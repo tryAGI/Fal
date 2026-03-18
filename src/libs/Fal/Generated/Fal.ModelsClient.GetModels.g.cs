@@ -119,11 +119,11 @@ namespace Fal
             __pathBuilder
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("cursor", cursor)
-                .AddOptionalParameter("endpoint_id", endpointId?.ToString() ?? string.Empty)
+                .AddOptionalParameter("endpoint_id", endpointId?.ToString())
                 .AddOptionalParameter("q", q)
                 .AddOptionalParameter("category", category)
                 .AddOptionalParameter("status", status?.ToValueString())
-                .AddOptionalParameter("expand", expand?.ToString() ?? string.Empty) 
+                .AddOptionalParameter("expand", expand?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(

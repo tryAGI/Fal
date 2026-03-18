@@ -129,13 +129,13 @@ namespace Fal
             __pathBuilder
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("cursor", cursor)
-                .AddOptionalParameter("start", start?.ToString() ?? string.Empty)
-                .AddOptionalParameter("end", end?.ToString() ?? string.Empty)
+                .AddOptionalParameter("start", start?.ToString())
+                .AddOptionalParameter("end", end?.ToString())
                 .AddOptionalParameter("timezone", timezone)
                 .AddOptionalParameter("timeframe", timeframe?.ToValueString())
                 .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString())
-                .AddOptionalParameter("endpoint_id", endpointId?.ToString() ?? string.Empty)
-                .AddOptionalParameter("expand", expand?.ToString() ?? string.Empty) 
+                .AddOptionalParameter("endpoint_id", endpointId?.ToString())
+                .AddOptionalParameter("expand", expand?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(

@@ -51,7 +51,7 @@ namespace Fal
                 path: "/account/billing",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
-                .AddOptionalParameter("expand", expand?.ToString() ?? string.Empty) 
+                .AddOptionalParameter("expand", expand?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(

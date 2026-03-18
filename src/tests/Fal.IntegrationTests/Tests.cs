@@ -10,8 +10,7 @@ public partial class Tests
             Environment.GetEnvironmentVariable("FAL_API_KEY") ??
             throw new AssertInconclusiveException("FAL_API_KEY environment variable is not found.");
 
-        var httpClient = new HttpClient(new EmptyQueryParamHandler());
-        var client = new FalClient(apiKey, httpClient: httpClient);
+        var client = new FalClient(apiKey);
 
         return client;
     }

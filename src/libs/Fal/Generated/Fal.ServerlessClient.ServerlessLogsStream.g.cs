@@ -121,8 +121,8 @@ namespace Fal
                 path: "/serverless/logs/stream",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
-                .AddOptionalParameter("start", start?.ToString() ?? string.Empty)
-                .AddOptionalParameter("end", end?.ToString() ?? string.Empty)
+                .AddOptionalParameter("start", start?.ToString())
+                .AddOptionalParameter("end", end?.ToString())
                 .AddOptionalParameter("app_id", appId, delimiter: ",", explode: true)
                 .AddOptionalParameter("revision", revision)
                 .AddOptionalParameter("run_source", runSource?.ToValueString())

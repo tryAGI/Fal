@@ -124,11 +124,11 @@ namespace Fal
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("cursor", cursor)
                 .AddRequiredParameter("endpoint_id", endpointId)
-                .AddOptionalParameter("start", start?.ToString() ?? string.Empty)
-                .AddOptionalParameter("end", end?.ToString() ?? string.Empty)
+                .AddOptionalParameter("start", start?.ToString())
+                .AddOptionalParameter("end", end?.ToString())
                 .AddOptionalParameter("status", status?.ToValueString())
                 .AddOptionalParameter("request_id", requestId?.ToString())
-                .AddOptionalParameter("expand", expand?.ToString() ?? string.Empty)
+                .AddOptionalParameter("expand", expand?.ToString())
                 .AddOptionalParameter("sort_by", sortBy?.ToValueString()) 
                 ; 
             var __path = __pathBuilder.ToString();

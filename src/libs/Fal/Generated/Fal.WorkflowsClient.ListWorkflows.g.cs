@@ -82,7 +82,7 @@ namespace Fal
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("cursor", cursor)
                 .AddOptionalParameter("search", search)
-                .AddOptionalParameter("used_endpoint_ids", usedEndpointIds?.ToString() ?? string.Empty) 
+                .AddOptionalParameter("used_endpoint_ids", usedEndpointIds?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
