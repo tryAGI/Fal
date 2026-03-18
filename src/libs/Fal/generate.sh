@@ -10,8 +10,11 @@ curl --fail --silent --show-error --location "$openapi_url" -o openapi.json
 # Fix auth scheme: Fal uses 'Authorization: Key <api_key>' but the spec defines it as
 # apiKey-in-header which AutoSDK can't generate a constructor for. Use HTTP bearer scheme
 # (generates proper constructor) and override to Key scheme in FalClient.Authorization.cs.
+# Both apiKey and adminApiKey are mapped to the same bearer scheme so AutoSDK generates
+# auth code for all endpoints (admin endpoints use adminApiKey in the spec).
 jq '.components.securitySchemes = {
-  "apiKey": {"type": "http", "scheme": "bearer"}
+  "apiKey": {"type": "http", "scheme": "bearer"},
+  "adminApiKey": {"type": "http", "scheme": "bearer"}
 } | .security = [{"apiKey": []}]' openapi.json > openapi.tmp.json && mv openapi.tmp.json openapi.json
 
 autosdk generate openapi.json \

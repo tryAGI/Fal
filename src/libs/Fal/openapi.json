@@ -16,6 +16,10 @@
       "apiKey": {
         "type": "http",
         "scheme": "bearer"
+      },
+      "adminApiKey": {
+        "type": "http",
+        "scheme": "bearer"
       }
     },
     "schemas": {},
