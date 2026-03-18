@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+readonly openapi_url="https://api.fal.ai/v1/openapi.json"
+
+dotnet tool update --global autosdk.cli --prerelease || dotnet tool install --global autosdk.cli --prerelease
+rm -rf Generated
+curl --fail --silent --show-error --location "$openapi_url" -o openapi.json
+autosdk generate openapi.json \
+  --namespace Fal \
+  --clientClassName FalClient \
+  --targetFramework net8.0 \
+  --output Generated \
+  --security-scheme "Http:Header:Bearer" \
+  --exclude-deprecated-operations

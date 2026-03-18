@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <Description>Generated C# SDK based on Fal.ai OpenAPI specification.</Description>
+    <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;fal;fal.ai;ai;inference;image;video;generative;generated</PackageTags>
+  </PropertyGroup>
+
+</Project>

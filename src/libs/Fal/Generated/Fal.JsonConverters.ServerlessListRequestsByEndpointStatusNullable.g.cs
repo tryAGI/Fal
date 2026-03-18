@@ -1,0 +1,60 @@
+#nullable enable
+
+namespace Fal.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class ServerlessListRequestsByEndpointStatusNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.ServerlessListRequestsByEndpointStatus?>
+    {
+        /// <inheritdoc />
+        public override global::Fal.ServerlessListRequestsByEndpointStatus? Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::Fal.ServerlessListRequestsByEndpointStatusExtensions.ToEnum(stringValue);
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::Fal.ServerlessListRequestsByEndpointStatus)numValue;
+                }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::Fal.ServerlessListRequestsByEndpointStatus?);
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::Fal.ServerlessListRequestsByEndpointStatus? value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::Fal.ServerlessListRequestsByEndpointStatusExtensions.ToValueString(value.Value));
+            }
+        }
+    }
+}
