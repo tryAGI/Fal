@@ -18,6 +18,9 @@ using Fal;
 using var client = new FalClient(apiKey);
 ```
 
+<!-- EXAMPLES:START -->
+<!-- EXAMPLES:END -->
+
 ## Support
 
 Priority place for bugs: https://github.com/tryAGI/Fal/issues
