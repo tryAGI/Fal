@@ -1,3 +1,9 @@
+/*
+order: 60
+title: Secrets
+slug: secrets
+*/
+
 namespace Fal.IntegrationTests;
 
 public partial class Tests
