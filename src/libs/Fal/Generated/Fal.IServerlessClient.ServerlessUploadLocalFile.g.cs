@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IServerlessClient
     {
+
         /// <summary>
         /// Upload local file (multipart/form-data)<br/>
         /// Uploads a local file using multipart/form-data. The file field name must be `file_upload`.
@@ -17,6 +18,7 @@ namespace Fal
         /// Default Value: false<br/>
         /// Example: false
         /// </param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>

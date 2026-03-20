@@ -23,6 +23,7 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Get workflow details<br/>
         /// Get detailed information about a specific workflow, including its full contents/definition.<br/>

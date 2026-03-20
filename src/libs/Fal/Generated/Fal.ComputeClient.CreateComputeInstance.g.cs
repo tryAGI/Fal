@@ -23,6 +23,7 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Create Compute Instance<br/>
         /// Creates a new compute instance with the specified configuration and SSH key.<br/>
@@ -53,6 +54,7 @@ namespace Fal
         /// Optional idempotency key for safe request retries<br/>
         /// Example: 550e8400-e29b-41d4-a716-446655440000
         /// </param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>

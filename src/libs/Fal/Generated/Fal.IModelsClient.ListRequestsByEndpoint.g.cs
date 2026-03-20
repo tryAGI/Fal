@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// List requests by endpoint<br/>
         /// Lists requests for a specific endpoint.<br/>

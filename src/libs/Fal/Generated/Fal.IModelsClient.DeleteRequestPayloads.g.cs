@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// Delete request payloads<br/>
         /// Deletes the IO payloads and associated CDN output files for a specific request.<br/>

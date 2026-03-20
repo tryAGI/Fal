@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IComputeClient
     {
+
         /// <summary>
         /// List Compute Instances<br/>
         /// Returns a list of all compute instances belonging to the authenticated user's workspace.<br/>

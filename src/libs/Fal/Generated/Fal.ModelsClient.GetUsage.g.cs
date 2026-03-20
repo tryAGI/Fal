@@ -37,6 +37,7 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Usage<br/>
         /// Returns paginated usage records for your workspace with filters for endpoint,<br/>

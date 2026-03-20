@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IComputeClient
     {
+
         /// <summary>
         /// Get Compute Instance<br/>
         /// Retrieves detailed information about a specific compute instance by its ID.<br/>

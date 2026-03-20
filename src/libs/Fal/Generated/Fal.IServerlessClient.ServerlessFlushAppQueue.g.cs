@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IServerlessClient
     {
+
         /// <summary>
         /// Flush Application Queue<br/>
         /// Flushes all pending requests from an application's queue.<br/>

@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// Estimate cost<br/>
         /// Computes cost estimates using one of two methods:<br/>
@@ -26,6 +27,7 @@ namespace Fal
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
         ///     
         /// </summary>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>

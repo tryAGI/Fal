@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// Model search<br/>
         /// Unified endpoint for discovering model endpoints. Supports three usage modes:<br/>

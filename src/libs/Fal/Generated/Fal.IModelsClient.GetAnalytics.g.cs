@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// Analytics<br/>
         /// Time-bucketed metrics per model endpoint, including request counts, success/error<br/>
