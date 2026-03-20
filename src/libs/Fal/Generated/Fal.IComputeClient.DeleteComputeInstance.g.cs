@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IComputeClient
     {
+
         /// <summary>
         /// Delete Compute Instance<br/>
         /// Deletes a specific compute instance by its ID. This action is irreversible.<br/>

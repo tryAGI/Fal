@@ -23,6 +23,7 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Upload file from URL<br/>
         /// Creates a new file at the target path by downloading it from the provided URL.
@@ -31,6 +32,7 @@ namespace Fal
         /// Target file path (including filename)<br/>
         /// Example: datasets/images/cat.jpg
         /// </param>
+
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>

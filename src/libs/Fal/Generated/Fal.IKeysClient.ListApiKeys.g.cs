@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IKeysClient
     {
+
         /// <summary>
         /// List API Keys<br/>
         /// Returns a list of all API keys belonging to the authenticated user's workspace.<br/>

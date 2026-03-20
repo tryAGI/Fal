@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IModelsClient
     {
+
         /// <summary>
         /// Billing Events<br/>
         /// Returns paginated individual billing event records with filters<br/>

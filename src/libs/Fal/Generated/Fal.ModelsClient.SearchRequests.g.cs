@@ -37,6 +37,7 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
+
         /// <summary>
         /// Search Requests<br/>
         /// Search, filter, and browse your request history. Supports three modes:<br/>

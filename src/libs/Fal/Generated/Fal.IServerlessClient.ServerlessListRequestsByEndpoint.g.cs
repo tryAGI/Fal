@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IServerlessClient
     {
+
         /// <summary>
         /// List requests by endpoint<br/>
         /// Lists requests for endpoints owned by the authenticated user.<br/>

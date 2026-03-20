@@ -4,6 +4,7 @@ namespace Fal
 {
     public partial interface IServerlessClient
     {
+
         /// <summary>
         /// Metrics<br/>
         /// Returns Prometheus-compatible metrics in text format for integration into your<br/>
