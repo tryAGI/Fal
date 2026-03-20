@@ -19,6 +19,82 @@ using var client = new FalClient(apiKey);
 ```
 
 <!-- EXAMPLES:START -->
+### Apps Get Meta Returns Platform Metadata
+
+
+```csharp
+var client = GetAuthorizedApi();
+
+var response = await client.Meta.GetMetaAsync();
+```
+
+### Apps Get Pricing Returns Price For Endpoint
+
+
+```csharp
+var client = GetAuthorizedApi();
+
+var response = await client.Models.GetPricingAsync(
+    endpointId: "fal-ai/flux/dev");
+```
+
+### Apps Search Requests Returns Results
+
+
+```csharp
+var client = GetAuthorizedApi();
+
+var response = await client.Models.SearchRequestsAsync(
+    limit: 5);
+```
+
+### Billing Get Account Billing Returns Username
+
+
+```csharp
+var client = GetAuthorizedApi();
+
+try
+{
+    var response = await client.Account.GetAccountBillingAsync();
+
+}
+catch (ApiException ex) when (ex.Message.Contains("Admin API key"))
+{
+}
+```
+
+### Billing Get Usage Returns Usage Data
+
+
+```csharp
+var client = GetAuthorizedApi();
+
+try
+{
+    var response = await client.Models.GetUsageAsync(limit: 5);
+
+}
+catch (ApiException ex) when (ex.Message.Contains("Admin API key"))
+{
+}
+```
+
+### Secrets
+
+
+```csharp
+var client = GetAuthorizedApi();
+
+try
+{
+    var response = await client.Keys.ListApiKeysAsync(limit: 10);
+
+}
+catch (ApiException ex) when (ex.Message.Contains("Admin API key"))
+{
+}
+```
 <!-- EXAMPLES:END -->
 
 ## Support

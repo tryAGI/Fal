@@ -2,7 +2,13 @@ site_name: Fal .NET SDK Documentation
 nav:
 - Overview: index.md
 # EXAMPLES:START
-
+- Examples:
+  - Apps Get Meta Returns Platform Metadata: examples/apps-get-meta-returns-platform-metadata.md
+  - Apps Get Pricing Returns Price For Endpoint: examples/apps-get-pricing-returns-price-for-endpoint.md
+  - Apps Search Requests Returns Results: examples/apps-search-requests-returns-results.md
+  - Billing Get Account Billing Returns Username: examples/billing-get-account-billing-returns-username.md
+  - Billing Get Usage Returns Usage Data: examples/billing-get-usage-returns-usage-data.md
+  - Secrets: examples/secrets.md
 # EXAMPLES:END
 
 theme:
