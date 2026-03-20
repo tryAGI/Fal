@@ -45,7 +45,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Logs history (paginated)<br/>
         /// Returns paginated historical logs that match the provided filters.
@@ -99,7 +98,6 @@ namespace Fal
         /// Filter by request id<br/>
         /// Example: req_abc123
         /// </param>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>

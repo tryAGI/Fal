@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IAccountClient
     {
-
         /// <summary>
         /// Account Billing<br/>
         /// Returns billing information for the authenticated account. Use the `expand`<br/>

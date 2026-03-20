@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IModelsClient
     {
-
         /// <summary>
         /// Search Requests<br/>
         /// Search, filter, and browse your request history. Supports three modes:<br/>

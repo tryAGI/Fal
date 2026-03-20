@@ -19,7 +19,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get platform metadata<br/>
         /// Returns platform metadata including webhook IP ranges for allowlisting.<br/>

@@ -23,7 +23,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Queue Size<br/>
         /// Retrieves the current queue size for a specific application.

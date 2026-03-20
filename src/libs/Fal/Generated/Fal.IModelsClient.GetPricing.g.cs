@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IModelsClient
     {
-
         /// <summary>
         /// Pricing<br/>
         /// Returns unit pricing for requested endpoint IDs. Most models use<br/>

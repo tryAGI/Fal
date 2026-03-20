@@ -21,7 +21,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Pricing<br/>
         /// Returns unit pricing for requested endpoint IDs. Most models use<br/>

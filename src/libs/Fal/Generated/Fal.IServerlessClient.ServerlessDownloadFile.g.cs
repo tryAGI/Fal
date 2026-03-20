@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IServerlessClient
     {
-
         /// <summary>
         /// Download file<br/>
         /// Downloads a file by its path. Proxies the underlying storage response.

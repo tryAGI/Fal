@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IServerlessClient
     {
-
         /// <summary>
         /// List files (root)<br/>
         /// Lists files and folders in the root of your project storage.

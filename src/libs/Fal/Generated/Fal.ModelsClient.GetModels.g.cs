@@ -33,7 +33,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Model search<br/>
         /// Unified endpoint for discovering model endpoints. Supports three usage modes:<br/>

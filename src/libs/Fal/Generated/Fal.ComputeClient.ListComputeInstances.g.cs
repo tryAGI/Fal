@@ -23,7 +23,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List Compute Instances<br/>
         /// Returns a list of all compute instances belonging to the authenticated user's workspace.<br/>

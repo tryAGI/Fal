@@ -35,7 +35,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// FOCUS Report<br/>
         /// Returns a FOCUS compliant billing report as a CSV download.<br/>

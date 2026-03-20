@@ -21,7 +21,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Account Billing<br/>
         /// Returns billing information for the authenticated account. Use the `expand`<br/>
