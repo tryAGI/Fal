@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IWorkflowsClient
     {
-
         /// <summary>
         /// List user workflows<br/>
         /// List workflows for the authenticated user with optional search and filtering.<br/>

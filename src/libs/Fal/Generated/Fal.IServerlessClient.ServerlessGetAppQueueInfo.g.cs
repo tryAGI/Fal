@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IServerlessClient
     {
-
         /// <summary>
         /// Queue Size<br/>
         /// Retrieves the current queue size for a specific application.

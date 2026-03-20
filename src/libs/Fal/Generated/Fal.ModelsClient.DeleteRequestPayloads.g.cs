@@ -23,7 +23,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Delete request payloads<br/>
         /// Deletes the IO payloads and associated CDN output files for a specific request.<br/>

@@ -20,7 +20,6 @@ namespace Fal
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Flush Application Queue<br/>
         /// Flushes all pending requests from an application's queue.<br/>

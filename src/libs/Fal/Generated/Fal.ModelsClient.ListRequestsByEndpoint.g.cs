@@ -37,7 +37,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List requests by endpoint<br/>
         /// Lists requests for a specific endpoint.<br/>

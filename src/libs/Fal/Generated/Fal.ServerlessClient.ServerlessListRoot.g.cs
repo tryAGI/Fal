@@ -19,7 +19,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List files (root)<br/>
         /// Lists files and folders in the root of your project storage.

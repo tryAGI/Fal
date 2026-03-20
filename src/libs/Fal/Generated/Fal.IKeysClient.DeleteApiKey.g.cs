@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IKeysClient
     {
-
         /// <summary>
         /// Delete API Key<br/>
         /// Deletes an API key by its ID. This action is irreversible.<br/>

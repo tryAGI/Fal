@@ -21,7 +21,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref byte[] content);
 
-
         /// <summary>
         /// Download file<br/>
         /// Downloads a file by its path. Proxies the underlying storage response.

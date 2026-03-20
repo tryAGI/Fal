@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IMetaClient
     {
-
         /// <summary>
         /// Get platform metadata<br/>
         /// Returns platform metadata including webhook IP ranges for allowlisting.<br/>

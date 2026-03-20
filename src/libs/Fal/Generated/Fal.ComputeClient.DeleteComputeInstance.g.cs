@@ -16,7 +16,6 @@ namespace Fal
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-
         /// <summary>
         /// Delete Compute Instance<br/>
         /// Deletes a specific compute instance by its ID. This action is irreversible.<br/>

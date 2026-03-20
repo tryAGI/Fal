@@ -21,7 +21,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Get Compute Instance<br/>
         /// Retrieves detailed information about a specific compute instance by its ID.<br/>

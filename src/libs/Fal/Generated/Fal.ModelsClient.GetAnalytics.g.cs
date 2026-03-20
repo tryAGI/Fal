@@ -37,7 +37,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// Analytics<br/>
         /// Time-bucketed metrics per model endpoint, including request counts, success/error<br/>

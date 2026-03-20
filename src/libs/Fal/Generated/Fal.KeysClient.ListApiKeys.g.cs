@@ -25,7 +25,6 @@ namespace Fal
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
-
         /// <summary>
         /// List API Keys<br/>
         /// Returns a list of all API keys belonging to the authenticated user's workspace.<br/>

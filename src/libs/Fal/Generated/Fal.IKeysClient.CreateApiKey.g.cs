@@ -4,7 +4,6 @@ namespace Fal
 {
     public partial interface IKeysClient
     {
-
         /// <summary>
         /// Create API Key<br/>
         /// Creates a new API key with the specified alias.<br/>
@@ -23,7 +22,6 @@ namespace Fal
         /// - Automated key rotation workflows<br/>
         /// - Integration with secret management systems
         /// </summary>
-
         /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
@@ -31,7 +29,6 @@ namespace Fal
 
             global::Fal.CreateApiKeyRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create API Key<br/>
         /// Creates a new API key with the specified alias.<br/>
