@@ -48,57 +48,12 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public PricingClient Pricing { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public UsageClient Usage { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public AnalyticsClient Analytics { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public RequestsClient Requests { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public WorkflowsClient Workflows { get; }
 
         /// <summary>
         /// 
         /// </summary>
         public ServerlessClient Serverless { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public AppsClient Apps { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public FilesClient Files { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public MetricsClient Metrics { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ObservabilityClient Observability { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public LogsClient Logs { get; }
 
         /// <summary>
         /// 
