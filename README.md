@@ -20,8 +20,6 @@ using var client = new FalClient(apiKey);
 
 <!-- EXAMPLES:START -->
 ### Apps Get Meta Returns Platform Metadata
-
-
 ```csharp
 var client = GetAuthorizedApi();
 
@@ -29,8 +27,6 @@ var response = await client.Meta.GetMetaAsync();
 ```
 
 ### Apps Get Pricing Returns Price For Endpoint
-
-
 ```csharp
 var client = GetAuthorizedApi();
 
@@ -39,8 +35,6 @@ var response = await client.Models.GetPricingAsync(
 ```
 
 ### Apps Search Requests Returns Results
-
-
 ```csharp
 var client = GetAuthorizedApi();
 
@@ -49,8 +43,6 @@ var response = await client.Models.SearchRequestsAsync(
 ```
 
 ### Billing Get Account Billing Returns Username
-
-
 ```csharp
 var client = GetAuthorizedApi();
 
@@ -65,8 +57,6 @@ catch (ApiException ex) when (ex.Message.Contains("Admin API key"))
 ```
 
 ### Billing Get Usage Returns Usage Data
-
-
 ```csharp
 var client = GetAuthorizedApi();
 
@@ -81,8 +71,6 @@ catch (ApiException ex) when (ex.Message.Contains("Admin API key"))
 ```
 
 ### Secrets
-
-
 ```csharp
 var client = GetAuthorizedApi();
 
@@ -108,7 +96,3 @@ Discord: https://discord.gg/Ca2xhfBf3v
 ![JetBrains logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.png)
 
 This project is supported by JetBrains through the [Open Source Support Program](https://jb.gg/OpenSourceSupport).
-
-![CodeRabbit logo](https://opengraph.githubassets.com/1c51002d7d0bbe0c4fd72ff8f2e58192702f73a7037102f77e4dbb98ac00ea8f/marketplace/coderabbitai)
-
-This project is supported by CodeRabbit through the [Open Source Support Program](https://github.com/marketplace/coderabbitai).
