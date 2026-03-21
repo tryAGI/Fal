@@ -149,7 +149,7 @@ namespace Fal
                 .AddOptionalParameter("app_id", appId, delimiter: ",", explode: true)
                 .AddOptionalParameter("revision", revision)
                 .AddOptionalParameter("run_source", runSource?.ToValueString())
-                .AddOptionalParameter("traceback", traceback?.ToString())
+                .AddOptionalParameter("traceback", traceback?.ToString().ToLowerInvariant())
                 .AddOptionalParameter("search", search)
                 .AddOptionalParameter("level", level)
                 .AddOptionalParameter("job_id", jobId)

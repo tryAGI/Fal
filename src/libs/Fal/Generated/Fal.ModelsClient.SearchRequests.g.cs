@@ -135,8 +135,8 @@ namespace Fal
                 .AddOptionalParameter("image_url", imageUrl)
                 .AddOptionalParameter("video_url", videoUrl)
                 .AddOptionalParameter("endpoint", endpoint)
-                .AddOptionalParameter("exclude_api_requests", excludeApiRequests?.ToString())
-                .AddOptionalParameter("only_api_requests", onlyApiRequests?.ToString())
+                .AddOptionalParameter("exclude_api_requests", excludeApiRequests?.ToString().ToLowerInvariant())
+                .AddOptionalParameter("only_api_requests", onlyApiRequests?.ToString().ToLowerInvariant())
                 .AddOptionalParameter("min_similarity", minSimilarity?.ToString()) 
                 ; 
             var __path = __pathBuilder.ToString();
