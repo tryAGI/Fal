@@ -43,17 +43,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public ModelsClient Models { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public WorkflowsClient Workflows { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ServerlessClient Serverless { get; }
+        public AccountClient Account { get; }
 
         /// <summary>
         /// 
@@ -68,12 +58,22 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public AccountClient Account { get; }
+        public MetaClient Meta { get; }
 
         /// <summary>
         /// 
         /// </summary>
-        public MetaClient Meta { get; }
+        public ModelsClient Models { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public ServerlessClient Serverless { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public WorkflowsClient Workflows { get; }
 
     }
 }
