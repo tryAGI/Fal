@@ -62,7 +62,7 @@ namespace Fal
                 path: $"/serverless/files/file/local/{targetPath}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
-                .AddOptionalParameter("unzip", unzip?.ToString()) 
+                .AddOptionalParameter("unzip", unzip?.ToString().ToLowerInvariant()) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
