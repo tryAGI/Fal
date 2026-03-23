@@ -12,11 +12,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Success,
+        Error,
         /// <summary>
         /// 
         /// </summary>
-        Error,
+        Success,
         /// <summary>
         /// 
         /// </summary>
@@ -35,8 +35,8 @@ namespace Fal
         {
             return value switch
             {
-                ServerlessListRequestsByEndpointStatus.Success => "success",
                 ServerlessListRequestsByEndpointStatus.Error => "error",
+                ServerlessListRequestsByEndpointStatus.Success => "success",
                 ServerlessListRequestsByEndpointStatus.UserError => "user_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -48,8 +48,8 @@ namespace Fal
         {
             return value switch
             {
-                "success" => ServerlessListRequestsByEndpointStatus.Success,
                 "error" => ServerlessListRequestsByEndpointStatus.Error,
+                "success" => ServerlessListRequestsByEndpointStatus.Success,
                 "user_error" => ServerlessListRequestsByEndpointStatus.UserError,
                 _ => null,
             };

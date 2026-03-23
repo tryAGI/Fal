@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessUploadFromUrlResponseErrorType3.AuthorizationError => "authorization_error",
-                ServerlessUploadFromUrlResponseErrorType3.ValidationError => "validation_error",
                 ServerlessUploadFromUrlResponseErrorType3.NotFound => "not_found",
+                ServerlessUploadFromUrlResponseErrorType3.NotImplemented => "not_implemented",
                 ServerlessUploadFromUrlResponseErrorType3.RateLimited => "rate_limited",
                 ServerlessUploadFromUrlResponseErrorType3.ServerError => "server_error",
-                ServerlessUploadFromUrlResponseErrorType3.NotImplemented => "not_implemented",
+                ServerlessUploadFromUrlResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessUploadFromUrlResponseErrorType3.AuthorizationError,
-                "validation_error" => ServerlessUploadFromUrlResponseErrorType3.ValidationError,
                 "not_found" => ServerlessUploadFromUrlResponseErrorType3.NotFound,
+                "not_implemented" => ServerlessUploadFromUrlResponseErrorType3.NotImplemented,
                 "rate_limited" => ServerlessUploadFromUrlResponseErrorType3.RateLimited,
                 "server_error" => ServerlessUploadFromUrlResponseErrorType3.ServerError,
-                "not_implemented" => ServerlessUploadFromUrlResponseErrorType3.NotImplemented,
+                "validation_error" => ServerlessUploadFromUrlResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

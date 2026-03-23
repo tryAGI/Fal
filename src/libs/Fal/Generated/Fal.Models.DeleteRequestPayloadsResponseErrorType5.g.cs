@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 DeleteRequestPayloadsResponseErrorType5.AuthorizationError => "authorization_error",
-                DeleteRequestPayloadsResponseErrorType5.ValidationError => "validation_error",
                 DeleteRequestPayloadsResponseErrorType5.NotFound => "not_found",
+                DeleteRequestPayloadsResponseErrorType5.NotImplemented => "not_implemented",
                 DeleteRequestPayloadsResponseErrorType5.RateLimited => "rate_limited",
                 DeleteRequestPayloadsResponseErrorType5.ServerError => "server_error",
-                DeleteRequestPayloadsResponseErrorType5.NotImplemented => "not_implemented",
+                DeleteRequestPayloadsResponseErrorType5.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => DeleteRequestPayloadsResponseErrorType5.AuthorizationError,
-                "validation_error" => DeleteRequestPayloadsResponseErrorType5.ValidationError,
                 "not_found" => DeleteRequestPayloadsResponseErrorType5.NotFound,
+                "not_implemented" => DeleteRequestPayloadsResponseErrorType5.NotImplemented,
                 "rate_limited" => DeleteRequestPayloadsResponseErrorType5.RateLimited,
                 "server_error" => DeleteRequestPayloadsResponseErrorType5.ServerError,
-                "not_implemented" => DeleteRequestPayloadsResponseErrorType5.NotImplemented,
+                "validation_error" => DeleteRequestPayloadsResponseErrorType5.ValidationError,
                 _ => null,
             };
         }

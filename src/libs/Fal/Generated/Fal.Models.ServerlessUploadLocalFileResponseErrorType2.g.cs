@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessUploadLocalFileResponseErrorType2.AuthorizationError => "authorization_error",
-                ServerlessUploadLocalFileResponseErrorType2.ValidationError => "validation_error",
                 ServerlessUploadLocalFileResponseErrorType2.NotFound => "not_found",
+                ServerlessUploadLocalFileResponseErrorType2.NotImplemented => "not_implemented",
                 ServerlessUploadLocalFileResponseErrorType2.RateLimited => "rate_limited",
                 ServerlessUploadLocalFileResponseErrorType2.ServerError => "server_error",
-                ServerlessUploadLocalFileResponseErrorType2.NotImplemented => "not_implemented",
+                ServerlessUploadLocalFileResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessUploadLocalFileResponseErrorType2.AuthorizationError,
-                "validation_error" => ServerlessUploadLocalFileResponseErrorType2.ValidationError,
                 "not_found" => ServerlessUploadLocalFileResponseErrorType2.NotFound,
+                "not_implemented" => ServerlessUploadLocalFileResponseErrorType2.NotImplemented,
                 "rate_limited" => ServerlessUploadLocalFileResponseErrorType2.RateLimited,
                 "server_error" => ServerlessUploadLocalFileResponseErrorType2.ServerError,
-                "not_implemented" => ServerlessUploadLocalFileResponseErrorType2.NotImplemented,
+                "validation_error" => ServerlessUploadLocalFileResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

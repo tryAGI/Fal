@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ListWorkflowsResponseErrorType.AuthorizationError => "authorization_error",
-                ListWorkflowsResponseErrorType.ValidationError => "validation_error",
                 ListWorkflowsResponseErrorType.NotFound => "not_found",
+                ListWorkflowsResponseErrorType.NotImplemented => "not_implemented",
                 ListWorkflowsResponseErrorType.RateLimited => "rate_limited",
                 ListWorkflowsResponseErrorType.ServerError => "server_error",
-                ListWorkflowsResponseErrorType.NotImplemented => "not_implemented",
+                ListWorkflowsResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ListWorkflowsResponseErrorType.AuthorizationError,
-                "validation_error" => ListWorkflowsResponseErrorType.ValidationError,
                 "not_found" => ListWorkflowsResponseErrorType.NotFound,
+                "not_implemented" => ListWorkflowsResponseErrorType.NotImplemented,
                 "rate_limited" => ListWorkflowsResponseErrorType.RateLimited,
                 "server_error" => ListWorkflowsResponseErrorType.ServerError,
-                "not_implemented" => ListWorkflowsResponseErrorType.NotImplemented,
+                "validation_error" => ListWorkflowsResponseErrorType.ValidationError,
                 _ => null,
             };
         }

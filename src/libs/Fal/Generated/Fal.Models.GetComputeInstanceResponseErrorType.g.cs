@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetComputeInstanceResponseErrorType.AuthorizationError => "authorization_error",
-                GetComputeInstanceResponseErrorType.ValidationError => "validation_error",
                 GetComputeInstanceResponseErrorType.NotFound => "not_found",
+                GetComputeInstanceResponseErrorType.NotImplemented => "not_implemented",
                 GetComputeInstanceResponseErrorType.RateLimited => "rate_limited",
                 GetComputeInstanceResponseErrorType.ServerError => "server_error",
-                GetComputeInstanceResponseErrorType.NotImplemented => "not_implemented",
+                GetComputeInstanceResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetComputeInstanceResponseErrorType.AuthorizationError,
-                "validation_error" => GetComputeInstanceResponseErrorType.ValidationError,
                 "not_found" => GetComputeInstanceResponseErrorType.NotFound,
+                "not_implemented" => GetComputeInstanceResponseErrorType.NotImplemented,
                 "rate_limited" => GetComputeInstanceResponseErrorType.RateLimited,
                 "server_error" => GetComputeInstanceResponseErrorType.ServerError,
-                "not_implemented" => GetComputeInstanceResponseErrorType.NotImplemented,
+                "validation_error" => GetComputeInstanceResponseErrorType.ValidationError,
                 _ => null,
             };
         }

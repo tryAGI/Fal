@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessListDirectoryResponseErrorType3.AuthorizationError => "authorization_error",
-                ServerlessListDirectoryResponseErrorType3.ValidationError => "validation_error",
                 ServerlessListDirectoryResponseErrorType3.NotFound => "not_found",
+                ServerlessListDirectoryResponseErrorType3.NotImplemented => "not_implemented",
                 ServerlessListDirectoryResponseErrorType3.RateLimited => "rate_limited",
                 ServerlessListDirectoryResponseErrorType3.ServerError => "server_error",
-                ServerlessListDirectoryResponseErrorType3.NotImplemented => "not_implemented",
+                ServerlessListDirectoryResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessListDirectoryResponseErrorType3.AuthorizationError,
-                "validation_error" => ServerlessListDirectoryResponseErrorType3.ValidationError,
                 "not_found" => ServerlessListDirectoryResponseErrorType3.NotFound,
+                "not_implemented" => ServerlessListDirectoryResponseErrorType3.NotImplemented,
                 "rate_limited" => ServerlessListDirectoryResponseErrorType3.RateLimited,
                 "server_error" => ServerlessListDirectoryResponseErrorType3.ServerError,
-                "not_implemented" => ServerlessListDirectoryResponseErrorType3.NotImplemented,
+                "validation_error" => ServerlessListDirectoryResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

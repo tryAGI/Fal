@@ -13,11 +13,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        True,
+        False,
         /// <summary>
         /// 
         /// </summary>
-        False,
+        True,
     }
 
     /// <summary>
@@ -32,8 +32,8 @@ namespace Fal
         {
             return value switch
             {
-                GetUsageBoundToTimeframe.True => "true",
                 GetUsageBoundToTimeframe.False => "false",
+                GetUsageBoundToTimeframe.True => "true",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,8 +44,8 @@ namespace Fal
         {
             return value switch
             {
-                "true" => GetUsageBoundToTimeframe.True,
                 "false" => GetUsageBoundToTimeframe.False,
+                "true" => GetUsageBoundToTimeframe.True,
                 _ => null,
             };
         }

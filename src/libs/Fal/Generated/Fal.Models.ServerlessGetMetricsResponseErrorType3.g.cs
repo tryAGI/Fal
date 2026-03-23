@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessGetMetricsResponseErrorType3.AuthorizationError => "authorization_error",
-                ServerlessGetMetricsResponseErrorType3.ValidationError => "validation_error",
                 ServerlessGetMetricsResponseErrorType3.NotFound => "not_found",
+                ServerlessGetMetricsResponseErrorType3.NotImplemented => "not_implemented",
                 ServerlessGetMetricsResponseErrorType3.RateLimited => "rate_limited",
                 ServerlessGetMetricsResponseErrorType3.ServerError => "server_error",
-                ServerlessGetMetricsResponseErrorType3.NotImplemented => "not_implemented",
+                ServerlessGetMetricsResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessGetMetricsResponseErrorType3.AuthorizationError,
-                "validation_error" => ServerlessGetMetricsResponseErrorType3.ValidationError,
                 "not_found" => ServerlessGetMetricsResponseErrorType3.NotFound,
+                "not_implemented" => ServerlessGetMetricsResponseErrorType3.NotImplemented,
                 "rate_limited" => ServerlessGetMetricsResponseErrorType3.RateLimited,
                 "server_error" => ServerlessGetMetricsResponseErrorType3.ServerError,
-                "not_implemented" => ServerlessGetMetricsResponseErrorType3.NotImplemented,
+                "validation_error" => ServerlessGetMetricsResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

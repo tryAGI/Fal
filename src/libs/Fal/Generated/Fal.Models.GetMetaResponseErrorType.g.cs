@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetMetaResponseErrorType.AuthorizationError => "authorization_error",
-                GetMetaResponseErrorType.ValidationError => "validation_error",
                 GetMetaResponseErrorType.NotFound => "not_found",
+                GetMetaResponseErrorType.NotImplemented => "not_implemented",
                 GetMetaResponseErrorType.RateLimited => "rate_limited",
                 GetMetaResponseErrorType.ServerError => "server_error",
-                GetMetaResponseErrorType.NotImplemented => "not_implemented",
+                GetMetaResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetMetaResponseErrorType.AuthorizationError,
-                "validation_error" => GetMetaResponseErrorType.ValidationError,
                 "not_found" => GetMetaResponseErrorType.NotFound,
+                "not_implemented" => GetMetaResponseErrorType.NotImplemented,
                 "rate_limited" => GetMetaResponseErrorType.RateLimited,
                 "server_error" => GetMetaResponseErrorType.ServerError,
-                "not_implemented" => GetMetaResponseErrorType.NotImplemented,
+                "validation_error" => GetMetaResponseErrorType.ValidationError,
                 _ => null,
             };
         }

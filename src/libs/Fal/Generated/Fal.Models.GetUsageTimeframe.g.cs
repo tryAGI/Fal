@@ -12,7 +12,7 @@ namespace Fal
         /// <summary>
         /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
         /// </summary>
-        Minute,
+        Day,
         /// <summary>
         /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
         /// </summary>
@@ -20,15 +20,15 @@ namespace Fal
         /// <summary>
         /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
         /// </summary>
-        Day,
-        /// <summary>
-        /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
-        /// </summary>
-        Week,
+        Minute,
         /// <summary>
         /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
         /// </summary>
         Month,
+        /// <summary>
+        /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
+        /// </summary>
+        Week,
     }
 
     /// <summary>
@@ -43,11 +43,11 @@ namespace Fal
         {
             return value switch
             {
-                GetUsageTimeframe.Minute => "minute",
-                GetUsageTimeframe.Hour => "hour",
                 GetUsageTimeframe.Day => "day",
-                GetUsageTimeframe.Week => "week",
+                GetUsageTimeframe.Hour => "hour",
+                GetUsageTimeframe.Minute => "minute",
                 GetUsageTimeframe.Month => "month",
+                GetUsageTimeframe.Week => "week",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -58,11 +58,11 @@ namespace Fal
         {
             return value switch
             {
-                "minute" => GetUsageTimeframe.Minute,
-                "hour" => GetUsageTimeframe.Hour,
                 "day" => GetUsageTimeframe.Day,
-                "week" => GetUsageTimeframe.Week,
+                "hour" => GetUsageTimeframe.Hour,
+                "minute" => GetUsageTimeframe.Minute,
                 "month" => GetUsageTimeframe.Month,
+                "week" => GetUsageTimeframe.Week,
                 _ => null,
             };
         }

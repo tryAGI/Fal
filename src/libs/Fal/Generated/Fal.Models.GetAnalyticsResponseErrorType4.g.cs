@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetAnalyticsResponseErrorType4.AuthorizationError => "authorization_error",
-                GetAnalyticsResponseErrorType4.ValidationError => "validation_error",
                 GetAnalyticsResponseErrorType4.NotFound => "not_found",
+                GetAnalyticsResponseErrorType4.NotImplemented => "not_implemented",
                 GetAnalyticsResponseErrorType4.RateLimited => "rate_limited",
                 GetAnalyticsResponseErrorType4.ServerError => "server_error",
-                GetAnalyticsResponseErrorType4.NotImplemented => "not_implemented",
+                GetAnalyticsResponseErrorType4.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetAnalyticsResponseErrorType4.AuthorizationError,
-                "validation_error" => GetAnalyticsResponseErrorType4.ValidationError,
                 "not_found" => GetAnalyticsResponseErrorType4.NotFound,
+                "not_implemented" => GetAnalyticsResponseErrorType4.NotImplemented,
                 "rate_limited" => GetAnalyticsResponseErrorType4.RateLimited,
                 "server_error" => GetAnalyticsResponseErrorType4.ServerError,
-                "not_implemented" => GetAnalyticsResponseErrorType4.NotImplemented,
+                "validation_error" => GetAnalyticsResponseErrorType4.ValidationError,
                 _ => null,
             };
         }

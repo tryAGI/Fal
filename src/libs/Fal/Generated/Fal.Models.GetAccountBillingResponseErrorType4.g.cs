@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetAccountBillingResponseErrorType4.AuthorizationError => "authorization_error",
-                GetAccountBillingResponseErrorType4.ValidationError => "validation_error",
                 GetAccountBillingResponseErrorType4.NotFound => "not_found",
+                GetAccountBillingResponseErrorType4.NotImplemented => "not_implemented",
                 GetAccountBillingResponseErrorType4.RateLimited => "rate_limited",
                 GetAccountBillingResponseErrorType4.ServerError => "server_error",
-                GetAccountBillingResponseErrorType4.NotImplemented => "not_implemented",
+                GetAccountBillingResponseErrorType4.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetAccountBillingResponseErrorType4.AuthorizationError,
-                "validation_error" => GetAccountBillingResponseErrorType4.ValidationError,
                 "not_found" => GetAccountBillingResponseErrorType4.NotFound,
+                "not_implemented" => GetAccountBillingResponseErrorType4.NotImplemented,
                 "rate_limited" => GetAccountBillingResponseErrorType4.RateLimited,
                 "server_error" => GetAccountBillingResponseErrorType4.ServerError,
-                "not_implemented" => GetAccountBillingResponseErrorType4.NotImplemented,
+                "validation_error" => GetAccountBillingResponseErrorType4.ValidationError,
                 _ => null,
             };
         }

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessDownloadFileResponseErrorType.AuthorizationError => "authorization_error",
-                ServerlessDownloadFileResponseErrorType.ValidationError => "validation_error",
                 ServerlessDownloadFileResponseErrorType.NotFound => "not_found",
+                ServerlessDownloadFileResponseErrorType.NotImplemented => "not_implemented",
                 ServerlessDownloadFileResponseErrorType.RateLimited => "rate_limited",
                 ServerlessDownloadFileResponseErrorType.ServerError => "server_error",
-                ServerlessDownloadFileResponseErrorType.NotImplemented => "not_implemented",
+                ServerlessDownloadFileResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessDownloadFileResponseErrorType.AuthorizationError,
-                "validation_error" => ServerlessDownloadFileResponseErrorType.ValidationError,
                 "not_found" => ServerlessDownloadFileResponseErrorType.NotFound,
+                "not_implemented" => ServerlessDownloadFileResponseErrorType.NotImplemented,
                 "rate_limited" => ServerlessDownloadFileResponseErrorType.RateLimited,
                 "server_error" => ServerlessDownloadFileResponseErrorType.ServerError,
-                "not_implemented" => ServerlessDownloadFileResponseErrorType.NotImplemented,
+                "validation_error" => ServerlessDownloadFileResponseErrorType.ValidationError,
                 _ => null,
             };
         }

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetFocusReportResponseErrorType2.AuthorizationError => "authorization_error",
-                GetFocusReportResponseErrorType2.ValidationError => "validation_error",
                 GetFocusReportResponseErrorType2.NotFound => "not_found",
+                GetFocusReportResponseErrorType2.NotImplemented => "not_implemented",
                 GetFocusReportResponseErrorType2.RateLimited => "rate_limited",
                 GetFocusReportResponseErrorType2.ServerError => "server_error",
-                GetFocusReportResponseErrorType2.NotImplemented => "not_implemented",
+                GetFocusReportResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetFocusReportResponseErrorType2.AuthorizationError,
-                "validation_error" => GetFocusReportResponseErrorType2.ValidationError,
                 "not_found" => GetFocusReportResponseErrorType2.NotFound,
+                "not_implemented" => GetFocusReportResponseErrorType2.NotImplemented,
                 "rate_limited" => GetFocusReportResponseErrorType2.RateLimited,
                 "server_error" => GetFocusReportResponseErrorType2.ServerError,
-                "not_implemented" => GetFocusReportResponseErrorType2.NotImplemented,
+                "validation_error" => GetFocusReportResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

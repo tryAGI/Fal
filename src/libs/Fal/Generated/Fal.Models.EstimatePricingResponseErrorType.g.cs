@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 EstimatePricingResponseErrorType.AuthorizationError => "authorization_error",
-                EstimatePricingResponseErrorType.ValidationError => "validation_error",
                 EstimatePricingResponseErrorType.NotFound => "not_found",
+                EstimatePricingResponseErrorType.NotImplemented => "not_implemented",
                 EstimatePricingResponseErrorType.RateLimited => "rate_limited",
                 EstimatePricingResponseErrorType.ServerError => "server_error",
-                EstimatePricingResponseErrorType.NotImplemented => "not_implemented",
+                EstimatePricingResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => EstimatePricingResponseErrorType.AuthorizationError,
-                "validation_error" => EstimatePricingResponseErrorType.ValidationError,
                 "not_found" => EstimatePricingResponseErrorType.NotFound,
+                "not_implemented" => EstimatePricingResponseErrorType.NotImplemented,
                 "rate_limited" => EstimatePricingResponseErrorType.RateLimited,
                 "server_error" => EstimatePricingResponseErrorType.ServerError,
-                "not_implemented" => EstimatePricingResponseErrorType.NotImplemented,
+                "validation_error" => EstimatePricingResponseErrorType.ValidationError,
                 _ => null,
             };
         }

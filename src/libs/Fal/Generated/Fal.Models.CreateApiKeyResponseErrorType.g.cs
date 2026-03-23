@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 CreateApiKeyResponseErrorType.AuthorizationError => "authorization_error",
-                CreateApiKeyResponseErrorType.ValidationError => "validation_error",
                 CreateApiKeyResponseErrorType.NotFound => "not_found",
+                CreateApiKeyResponseErrorType.NotImplemented => "not_implemented",
                 CreateApiKeyResponseErrorType.RateLimited => "rate_limited",
                 CreateApiKeyResponseErrorType.ServerError => "server_error",
-                CreateApiKeyResponseErrorType.NotImplemented => "not_implemented",
+                CreateApiKeyResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => CreateApiKeyResponseErrorType.AuthorizationError,
-                "validation_error" => CreateApiKeyResponseErrorType.ValidationError,
                 "not_found" => CreateApiKeyResponseErrorType.NotFound,
+                "not_implemented" => CreateApiKeyResponseErrorType.NotImplemented,
                 "rate_limited" => CreateApiKeyResponseErrorType.RateLimited,
                 "server_error" => CreateApiKeyResponseErrorType.ServerError,
-                "not_implemented" => CreateApiKeyResponseErrorType.NotImplemented,
+                "validation_error" => CreateApiKeyResponseErrorType.ValidationError,
                 _ => null,
             };
         }

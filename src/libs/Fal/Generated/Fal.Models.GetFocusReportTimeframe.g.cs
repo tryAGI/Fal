@@ -12,7 +12,7 @@ namespace Fal
         /// <summary>
         /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
         /// </summary>
-        Minute,
+        Day,
         /// <summary>
         /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
         /// </summary>
@@ -20,15 +20,15 @@ namespace Fal
         /// <summary>
         /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
         /// </summary>
-        Day,
-        /// <summary>
-        /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
-        /// </summary>
-        Week,
+        Minute,
         /// <summary>
         /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
         /// </summary>
         Month,
+        /// <summary>
+        /// minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).
+        /// </summary>
+        Week,
     }
 
     /// <summary>
@@ -43,11 +43,11 @@ namespace Fal
         {
             return value switch
             {
-                GetFocusReportTimeframe.Minute => "minute",
-                GetFocusReportTimeframe.Hour => "hour",
                 GetFocusReportTimeframe.Day => "day",
-                GetFocusReportTimeframe.Week => "week",
+                GetFocusReportTimeframe.Hour => "hour",
+                GetFocusReportTimeframe.Minute => "minute",
                 GetFocusReportTimeframe.Month => "month",
+                GetFocusReportTimeframe.Week => "week",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -58,11 +58,11 @@ namespace Fal
         {
             return value switch
             {
-                "minute" => GetFocusReportTimeframe.Minute,
-                "hour" => GetFocusReportTimeframe.Hour,
                 "day" => GetFocusReportTimeframe.Day,
-                "week" => GetFocusReportTimeframe.Week,
+                "hour" => GetFocusReportTimeframe.Hour,
+                "minute" => GetFocusReportTimeframe.Minute,
                 "month" => GetFocusReportTimeframe.Month,
+                "week" => GetFocusReportTimeframe.Week,
                 _ => null,
             };
         }

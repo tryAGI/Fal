@@ -12,10 +12,6 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Ready,
-        /// <summary>
-        /// 
-        /// </summary>
         Init,
         /// <summary>
         /// 
@@ -25,6 +21,10 @@ namespace Fal
         /// 
         /// </summary>
         Provisioning,
+        /// <summary>
+        /// 
+        /// </summary>
+        Ready,
         /// <summary>
         /// 
         /// </summary>
@@ -47,10 +47,10 @@ namespace Fal
         {
             return value switch
             {
-                ListComputeInstancesResponseInstanceStatus.Ready => "ready",
                 ListComputeInstancesResponseInstanceStatus.Init => "init",
                 ListComputeInstancesResponseInstanceStatus.Pending => "pending",
                 ListComputeInstancesResponseInstanceStatus.Provisioning => "provisioning",
+                ListComputeInstancesResponseInstanceStatus.Ready => "ready",
                 ListComputeInstancesResponseInstanceStatus.Stopped => "stopped",
                 ListComputeInstancesResponseInstanceStatus.Unknown => "unknown",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -63,10 +63,10 @@ namespace Fal
         {
             return value switch
             {
-                "ready" => ListComputeInstancesResponseInstanceStatus.Ready,
                 "init" => ListComputeInstancesResponseInstanceStatus.Init,
                 "pending" => ListComputeInstancesResponseInstanceStatus.Pending,
                 "provisioning" => ListComputeInstancesResponseInstanceStatus.Provisioning,
+                "ready" => ListComputeInstancesResponseInstanceStatus.Ready,
                 "stopped" => ListComputeInstancesResponseInstanceStatus.Stopped,
                 "unknown" => ListComputeInstancesResponseInstanceStatus.Unknown,
                 _ => null,

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ListApiKeysResponseErrorType3.AuthorizationError => "authorization_error",
-                ListApiKeysResponseErrorType3.ValidationError => "validation_error",
                 ListApiKeysResponseErrorType3.NotFound => "not_found",
+                ListApiKeysResponseErrorType3.NotImplemented => "not_implemented",
                 ListApiKeysResponseErrorType3.RateLimited => "rate_limited",
                 ListApiKeysResponseErrorType3.ServerError => "server_error",
-                ListApiKeysResponseErrorType3.NotImplemented => "not_implemented",
+                ListApiKeysResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ListApiKeysResponseErrorType3.AuthorizationError,
-                "validation_error" => ListApiKeysResponseErrorType3.ValidationError,
                 "not_found" => ListApiKeysResponseErrorType3.NotFound,
+                "not_implemented" => ListApiKeysResponseErrorType3.NotImplemented,
                 "rate_limited" => ListApiKeysResponseErrorType3.RateLimited,
                 "server_error" => ListApiKeysResponseErrorType3.ServerError,
-                "not_implemented" => ListApiKeysResponseErrorType3.NotImplemented,
+                "validation_error" => ListApiKeysResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

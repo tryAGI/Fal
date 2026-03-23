@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessFlushAppQueueResponseErrorType4.AuthorizationError => "authorization_error",
-                ServerlessFlushAppQueueResponseErrorType4.ValidationError => "validation_error",
                 ServerlessFlushAppQueueResponseErrorType4.NotFound => "not_found",
+                ServerlessFlushAppQueueResponseErrorType4.NotImplemented => "not_implemented",
                 ServerlessFlushAppQueueResponseErrorType4.RateLimited => "rate_limited",
                 ServerlessFlushAppQueueResponseErrorType4.ServerError => "server_error",
-                ServerlessFlushAppQueueResponseErrorType4.NotImplemented => "not_implemented",
+                ServerlessFlushAppQueueResponseErrorType4.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessFlushAppQueueResponseErrorType4.AuthorizationError,
-                "validation_error" => ServerlessFlushAppQueueResponseErrorType4.ValidationError,
                 "not_found" => ServerlessFlushAppQueueResponseErrorType4.NotFound,
+                "not_implemented" => ServerlessFlushAppQueueResponseErrorType4.NotImplemented,
                 "rate_limited" => ServerlessFlushAppQueueResponseErrorType4.RateLimited,
                 "server_error" => ServerlessFlushAppQueueResponseErrorType4.ServerError,
-                "not_implemented" => ServerlessFlushAppQueueResponseErrorType4.NotImplemented,
+                "validation_error" => ServerlessFlushAppQueueResponseErrorType4.ValidationError,
                 _ => null,
             };
         }

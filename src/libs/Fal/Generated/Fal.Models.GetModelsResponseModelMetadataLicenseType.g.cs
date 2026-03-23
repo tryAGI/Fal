@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Research,
+        Private,
         /// <summary>
         /// 
         /// </summary>
-        Private,
+        Research,
     }
 
     /// <summary>
@@ -35,8 +35,8 @@ namespace Fal
             return value switch
             {
                 GetModelsResponseModelMetadataLicenseType.Commercial => "commercial",
-                GetModelsResponseModelMetadataLicenseType.Research => "research",
                 GetModelsResponseModelMetadataLicenseType.Private => "private",
+                GetModelsResponseModelMetadataLicenseType.Research => "research",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -48,8 +48,8 @@ namespace Fal
             return value switch
             {
                 "commercial" => GetModelsResponseModelMetadataLicenseType.Commercial,
-                "research" => GetModelsResponseModelMetadataLicenseType.Research,
                 "private" => GetModelsResponseModelMetadataLicenseType.Private,
+                "research" => GetModelsResponseModelMetadataLicenseType.Research,
                 _ => null,
             };
         }

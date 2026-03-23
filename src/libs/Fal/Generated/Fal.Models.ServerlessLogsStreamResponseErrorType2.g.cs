@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessLogsStreamResponseErrorType2.AuthorizationError => "authorization_error",
-                ServerlessLogsStreamResponseErrorType2.ValidationError => "validation_error",
                 ServerlessLogsStreamResponseErrorType2.NotFound => "not_found",
+                ServerlessLogsStreamResponseErrorType2.NotImplemented => "not_implemented",
                 ServerlessLogsStreamResponseErrorType2.RateLimited => "rate_limited",
                 ServerlessLogsStreamResponseErrorType2.ServerError => "server_error",
-                ServerlessLogsStreamResponseErrorType2.NotImplemented => "not_implemented",
+                ServerlessLogsStreamResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessLogsStreamResponseErrorType2.AuthorizationError,
-                "validation_error" => ServerlessLogsStreamResponseErrorType2.ValidationError,
                 "not_found" => ServerlessLogsStreamResponseErrorType2.NotFound,
+                "not_implemented" => ServerlessLogsStreamResponseErrorType2.NotImplemented,
                 "rate_limited" => ServerlessLogsStreamResponseErrorType2.RateLimited,
                 "server_error" => ServerlessLogsStreamResponseErrorType2.ServerError,
-                "not_implemented" => ServerlessLogsStreamResponseErrorType2.NotImplemented,
+                "validation_error" => ServerlessLogsStreamResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

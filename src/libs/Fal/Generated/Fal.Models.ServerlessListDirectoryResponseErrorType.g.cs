@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessListDirectoryResponseErrorType.AuthorizationError => "authorization_error",
-                ServerlessListDirectoryResponseErrorType.ValidationError => "validation_error",
                 ServerlessListDirectoryResponseErrorType.NotFound => "not_found",
+                ServerlessListDirectoryResponseErrorType.NotImplemented => "not_implemented",
                 ServerlessListDirectoryResponseErrorType.RateLimited => "rate_limited",
                 ServerlessListDirectoryResponseErrorType.ServerError => "server_error",
-                ServerlessListDirectoryResponseErrorType.NotImplemented => "not_implemented",
+                ServerlessListDirectoryResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessListDirectoryResponseErrorType.AuthorizationError,
-                "validation_error" => ServerlessListDirectoryResponseErrorType.ValidationError,
                 "not_found" => ServerlessListDirectoryResponseErrorType.NotFound,
+                "not_implemented" => ServerlessListDirectoryResponseErrorType.NotImplemented,
                 "rate_limited" => ServerlessListDirectoryResponseErrorType.RateLimited,
                 "server_error" => ServerlessListDirectoryResponseErrorType.ServerError,
-                "not_implemented" => ServerlessListDirectoryResponseErrorType.NotImplemented,
+                "validation_error" => ServerlessListDirectoryResponseErrorType.ValidationError,
                 _ => null,
             };
         }

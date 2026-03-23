@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessGetAppQueueInfoResponseErrorType5.AuthorizationError => "authorization_error",
-                ServerlessGetAppQueueInfoResponseErrorType5.ValidationError => "validation_error",
                 ServerlessGetAppQueueInfoResponseErrorType5.NotFound => "not_found",
+                ServerlessGetAppQueueInfoResponseErrorType5.NotImplemented => "not_implemented",
                 ServerlessGetAppQueueInfoResponseErrorType5.RateLimited => "rate_limited",
                 ServerlessGetAppQueueInfoResponseErrorType5.ServerError => "server_error",
-                ServerlessGetAppQueueInfoResponseErrorType5.NotImplemented => "not_implemented",
+                ServerlessGetAppQueueInfoResponseErrorType5.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessGetAppQueueInfoResponseErrorType5.AuthorizationError,
-                "validation_error" => ServerlessGetAppQueueInfoResponseErrorType5.ValidationError,
                 "not_found" => ServerlessGetAppQueueInfoResponseErrorType5.NotFound,
+                "not_implemented" => ServerlessGetAppQueueInfoResponseErrorType5.NotImplemented,
                 "rate_limited" => ServerlessGetAppQueueInfoResponseErrorType5.RateLimited,
                 "server_error" => ServerlessGetAppQueueInfoResponseErrorType5.ServerError,
-                "not_implemented" => ServerlessGetAppQueueInfoResponseErrorType5.NotImplemented,
+                "validation_error" => ServerlessGetAppQueueInfoResponseErrorType5.ValidationError,
                 _ => null,
             };
         }

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ListRequestsByEndpointResponseErrorType.AuthorizationError => "authorization_error",
-                ListRequestsByEndpointResponseErrorType.ValidationError => "validation_error",
                 ListRequestsByEndpointResponseErrorType.NotFound => "not_found",
+                ListRequestsByEndpointResponseErrorType.NotImplemented => "not_implemented",
                 ListRequestsByEndpointResponseErrorType.RateLimited => "rate_limited",
                 ListRequestsByEndpointResponseErrorType.ServerError => "server_error",
-                ListRequestsByEndpointResponseErrorType.NotImplemented => "not_implemented",
+                ListRequestsByEndpointResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ListRequestsByEndpointResponseErrorType.AuthorizationError,
-                "validation_error" => ListRequestsByEndpointResponseErrorType.ValidationError,
                 "not_found" => ListRequestsByEndpointResponseErrorType.NotFound,
+                "not_implemented" => ListRequestsByEndpointResponseErrorType.NotImplemented,
                 "rate_limited" => ListRequestsByEndpointResponseErrorType.RateLimited,
                 "server_error" => ListRequestsByEndpointResponseErrorType.ServerError,
-                "not_implemented" => ListRequestsByEndpointResponseErrorType.NotImplemented,
+                "validation_error" => ListRequestsByEndpointResponseErrorType.ValidationError,
                 _ => null,
             };
         }

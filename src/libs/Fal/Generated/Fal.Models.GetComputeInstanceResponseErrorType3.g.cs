@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetComputeInstanceResponseErrorType3.AuthorizationError => "authorization_error",
-                GetComputeInstanceResponseErrorType3.ValidationError => "validation_error",
                 GetComputeInstanceResponseErrorType3.NotFound => "not_found",
+                GetComputeInstanceResponseErrorType3.NotImplemented => "not_implemented",
                 GetComputeInstanceResponseErrorType3.RateLimited => "rate_limited",
                 GetComputeInstanceResponseErrorType3.ServerError => "server_error",
-                GetComputeInstanceResponseErrorType3.NotImplemented => "not_implemented",
+                GetComputeInstanceResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetComputeInstanceResponseErrorType3.AuthorizationError,
-                "validation_error" => GetComputeInstanceResponseErrorType3.ValidationError,
                 "not_found" => GetComputeInstanceResponseErrorType3.NotFound,
+                "not_implemented" => GetComputeInstanceResponseErrorType3.NotImplemented,
                 "rate_limited" => GetComputeInstanceResponseErrorType3.RateLimited,
                 "server_error" => GetComputeInstanceResponseErrorType3.ServerError,
-                "not_implemented" => GetComputeInstanceResponseErrorType3.NotImplemented,
+                "validation_error" => GetComputeInstanceResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

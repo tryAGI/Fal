@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessListRootResponseErrorType.AuthorizationError => "authorization_error",
-                ServerlessListRootResponseErrorType.ValidationError => "validation_error",
                 ServerlessListRootResponseErrorType.NotFound => "not_found",
+                ServerlessListRootResponseErrorType.NotImplemented => "not_implemented",
                 ServerlessListRootResponseErrorType.RateLimited => "rate_limited",
                 ServerlessListRootResponseErrorType.ServerError => "server_error",
-                ServerlessListRootResponseErrorType.NotImplemented => "not_implemented",
+                ServerlessListRootResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessListRootResponseErrorType.AuthorizationError,
-                "validation_error" => ServerlessListRootResponseErrorType.ValidationError,
                 "not_found" => ServerlessListRootResponseErrorType.NotFound,
+                "not_implemented" => ServerlessListRootResponseErrorType.NotImplemented,
                 "rate_limited" => ServerlessListRootResponseErrorType.RateLimited,
                 "server_error" => ServerlessListRootResponseErrorType.ServerError,
-                "not_implemented" => ServerlessListRootResponseErrorType.NotImplemented,
+                "validation_error" => ServerlessListRootResponseErrorType.ValidationError,
                 _ => null,
             };
         }

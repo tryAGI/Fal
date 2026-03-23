@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessListRequestsByEndpointResponseErrorType4.AuthorizationError => "authorization_error",
-                ServerlessListRequestsByEndpointResponseErrorType4.ValidationError => "validation_error",
                 ServerlessListRequestsByEndpointResponseErrorType4.NotFound => "not_found",
+                ServerlessListRequestsByEndpointResponseErrorType4.NotImplemented => "not_implemented",
                 ServerlessListRequestsByEndpointResponseErrorType4.RateLimited => "rate_limited",
                 ServerlessListRequestsByEndpointResponseErrorType4.ServerError => "server_error",
-                ServerlessListRequestsByEndpointResponseErrorType4.NotImplemented => "not_implemented",
+                ServerlessListRequestsByEndpointResponseErrorType4.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessListRequestsByEndpointResponseErrorType4.AuthorizationError,
-                "validation_error" => ServerlessListRequestsByEndpointResponseErrorType4.ValidationError,
                 "not_found" => ServerlessListRequestsByEndpointResponseErrorType4.NotFound,
+                "not_implemented" => ServerlessListRequestsByEndpointResponseErrorType4.NotImplemented,
                 "rate_limited" => ServerlessListRequestsByEndpointResponseErrorType4.RateLimited,
                 "server_error" => ServerlessListRequestsByEndpointResponseErrorType4.ServerError,
-                "not_implemented" => ServerlessListRequestsByEndpointResponseErrorType4.NotImplemented,
+                "validation_error" => ServerlessListRequestsByEndpointResponseErrorType4.ValidationError,
                 _ => null,
             };
         }

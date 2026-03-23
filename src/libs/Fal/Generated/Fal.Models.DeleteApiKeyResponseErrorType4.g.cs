@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 DeleteApiKeyResponseErrorType4.AuthorizationError => "authorization_error",
-                DeleteApiKeyResponseErrorType4.ValidationError => "validation_error",
                 DeleteApiKeyResponseErrorType4.NotFound => "not_found",
+                DeleteApiKeyResponseErrorType4.NotImplemented => "not_implemented",
                 DeleteApiKeyResponseErrorType4.RateLimited => "rate_limited",
                 DeleteApiKeyResponseErrorType4.ServerError => "server_error",
-                DeleteApiKeyResponseErrorType4.NotImplemented => "not_implemented",
+                DeleteApiKeyResponseErrorType4.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => DeleteApiKeyResponseErrorType4.AuthorizationError,
-                "validation_error" => DeleteApiKeyResponseErrorType4.ValidationError,
                 "not_found" => DeleteApiKeyResponseErrorType4.NotFound,
+                "not_implemented" => DeleteApiKeyResponseErrorType4.NotImplemented,
                 "rate_limited" => DeleteApiKeyResponseErrorType4.RateLimited,
                 "server_error" => DeleteApiKeyResponseErrorType4.ServerError,
-                "not_implemented" => DeleteApiKeyResponseErrorType4.NotImplemented,
+                "validation_error" => DeleteApiKeyResponseErrorType4.ValidationError,
                 _ => null,
             };
         }

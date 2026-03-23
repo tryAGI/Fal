@@ -11,11 +11,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Ready,
+        Pending,
         /// <summary>
         /// 
         /// </summary>
-        Pending,
+        Ready,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Fal
         {
             return value switch
             {
-                GetModelsResponseModelEnterpriseStatusEnum.Ready => "ready",
                 GetModelsResponseModelEnterpriseStatusEnum.Pending => "pending",
+                GetModelsResponseModelEnterpriseStatusEnum.Ready => "ready",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Fal
         {
             return value switch
             {
-                "ready" => GetModelsResponseModelEnterpriseStatusEnum.Ready,
                 "pending" => GetModelsResponseModelEnterpriseStatusEnum.Pending,
+                "ready" => GetModelsResponseModelEnterpriseStatusEnum.Ready,
                 _ => null,
             };
         }
