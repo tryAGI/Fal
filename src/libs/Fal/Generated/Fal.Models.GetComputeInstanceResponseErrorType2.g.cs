@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetComputeInstanceResponseErrorType2.AuthorizationError => "authorization_error",
-                GetComputeInstanceResponseErrorType2.ValidationError => "validation_error",
                 GetComputeInstanceResponseErrorType2.NotFound => "not_found",
+                GetComputeInstanceResponseErrorType2.NotImplemented => "not_implemented",
                 GetComputeInstanceResponseErrorType2.RateLimited => "rate_limited",
                 GetComputeInstanceResponseErrorType2.ServerError => "server_error",
-                GetComputeInstanceResponseErrorType2.NotImplemented => "not_implemented",
+                GetComputeInstanceResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetComputeInstanceResponseErrorType2.AuthorizationError,
-                "validation_error" => GetComputeInstanceResponseErrorType2.ValidationError,
                 "not_found" => GetComputeInstanceResponseErrorType2.NotFound,
+                "not_implemented" => GetComputeInstanceResponseErrorType2.NotImplemented,
                 "rate_limited" => GetComputeInstanceResponseErrorType2.RateLimited,
                 "server_error" => GetComputeInstanceResponseErrorType2.ServerError,
-                "not_implemented" => GetComputeInstanceResponseErrorType2.NotImplemented,
+                "validation_error" => GetComputeInstanceResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

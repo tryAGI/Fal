@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessUploadLocalFileResponseErrorType3.AuthorizationError => "authorization_error",
-                ServerlessUploadLocalFileResponseErrorType3.ValidationError => "validation_error",
                 ServerlessUploadLocalFileResponseErrorType3.NotFound => "not_found",
+                ServerlessUploadLocalFileResponseErrorType3.NotImplemented => "not_implemented",
                 ServerlessUploadLocalFileResponseErrorType3.RateLimited => "rate_limited",
                 ServerlessUploadLocalFileResponseErrorType3.ServerError => "server_error",
-                ServerlessUploadLocalFileResponseErrorType3.NotImplemented => "not_implemented",
+                ServerlessUploadLocalFileResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessUploadLocalFileResponseErrorType3.AuthorizationError,
-                "validation_error" => ServerlessUploadLocalFileResponseErrorType3.ValidationError,
                 "not_found" => ServerlessUploadLocalFileResponseErrorType3.NotFound,
+                "not_implemented" => ServerlessUploadLocalFileResponseErrorType3.NotImplemented,
                 "rate_limited" => ServerlessUploadLocalFileResponseErrorType3.RateLimited,
                 "server_error" => ServerlessUploadLocalFileResponseErrorType3.ServerError,
-                "not_implemented" => ServerlessUploadLocalFileResponseErrorType3.NotImplemented,
+                "validation_error" => ServerlessUploadLocalFileResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

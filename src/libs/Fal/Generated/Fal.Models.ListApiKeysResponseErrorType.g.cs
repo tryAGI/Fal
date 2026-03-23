@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ListApiKeysResponseErrorType.AuthorizationError => "authorization_error",
-                ListApiKeysResponseErrorType.ValidationError => "validation_error",
                 ListApiKeysResponseErrorType.NotFound => "not_found",
+                ListApiKeysResponseErrorType.NotImplemented => "not_implemented",
                 ListApiKeysResponseErrorType.RateLimited => "rate_limited",
                 ListApiKeysResponseErrorType.ServerError => "server_error",
-                ListApiKeysResponseErrorType.NotImplemented => "not_implemented",
+                ListApiKeysResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ListApiKeysResponseErrorType.AuthorizationError,
-                "validation_error" => ListApiKeysResponseErrorType.ValidationError,
                 "not_found" => ListApiKeysResponseErrorType.NotFound,
+                "not_implemented" => ListApiKeysResponseErrorType.NotImplemented,
                 "rate_limited" => ListApiKeysResponseErrorType.RateLimited,
                 "server_error" => ListApiKeysResponseErrorType.ServerError,
-                "not_implemented" => ListApiKeysResponseErrorType.NotImplemented,
+                "validation_error" => ListApiKeysResponseErrorType.ValidationError,
                 _ => null,
             };
         }

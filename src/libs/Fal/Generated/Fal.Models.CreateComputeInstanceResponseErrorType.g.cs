@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 CreateComputeInstanceResponseErrorType.AuthorizationError => "authorization_error",
-                CreateComputeInstanceResponseErrorType.ValidationError => "validation_error",
                 CreateComputeInstanceResponseErrorType.NotFound => "not_found",
+                CreateComputeInstanceResponseErrorType.NotImplemented => "not_implemented",
                 CreateComputeInstanceResponseErrorType.RateLimited => "rate_limited",
                 CreateComputeInstanceResponseErrorType.ServerError => "server_error",
-                CreateComputeInstanceResponseErrorType.NotImplemented => "not_implemented",
+                CreateComputeInstanceResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => CreateComputeInstanceResponseErrorType.AuthorizationError,
-                "validation_error" => CreateComputeInstanceResponseErrorType.ValidationError,
                 "not_found" => CreateComputeInstanceResponseErrorType.NotFound,
+                "not_implemented" => CreateComputeInstanceResponseErrorType.NotImplemented,
                 "rate_limited" => CreateComputeInstanceResponseErrorType.RateLimited,
                 "server_error" => CreateComputeInstanceResponseErrorType.ServerError,
-                "not_implemented" => CreateComputeInstanceResponseErrorType.NotImplemented,
+                "validation_error" => CreateComputeInstanceResponseErrorType.ValidationError,
                 _ => null,
             };
         }

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetUsageResponseErrorType5.AuthorizationError => "authorization_error",
-                GetUsageResponseErrorType5.ValidationError => "validation_error",
                 GetUsageResponseErrorType5.NotFound => "not_found",
+                GetUsageResponseErrorType5.NotImplemented => "not_implemented",
                 GetUsageResponseErrorType5.RateLimited => "rate_limited",
                 GetUsageResponseErrorType5.ServerError => "server_error",
-                GetUsageResponseErrorType5.NotImplemented => "not_implemented",
+                GetUsageResponseErrorType5.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetUsageResponseErrorType5.AuthorizationError,
-                "validation_error" => GetUsageResponseErrorType5.ValidationError,
                 "not_found" => GetUsageResponseErrorType5.NotFound,
+                "not_implemented" => GetUsageResponseErrorType5.NotImplemented,
                 "rate_limited" => GetUsageResponseErrorType5.RateLimited,
                 "server_error" => GetUsageResponseErrorType5.ServerError,
-                "not_implemented" => GetUsageResponseErrorType5.NotImplemented,
+                "validation_error" => GetUsageResponseErrorType5.ValidationError,
                 _ => null,
             };
         }

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 DeleteComputeInstanceResponseErrorType5.AuthorizationError => "authorization_error",
-                DeleteComputeInstanceResponseErrorType5.ValidationError => "validation_error",
                 DeleteComputeInstanceResponseErrorType5.NotFound => "not_found",
+                DeleteComputeInstanceResponseErrorType5.NotImplemented => "not_implemented",
                 DeleteComputeInstanceResponseErrorType5.RateLimited => "rate_limited",
                 DeleteComputeInstanceResponseErrorType5.ServerError => "server_error",
-                DeleteComputeInstanceResponseErrorType5.NotImplemented => "not_implemented",
+                DeleteComputeInstanceResponseErrorType5.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => DeleteComputeInstanceResponseErrorType5.AuthorizationError,
-                "validation_error" => DeleteComputeInstanceResponseErrorType5.ValidationError,
                 "not_found" => DeleteComputeInstanceResponseErrorType5.NotFound,
+                "not_implemented" => DeleteComputeInstanceResponseErrorType5.NotImplemented,
                 "rate_limited" => DeleteComputeInstanceResponseErrorType5.RateLimited,
                 "server_error" => DeleteComputeInstanceResponseErrorType5.ServerError,
-                "not_implemented" => DeleteComputeInstanceResponseErrorType5.NotImplemented,
+                "validation_error" => DeleteComputeInstanceResponseErrorType5.ValidationError,
                 _ => null,
             };
         }

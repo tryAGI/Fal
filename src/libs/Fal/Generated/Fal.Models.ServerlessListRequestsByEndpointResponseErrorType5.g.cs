@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessListRequestsByEndpointResponseErrorType5.AuthorizationError => "authorization_error",
-                ServerlessListRequestsByEndpointResponseErrorType5.ValidationError => "validation_error",
                 ServerlessListRequestsByEndpointResponseErrorType5.NotFound => "not_found",
+                ServerlessListRequestsByEndpointResponseErrorType5.NotImplemented => "not_implemented",
                 ServerlessListRequestsByEndpointResponseErrorType5.RateLimited => "rate_limited",
                 ServerlessListRequestsByEndpointResponseErrorType5.ServerError => "server_error",
-                ServerlessListRequestsByEndpointResponseErrorType5.NotImplemented => "not_implemented",
+                ServerlessListRequestsByEndpointResponseErrorType5.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessListRequestsByEndpointResponseErrorType5.AuthorizationError,
-                "validation_error" => ServerlessListRequestsByEndpointResponseErrorType5.ValidationError,
                 "not_found" => ServerlessListRequestsByEndpointResponseErrorType5.NotFound,
+                "not_implemented" => ServerlessListRequestsByEndpointResponseErrorType5.NotImplemented,
                 "rate_limited" => ServerlessListRequestsByEndpointResponseErrorType5.RateLimited,
                 "server_error" => ServerlessListRequestsByEndpointResponseErrorType5.ServerError,
-                "not_implemented" => ServerlessListRequestsByEndpointResponseErrorType5.NotImplemented,
+                "validation_error" => ServerlessListRequestsByEndpointResponseErrorType5.ValidationError,
                 _ => null,
             };
         }

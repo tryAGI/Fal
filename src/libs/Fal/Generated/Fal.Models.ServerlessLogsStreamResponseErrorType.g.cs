@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessLogsStreamResponseErrorType.AuthorizationError => "authorization_error",
-                ServerlessLogsStreamResponseErrorType.ValidationError => "validation_error",
                 ServerlessLogsStreamResponseErrorType.NotFound => "not_found",
+                ServerlessLogsStreamResponseErrorType.NotImplemented => "not_implemented",
                 ServerlessLogsStreamResponseErrorType.RateLimited => "rate_limited",
                 ServerlessLogsStreamResponseErrorType.ServerError => "server_error",
-                ServerlessLogsStreamResponseErrorType.NotImplemented => "not_implemented",
+                ServerlessLogsStreamResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessLogsStreamResponseErrorType.AuthorizationError,
-                "validation_error" => ServerlessLogsStreamResponseErrorType.ValidationError,
                 "not_found" => ServerlessLogsStreamResponseErrorType.NotFound,
+                "not_implemented" => ServerlessLogsStreamResponseErrorType.NotImplemented,
                 "rate_limited" => ServerlessLogsStreamResponseErrorType.RateLimited,
                 "server_error" => ServerlessLogsStreamResponseErrorType.ServerError,
-                "not_implemented" => ServerlessLogsStreamResponseErrorType.NotImplemented,
+                "validation_error" => ServerlessLogsStreamResponseErrorType.ValidationError,
                 _ => null,
             };
         }

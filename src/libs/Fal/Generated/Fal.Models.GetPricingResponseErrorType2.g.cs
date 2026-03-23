@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetPricingResponseErrorType2.AuthorizationError => "authorization_error",
-                GetPricingResponseErrorType2.ValidationError => "validation_error",
                 GetPricingResponseErrorType2.NotFound => "not_found",
+                GetPricingResponseErrorType2.NotImplemented => "not_implemented",
                 GetPricingResponseErrorType2.RateLimited => "rate_limited",
                 GetPricingResponseErrorType2.ServerError => "server_error",
-                GetPricingResponseErrorType2.NotImplemented => "not_implemented",
+                GetPricingResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetPricingResponseErrorType2.AuthorizationError,
-                "validation_error" => GetPricingResponseErrorType2.ValidationError,
                 "not_found" => GetPricingResponseErrorType2.NotFound,
+                "not_implemented" => GetPricingResponseErrorType2.NotImplemented,
                 "rate_limited" => GetPricingResponseErrorType2.RateLimited,
                 "server_error" => GetPricingResponseErrorType2.ServerError,
-                "not_implemented" => GetPricingResponseErrorType2.NotImplemented,
+                "validation_error" => GetPricingResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

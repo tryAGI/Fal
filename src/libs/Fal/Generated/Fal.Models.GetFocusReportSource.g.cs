@@ -12,11 +12,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Invoice,
+        Estimate,
         /// <summary>
         /// 
         /// </summary>
-        Estimate,
+        Invoice,
     }
 
     /// <summary>
@@ -31,8 +31,8 @@ namespace Fal
         {
             return value switch
             {
-                GetFocusReportSource.Invoice => "invoice",
                 GetFocusReportSource.Estimate => "estimate",
+                GetFocusReportSource.Invoice => "invoice",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -43,8 +43,8 @@ namespace Fal
         {
             return value switch
             {
-                "invoice" => GetFocusReportSource.Invoice,
                 "estimate" => GetFocusReportSource.Estimate,
+                "invoice" => GetFocusReportSource.Invoice,
                 _ => null,
             };
         }

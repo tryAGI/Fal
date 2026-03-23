@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetModelsResponseErrorType3.AuthorizationError => "authorization_error",
-                GetModelsResponseErrorType3.ValidationError => "validation_error",
                 GetModelsResponseErrorType3.NotFound => "not_found",
+                GetModelsResponseErrorType3.NotImplemented => "not_implemented",
                 GetModelsResponseErrorType3.RateLimited => "rate_limited",
                 GetModelsResponseErrorType3.ServerError => "server_error",
-                GetModelsResponseErrorType3.NotImplemented => "not_implemented",
+                GetModelsResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetModelsResponseErrorType3.AuthorizationError,
-                "validation_error" => GetModelsResponseErrorType3.ValidationError,
                 "not_found" => GetModelsResponseErrorType3.NotFound,
+                "not_implemented" => GetModelsResponseErrorType3.NotImplemented,
                 "rate_limited" => GetModelsResponseErrorType3.RateLimited,
                 "server_error" => GetModelsResponseErrorType3.ServerError,
-                "not_implemented" => GetModelsResponseErrorType3.NotImplemented,
+                "validation_error" => GetModelsResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

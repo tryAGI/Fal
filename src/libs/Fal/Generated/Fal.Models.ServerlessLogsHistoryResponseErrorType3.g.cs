@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessLogsHistoryResponseErrorType3.AuthorizationError => "authorization_error",
-                ServerlessLogsHistoryResponseErrorType3.ValidationError => "validation_error",
                 ServerlessLogsHistoryResponseErrorType3.NotFound => "not_found",
+                ServerlessLogsHistoryResponseErrorType3.NotImplemented => "not_implemented",
                 ServerlessLogsHistoryResponseErrorType3.RateLimited => "rate_limited",
                 ServerlessLogsHistoryResponseErrorType3.ServerError => "server_error",
-                ServerlessLogsHistoryResponseErrorType3.NotImplemented => "not_implemented",
+                ServerlessLogsHistoryResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessLogsHistoryResponseErrorType3.AuthorizationError,
-                "validation_error" => ServerlessLogsHistoryResponseErrorType3.ValidationError,
                 "not_found" => ServerlessLogsHistoryResponseErrorType3.NotFound,
+                "not_implemented" => ServerlessLogsHistoryResponseErrorType3.NotImplemented,
                 "rate_limited" => ServerlessLogsHistoryResponseErrorType3.RateLimited,
                 "server_error" => ServerlessLogsHistoryResponseErrorType3.ServerError,
-                "not_implemented" => ServerlessLogsHistoryResponseErrorType3.NotImplemented,
+                "validation_error" => ServerlessLogsHistoryResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

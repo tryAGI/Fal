@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 CreateApiKeyResponseErrorType3.AuthorizationError => "authorization_error",
-                CreateApiKeyResponseErrorType3.ValidationError => "validation_error",
                 CreateApiKeyResponseErrorType3.NotFound => "not_found",
+                CreateApiKeyResponseErrorType3.NotImplemented => "not_implemented",
                 CreateApiKeyResponseErrorType3.RateLimited => "rate_limited",
                 CreateApiKeyResponseErrorType3.ServerError => "server_error",
-                CreateApiKeyResponseErrorType3.NotImplemented => "not_implemented",
+                CreateApiKeyResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => CreateApiKeyResponseErrorType3.AuthorizationError,
-                "validation_error" => CreateApiKeyResponseErrorType3.ValidationError,
                 "not_found" => CreateApiKeyResponseErrorType3.NotFound,
+                "not_implemented" => CreateApiKeyResponseErrorType3.NotImplemented,
                 "rate_limited" => CreateApiKeyResponseErrorType3.RateLimited,
                 "server_error" => CreateApiKeyResponseErrorType3.ServerError,
-                "not_implemented" => CreateApiKeyResponseErrorType3.NotImplemented,
+                "validation_error" => CreateApiKeyResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

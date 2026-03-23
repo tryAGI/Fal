@@ -12,11 +12,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        GrpcRun,
-        /// <summary>
-        /// 
-        /// </summary>
-        GrpcRegister,
+        Cron,
         /// <summary>
         /// 
         /// </summary>
@@ -24,7 +20,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Cron,
+        GrpcRegister,
+        /// <summary>
+        /// 
+        /// </summary>
+        GrpcRun,
     }
 
     /// <summary>
@@ -39,10 +39,10 @@ namespace Fal
         {
             return value switch
             {
-                ServerlessLogsStreamRunSource.GrpcRun => "grpc-run",
-                ServerlessLogsStreamRunSource.GrpcRegister => "grpc-register",
-                ServerlessLogsStreamRunSource.Gateway => "gateway",
                 ServerlessLogsStreamRunSource.Cron => "cron",
+                ServerlessLogsStreamRunSource.Gateway => "gateway",
+                ServerlessLogsStreamRunSource.GrpcRegister => "grpc-register",
+                ServerlessLogsStreamRunSource.GrpcRun => "grpc-run",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -53,10 +53,10 @@ namespace Fal
         {
             return value switch
             {
-                "grpc-run" => ServerlessLogsStreamRunSource.GrpcRun,
-                "grpc-register" => ServerlessLogsStreamRunSource.GrpcRegister,
-                "gateway" => ServerlessLogsStreamRunSource.Gateway,
                 "cron" => ServerlessLogsStreamRunSource.Cron,
+                "gateway" => ServerlessLogsStreamRunSource.Gateway,
+                "grpc-register" => ServerlessLogsStreamRunSource.GrpcRegister,
+                "grpc-run" => ServerlessLogsStreamRunSource.GrpcRun,
                 _ => null,
             };
         }

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetWorkflowResponseErrorType2.AuthorizationError => "authorization_error",
-                GetWorkflowResponseErrorType2.ValidationError => "validation_error",
                 GetWorkflowResponseErrorType2.NotFound => "not_found",
+                GetWorkflowResponseErrorType2.NotImplemented => "not_implemented",
                 GetWorkflowResponseErrorType2.RateLimited => "rate_limited",
                 GetWorkflowResponseErrorType2.ServerError => "server_error",
-                GetWorkflowResponseErrorType2.NotImplemented => "not_implemented",
+                GetWorkflowResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetWorkflowResponseErrorType2.AuthorizationError,
-                "validation_error" => GetWorkflowResponseErrorType2.ValidationError,
                 "not_found" => GetWorkflowResponseErrorType2.NotFound,
+                "not_implemented" => GetWorkflowResponseErrorType2.NotImplemented,
                 "rate_limited" => GetWorkflowResponseErrorType2.RateLimited,
                 "server_error" => GetWorkflowResponseErrorType2.ServerError,
-                "not_implemented" => GetWorkflowResponseErrorType2.NotImplemented,
+                "validation_error" => GetWorkflowResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

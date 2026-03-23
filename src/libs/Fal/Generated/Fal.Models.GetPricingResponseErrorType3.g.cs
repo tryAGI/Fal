@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetPricingResponseErrorType3.AuthorizationError => "authorization_error",
-                GetPricingResponseErrorType3.ValidationError => "validation_error",
                 GetPricingResponseErrorType3.NotFound => "not_found",
+                GetPricingResponseErrorType3.NotImplemented => "not_implemented",
                 GetPricingResponseErrorType3.RateLimited => "rate_limited",
                 GetPricingResponseErrorType3.ServerError => "server_error",
-                GetPricingResponseErrorType3.NotImplemented => "not_implemented",
+                GetPricingResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetPricingResponseErrorType3.AuthorizationError,
-                "validation_error" => GetPricingResponseErrorType3.ValidationError,
                 "not_found" => GetPricingResponseErrorType3.NotFound,
+                "not_implemented" => GetPricingResponseErrorType3.NotImplemented,
                 "rate_limited" => GetPricingResponseErrorType3.RateLimited,
                 "server_error" => GetPricingResponseErrorType3.ServerError,
-                "not_implemented" => GetPricingResponseErrorType3.NotImplemented,
+                "validation_error" => GetPricingResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

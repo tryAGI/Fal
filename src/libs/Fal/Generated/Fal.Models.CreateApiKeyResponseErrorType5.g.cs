@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 CreateApiKeyResponseErrorType5.AuthorizationError => "authorization_error",
-                CreateApiKeyResponseErrorType5.ValidationError => "validation_error",
                 CreateApiKeyResponseErrorType5.NotFound => "not_found",
+                CreateApiKeyResponseErrorType5.NotImplemented => "not_implemented",
                 CreateApiKeyResponseErrorType5.RateLimited => "rate_limited",
                 CreateApiKeyResponseErrorType5.ServerError => "server_error",
-                CreateApiKeyResponseErrorType5.NotImplemented => "not_implemented",
+                CreateApiKeyResponseErrorType5.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => CreateApiKeyResponseErrorType5.AuthorizationError,
-                "validation_error" => CreateApiKeyResponseErrorType5.ValidationError,
                 "not_found" => CreateApiKeyResponseErrorType5.NotFound,
+                "not_implemented" => CreateApiKeyResponseErrorType5.NotImplemented,
                 "rate_limited" => CreateApiKeyResponseErrorType5.RateLimited,
                 "server_error" => CreateApiKeyResponseErrorType5.ServerError,
-                "not_implemented" => CreateApiKeyResponseErrorType5.NotImplemented,
+                "validation_error" => CreateApiKeyResponseErrorType5.ValidationError,
                 _ => null,
             };
         }

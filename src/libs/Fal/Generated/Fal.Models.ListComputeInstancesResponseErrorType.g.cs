@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ListComputeInstancesResponseErrorType.AuthorizationError => "authorization_error",
-                ListComputeInstancesResponseErrorType.ValidationError => "validation_error",
                 ListComputeInstancesResponseErrorType.NotFound => "not_found",
+                ListComputeInstancesResponseErrorType.NotImplemented => "not_implemented",
                 ListComputeInstancesResponseErrorType.RateLimited => "rate_limited",
                 ListComputeInstancesResponseErrorType.ServerError => "server_error",
-                ListComputeInstancesResponseErrorType.NotImplemented => "not_implemented",
+                ListComputeInstancesResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ListComputeInstancesResponseErrorType.AuthorizationError,
-                "validation_error" => ListComputeInstancesResponseErrorType.ValidationError,
                 "not_found" => ListComputeInstancesResponseErrorType.NotFound,
+                "not_implemented" => ListComputeInstancesResponseErrorType.NotImplemented,
                 "rate_limited" => ListComputeInstancesResponseErrorType.RateLimited,
                 "server_error" => ListComputeInstancesResponseErrorType.ServerError,
-                "not_implemented" => ListComputeInstancesResponseErrorType.NotImplemented,
+                "validation_error" => ListComputeInstancesResponseErrorType.ValidationError,
                 _ => null,
             };
         }

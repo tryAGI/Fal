@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetWorkflowResponseErrorType.AuthorizationError => "authorization_error",
-                GetWorkflowResponseErrorType.ValidationError => "validation_error",
                 GetWorkflowResponseErrorType.NotFound => "not_found",
+                GetWorkflowResponseErrorType.NotImplemented => "not_implemented",
                 GetWorkflowResponseErrorType.RateLimited => "rate_limited",
                 GetWorkflowResponseErrorType.ServerError => "server_error",
-                GetWorkflowResponseErrorType.NotImplemented => "not_implemented",
+                GetWorkflowResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetWorkflowResponseErrorType.AuthorizationError,
-                "validation_error" => GetWorkflowResponseErrorType.ValidationError,
                 "not_found" => GetWorkflowResponseErrorType.NotFound,
+                "not_implemented" => GetWorkflowResponseErrorType.NotImplemented,
                 "rate_limited" => GetWorkflowResponseErrorType.RateLimited,
                 "server_error" => GetWorkflowResponseErrorType.ServerError,
-                "not_implemented" => GetWorkflowResponseErrorType.NotImplemented,
+                "validation_error" => GetWorkflowResponseErrorType.ValidationError,
                 _ => null,
             };
         }

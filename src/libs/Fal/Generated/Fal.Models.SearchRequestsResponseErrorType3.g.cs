@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 SearchRequestsResponseErrorType3.AuthorizationError => "authorization_error",
-                SearchRequestsResponseErrorType3.ValidationError => "validation_error",
                 SearchRequestsResponseErrorType3.NotFound => "not_found",
+                SearchRequestsResponseErrorType3.NotImplemented => "not_implemented",
                 SearchRequestsResponseErrorType3.RateLimited => "rate_limited",
                 SearchRequestsResponseErrorType3.ServerError => "server_error",
-                SearchRequestsResponseErrorType3.NotImplemented => "not_implemented",
+                SearchRequestsResponseErrorType3.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => SearchRequestsResponseErrorType3.AuthorizationError,
-                "validation_error" => SearchRequestsResponseErrorType3.ValidationError,
                 "not_found" => SearchRequestsResponseErrorType3.NotFound,
+                "not_implemented" => SearchRequestsResponseErrorType3.NotImplemented,
                 "rate_limited" => SearchRequestsResponseErrorType3.RateLimited,
                 "server_error" => SearchRequestsResponseErrorType3.ServerError,
-                "not_implemented" => SearchRequestsResponseErrorType3.NotImplemented,
+                "validation_error" => SearchRequestsResponseErrorType3.ValidationError,
                 _ => null,
             };
         }

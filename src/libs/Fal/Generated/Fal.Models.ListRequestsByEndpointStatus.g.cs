@@ -12,11 +12,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Success,
+        Error,
         /// <summary>
         /// 
         /// </summary>
-        Error,
+        Success,
         /// <summary>
         /// 
         /// </summary>
@@ -35,8 +35,8 @@ namespace Fal
         {
             return value switch
             {
-                ListRequestsByEndpointStatus.Success => "success",
                 ListRequestsByEndpointStatus.Error => "error",
+                ListRequestsByEndpointStatus.Success => "success",
                 ListRequestsByEndpointStatus.UserError => "user_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -48,8 +48,8 @@ namespace Fal
         {
             return value switch
             {
-                "success" => ListRequestsByEndpointStatus.Success,
                 "error" => ListRequestsByEndpointStatus.Error,
+                "success" => ListRequestsByEndpointStatus.Success,
                 "user_error" => ListRequestsByEndpointStatus.UserError,
                 _ => null,
             };

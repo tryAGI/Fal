@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessGetAppQueueInfoResponseErrorType2.AuthorizationError => "authorization_error",
-                ServerlessGetAppQueueInfoResponseErrorType2.ValidationError => "validation_error",
                 ServerlessGetAppQueueInfoResponseErrorType2.NotFound => "not_found",
+                ServerlessGetAppQueueInfoResponseErrorType2.NotImplemented => "not_implemented",
                 ServerlessGetAppQueueInfoResponseErrorType2.RateLimited => "rate_limited",
                 ServerlessGetAppQueueInfoResponseErrorType2.ServerError => "server_error",
-                ServerlessGetAppQueueInfoResponseErrorType2.NotImplemented => "not_implemented",
+                ServerlessGetAppQueueInfoResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessGetAppQueueInfoResponseErrorType2.AuthorizationError,
-                "validation_error" => ServerlessGetAppQueueInfoResponseErrorType2.ValidationError,
                 "not_found" => ServerlessGetAppQueueInfoResponseErrorType2.NotFound,
+                "not_implemented" => ServerlessGetAppQueueInfoResponseErrorType2.NotImplemented,
                 "rate_limited" => ServerlessGetAppQueueInfoResponseErrorType2.RateLimited,
                 "server_error" => ServerlessGetAppQueueInfoResponseErrorType2.ServerError,
-                "not_implemented" => ServerlessGetAppQueueInfoResponseErrorType2.NotImplemented,
+                "validation_error" => ServerlessGetAppQueueInfoResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

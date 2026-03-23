@@ -12,11 +12,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Gpu8xH100Sxm5,
+        Gpu1xH100Sxm5,
         /// <summary>
         /// 
         /// </summary>
-        Gpu1xH100Sxm5,
+        Gpu8xH100Sxm5,
     }
 
     /// <summary>
@@ -31,8 +31,8 @@ namespace Fal
         {
             return value switch
             {
-                CreateComputeInstanceRequestInstanceType.Gpu8xH100Sxm5 => "gpu_8x_h100_sxm5",
                 CreateComputeInstanceRequestInstanceType.Gpu1xH100Sxm5 => "gpu_1x_h100_sxm5",
+                CreateComputeInstanceRequestInstanceType.Gpu8xH100Sxm5 => "gpu_8x_h100_sxm5",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -43,8 +43,8 @@ namespace Fal
         {
             return value switch
             {
-                "gpu_8x_h100_sxm5" => CreateComputeInstanceRequestInstanceType.Gpu8xH100Sxm5,
                 "gpu_1x_h100_sxm5" => CreateComputeInstanceRequestInstanceType.Gpu1xH100Sxm5,
+                "gpu_8x_h100_sxm5" => CreateComputeInstanceRequestInstanceType.Gpu8xH100Sxm5,
                 _ => null,
             };
         }

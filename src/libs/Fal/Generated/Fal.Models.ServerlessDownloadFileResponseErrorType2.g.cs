@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ServerlessDownloadFileResponseErrorType2.AuthorizationError => "authorization_error",
-                ServerlessDownloadFileResponseErrorType2.ValidationError => "validation_error",
                 ServerlessDownloadFileResponseErrorType2.NotFound => "not_found",
+                ServerlessDownloadFileResponseErrorType2.NotImplemented => "not_implemented",
                 ServerlessDownloadFileResponseErrorType2.RateLimited => "rate_limited",
                 ServerlessDownloadFileResponseErrorType2.ServerError => "server_error",
-                ServerlessDownloadFileResponseErrorType2.NotImplemented => "not_implemented",
+                ServerlessDownloadFileResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ServerlessDownloadFileResponseErrorType2.AuthorizationError,
-                "validation_error" => ServerlessDownloadFileResponseErrorType2.ValidationError,
                 "not_found" => ServerlessDownloadFileResponseErrorType2.NotFound,
+                "not_implemented" => ServerlessDownloadFileResponseErrorType2.NotImplemented,
                 "rate_limited" => ServerlessDownloadFileResponseErrorType2.RateLimited,
                 "server_error" => ServerlessDownloadFileResponseErrorType2.ServerError,
-                "not_implemented" => ServerlessDownloadFileResponseErrorType2.NotImplemented,
+                "validation_error" => ServerlessDownloadFileResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

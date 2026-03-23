@@ -12,7 +12,15 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        UsWest,
+        EuNorth,
+        /// <summary>
+        /// 
+        /// </summary>
+        EuWest,
+        /// <summary>
+        /// 
+        /// </summary>
+        Other,
         /// <summary>
         /// 
         /// </summary>
@@ -24,15 +32,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        EuNorth,
-        /// <summary>
-        /// 
-        /// </summary>
-        EuWest,
-        /// <summary>
-        /// 
-        /// </summary>
-        Other,
+        UsWest,
     }
 
     /// <summary>
@@ -47,12 +47,12 @@ namespace Fal
         {
             return value switch
             {
-                ListComputeInstancesResponseInstanceRegion.UsWest => "us-west",
-                ListComputeInstancesResponseInstanceRegion.UsCentral => "us-central",
-                ListComputeInstancesResponseInstanceRegion.UsEast => "us-east",
                 ListComputeInstancesResponseInstanceRegion.EuNorth => "eu-north",
                 ListComputeInstancesResponseInstanceRegion.EuWest => "eu-west",
                 ListComputeInstancesResponseInstanceRegion.Other => "other",
+                ListComputeInstancesResponseInstanceRegion.UsCentral => "us-central",
+                ListComputeInstancesResponseInstanceRegion.UsEast => "us-east",
+                ListComputeInstancesResponseInstanceRegion.UsWest => "us-west",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,12 +63,12 @@ namespace Fal
         {
             return value switch
             {
-                "us-west" => ListComputeInstancesResponseInstanceRegion.UsWest,
-                "us-central" => ListComputeInstancesResponseInstanceRegion.UsCentral,
-                "us-east" => ListComputeInstancesResponseInstanceRegion.UsEast,
                 "eu-north" => ListComputeInstancesResponseInstanceRegion.EuNorth,
                 "eu-west" => ListComputeInstancesResponseInstanceRegion.EuWest,
                 "other" => ListComputeInstancesResponseInstanceRegion.Other,
+                "us-central" => ListComputeInstancesResponseInstanceRegion.UsCentral,
+                "us-east" => ListComputeInstancesResponseInstanceRegion.UsEast,
+                "us-west" => ListComputeInstancesResponseInstanceRegion.UsWest,
                 _ => null,
             };
         }

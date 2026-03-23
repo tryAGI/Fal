@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetAccountBillingResponseErrorType2.AuthorizationError => "authorization_error",
-                GetAccountBillingResponseErrorType2.ValidationError => "validation_error",
                 GetAccountBillingResponseErrorType2.NotFound => "not_found",
+                GetAccountBillingResponseErrorType2.NotImplemented => "not_implemented",
                 GetAccountBillingResponseErrorType2.RateLimited => "rate_limited",
                 GetAccountBillingResponseErrorType2.ServerError => "server_error",
-                GetAccountBillingResponseErrorType2.NotImplemented => "not_implemented",
+                GetAccountBillingResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetAccountBillingResponseErrorType2.AuthorizationError,
-                "validation_error" => GetAccountBillingResponseErrorType2.ValidationError,
                 "not_found" => GetAccountBillingResponseErrorType2.NotFound,
+                "not_implemented" => GetAccountBillingResponseErrorType2.NotImplemented,
                 "rate_limited" => GetAccountBillingResponseErrorType2.RateLimited,
                 "server_error" => GetAccountBillingResponseErrorType2.ServerError,
-                "not_implemented" => GetAccountBillingResponseErrorType2.NotImplemented,
+                "validation_error" => GetAccountBillingResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

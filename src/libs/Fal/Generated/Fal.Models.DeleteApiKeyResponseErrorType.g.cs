@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 DeleteApiKeyResponseErrorType.AuthorizationError => "authorization_error",
-                DeleteApiKeyResponseErrorType.ValidationError => "validation_error",
                 DeleteApiKeyResponseErrorType.NotFound => "not_found",
+                DeleteApiKeyResponseErrorType.NotImplemented => "not_implemented",
                 DeleteApiKeyResponseErrorType.RateLimited => "rate_limited",
                 DeleteApiKeyResponseErrorType.ServerError => "server_error",
-                DeleteApiKeyResponseErrorType.NotImplemented => "not_implemented",
+                DeleteApiKeyResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => DeleteApiKeyResponseErrorType.AuthorizationError,
-                "validation_error" => DeleteApiKeyResponseErrorType.ValidationError,
                 "not_found" => DeleteApiKeyResponseErrorType.NotFound,
+                "not_implemented" => DeleteApiKeyResponseErrorType.NotImplemented,
                 "rate_limited" => DeleteApiKeyResponseErrorType.RateLimited,
                 "server_error" => DeleteApiKeyResponseErrorType.ServerError,
-                "not_implemented" => DeleteApiKeyResponseErrorType.NotImplemented,
+                "validation_error" => DeleteApiKeyResponseErrorType.ValidationError,
                 _ => null,
             };
         }

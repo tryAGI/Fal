@@ -13,11 +13,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        EndedAt,
+        Duration,
         /// <summary>
         /// 
         /// </summary>
-        Duration,
+        EndedAt,
     }
 
     /// <summary>
@@ -32,8 +32,8 @@ namespace Fal
         {
             return value switch
             {
-                ListRequestsByEndpointSortBy.EndedAt => "ended_at",
                 ListRequestsByEndpointSortBy.Duration => "duration",
+                ListRequestsByEndpointSortBy.EndedAt => "ended_at",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,8 +44,8 @@ namespace Fal
         {
             return value switch
             {
-                "ended_at" => ListRequestsByEndpointSortBy.EndedAt,
                 "duration" => ListRequestsByEndpointSortBy.Duration,
+                "ended_at" => ListRequestsByEndpointSortBy.EndedAt,
                 _ => null,
             };
         }

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 ListRequestsByEndpointResponseErrorType2.AuthorizationError => "authorization_error",
-                ListRequestsByEndpointResponseErrorType2.ValidationError => "validation_error",
                 ListRequestsByEndpointResponseErrorType2.NotFound => "not_found",
+                ListRequestsByEndpointResponseErrorType2.NotImplemented => "not_implemented",
                 ListRequestsByEndpointResponseErrorType2.RateLimited => "rate_limited",
                 ListRequestsByEndpointResponseErrorType2.ServerError => "server_error",
-                ListRequestsByEndpointResponseErrorType2.NotImplemented => "not_implemented",
+                ListRequestsByEndpointResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => ListRequestsByEndpointResponseErrorType2.AuthorizationError,
-                "validation_error" => ListRequestsByEndpointResponseErrorType2.ValidationError,
                 "not_found" => ListRequestsByEndpointResponseErrorType2.NotFound,
+                "not_implemented" => ListRequestsByEndpointResponseErrorType2.NotImplemented,
                 "rate_limited" => ListRequestsByEndpointResponseErrorType2.RateLimited,
                 "server_error" => ListRequestsByEndpointResponseErrorType2.ServerError,
-                "not_implemented" => ListRequestsByEndpointResponseErrorType2.NotImplemented,
+                "validation_error" => ListRequestsByEndpointResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetAnalyticsResponseErrorType2.AuthorizationError => "authorization_error",
-                GetAnalyticsResponseErrorType2.ValidationError => "validation_error",
                 GetAnalyticsResponseErrorType2.NotFound => "not_found",
+                GetAnalyticsResponseErrorType2.NotImplemented => "not_implemented",
                 GetAnalyticsResponseErrorType2.RateLimited => "rate_limited",
                 GetAnalyticsResponseErrorType2.ServerError => "server_error",
-                GetAnalyticsResponseErrorType2.NotImplemented => "not_implemented",
+                GetAnalyticsResponseErrorType2.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetAnalyticsResponseErrorType2.AuthorizationError,
-                "validation_error" => GetAnalyticsResponseErrorType2.ValidationError,
                 "not_found" => GetAnalyticsResponseErrorType2.NotFound,
+                "not_implemented" => GetAnalyticsResponseErrorType2.NotImplemented,
                 "rate_limited" => GetAnalyticsResponseErrorType2.RateLimited,
                 "server_error" => GetAnalyticsResponseErrorType2.ServerError,
-                "not_implemented" => GetAnalyticsResponseErrorType2.NotImplemented,
+                "validation_error" => GetAnalyticsResponseErrorType2.ValidationError,
                 _ => null,
             };
         }

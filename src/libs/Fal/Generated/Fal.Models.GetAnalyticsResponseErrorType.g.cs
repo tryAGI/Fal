@@ -15,11 +15,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        ValidationError,
+        NotFound,
         /// <summary>
         /// 
         /// </summary>
-        NotFound,
+        NotImplemented,
         /// <summary>
         /// 
         /// </summary>
@@ -31,7 +31,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        NotImplemented,
+        ValidationError,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Fal
             return value switch
             {
                 GetAnalyticsResponseErrorType.AuthorizationError => "authorization_error",
-                GetAnalyticsResponseErrorType.ValidationError => "validation_error",
                 GetAnalyticsResponseErrorType.NotFound => "not_found",
+                GetAnalyticsResponseErrorType.NotImplemented => "not_implemented",
                 GetAnalyticsResponseErrorType.RateLimited => "rate_limited",
                 GetAnalyticsResponseErrorType.ServerError => "server_error",
-                GetAnalyticsResponseErrorType.NotImplemented => "not_implemented",
+                GetAnalyticsResponseErrorType.ValidationError => "validation_error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Fal
             return value switch
             {
                 "authorization_error" => GetAnalyticsResponseErrorType.AuthorizationError,
-                "validation_error" => GetAnalyticsResponseErrorType.ValidationError,
                 "not_found" => GetAnalyticsResponseErrorType.NotFound,
+                "not_implemented" => GetAnalyticsResponseErrorType.NotImplemented,
                 "rate_limited" => GetAnalyticsResponseErrorType.RateLimited,
                 "server_error" => GetAnalyticsResponseErrorType.ServerError,
-                "not_implemented" => GetAnalyticsResponseErrorType.NotImplemented,
+                "validation_error" => GetAnalyticsResponseErrorType.ValidationError,
                 _ => null,
             };
         }
