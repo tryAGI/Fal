@@ -104,8 +104,10 @@ namespace Fal
         public global::Fal.GetModelsResponseModelMetadataGroup? Group { get; set; }
 
         /// <summary>
-        /// Whether the model is highlighted
+        /// Whether the model is highlighted (deprecated, always false)<br/>
+        /// Example: false
         /// </summary>
+        /// <example>false</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("highlighted")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Highlighted { get; set; }
@@ -142,8 +144,10 @@ namespace Fal
         public double? DurationEstimate { get; set; }
 
         /// <summary>
-        /// Whether the model is pinned
+        /// Whether the model is pinned (deprecated, always false)<br/>
+        /// Example: false
         /// </summary>
+        /// <example>false</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("pinned")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Pinned { get; set; }
@@ -200,7 +204,8 @@ namespace Fal
         /// Model group information (optional)
         /// </param>
         /// <param name="highlighted">
-        /// Whether the model is highlighted
+        /// Whether the model is highlighted (deprecated, always false)<br/>
+        /// Example: false
         /// </param>
         /// <param name="kind">
         /// Model kind - inference or training (optional)
@@ -218,7 +223,8 @@ namespace Fal
         /// Estimated duration in minutes (optional)
         /// </param>
         /// <param name="pinned">
-        /// Whether the model is pinned
+        /// Whether the model is pinned (deprecated, always false)<br/>
+        /// Example: false
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
