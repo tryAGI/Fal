@@ -266,7 +266,9 @@
                               },
                               "highlighted": {
                                 "type": "boolean",
-                                "description": "Whether the model is highlighted"
+                                "description": "Whether the model is highlighted (deprecated, always false)",
+                                "deprecated": true,
+                                "example": false
                               },
                               "kind": {
                                 "type": "string",
@@ -300,7 +302,9 @@
                               },
                               "pinned": {
                                 "type": "boolean",
-                                "description": "Whether the model is pinned"
+                                "description": "Whether the model is pinned (deprecated, always false)",
+                                "deprecated": true,
+                                "example": false
                               }
                             },
                             "required": [
@@ -449,7 +453,7 @@
                         "thumbnail_url": "https://fal.media/files/example.jpg",
                         "model_url": "https://fal.run/fal-ai/flux/dev",
                         "date": "2024-08-01T00:00:00Z",
-                        "highlighted": true,
+                        "highlighted": false,
                         "pinned": false
                       }
                     }
