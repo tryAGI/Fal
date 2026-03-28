@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# OpenAPI spec: https://api.fal.ai/v1/openapi.json
+
 readonly openapi_url="https://api.fal.ai/v1/openapi.json"
 
 dotnet tool install --global autosdk.cli --prerelease
