@@ -20,6 +20,6 @@ jq '.components.securitySchemes = {
 autosdk generate openapi.json \
   --namespace Fal \
   --clientClassName FalClient \
-  --targetFramework net8.0 \
+  --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations
