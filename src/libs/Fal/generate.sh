@@ -7,19 +7,12 @@ dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
 curl --fail --silent --show-error --location https://api.fal.ai/v1/openapi.json -o openapi.json
 
-# Fix auth scheme: Fal uses 'Authorization: Key <api_key>' but the spec defines it as
-# apiKey-in-header which AutoSDK can't generate a constructor for. Use HTTP bearer scheme
-# (generates proper constructor) and override to Key scheme in FalClient.Authorization.cs.
-# Both apiKey and adminApiKey are mapped to the same bearer scheme so AutoSDK generates
-# auth code for all endpoints (admin endpoints use adminApiKey in the spec).
-jq '.components.securitySchemes = {
-  "apiKey": {"type": "http", "scheme": "bearer"},
-  "adminApiKey": {"type": "http", "scheme": "bearer"}
-} | .security = [{"apiKey": []}]' openapi.json > openapi.tmp.json && mv openapi.tmp.json openapi.json
-
+# Auth: --security-scheme overrides the spec's apiKey/adminApiKey auth with HTTP bearer.
+# Fal uses 'Authorization: Key <api_key>' — FalClient.Authorization.cs rewrites Bearer → Key.
 autosdk generate openapi.json \
   --namespace Fal \
   --clientClassName FalClient \
   --targetFramework net10.0 \
   --output Generated \
-  --exclude-deprecated-operations
+  --exclude-deprecated-operations \
+  --security-scheme Http:Header:Bearer
