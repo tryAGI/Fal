@@ -3,11 +3,9 @@ set -euo pipefail
 
 # OpenAPI spec: https://api.fal.ai/v1/openapi.json
 
-readonly openapi_url="https://api.fal.ai/v1/openapi.json"
-
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl --fail --silent --show-error --location "$openapi_url" -o openapi.json
+curl --fail --silent --show-error --location https://api.fal.ai/v1/openapi.json -o openapi.json
 
 # Fix auth scheme: Fal uses 'Authorization: Key <api_key>' but the spec defines it as
 # apiKey-in-header which AutoSDK can't generate a constructor for. Use HTTP bearer scheme
