@@ -240,7 +240,7 @@ namespace Fal
                     yield break;
                 }
 
-                var __streamedResponse = global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(string), JsonSerializerContext) as string ??
+                var __streamedResponse = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(string), JsonSerializerContext) ??
                                        throw new global::Fal.ApiException(
                                            message: $"Response deserialization failed for \"{__content}\" ",
                                            statusCode: __response.StatusCode)
