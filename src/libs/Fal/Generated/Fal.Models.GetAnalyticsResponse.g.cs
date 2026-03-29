@@ -42,11 +42,11 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="GetAnalyticsResponse" /> class.
         /// </summary>
-        /// <param name="nextCursor">
-        /// Cursor for the next page of results, null if no more pages
-        /// </param>
         /// <param name="hasMore">
         /// Boolean indicating if more results are available (convenience field derived from next_cursor)
+        /// </param>
+        /// <param name="nextCursor">
+        /// Cursor for the next page of results, null if no more pages
         /// </param>
         /// <param name="timeSeries">
         /// Time series analytics data grouped by time bucket (when expand includes 'time_series'). Each bucket contains all analytics records for that time period.
@@ -63,8 +63,8 @@ namespace Fal
             global::System.Collections.Generic.IList<global::Fal.GetAnalyticsResponseTimeSerie>? timeSeries,
             global::System.Collections.Generic.IList<global::Fal.GetAnalyticsResponseSummaryItem>? summary)
         {
-            this.HasMore = hasMore;
             this.NextCursor = nextCursor;
+            this.HasMore = hasMore;
             this.TimeSeries = timeSeries;
             this.Summary = summary;
         }

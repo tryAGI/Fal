@@ -114,6 +114,10 @@ namespace Fal
         /// Time when request was sent to the backend<br/>
         /// Example: 2025-01-01T00:00:01Z
         /// </param>
+        /// <param name="runnerId">
+        /// Unique identifier for the runner execution instance<br/>
+        /// Example: f1e2d3c4-b5a6-7890-dcba-0987654321fe
+        /// </param>
         /// <param name="endedAt">
         /// Time when request finished processing<br/>
         /// Example: 2025-01-01T00:00:08Z
@@ -131,10 +135,6 @@ namespace Fal
         /// </param>
         /// <param name="jsonOutput">
         /// Output payload for the request
-        /// </param>
-        /// <param name="runnerId">
-        /// Unique identifier for the runner execution instance<br/>
-        /// Example: f1e2d3c4-b5a6-7890-dcba-0987654321fe
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -155,12 +155,12 @@ namespace Fal
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
             this.StartedAt = startedAt;
             this.SentAt = sentAt;
-            this.RunnerId = runnerId;
             this.EndedAt = endedAt;
             this.StatusCode = statusCode;
             this.Duration = duration;
             this.JsonInput = jsonInput;
             this.JsonOutput = jsonOutput;
+            this.RunnerId = runnerId;
         }
 
         /// <summary>
