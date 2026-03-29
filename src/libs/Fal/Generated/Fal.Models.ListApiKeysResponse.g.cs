@@ -37,14 +37,14 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="ListApiKeysResponse" /> class.
         /// </summary>
-        /// <param name="nextCursor">
-        /// Cursor for the next page of results, null if no more pages
-        /// </param>
         /// <param name="hasMore">
         /// Boolean indicating if more results are available (convenience field derived from next_cursor)
         /// </param>
         /// <param name="keys">
         /// Array of API keys belonging to the authenticated user
+        /// </param>
+        /// <param name="nextCursor">
+        /// Cursor for the next page of results, null if no more pages
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -54,9 +54,9 @@ namespace Fal
             global::System.Collections.Generic.IList<global::Fal.ListApiKeysResponseKey> keys,
             string? nextCursor)
         {
+            this.NextCursor = nextCursor;
             this.HasMore = hasMore;
             this.Keys = keys ?? throw new global::System.ArgumentNullException(nameof(keys));
-            this.NextCursor = nextCursor;
         }
 
         /// <summary>

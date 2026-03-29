@@ -78,6 +78,9 @@ namespace Fal
         /// <param name="timestamp">
         /// Request timestamp in ISO8601 format
         /// </param>
+        /// <param name="costEstimateNanoUsd">
+        /// Estimated cost in nano USD (1 USD = 1,000,000,000 nano USD)
+        /// </param>
         /// <param name="outputUnits">
         /// Custom billing units for this request
         /// </param>
@@ -86,9 +89,6 @@ namespace Fal
         /// </param>
         /// <param name="percentDiscount">
         /// Discount percentage applied to this request (e.g., 10 = 10% discount)
-        /// </param>
-        /// <param name="costEstimateNanoUsd">
-        /// Estimated cost in nano USD (1 USD = 1,000,000,000 nano USD)
         /// </param>
         /// <param name="authMethod">
         /// Authentication method label (e.g., 'Key 1', 'API Key', 'User token'). Only populated when 'auth_method' is included in expand parameter.
@@ -109,10 +109,10 @@ namespace Fal
             this.RequestId = requestId ?? throw new global::System.ArgumentNullException(nameof(requestId));
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
             this.Timestamp = timestamp ?? throw new global::System.ArgumentNullException(nameof(timestamp));
-            this.CostEstimateNanoUsd = costEstimateNanoUsd;
             this.OutputUnits = outputUnits;
             this.UnitPrice = unitPrice;
             this.PercentDiscount = percentDiscount;
+            this.CostEstimateNanoUsd = costEstimateNanoUsd;
             this.AuthMethod = authMethod;
         }
 

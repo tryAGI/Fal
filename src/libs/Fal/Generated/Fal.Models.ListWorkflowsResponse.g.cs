@@ -55,13 +55,13 @@ namespace Fal
         /// Array of workflow items<br/>
         /// Example: [{"name":"my-image-workflow","title":"My Image Generation Workflow","user_nickname":"johndoe","created_at":"2024-01-15T10:30:00Z","thumbnail_url":"https://fal.ai/workflows/thumb_abc123.png","description":"Generate high-quality images using FLUX model","tags":["image-generation","ai","flux"],"endpoint_ids":["fal-ai/flux/dev","fal-ai/face-swap"]}]
         /// </param>
-        /// <param name="nextCursor">
-        /// Cursor for the next page of results, null if no more pages<br/>
-        /// Example: eyJvZmZzZXQiOjEwfQ==
-        /// </param>
         /// <param name="hasMore">
         /// Whether more results are available<br/>
         /// Example: true
+        /// </param>
+        /// <param name="nextCursor">
+        /// Cursor for the next page of results, null if no more pages<br/>
+        /// Example: eyJvZmZzZXQiOjEwfQ==
         /// </param>
         /// <param name="total">
         /// Total number of workflows matching the query<br/>
@@ -77,8 +77,8 @@ namespace Fal
             int? total)
         {
             this.Workflows = workflows ?? throw new global::System.ArgumentNullException(nameof(workflows));
-            this.HasMore = hasMore;
             this.NextCursor = nextCursor;
+            this.HasMore = hasMore;
             this.Total = total;
         }
 

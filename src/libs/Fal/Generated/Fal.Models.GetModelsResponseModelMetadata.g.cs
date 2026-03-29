@@ -181,17 +181,28 @@ namespace Fal
         /// <param name="updatedAt">
         /// ISO8601 timestamp of when the model was last updated
         /// </param>
-        /// <param name="isFavorited">
-        /// Whether the model is favorited by the authenticated user (null when unauthenticated)
-        /// </param>
         /// <param name="thumbnailUrl">
         /// Main thumbnail image URL
         /// </param>
-        /// <param name="thumbnailAnimatedUrl">
-        /// Animated thumbnail URL (optional)
-        /// </param>
         /// <param name="modelUrl">
         /// Full model endpoint URL (e.g., https://fal.run/...)
+        /// </param>
+        /// <param name="date">
+        /// ISO8601 timestamp of model creation
+        /// </param>
+        /// <param name="highlighted">
+        /// Whether the model is highlighted (deprecated, always false)<br/>
+        /// Example: false
+        /// </param>
+        /// <param name="pinned">
+        /// Whether the model is pinned (deprecated, always false)<br/>
+        /// Example: false
+        /// </param>
+        /// <param name="isFavorited">
+        /// Whether the model is favorited by the authenticated user (null when unauthenticated)
+        /// </param>
+        /// <param name="thumbnailAnimatedUrl">
+        /// Animated thumbnail URL (optional)
         /// </param>
         /// <param name="githubUrl">
         /// License or GitHub URL (optional)
@@ -199,15 +210,8 @@ namespace Fal
         /// <param name="licenseType">
         /// License type for the model (optional)
         /// </param>
-        /// <param name="date">
-        /// ISO8601 timestamp of model creation
-        /// </param>
         /// <param name="group">
         /// Model group information (optional)
-        /// </param>
-        /// <param name="highlighted">
-        /// Whether the model is highlighted (deprecated, always false)<br/>
-        /// Example: false
         /// </param>
         /// <param name="kind">
         /// Model kind - inference or training (optional)
@@ -223,10 +227,6 @@ namespace Fal
         /// </param>
         /// <param name="durationEstimate">
         /// Estimated duration in minutes (optional)
-        /// </param>
-        /// <param name="pinned">
-        /// Whether the model is pinned (deprecated, always false)<br/>
-        /// Example: false
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -260,21 +260,21 @@ namespace Fal
             this.Status = status;
             this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
             this.UpdatedAt = updatedAt ?? throw new global::System.ArgumentNullException(nameof(updatedAt));
-            this.ThumbnailUrl = thumbnailUrl ?? throw new global::System.ArgumentNullException(nameof(thumbnailUrl));
-            this.ModelUrl = modelUrl ?? throw new global::System.ArgumentNullException(nameof(modelUrl));
-            this.Date = date ?? throw new global::System.ArgumentNullException(nameof(date));
-            this.Highlighted = highlighted;
-            this.Pinned = pinned;
             this.IsFavorited = isFavorited;
+            this.ThumbnailUrl = thumbnailUrl ?? throw new global::System.ArgumentNullException(nameof(thumbnailUrl));
             this.ThumbnailAnimatedUrl = thumbnailAnimatedUrl;
+            this.ModelUrl = modelUrl ?? throw new global::System.ArgumentNullException(nameof(modelUrl));
             this.GithubUrl = githubUrl;
             this.LicenseType = licenseType;
+            this.Date = date ?? throw new global::System.ArgumentNullException(nameof(date));
             this.Group = group;
+            this.Highlighted = highlighted;
             this.Kind = kind;
             this.TrainingEndpointIds = trainingEndpointIds;
             this.InferenceEndpointIds = inferenceEndpointIds;
             this.StreamUrl = streamUrl;
             this.DurationEstimate = durationEstimate;
+            this.Pinned = pinned;
         }
 
         /// <summary>

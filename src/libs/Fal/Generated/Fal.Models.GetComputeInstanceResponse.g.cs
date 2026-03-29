@@ -93,6 +93,10 @@ namespace Fal
         /// Geographical region where the instance is located<br/>
         /// Example: us-west
         /// </param>
+        /// <param name="status">
+        /// Current operational status of the instance<br/>
+        /// Example: ready
+        /// </param>
         /// <param name="sector">
         /// Sector identifier for instance placement within the region (if applicable)<br/>
         /// Example: sector_1
@@ -100,10 +104,6 @@ namespace Fal
         /// <param name="ip">
         /// IP address of the instance (available when instance is ready)<br/>
         /// Example: 203.0.113.42
-        /// </param>
-        /// <param name="status">
-        /// Current operational status of the instance<br/>
-        /// Example: ready
         /// </param>
         /// <param name="creatorUserNickname">
         /// Nickname of the user who created this instance<br/>
@@ -124,9 +124,9 @@ namespace Fal
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.InstanceType = instanceType;
             this.Region = region;
-            this.Status = status;
             this.Sector = sector;
             this.Ip = ip;
+            this.Status = status;
             this.CreatorUserNickname = creatorUserNickname;
         }
 

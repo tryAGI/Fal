@@ -40,11 +40,11 @@ namespace Fal
         /// <param name="models">
         /// Array of model information
         /// </param>
-        /// <param name="nextCursor">
-        /// Cursor for the next page of results, null if no more pages
-        /// </param>
         /// <param name="hasMore">
         /// Boolean indicating if more results are available (convenience field derived from next_cursor)
+        /// </param>
+        /// <param name="nextCursor">
+        /// Cursor for the next page of results, null if no more pages
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -55,8 +55,8 @@ namespace Fal
             string? nextCursor)
         {
             this.Models = models ?? throw new global::System.ArgumentNullException(nameof(models));
-            this.HasMore = hasMore;
             this.NextCursor = nextCursor;
+            this.HasMore = hasMore;
         }
 
         /// <summary>

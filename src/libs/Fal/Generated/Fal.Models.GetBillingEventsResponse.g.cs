@@ -37,14 +37,14 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="GetBillingEventsResponse" /> class.
         /// </summary>
-        /// <param name="nextCursor">
-        /// Cursor for the next page of results, null if no more pages
-        /// </param>
         /// <param name="hasMore">
         /// Boolean indicating if more results are available (convenience field derived from next_cursor)
         /// </param>
         /// <param name="billingEvents">
         /// List of billing event records
+        /// </param>
+        /// <param name="nextCursor">
+        /// Cursor for the next page of results, null if no more pages
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -54,9 +54,9 @@ namespace Fal
             global::System.Collections.Generic.IList<global::Fal.GetBillingEventsResponseBillingEvent> billingEvents,
             string? nextCursor)
         {
+            this.NextCursor = nextCursor;
             this.HasMore = hasMore;
             this.BillingEvents = billingEvents ?? throw new global::System.ArgumentNullException(nameof(billingEvents));
-            this.NextCursor = nextCursor;
         }
 
         /// <summary>

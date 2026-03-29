@@ -31,11 +31,11 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="EstimatePricingRequestVariant1" /> class.
         /// </summary>
-        /// <param name="estimateType">
-        /// Estimate type: historical API pricing based on past usage patterns
-        /// </param>
         /// <param name="endpoints">
         /// Map of endpoint IDs to call quantities
+        /// </param>
+        /// <param name="estimateType">
+        /// Estimate type: historical API pricing based on past usage patterns
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -44,8 +44,8 @@ namespace Fal
             global::System.Collections.Generic.Dictionary<string, global::Fal.EstimatePricingRequestVariant1Endpoints2> endpoints,
             global::Fal.EstimatePricingRequestVariant1EstimateType estimateType)
         {
-            this.Endpoints = endpoints ?? throw new global::System.ArgumentNullException(nameof(endpoints));
             this.EstimateType = estimateType;
+            this.Endpoints = endpoints ?? throw new global::System.ArgumentNullException(nameof(endpoints));
         }
 
         /// <summary>

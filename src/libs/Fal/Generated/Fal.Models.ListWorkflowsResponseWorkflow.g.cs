@@ -103,14 +103,6 @@ namespace Fal
         /// ISO8601 timestamp of workflow creation<br/>
         /// Example: 2024-01-15T10:30:00Z
         /// </param>
-        /// <param name="thumbnailUrl">
-        /// URL to the workflow thumbnail image<br/>
-        /// Example: https://fal.ai/workflows/thumb_abc123.png
-        /// </param>
-        /// <param name="description">
-        /// Brief description of what the workflow does<br/>
-        /// Example: Generate high-quality images using FLUX model
-        /// </param>
         /// <param name="tags">
         /// Tags associated with the workflow<br/>
         /// Example: [image-generation, ai, flux]
@@ -118,6 +110,14 @@ namespace Fal
         /// <param name="endpointIds">
         /// List of model endpoint IDs used in this workflow<br/>
         /// Example: [fal-ai/flux/dev, fal-ai/face-swap]
+        /// </param>
+        /// <param name="thumbnailUrl">
+        /// URL to the workflow thumbnail image<br/>
+        /// Example: https://fal.ai/workflows/thumb_abc123.png
+        /// </param>
+        /// <param name="description">
+        /// Brief description of what the workflow does<br/>
+        /// Example: Generate high-quality images using FLUX model
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -136,10 +136,10 @@ namespace Fal
             this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
             this.UserNickname = userNickname ?? throw new global::System.ArgumentNullException(nameof(userNickname));
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
-            this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
-            this.EndpointIds = endpointIds ?? throw new global::System.ArgumentNullException(nameof(endpointIds));
             this.ThumbnailUrl = thumbnailUrl;
             this.Description = description;
+            this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
+            this.EndpointIds = endpointIds ?? throw new global::System.ArgumentNullException(nameof(endpointIds));
         }
 
         /// <summary>

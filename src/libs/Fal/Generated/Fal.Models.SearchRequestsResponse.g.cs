@@ -37,14 +37,14 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchRequestsResponse" /> class.
         /// </summary>
-        /// <param name="nextCursor">
-        /// Cursor for the next page of results, null if no more pages
-        /// </param>
         /// <param name="hasMore">
         /// Boolean indicating if more results are available (convenience field derived from next_cursor)
         /// </param>
         /// <param name="results">
         /// Array of matching request results, ordered by relevance or recency
+        /// </param>
+        /// <param name="nextCursor">
+        /// Cursor for the next page of results, null if no more pages
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -54,9 +54,9 @@ namespace Fal
             global::System.Collections.Generic.IList<global::Fal.SearchRequestsResponseResult> results,
             string? nextCursor)
         {
+            this.NextCursor = nextCursor;
             this.HasMore = hasMore;
             this.Results = results ?? throw new global::System.ArgumentNullException(nameof(results));
-            this.NextCursor = nextCursor;
         }
 
         /// <summary>

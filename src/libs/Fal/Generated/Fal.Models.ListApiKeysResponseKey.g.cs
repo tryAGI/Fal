@@ -77,13 +77,13 @@ namespace Fal
         /// User-provided friendly name for the key<br/>
         /// Example: Production Key
         /// </param>
-        /// <param name="scope">
-        /// Scope of the API key. Only API scope keys can be managed via this API.<br/>
-        /// Example: API
-        /// </param>
         /// <param name="createdAt">
         /// ISO8601 timestamp when the key was created<br/>
         /// Example: 2025-01-15T12:00:00Z
+        /// </param>
+        /// <param name="scope">
+        /// Scope of the API key. Only API scope keys can be managed via this API.<br/>
+        /// Example: API
         /// </param>
         /// <param name="creatorNickname">
         /// Nickname of the user who created this key (when expanded)<br/>
@@ -106,8 +106,8 @@ namespace Fal
         {
             this.KeyId = keyId ?? throw new global::System.ArgumentNullException(nameof(keyId));
             this.Alias = alias ?? throw new global::System.ArgumentNullException(nameof(alias));
-            this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
             this.Scope = scope;
+            this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
             this.CreatorNickname = creatorNickname;
             this.CreatorEmail = creatorEmail;
         }
