@@ -759,6 +759,8 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
@@ -774,6 +776,8 @@ namespace Fal
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
