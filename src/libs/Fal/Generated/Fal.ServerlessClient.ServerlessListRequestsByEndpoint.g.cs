@@ -9,7 +9,7 @@ namespace Fal
             global::System.Net.Http.HttpClient httpClient,
             ref int? limit,
             ref string? cursor,
-            ref string endpointId,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>> endpointId,
             ref global::Fal.AnyOf<global::System.DateTime?, string>? start,
             ref global::Fal.AnyOf<global::System.DateTime?, string>? end,
             ref global::Fal.ServerlessListRequestsByEndpointStatus? status,
@@ -21,7 +21,7 @@ namespace Fal
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             int? limit,
             string? cursor,
-            string endpointId,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>> endpointId,
             global::Fal.AnyOf<global::System.DateTime?, string>? start,
             global::Fal.AnyOf<global::System.DateTime?, string>? end,
             global::Fal.ServerlessListRequestsByEndpointStatus? status,
@@ -38,8 +38,9 @@ namespace Fal
             ref string content);
 
         /// <summary>
-        /// List requests by endpoint<br/>
-        /// Lists requests for endpoints owned by the authenticated user.<br/>
+        /// List requests by endpoint(s)<br/>
+        /// Lists requests for one or more endpoints owned by the authenticated user.<br/>
+        /// Use repeated or comma-separated `endpoint_id` (same as other platform list APIs).<br/>
         /// **Authentication:** Requires API key.<br/>
         /// **Filters:**<br/>
         /// - Time range via start / end<br/>
@@ -61,8 +62,8 @@ namespace Fal
         /// Example: Mg==
         /// </param>
         /// <param name="endpointId">
-        /// Endpoint identifier to filter requests by<br/>
-        /// Example: fal-ai/flux/dev
+        /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
+        /// Example: [fal-ai/flux/dev]
         /// </param>
         /// <param name="start">
         /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>
@@ -92,7 +93,7 @@ namespace Fal
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Fal.ServerlessListRequestsByEndpointResponse> ServerlessListRequestsByEndpointAsync(
-            string endpointId,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>> endpointId,
             int? limit = default,
             string? cursor = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
@@ -123,7 +124,7 @@ namespace Fal
             __pathBuilder
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("cursor", cursor)
-                .AddRequiredParameter("endpoint_id", endpointId)
+                .AddRequiredParameter("endpoint_id", endpointId.ToString() ?? string.Empty)
                 .AddOptionalParameter("start", start?.ToString())
                 .AddOptionalParameter("end", end?.ToString())
                 .AddOptionalParameter("status", status?.ToValueString())
