@@ -375,6 +375,7 @@ namespace Fal
         public async global::System.Threading.Tasks.Task<global::Fal.EstimatePricingResponse> EstimatePricingAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Fal.OneOf<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2>
             {
             };
