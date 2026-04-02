@@ -713,6 +713,22 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType5NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType4NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter),
@@ -1344,6 +1360,18 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponse5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseError5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType5), TypeInfoPropertyName = "GetFocusReportResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType5")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType2), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType3), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType4), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseError))]
