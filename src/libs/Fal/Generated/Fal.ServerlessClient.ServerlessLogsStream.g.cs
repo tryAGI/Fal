@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class ServerlessClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_ServerlessLogsStreamSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_ServerlessLogsStreamSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_ServerlessLogsStreamSecurityRequirement0,
+            };
         partial void PrepareServerlessLogsStreamArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::Fal.AnyOf<global::System.DateTime?, string>? start,
@@ -117,6 +136,12 @@ namespace Fal
                 requestId: ref requestId,
                 request: request);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ServerlessLogsStreamSecurityRequirements,
+                operationName: "ServerlessLogsStreamAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: "/serverless/logs/stream",
                 baseUri: HttpClient.BaseAddress); 
@@ -131,7 +156,7 @@ namespace Fal
                 .AddOptionalParameter("level", level)
                 .AddOptionalParameter("job_id", jobId)
                 .AddOptionalParameter("request_id", requestId) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -141,7 +166,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

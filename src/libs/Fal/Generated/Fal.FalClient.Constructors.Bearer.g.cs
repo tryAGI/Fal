@@ -6,6 +6,7 @@ namespace Fal
     public sealed partial class FalClient
     {
         /// <inheritdoc cref="FalClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Fal.EndPointAuthorization}?, bool)"/>
+
         public FalClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,

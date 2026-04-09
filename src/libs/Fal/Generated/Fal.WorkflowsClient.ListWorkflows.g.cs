@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class WorkflowsClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_ListWorkflowsSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_ListWorkflowsSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_ListWorkflowsSecurityRequirement0,
+            };
         partial void PrepareListWorkflowsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? limit,
@@ -75,6 +94,12 @@ namespace Fal
                 search: ref search,
                 usedEndpointIds: ref usedEndpointIds);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ListWorkflowsSecurityRequirements,
+                operationName: "ListWorkflowsAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: "/workflows",
                 baseUri: HttpClient.BaseAddress); 
@@ -83,7 +108,7 @@ namespace Fal
                 .AddOptionalParameter("cursor", cursor)
                 .AddOptionalParameter("search", search)
                 .AddOptionalParameter("used_endpoint_ids", usedEndpointIds?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -93,7 +118,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

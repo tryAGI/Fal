@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class AccountClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_GetFocusReportSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_GetFocusReportSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_GetFocusReportSecurityRequirement0,
+            };
         partial void PrepareGetFocusReportArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref global::Fal.GetFocusReportSource source,
@@ -107,6 +126,12 @@ namespace Fal
                 timeframe: ref timeframe,
                 boundToTimeframe: ref boundToTimeframe);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetFocusReportSecurityRequirements,
+                operationName: "GetFocusReportAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: "/account/focus",
                 baseUri: HttpClient.BaseAddress); 
@@ -119,7 +144,7 @@ namespace Fal
                 .AddOptionalParameter("timezone", timezone)
                 .AddOptionalParameter("timeframe", timeframe?.ToValueString())
                 .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -129,7 +154,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

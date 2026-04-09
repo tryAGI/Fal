@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class KeysClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_CreateApiKeySecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_CreateApiKeySecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_CreateApiKeySecurityRequirement0,
+            };
         partial void PrepareCreateApiKeyArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Fal.CreateApiKeyRequest request);
@@ -55,9 +74,15 @@ namespace Fal
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateApiKeySecurityRequirements,
+                operationName: "CreateApiKeyAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: "/keys",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -67,7 +92,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

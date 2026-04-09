@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class ServerlessClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_ServerlessGetMetricsSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_ServerlessGetMetricsSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_ServerlessGetMetricsSecurityRequirement0,
+            };
         partial void PrepareServerlessGetMetricsArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareServerlessGetMetricsRequest(
@@ -42,9 +61,15 @@ namespace Fal
             PrepareServerlessGetMetricsArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ServerlessGetMetricsSecurityRequirements,
+                operationName: "ServerlessGetMetricsAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: "/serverless/metrics",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -54,7 +79,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class ModelsClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_EstimatePricingSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_EstimatePricingSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_EstimatePricingSecurityRequirement0,
+            };
         partial void PrepareEstimatePricingArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Fal.OneOf<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2> request);
@@ -57,9 +76,15 @@ namespace Fal
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EstimatePricingSecurityRequirements,
+                operationName: "EstimatePricingAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: "/models/pricing/estimate",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -69,7 +94,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
