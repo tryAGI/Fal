@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class ModelsClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_GetAnalyticsSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_GetAnalyticsSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_GetAnalyticsSecurityRequirement0,
+            };
         partial void PrepareGetAnalyticsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? limit,
@@ -140,6 +159,12 @@ namespace Fal
                 endpointId: ref endpointId,
                 expand: ref expand);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetAnalyticsSecurityRequirements,
+                operationName: "GetAnalyticsAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: "/models/analytics",
                 baseUri: HttpClient.BaseAddress); 
@@ -153,7 +178,7 @@ namespace Fal
                 .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString())
                 .AddRequiredParameter("endpoint_id", endpointId.ToString() ?? string.Empty)
                 .AddOptionalParameter("expand", expand?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -163,7 +188,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

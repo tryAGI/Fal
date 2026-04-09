@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class ServerlessClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_ServerlessUploadFromUrlSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_ServerlessUploadFromUrlSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_ServerlessUploadFromUrlSecurityRequirement0,
+            };
         partial void PrepareServerlessUploadFromUrlArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string file,
@@ -49,9 +68,15 @@ namespace Fal
                 file: ref file,
                 request: request);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ServerlessUploadFromUrlSecurityRequirements,
+                operationName: "ServerlessUploadFromUrlAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: $"/serverless/files/file/url/{file}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -61,7 +86,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

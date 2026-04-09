@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class ComputeClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_GetComputeInstanceSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_GetComputeInstanceSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_GetComputeInstanceSecurityRequirement0,
+            };
         partial void PrepareGetComputeInstanceArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string id);
@@ -56,9 +75,15 @@ namespace Fal
                 httpClient: HttpClient,
                 id: ref id);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetComputeInstanceSecurityRequirements,
+                operationName: "GetComputeInstanceAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: $"/compute/instances/{id}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -68,7 +93,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

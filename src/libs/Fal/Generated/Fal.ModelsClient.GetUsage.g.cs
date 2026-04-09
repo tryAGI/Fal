@@ -5,6 +5,25 @@ namespace Fal
 {
     public partial class ModelsClient
     {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_GetUsageSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_GetUsageSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_GetUsageSecurityRequirement0,
+            };
         partial void PrepareGetUsageArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? limit,
@@ -123,6 +142,12 @@ namespace Fal
                 endpointId: ref endpointId,
                 expand: ref expand);
 
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetUsageSecurityRequirements,
+                operationName: "GetUsageAsync");
+
             var __pathBuilder = new global::Fal.PathBuilder(
                 path: "/models/usage",
                 baseUri: HttpClient.BaseAddress); 
@@ -136,7 +161,7 @@ namespace Fal
                 .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString())
                 .AddOptionalParameter("endpoint_id", endpointId?.ToString())
                 .AddOptionalParameter("expand", expand?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -146,7 +171,7 @@ namespace Fal
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
