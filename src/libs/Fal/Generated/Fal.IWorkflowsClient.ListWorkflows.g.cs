@@ -34,6 +34,7 @@ namespace Fal
         /// Filter by model endpoint IDs used in the workflow. Can be a single value or comma-separated values.<br/>
         /// Example: [fal-ai/flux/dev]
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Fal.ListWorkflowsResponse> ListWorkflowsAsync(
@@ -41,6 +42,7 @@ namespace Fal
             string? cursor = default,
             string? search = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? usedEndpointIds = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

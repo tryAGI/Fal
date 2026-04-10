@@ -35,12 +35,14 @@ namespace Fal
         /// Example: 550e8400-e29b-41d4-a716-446655440000
         /// </param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Fal.CreateComputeInstanceResponse> CreateComputeInstanceAsync(
 
             global::Fal.CreateComputeInstanceRequest request,
             string? idempotencyKey = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create Compute Instance<br/>
@@ -84,6 +86,7 @@ namespace Fal
         /// Sector for InfiniBand configuration (only valid with gpu_8x_h100_sxm5)<br/>
         /// Example: sector_1
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Fal.CreateComputeInstanceResponse> CreateComputeInstanceAsync(
@@ -91,6 +94,7 @@ namespace Fal
             string sshKey,
             string? idempotencyKey = default,
             global::Fal.CreateComputeInstanceRequestSector? sector = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

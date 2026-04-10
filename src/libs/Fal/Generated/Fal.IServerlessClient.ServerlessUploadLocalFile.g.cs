@@ -18,6 +18,7 @@ namespace Fal
         /// Example: false
         /// </param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         global::System.Threading.Tasks.Task<bool> ServerlessUploadLocalFileAsync(
@@ -25,6 +26,7 @@ namespace Fal
 
             global::Fal.ServerlessUploadLocalFileRequest request,
             bool? unzip = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upload local file (multipart/form-data)<br/>
@@ -42,12 +44,14 @@ namespace Fal
         /// <param name="fileUpload">
         /// Binary file content
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<bool> ServerlessUploadLocalFileAsync(
             string targetPath,
             bool? unzip = default,
             object? fileUpload = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

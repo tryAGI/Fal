@@ -65,6 +65,14 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.ListRequestsByEndpointSortByNullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsBoundToTimeframeNullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ServerlessLogsHistoryRunSourceJsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessLogsHistoryRunSourceNullableJsonConverter),
@@ -201,6 +209,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType5NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorTypeNullableJsonConverter),
@@ -320,6 +332,30 @@ namespace Fal
             typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType6JsonConverter),
 
             typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType6NullableJsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorTypeJsonConverter),
 
@@ -789,6 +825,14 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
@@ -854,6 +898,8 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointStatus), TypeInfoPropertyName = "ListRequestsByEndpointStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointSortBy), TypeInfoPropertyName = "ListRequestsByEndpointSortBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsTimeframe), TypeInfoPropertyName = "ServerlessGetAnalyticsTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsBoundToTimeframe), TypeInfoPropertyName = "ServerlessGetAnalyticsBoundToTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryRunSource), TypeInfoPropertyName = "ServerlessLogsHistoryRunSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamRunSource), TypeInfoPropertyName = "ServerlessLogsStreamRunSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointStatus), TypeInfoPropertyName = "ServerlessListRequestsByEndpointStatus2")]
@@ -962,6 +1008,9 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse6))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseError5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType5), TypeInfoPropertyName = "GetAnalyticsResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType6), TypeInfoPropertyName = "GetAnalyticsResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetBillingEventsResponseBillingEvent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseBillingEvent))]
@@ -1069,6 +1118,31 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetWorkflowResponse7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetWorkflowResponseError6))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetWorkflowResponseErrorType6), TypeInfoPropertyName = "GetWorkflowResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetAnalyticsResponseTimeSerie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseTimeSerie))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetAnalyticsResponseTimeSerieResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseTimeSerieResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetAnalyticsResponseSummaryItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseSummaryItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseErrorType), TypeInfoPropertyName = "ServerlessGetAnalyticsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseErrorType2), TypeInfoPropertyName = "ServerlessGetAnalyticsResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseErrorType3), TypeInfoPropertyName = "ServerlessGetAnalyticsResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponse5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseErrorType4), TypeInfoPropertyName = "ServerlessGetAnalyticsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseErrorType5), TypeInfoPropertyName = "ServerlessGetAnalyticsResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseErrorType6), TypeInfoPropertyName = "ServerlessGetAnalyticsResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAppQueueInfoResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAppQueueInfoResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAppQueueInfoResponseError))]
@@ -1396,6 +1470,9 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ListRequestsByEndpointResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.SearchRequestsResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ListWorkflowsResponseWorkflow>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessGetAnalyticsResponseTimeSerie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessGetAnalyticsResponseTimeSerieResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessGetAnalyticsResponseSummaryItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListRootResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListDirectoryResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessLogsHistoryResponseItem>))]
