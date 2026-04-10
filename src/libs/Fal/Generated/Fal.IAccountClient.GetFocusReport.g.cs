@@ -50,6 +50,7 @@ namespace Fal
         /// Default Value: true<br/>
         /// Example: true
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         global::System.Threading.Tasks.Task<string> GetFocusReportAsync(
@@ -61,6 +62,7 @@ namespace Fal
             string? timezone = default,
             global::Fal.GetFocusReportTimeframe? timeframe = default,
             global::Fal.GetFocusReportBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

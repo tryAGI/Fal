@@ -25,10 +25,12 @@ namespace Fal
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Fal.GetPricingResponse> GetPricingAsync(
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>> endpointId,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

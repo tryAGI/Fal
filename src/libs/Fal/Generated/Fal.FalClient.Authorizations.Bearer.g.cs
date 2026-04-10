@@ -25,6 +25,7 @@ namespace Fal
             Authorizations.Add(new global::Fal.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBearer",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

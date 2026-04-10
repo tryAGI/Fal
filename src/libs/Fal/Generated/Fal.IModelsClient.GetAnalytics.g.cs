@@ -79,6 +79,7 @@ namespace Fal
         /// Default Value: [time_series, request_count]<br/>
         /// Example: [request_count, success_count]
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Fal.GetAnalyticsResponse> GetAnalyticsAsync(
@@ -91,6 +92,7 @@ namespace Fal
             global::Fal.GetAnalyticsTimeframe? timeframe = default,
             global::Fal.GetAnalyticsBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
