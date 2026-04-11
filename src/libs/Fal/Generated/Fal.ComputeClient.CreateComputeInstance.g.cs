@@ -148,10 +148,10 @@ namespace Fal
                 } 
             }
 
-                if (idempotencyKey != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Idempotency-Key", idempotencyKey.ToString());
-                }
+            var __idempotencyKey = global::System.String.IsNullOrWhiteSpace(idempotencyKey)
+                ? CreateIdempotencyKey()
+                : idempotencyKey;
+            __httpRequest.Headers.TryAddWithoutValidation("Idempotency-Key", __idempotencyKey);
 
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(

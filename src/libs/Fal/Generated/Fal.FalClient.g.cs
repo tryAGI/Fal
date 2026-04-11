@@ -34,6 +34,10 @@ namespace Fal
 
         /// <inheritdoc/>
         public global::Fal.AutoSDKClientOptions Options { get; }
+
+
+        /// <inheritdoc/>
+        public global::System.Func<string> CreateIdempotencyKey { get; set; } = () => global::System.Guid.NewGuid().ToString("D");
         /// <summary>
         /// 
         /// </summary>
@@ -46,6 +50,7 @@ namespace Fal
         public AccountClient Account => new AccountClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -55,6 +60,7 @@ namespace Fal
         public ComputeClient Compute => new ComputeClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -64,6 +70,7 @@ namespace Fal
         public KeysClient Keys => new KeysClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -73,6 +80,7 @@ namespace Fal
         public MetaClient Meta => new MetaClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -82,6 +90,7 @@ namespace Fal
         public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -91,6 +100,7 @@ namespace Fal
         public ServerlessClient Serverless => new ServerlessClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContext = JsonSerializerContext,
         };
 
@@ -100,6 +110,7 @@ namespace Fal
         public WorkflowsClient Workflows => new WorkflowsClient(HttpClient, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
             JsonSerializerContext = JsonSerializerContext,
         };
 
