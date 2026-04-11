@@ -137,10 +137,10 @@ namespace Fal
                 } 
             }
 
-                if (idempotencyKey != default)
-                {
-                    __httpRequest.Headers.TryAddWithoutValidation("Idempotency-Key", idempotencyKey.ToString());
-                }
+            var __idempotencyKey = global::System.String.IsNullOrWhiteSpace(idempotencyKey)
+                ? CreateIdempotencyKey()
+                : idempotencyKey;
+            __httpRequest.Headers.TryAddWithoutValidation("Idempotency-Key", __idempotencyKey);
 
                 global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
