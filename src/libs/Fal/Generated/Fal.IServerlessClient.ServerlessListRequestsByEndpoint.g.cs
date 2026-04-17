@@ -10,7 +10,7 @@ namespace Fal
         /// Use repeated or comma-separated `endpoint_id` (same as other platform list APIs).<br/>
         /// **Authentication:** Requires API key.<br/>
         /// **Filters:**<br/>
-        /// - Time range via start / end<br/>
+        /// - Time range via start / end. If `start` is omitted, defaults to the last 24 hours — unless `request_id` is provided, in which case the default start bound is widened to 90 days.<br/>
         /// - Status (success, error, user_error)<br/>
         /// - Request ID<br/>
         /// - Pagination via cursor/limit (limit defaults to 50, max 100)<br/>
