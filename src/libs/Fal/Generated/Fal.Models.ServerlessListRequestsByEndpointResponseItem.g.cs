@@ -90,6 +90,14 @@ namespace Fal
         public required global::System.Guid RunnerId { get; set; }
 
         /// <summary>
+        /// Billable units for this request (only present when expand=billing). Null if a billing event has not yet been recorded for this request.<br/>
+        /// Example: 1.5F
+        /// </summary>
+        /// <example>1.5F</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("billable_units")]
+        public double? BillableUnits { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -136,6 +144,10 @@ namespace Fal
         /// <param name="jsonOutput">
         /// Output payload for the request
         /// </param>
+        /// <param name="billableUnits">
+        /// Billable units for this request (only present when expand=billing). Null if a billing event has not yet been recorded for this request.<br/>
+        /// Example: 1.5F
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -149,7 +161,8 @@ namespace Fal
             int? statusCode,
             double? duration,
             object? jsonInput,
-            object? jsonOutput)
+            object? jsonOutput,
+            double? billableUnits)
         {
             this.RequestId = requestId;
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
@@ -161,6 +174,7 @@ namespace Fal
             this.JsonInput = jsonInput;
             this.JsonOutput = jsonOutput;
             this.RunnerId = runnerId;
+            this.BillableUnits = billableUnits;
         }
 
         /// <summary>
