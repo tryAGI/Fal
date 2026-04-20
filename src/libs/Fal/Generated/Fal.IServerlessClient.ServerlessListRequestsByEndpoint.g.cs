@@ -17,7 +17,8 @@ namespace Fal
         /// **Sorting:**<br/>
         /// - By end time (default) or duration<br/>
         /// **Expansions:**<br/>
-        /// - Include payloads by adding expand=payloads
+        /// - Include payloads by adding expand=payloads<br/>
+        /// - Include per-request `billable_units` by adding expand=billing (endpoint owner only)
         /// </summary>
         /// <param name="limit">
         /// Number of items to return per page (max 100)<br/>
@@ -49,8 +50,8 @@ namespace Fal
         /// Example: a1b2c3d4-e5f6-7890-abcd-ef1234567890
         /// </param>
         /// <param name="expand">
-        /// Fields to expand in the response. Use payloads to include input and output payloads.<br/>
-        /// Example: [payloads]
+        /// Fields to expand in the response. Use payloads to include input and output payloads. Use billing to include billable_units per request.<br/>
+        /// Example: [payloads, billing]
         /// </param>
         /// <param name="sortBy">
         /// Sort results by end time or duration<br/>
