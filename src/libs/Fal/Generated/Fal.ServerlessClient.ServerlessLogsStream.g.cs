@@ -29,7 +29,7 @@ namespace Fal
             global::System.Net.Http.HttpClient httpClient,
             ref global::Fal.AnyOf<global::System.DateTime?, string>? start,
             ref global::Fal.AnyOf<global::System.DateTime?, string>? end,
-            global::System.Collections.Generic.IList<string>? appId,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? appId,
             ref string? revision,
             ref global::Fal.ServerlessLogsStreamRunSource? runSource,
             ref bool? traceback,
@@ -43,7 +43,7 @@ namespace Fal
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             global::Fal.AnyOf<global::System.DateTime?, string>? start,
             global::Fal.AnyOf<global::System.DateTime?, string>? end,
-            global::System.Collections.Generic.IList<string>? appId,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? appId,
             string? revision,
             global::Fal.ServerlessLogsStreamRunSource? runSource,
             bool? traceback,
@@ -69,8 +69,8 @@ namespace Fal
         /// Example: 2025-02-01T00:00:00Z
         /// </param>
         /// <param name="appId">
-        /// Filter by app IDs<br/>
-        /// Example: [my-app]
+        /// Filter by specific app ID(s) in '&lt;owner&gt;/&lt;name&gt;' format (e.g. 'fal-ai/my-app'). Accepts 1-50 app IDs. Supports comma-separated values: ?app_id=fal-ai/foo,fal-ai/bar or array syntax: ?app_id=fal-ai/foo&amp;app_id=fal-ai/bar<br/>
+        /// Example: [fal-ai/my-app]
         /// </param>
         /// <param name="revision">
         /// Filter by revision<br/>
@@ -110,7 +110,7 @@ namespace Fal
             global::System.Collections.Generic.IList<global::Fal.ServerlessLogsStreamRequestItem> request,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
-            global::System.Collections.Generic.IList<string>? appId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? appId = default,
             string? revision = default,
             global::Fal.ServerlessLogsStreamRunSource? runSource = default,
             bool? traceback = default,
@@ -129,7 +129,7 @@ namespace Fal
                 httpClient: HttpClient,
                 start: ref start,
                 end: ref end,
-                appId: appId,
+                appId: ref appId,
                 revision: ref revision,
                 runSource: ref runSource,
                 traceback: ref traceback,
@@ -167,7 +167,7 @@ namespace Fal
                             __pathBuilder
                                 .AddOptionalParameter("start", start?.ToString())
                                 .AddOptionalParameter("end", end?.ToString())
-                                .AddOptionalParameter("app_id", appId, delimiter: ",", explode: true)
+                                .AddOptionalParameter("app_id", appId?.ToString())
                                 .AddOptionalParameter("revision", revision)
                                 .AddOptionalParameter("run_source", runSource?.ToValueString())
                                 .AddOptionalParameter("traceback", traceback?.ToString().ToLowerInvariant())

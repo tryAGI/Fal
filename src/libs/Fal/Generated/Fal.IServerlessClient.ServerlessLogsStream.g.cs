@@ -17,8 +17,8 @@ namespace Fal
         /// Example: 2025-02-01T00:00:00Z
         /// </param>
         /// <param name="appId">
-        /// Filter by app IDs<br/>
-        /// Example: [my-app]
+        /// Filter by specific app ID(s) in '&lt;owner&gt;/&lt;name&gt;' format (e.g. 'fal-ai/my-app'). Accepts 1-50 app IDs. Supports comma-separated values: ?app_id=fal-ai/foo,fal-ai/bar or array syntax: ?app_id=fal-ai/foo&amp;app_id=fal-ai/bar<br/>
+        /// Example: [fal-ai/my-app]
         /// </param>
         /// <param name="revision">
         /// Filter by revision<br/>
@@ -58,7 +58,7 @@ namespace Fal
             global::System.Collections.Generic.IList<global::Fal.ServerlessLogsStreamRequestItem> request,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
-            global::System.Collections.Generic.IList<string>? appId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? appId = default,
             string? revision = default,
             global::Fal.ServerlessLogsStreamRunSource? runSource = default,
             bool? traceback = default,
