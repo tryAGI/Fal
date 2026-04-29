@@ -144,7 +144,7 @@ namespace Fal
                 PrepareGetPricingRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    endpointId: endpointId);
+                    endpointId: endpointId!);
 
                 return __httpRequest;
             }

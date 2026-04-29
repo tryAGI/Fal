@@ -153,7 +153,7 @@ namespace Fal
                 PrepareDeleteApiKeyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    keyId: keyId,
+                    keyId: keyId!,
                     idempotencyKey: idempotencyKey);
 
                 return __httpRequest;

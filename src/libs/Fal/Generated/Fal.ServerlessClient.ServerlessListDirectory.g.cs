@@ -128,7 +128,7 @@ namespace Fal
                 PrepareServerlessListDirectoryRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    dir: dir);
+                    dir: dir!);
 
                 return __httpRequest;
             }

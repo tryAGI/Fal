@@ -142,7 +142,7 @@ namespace Fal
                 PrepareServerlessUploadFromUrlRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    file: file,
+                    file: file!,
                     request: request);
 
                 return __httpRequest;

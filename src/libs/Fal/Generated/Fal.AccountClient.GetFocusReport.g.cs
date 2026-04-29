@@ -204,7 +204,7 @@ namespace Fal
                 PrepareGetFocusReportRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    source: source,
+                    source: source!,
                     billingMonth: billingMonth,
                     chargeMonth: chargeMonth,
                     start: start,

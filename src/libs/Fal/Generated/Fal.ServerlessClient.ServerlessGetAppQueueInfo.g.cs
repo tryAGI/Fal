@@ -136,8 +136,8 @@ namespace Fal
                 PrepareServerlessGetAppQueueInfoRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    owner: owner,
-                    name: name);
+                    owner: owner!,
+                    name: name!);
 
                 return __httpRequest;
             }
