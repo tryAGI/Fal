@@ -128,7 +128,7 @@ namespace Fal
                 PrepareServerlessDownloadFileRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    file: file);
+                    file: file!);
 
                 return __httpRequest;
             }

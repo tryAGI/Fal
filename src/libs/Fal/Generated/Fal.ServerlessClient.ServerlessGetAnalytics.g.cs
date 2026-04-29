@@ -248,7 +248,7 @@ namespace Fal
                     timezone: timezone,
                     timeframe: timeframe,
                     boundToTimeframe: boundToTimeframe,
-                    endpointId: endpointId,
+                    endpointId: endpointId!,
                     expand: expand);
 
                 return __httpRequest;

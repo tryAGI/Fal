@@ -218,7 +218,7 @@ namespace Fal
                     httpRequestMessage: __httpRequest,
                     limit: limit,
                     cursor: cursor,
-                    endpointId: endpointId,
+                    endpointId: endpointId!,
                     start: start,
                     end: end,
                     status: status,

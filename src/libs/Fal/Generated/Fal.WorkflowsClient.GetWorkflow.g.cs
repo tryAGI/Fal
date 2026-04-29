@@ -142,8 +142,8 @@ namespace Fal
                 PrepareGetWorkflowRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    username: username,
-                    workflowName: workflowName);
+                    username: username!,
+                    workflowName: workflowName!);
 
                 return __httpRequest;
             }

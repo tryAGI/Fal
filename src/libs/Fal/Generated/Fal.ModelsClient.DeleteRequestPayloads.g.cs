@@ -158,7 +158,7 @@ namespace Fal
                 PrepareDeleteRequestPayloadsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    requestId: requestId,
+                    requestId: requestId!,
                     idempotencyKey: idempotencyKey);
 
                 return __httpRequest;

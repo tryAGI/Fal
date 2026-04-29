@@ -157,8 +157,8 @@ namespace Fal
                 PrepareServerlessFlushAppQueueRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    owner: owner,
-                    name: name,
+                    owner: owner!,
+                    name: name!,
                     idempotencyKey: idempotencyKey);
 
                 return __httpRequest;
