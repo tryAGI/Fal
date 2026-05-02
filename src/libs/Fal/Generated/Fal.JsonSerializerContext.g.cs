@@ -185,10 +185,6 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetUsageResponseErrorType4NullableJsonConverter),
 
-            typeof(global::Fal.JsonConverters.GetUsageResponseErrorType5JsonConverter),
-
-            typeof(global::Fal.JsonConverters.GetUsageResponseErrorType5NullableJsonConverter),
-
             typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorTypeNullableJsonConverter),
@@ -228,10 +224,6 @@ namespace Fal
             typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType4JsonConverter),
 
             typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType4NullableJsonConverter),
-
-            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType5JsonConverter),
-
-            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType5NullableJsonConverter),
 
             typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeJsonConverter),
 
@@ -987,9 +979,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponse5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseError4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType4), TypeInfoPropertyName = "GetUsageResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType5), TypeInfoPropertyName = "GetUsageResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetAnalyticsResponseTimeSerie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseTimeSerie))]
@@ -1030,9 +1019,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType4), TypeInfoPropertyName = "GetBillingEventsResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType5), TypeInfoPropertyName = "GetBillingEventsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.DeleteRequestPayloadsResponseCdnDeleteResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseCdnDeleteResult))]

@@ -504,62 +504,24 @@ namespace Fal
                                         h => h.Value),
                                 };
                             }
-                            // Resource not found
-                            if ((int)__response.StatusCode == 404)
-                            {
-                                string? __content_404 = null;
-                                global::System.Exception? __exception_404 = null;
-                                global::Fal.GetUsageResponse5? __value_404 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Fal.GetUsageResponse5.FromJson(__content_404, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_404 = global::Fal.GetUsageResponse5.FromJson(__content_404, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_404 = __ex;
-                                }
-
-                                throw new global::Fal.ApiException<global::Fal.GetUsageResponse5>(
-                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_404,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_404,
-                                    ResponseObject = __value_404,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value),
-                                };
-                            }
                             // Rate limit exceeded
                             if ((int)__response.StatusCode == 429)
                             {
                                 string? __content_429 = null;
                                 global::System.Exception? __exception_429 = null;
-                                global::Fal.GetUsageResponse6? __value_429 = null;
+                                global::Fal.GetUsageResponse5? __value_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_429 = global::Fal.GetUsageResponse6.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.GetUsageResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_429 = global::Fal.GetUsageResponse6.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.GetUsageResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -567,7 +529,7 @@ namespace Fal
                                     __exception_429 = __ex;
                                 }
 
-                                throw new global::Fal.ApiException<global::Fal.GetUsageResponse6>(
+                                throw new global::Fal.ApiException<global::Fal.GetUsageResponse5>(
                                     message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
                                     statusCode: __response.StatusCode)
