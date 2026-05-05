@@ -53,6 +53,27 @@ namespace Fal
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetModelAccessControlsAsResponseAsync(
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Model Access Controls Report<br/>
+        /// Returns the current model access controls for your organization as a CSV download.<br/>
+        /// &gt; **Availability:** This endpoint is available to enterprise customers with model access controls enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// The report includes each model's endpoint ID, title, category, enterprise readiness status, and the resolved UI and API access state (ALLOWED or BLOCKED).<br/>
+        ///     
+        /// </summary>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<string>> GetModelAccessControlsAsResponseAsync(
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetModelAccessControlsArguments(
@@ -80,6 +101,7 @@ namespace Fal
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Fal.PathBuilder(
                                 path: "/account/model-access-controls",
                                 baseUri: HttpClient.BaseAddress);
@@ -152,6 +174,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -162,6 +186,11 @@ namespace Fal
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -179,6 +208,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -188,8 +219,7 @@ namespace Fal
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -198,6 +228,11 @@ namespace Fal
                         __attempt < __maxAttempts &&
                         global::Fal.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -214,14 +249,15 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -261,6 +297,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -281,6 +319,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Authentication required
@@ -457,7 +497,11 @@ namespace Fal
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return __content;
+                                    return new global::Fal.AutoSDKHttpResponse<string>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __content);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -485,7 +529,11 @@ namespace Fal
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return __content;
+                                    return new global::Fal.AutoSDKHttpResponse<string>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __content);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

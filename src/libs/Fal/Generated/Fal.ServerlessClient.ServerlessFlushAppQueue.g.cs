@@ -78,6 +78,52 @@ namespace Fal
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            await ServerlessFlushAppQueueAsResponseAsync(
+                owner: owner,
+                name: name,
+                idempotencyKey: idempotencyKey,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Flush Application Queue<br/>
+        /// Flushes all pending requests from an application's queue.<br/>
+        /// **Authentication:** Required via API key<br/>
+        /// **Idempotency:**<br/>
+        /// - Optional `Idempotency-Key` header prevents duplicate flushes on retries<br/>
+        /// - Responses cached for 10 minutes per unique key<br/>
+        /// **Use Cases:**<br/>
+        /// - Clear stuck or outdated requests from the queue<br/>
+        /// - Reset queue state during development or testing<br/>
+        /// - Cancel all pending requests for an application<br/>
+        /// **Important:**<br/>
+        /// - This operation is irreversible<br/>
+        /// - All pending requests in the queue will be cancelled<br/>
+        /// - Requests already being processed will not be affected
+        /// </summary>
+        /// <param name="owner">
+        /// Username of the app owner<br/>
+        /// Example: user_123
+        /// </param>
+        /// <param name="name">
+        /// Application name<br/>
+        /// Example: my-app
+        /// </param>
+        /// <param name="idempotencyKey">
+        /// Optional idempotency key for safe request retries<br/>
+        /// Example: 550e8400-e29b-41d4-a716-446655440000
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse> ServerlessFlushAppQueueAsResponseAsync(
+            string owner,
+            string name,
+            string? idempotencyKey = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareServerlessFlushAppQueueArguments(
@@ -108,6 +154,7 @@ namespace Fal
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Fal.PathBuilder(
                                 path: $"/serverless/apps/{owner}/{name}/queue",
                                 baseUri: HttpClient.BaseAddress);
@@ -189,6 +236,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -199,6 +248,11 @@ namespace Fal
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -216,6 +270,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -225,8 +281,7 @@ namespace Fal
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -235,6 +290,11 @@ namespace Fal
                         __attempt < __maxAttempts &&
                         global::Fal.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -251,14 +311,15 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -298,6 +359,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -318,6 +381,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Invalid request parameters
@@ -566,6 +631,10 @@ namespace Fal
                                 {
                                     __response.EnsureSuccessStatusCode();
 
+                return new global::Fal.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -587,6 +656,10 @@ namespace Fal
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
+                                    return new global::Fal.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

@@ -77,6 +77,49 @@ namespace Fal
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await ListComputeInstancesAsResponseAsync(
+                limit: limit,
+                cursor: cursor,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// List Compute Instances<br/>
+        /// Returns a list of all compute instances belonging to the authenticated user's workspace.<br/>
+        /// **Requirements:**<br/>
+        /// - Requires compute permissions (extra_permissions.compute = true)<br/>
+        /// - Authentication required via admin API key<br/>
+        /// **Key Features:**<br/>
+        /// - View all instances regardless of status<br/>
+        /// - Includes instance configuration, region, and current status<br/>
+        /// - Paginated results for large instance lists<br/>
+        /// **Common Use Cases:**<br/>
+        /// - Monitor all active compute resources<br/>
+        /// - Check instance status and availability<br/>
+        /// - Audit compute resource usage<br/>
+        /// - Build compute management dashboards<br/>
+        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// </summary>
+        /// <param name="limit">
+        /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
+        /// Example: 50
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor from previous response. Encodes the page number.<br/>
+        /// Example: Mg==
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.ListComputeInstancesResponse>> ListComputeInstancesAsResponseAsync(
+            int? limit = default,
+            string? cursor = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareListComputeInstancesArguments(
@@ -106,12 +149,13 @@ namespace Fal
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Fal.PathBuilder(
                                 path: "/compute/instances",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
-                                .AddOptionalParameter("cursor", cursor) 
+                                .AddOptionalParameter("cursor", cursor)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -184,6 +228,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -194,6 +240,11 @@ namespace Fal
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -211,6 +262,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -220,8 +273,7 @@ namespace Fal
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -230,6 +282,11 @@ namespace Fal
                         __attempt < __maxAttempts &&
                         global::Fal.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -246,14 +303,15 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -293,6 +351,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -313,6 +373,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Authentication required
@@ -489,9 +551,13 @@ namespace Fal
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Fal.ListComputeInstancesResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Fal.ListComputeInstancesResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.ListComputeInstancesResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -519,9 +585,13 @@ namespace Fal
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Fal.ListComputeInstancesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Fal.ListComputeInstancesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.ListComputeInstancesResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
