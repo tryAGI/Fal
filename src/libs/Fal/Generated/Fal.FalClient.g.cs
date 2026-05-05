@@ -47,7 +47,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public AccountClient Account => new AccountClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AccountClient Account => new AccountClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
@@ -57,7 +57,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public ComputeClient Compute => new ComputeClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ComputeClient Compute => new ComputeClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
@@ -67,7 +67,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public KeysClient Keys => new KeysClient(HttpClient, authorizations: Authorizations, options: Options)
+        public KeysClient Keys => new KeysClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
@@ -77,7 +77,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public MetaClient Meta => new MetaClient(HttpClient, authorizations: Authorizations, options: Options)
+        public MetaClient Meta => new MetaClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
@@ -87,7 +87,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public ModelsClient Models => new ModelsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ModelsClient Models => new ModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
@@ -97,7 +97,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public ServerlessClient Serverless => new ServerlessClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ServerlessClient Serverless => new ServerlessClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
@@ -107,7 +107,7 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        public WorkflowsClient Workflows => new WorkflowsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public WorkflowsClient Workflows => new WorkflowsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
@@ -147,10 +147,10 @@ namespace Fal
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
         public FalClient(
-            global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null,
-            global::System.Collections.Generic.List<global::Fal.EndPointAuthorization>? authorizations = null,
-            global::Fal.AutoSDKClientOptions? options = null,
+            global::System.Net.Http.HttpClient? httpClient,
+            global::System.Uri? baseUri,
+            global::System.Collections.Generic.List<global::Fal.EndPointAuthorization>? authorizations,
+            global::Fal.AutoSDKClientOptions? options,
             bool disposeHttpClient = true)
         {
 

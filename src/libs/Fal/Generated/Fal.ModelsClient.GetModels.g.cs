@@ -123,6 +123,90 @@ namespace Fal
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetModelsAsResponseAsync(
+                limit: limit,
+                cursor: cursor,
+                endpointId: endpointId,
+                q: q,
+                category: category,
+                status: status,
+                expand: expand,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Model search<br/>
+        /// Unified endpoint for discovering model endpoints. Supports three usage modes:<br/>
+        /// **1. List Mode** (no parameters):<br/>
+        /// Paginated list of all available model endpoints with minimal metadata.<br/>
+        /// **2. Find Mode** (`endpoint_id` parameter):<br/>
+        /// Retrieve specific model endpoint(s) by ID. Supports single or multiple IDs.<br/>
+        /// **3. Search Mode** (search parameters):<br/>
+        /// Filter models by free-text query, category, or status.<br/>
+        /// **Expansion:**<br/>
+        /// Use `expand` to include additional data in each model object:<br/>
+        /// - `openapi-3.0` — full OpenAPI 3.0 schema in the `openapi` field<br/>
+        /// - `enterprise_status` — enterprise readiness status (`ready` or `pending`) in the `enterprise_status` field<br/>
+        /// **Examples of `endpoint_id` values:**<br/>
+        /// - `fal-ai/flux/dev`<br/>
+        /// - `fal-ai/wan/v2.2-a14b/text-to-video`<br/>
+        /// - `fal-ai/minimax/video-01/image-to-video`<br/>
+        /// - `fal-ai/hunyuan3d-v21`<br/>
+        /// See [fal.ai Model APIs](https://docs.fal.ai/model-apis) for more details.<br/>
+        /// **Authentication:** Optional. Providing an API key grants higher rate limits.<br/>
+        /// **Common Use Cases:**<br/>
+        /// - Browse available models for integration<br/>
+        /// - Retrieve metadata for specific endpoints<br/>
+        /// - Search for models by category or keywords<br/>
+        /// - Get OpenAPI schemas for code generation<br/>
+        /// - Build model selection interfaces<br/>
+        ///     
+        /// </summary>
+        /// <param name="limit">
+        /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
+        /// Example: 50
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor from previous response. Encodes the page number.<br/>
+        /// Example: Mg==
+        /// </param>
+        /// <param name="endpointId">
+        /// Endpoint ID(s) to retrieve (e.g., 'fal-ai/flux/dev'). Can be a single value or multiple values (1-50 models). When combined with search params, narrows results to these IDs. Use array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
+        /// Example: [fal-ai/flux/dev, fal-ai/flux-pro]
+        /// </param>
+        /// <param name="q">
+        /// Free-text search query to filter models by name, description, or category<br/>
+        /// Example: text to image
+        /// </param>
+        /// <param name="category">
+        /// Filter by category (e.g., 'text-to-image', 'image-to-video', 'training')<br/>
+        /// Example: text-to-image
+        /// </param>
+        /// <param name="status">
+        /// Filter models by status - omit to include all statuses<br/>
+        /// Example: active
+        /// </param>
+        /// <param name="expand">
+        /// Fields to expand in the response. Supported values: 'openapi-3.0' (includes full OpenAPI 3.0 schema in 'openapi' field), 'enterprise_status' (includes enterprise readiness status)<br/>
+        /// Example: [openapi-3.0, enterprise_status]
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.GetModelsResponse>> GetModelsAsResponseAsync(
+            int? limit = default,
+            string? cursor = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
+            string? q = default,
+            string? category = default,
+            global::Fal.GetModelsStatus? status = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetModelsArguments(
@@ -157,9 +241,10 @@ namespace Fal
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Fal.PathBuilder(
                                 path: "/models",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("cursor", cursor)
@@ -167,7 +252,7 @@ namespace Fal
                                 .AddOptionalParameter("q", q)
                                 .AddOptionalParameter("category", category)
                                 .AddOptionalParameter("status", status?.ToValueString())
-                                .AddOptionalParameter("expand", expand?.ToString()) 
+                                .AddOptionalParameter("expand", expand?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -245,6 +330,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -255,6 +342,11 @@ namespace Fal
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -272,6 +364,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -281,8 +375,7 @@ namespace Fal
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -291,6 +384,11 @@ namespace Fal
                         __attempt < __maxAttempts &&
                         global::Fal.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -307,14 +405,15 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -354,6 +453,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -374,6 +475,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Invalid request parameters
@@ -550,9 +653,13 @@ namespace Fal
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Fal.GetModelsResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Fal.GetModelsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.GetModelsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -580,9 +687,13 @@ namespace Fal
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Fal.GetModelsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Fal.GetModelsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.GetModelsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
