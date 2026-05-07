@@ -1355,6 +1355,859 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType), TypeInfoPropertyName = "ListApiKeysResponseErrorType2_3")]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Fal.JsonConverters.EstimatePricingRequestVariant1EstimateTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingRequestVariant1EstimateTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingRequestVariant2EstimateTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingRequestVariant2EstimateTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryRequestItemConditionTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryRequestItemConditionTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamRequestItemConditionTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamRequestItemConditionTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceRequestInstanceTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceRequestInstanceTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceRequestSectorJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceRequestSectorNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageBoundToTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsBoundToTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointSortByJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointSortByNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsBoundToTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryRunSourceJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryRunSourceNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamRunSourceJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamRunSourceNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointSortByJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointSortByNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportSourceJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportSourceNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataLicenseTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataLicenseTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataKindJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataKindNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseModelEnterpriseStatusEnumJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseModelEnterpriseStatusEnumNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetPricingResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetPricingResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetPricingResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetPricingResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetPricingResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetPricingResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetPricingResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetPricingResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseEstimateTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseEstimateTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.EstimatePricingResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetUsageResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAnalyticsResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetWorkflowResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseInstanceInstanceTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseInstanceInstanceTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseInstanceRegionJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseInstanceRegionNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseInstanceSectorJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseInstanceSectorNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseInstanceStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseInstanceStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListComputeInstancesResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseInstanceTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseInstanceTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseRegionJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseRegionNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseSectorJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseSectorNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseInstanceTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseInstanceTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseRegionJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseRegionNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseSectorJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseSectorNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetComputeInstanceResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseKeyScopeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseKeyScopeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListApiKeysResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.CreateApiKeyResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteApiKeyResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteApiKeyResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteApiKeyResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteApiKeyResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteApiKeyResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteApiKeyResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteApiKeyResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.DeleteApiKeyResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetAccountBillingResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetFocusReportResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetMetaResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetMetaResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.OneOfJsonConverter<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>),
+
+            typeof(global::Fal.JsonConverters.UnixTimestampJsonConverter),
+        })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseError2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType2), TypeInfoPropertyName = "ListApiKeysResponseErrorType22")]
@@ -1469,7 +2322,471 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListRequestsByEndpointResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ListComputeInstancesResponseInstance>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ListApiKeysResponseKey>))]
+    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = global::System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
+            SourceGenerationContextChunk0.Default,
+
+            SourceGenerationContextChunk1.Default
+            );
+
+        private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SourceGenerationContext Default { get; } = new(DefaultOptions);
+
+        private SourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+            : base(options)
+        {
+        }
+
+        /// <inheritdoc />
+        protected override global::System.Text.Json.JsonSerializerOptions? GeneratedSerializerOptions => DefaultOptions;
+
+        /// <inheritdoc />
+        public override global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(global::System.Type type)
+        {
+            return Resolver.GetTypeInfo(type, Options);
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingRequestVariant1EstimateTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingRequestVariant1EstimateTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingRequestVariant2EstimateTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingRequestVariant2EstimateTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryRequestItemConditionTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryRequestItemConditionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamRequestItemConditionTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamRequestItemConditionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceRequestInstanceTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceRequestInstanceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceRequestSectorJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceRequestSectorNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsStatusJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsStatusNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageBoundToTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageBoundToTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsBoundToTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsBoundToTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointStatusJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointStatusNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointSortByJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointSortByNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsBoundToTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsBoundToTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryRunSourceJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryRunSourceNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamRunSourceJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamRunSourceNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointStatusJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointStatusNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointSortByJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointSortByNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportSourceJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportSourceNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportBoundToTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportBoundToTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataLicenseTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataLicenseTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataKindJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataKindNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelEnterpriseStatusEnumJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelEnterpriseStatusEnumNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetPricingResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetPricingResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetPricingResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetPricingResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetPricingResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetPricingResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetPricingResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetPricingResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseEstimateTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseEstimateTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.EstimatePricingResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetUsageResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAnalyticsResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetWorkflowResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAnalyticsResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetAppQueueInfoResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessFlushAppQueueResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListDirectoryResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessDownloadFileResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadFromUrlResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessUploadLocalFileResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessGetMetricsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsHistoryResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessLogsStreamResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceInstanceTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceInstanceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceRegionJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceRegionNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceSectorJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceSectorNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceStatusJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceStatusNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListComputeInstancesResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseInstanceTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseInstanceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseRegionJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseRegionNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseSectorJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseSectorNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseStatusJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseStatusNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateComputeInstanceResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseInstanceTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseInstanceTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseRegionJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseRegionNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseSectorJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseSectorNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseStatusJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseStatusNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetComputeInstanceResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteComputeInstanceResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseKeyScopeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseKeyScopeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListApiKeysResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.CreateApiKeyResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteApiKeyResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteApiKeyResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteApiKeyResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteApiKeyResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteApiKeyResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteApiKeyResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteApiKeyResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.DeleteApiKeyResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetAccountBillingResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetMetaResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetMetaResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetMetaResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.OneOfJsonConverter<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>());
+            options.Converters.Add(new global::Fal.JsonConverters.UnixTimestampJsonConverter());
+
+            return options;
+        }
     }
 }
