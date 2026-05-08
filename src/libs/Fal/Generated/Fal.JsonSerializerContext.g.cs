@@ -225,6 +225,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType4NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType5NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeNullableJsonConverter),
@@ -269,6 +273,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorTypeNullableJsonConverter),
@@ -284,6 +292,10 @@ namespace Fal
             typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType4JsonConverter),
 
             typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType5NullableJsonConverter),
 
             typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorTypeJsonConverter),
 
@@ -1019,6 +1031,9 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType4), TypeInfoPropertyName = "GetBillingEventsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType5), TypeInfoPropertyName = "GetBillingEventsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.DeleteRequestPayloadsResponseCdnDeleteResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseCdnDeleteResult))]
@@ -1058,6 +1073,9 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse6))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseError5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType5), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType6), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.SearchRequestsResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseResult))]
@@ -1073,6 +1091,9 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseError4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType4), TypeInfoPropertyName = "SearchRequestsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType5), TypeInfoPropertyName = "SearchRequestsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListWorkflowsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ListWorkflowsResponseWorkflow>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListWorkflowsResponseWorkflow))]
@@ -1346,15 +1367,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteComputeInstanceResponseError4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteComputeInstanceResponseErrorType4), TypeInfoPropertyName = "DeleteComputeInstanceResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteComputeInstanceResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteComputeInstanceResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteComputeInstanceResponseErrorType5), TypeInfoPropertyName = "DeleteComputeInstanceResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ListApiKeysResponseKey>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKey))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKeyScope), TypeInfoPropertyName = "ListApiKeysResponseKeyScope2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType), TypeInfoPropertyName = "ListApiKeysResponseErrorType2_3")]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1578,6 +1590,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType4NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetBillingEventsResponseErrorType5NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeNullableJsonConverter),
@@ -1622,6 +1638,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorTypeNullableJsonConverter),
@@ -1637,6 +1657,10 @@ namespace Fal
             typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType4JsonConverter),
 
             typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.SearchRequestsResponseErrorType5NullableJsonConverter),
 
             typeof(global::Fal.JsonConverters.ListWorkflowsResponseErrorTypeJsonConverter),
 
@@ -2208,6 +2232,15 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteComputeInstanceResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteComputeInstanceResponseErrorType5), TypeInfoPropertyName = "DeleteComputeInstanceResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ListApiKeysResponseKey>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKey))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKeyScope), TypeInfoPropertyName = "ListApiKeysResponseKeyScope2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType), TypeInfoPropertyName = "ListApiKeysResponseErrorType2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseError2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType2), TypeInfoPropertyName = "ListApiKeysResponseErrorType22")]
@@ -2470,6 +2503,8 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType3NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType4JsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetBillingEventsResponseErrorType5NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType2JsonConverter());
@@ -2492,6 +2527,8 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType4NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5JsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorTypeJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorTypeNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType2JsonConverter());
@@ -2500,6 +2537,8 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType3NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType4JsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.SearchRequestsResponseErrorType5NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorTypeJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorTypeNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ListWorkflowsResponseErrorType2JsonConverter());
