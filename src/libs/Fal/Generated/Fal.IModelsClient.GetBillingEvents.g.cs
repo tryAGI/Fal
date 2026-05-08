@@ -14,7 +14,8 @@ namespace Fal
         /// - Flexible date range filtering<br/>
         /// - Optional endpoint filtering<br/>
         /// - Cursor-based pagination for efficient large dataset queries<br/>
-        /// - Limited to 100 records per page for performance<br/>
+        /// - Limited to 10000 records per page for performance<br/>
+        /// - Date range capped at 90 days per request<br/>
         /// **Common Use Cases:**<br/>
         /// - Audit individual billing events<br/>
         /// - Track request patterns and volumes<br/>
@@ -74,7 +75,8 @@ namespace Fal
         /// - Flexible date range filtering<br/>
         /// - Optional endpoint filtering<br/>
         /// - Cursor-based pagination for efficient large dataset queries<br/>
-        /// - Limited to 100 records per page for performance<br/>
+        /// - Limited to 10000 records per page for performance<br/>
+        /// - Date range capped at 90 days per request<br/>
         /// **Common Use Cases:**<br/>
         /// - Audit individual billing events<br/>
         /// - Track request patterns and volumes<br/>
