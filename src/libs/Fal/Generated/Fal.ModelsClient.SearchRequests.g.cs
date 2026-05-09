@@ -1,6 +1,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace Fal
 {
     public partial class ModelsClient
@@ -32,6 +34,7 @@ namespace Fal
             ref string? query,
             ref string? imageUrl,
             ref string? videoUrl,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
             ref string? endpoint,
             ref bool? excludeApiRequests,
             ref bool? onlyApiRequests,
@@ -44,6 +47,7 @@ namespace Fal
             string? query,
             string? imageUrl,
             string? videoUrl,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
             string? endpoint,
             bool? excludeApiRequests,
             bool? onlyApiRequests,
@@ -70,7 +74,7 @@ namespace Fal
         /// Combine semantic search with hard filters. Filters narrow the candidate set before<br/>
         /// ranking by similarity.<br/>
         /// **Filter Options:**<br/>
-        /// - `endpoint`: Filter by fal endpoint<br/>
+        /// - `endpoint_id`: Filter by one or more fal endpoints (comma-separated or repeated, up to 50 IDs)<br/>
         /// - `exclude_api_requests` / `only_api_requests`: Filter by request source<br/>
         /// **Restricted Request View:**<br/>
         /// For accounts with restricted request view enabled, an admin API key is required.<br/>
@@ -78,8 +82,8 @@ namespace Fal
         /// **Examples:**<br/>
         /// - Semantic text search: `?query=sunset+landscape`<br/>
         /// - Image similarity: `?image_url=https://...&amp;min_similarity=0.5`<br/>
-        /// - Filtered search: `?query=portrait&amp;endpoint=fal-ai/flux/dev`<br/>
-        /// - Browse by endpoint: `?endpoint=fal-ai/flux/dev`
+        /// - Filtered search: `?query=portrait&amp;endpoint_id=fal-ai/flux/dev`<br/>
+        /// - Browse across multiple endpoints: `?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell`
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -101,8 +105,12 @@ namespace Fal
         /// Video URL for similarity search. Mutually exclusive with query and image_url.<br/>
         /// Example: https://v3.fal.media/files/abc123/output.mp4
         /// </param>
+        /// <param name="endpointId">
+        /// Filter by one or more fal endpoints to scope request history. Accepts comma-separated or repeated values (1-50 IDs).<br/>
+        /// Example: [fal-ai/flux/dev]
+        /// </param>
         /// <param name="endpoint">
-        /// Filter by fal endpoint to scope request history.<br/>
+        /// Deprecated: use `endpoint_id`. Single-endpoint filter retained for backward compatibility. If both are provided, `endpoint_id` wins.<br/>
         /// Example: fal-ai/flux/dev
         /// </param>
         /// <param name="excludeApiRequests">
@@ -126,6 +134,7 @@ namespace Fal
             string? query = default,
             string? imageUrl = default,
             string? videoUrl = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             string? endpoint = default,
             bool? excludeApiRequests = default,
             bool? onlyApiRequests = default,
@@ -139,6 +148,7 @@ namespace Fal
                 query: query,
                 imageUrl: imageUrl,
                 videoUrl: videoUrl,
+                endpointId: endpointId,
                 endpoint: endpoint,
                 excludeApiRequests: excludeApiRequests,
                 onlyApiRequests: onlyApiRequests,
@@ -162,7 +172,7 @@ namespace Fal
         /// Combine semantic search with hard filters. Filters narrow the candidate set before<br/>
         /// ranking by similarity.<br/>
         /// **Filter Options:**<br/>
-        /// - `endpoint`: Filter by fal endpoint<br/>
+        /// - `endpoint_id`: Filter by one or more fal endpoints (comma-separated or repeated, up to 50 IDs)<br/>
         /// - `exclude_api_requests` / `only_api_requests`: Filter by request source<br/>
         /// **Restricted Request View:**<br/>
         /// For accounts with restricted request view enabled, an admin API key is required.<br/>
@@ -170,8 +180,8 @@ namespace Fal
         /// **Examples:**<br/>
         /// - Semantic text search: `?query=sunset+landscape`<br/>
         /// - Image similarity: `?image_url=https://...&amp;min_similarity=0.5`<br/>
-        /// - Filtered search: `?query=portrait&amp;endpoint=fal-ai/flux/dev`<br/>
-        /// - Browse by endpoint: `?endpoint=fal-ai/flux/dev`
+        /// - Filtered search: `?query=portrait&amp;endpoint_id=fal-ai/flux/dev`<br/>
+        /// - Browse across multiple endpoints: `?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell`
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -193,8 +203,12 @@ namespace Fal
         /// Video URL for similarity search. Mutually exclusive with query and image_url.<br/>
         /// Example: https://v3.fal.media/files/abc123/output.mp4
         /// </param>
+        /// <param name="endpointId">
+        /// Filter by one or more fal endpoints to scope request history. Accepts comma-separated or repeated values (1-50 IDs).<br/>
+        /// Example: [fal-ai/flux/dev]
+        /// </param>
         /// <param name="endpoint">
-        /// Filter by fal endpoint to scope request history.<br/>
+        /// Deprecated: use `endpoint_id`. Single-endpoint filter retained for backward compatibility. If both are provided, `endpoint_id` wins.<br/>
         /// Example: fal-ai/flux/dev
         /// </param>
         /// <param name="excludeApiRequests">
@@ -218,6 +232,7 @@ namespace Fal
             string? query = default,
             string? imageUrl = default,
             string? videoUrl = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             string? endpoint = default,
             bool? excludeApiRequests = default,
             bool? onlyApiRequests = default,
@@ -234,6 +249,7 @@ namespace Fal
                 query: ref query,
                 imageUrl: ref imageUrl,
                 videoUrl: ref videoUrl,
+                endpointId: ref endpointId,
                 endpoint: ref endpoint,
                 excludeApiRequests: ref excludeApiRequests,
                 onlyApiRequests: ref onlyApiRequests,
@@ -271,6 +287,7 @@ namespace Fal
                                 .AddOptionalParameter("query", query)
                                 .AddOptionalParameter("image_url", imageUrl)
                                 .AddOptionalParameter("video_url", videoUrl)
+                                .AddOptionalParameter("endpoint_id", endpointId?.ToString())
                                 .AddOptionalParameter("endpoint", endpoint)
                                 .AddOptionalParameter("exclude_api_requests", excludeApiRequests?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("only_api_requests", onlyApiRequests?.ToString().ToLowerInvariant())
@@ -321,6 +338,7 @@ namespace Fal
                     query: query,
                     imageUrl: imageUrl,
                     videoUrl: videoUrl,
+                    endpointId: endpointId,
                     endpoint: endpoint,
                     excludeApiRequests: excludeApiRequests,
                     onlyApiRequests: onlyApiRequests,
