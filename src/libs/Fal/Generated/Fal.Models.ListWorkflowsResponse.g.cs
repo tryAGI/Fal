@@ -88,5 +88,6 @@ namespace Fal
         public ListWorkflowsResponse()
         {
         }
+
     }
 }

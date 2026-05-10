@@ -122,5 +122,6 @@ namespace Fal
         public GetBillingEventsResponseBillingEvent()
         {
         }
+
     }
 }

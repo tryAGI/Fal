@@ -54,5 +54,6 @@ namespace Fal
         public GetModelsResponseModelOpenapiVariant2Error()
         {
         }
+
     }
 }

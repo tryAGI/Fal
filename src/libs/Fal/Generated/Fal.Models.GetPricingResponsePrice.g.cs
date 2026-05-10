@@ -78,5 +78,6 @@ namespace Fal
         public GetPricingResponsePrice()
         {
         }
+
     }
 }

@@ -76,5 +76,6 @@ namespace Fal
         public CreateComputeInstanceRequest()
         {
         }
+
     }
 }

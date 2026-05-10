@@ -59,5 +59,6 @@ namespace Fal
         public DeleteRequestPayloadsResponseCdnDeleteResult()
         {
         }
+
     }
 }

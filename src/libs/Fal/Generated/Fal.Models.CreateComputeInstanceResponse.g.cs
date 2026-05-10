@@ -136,5 +136,6 @@ namespace Fal
         public CreateComputeInstanceResponse()
         {
         }
+
     }
 }
