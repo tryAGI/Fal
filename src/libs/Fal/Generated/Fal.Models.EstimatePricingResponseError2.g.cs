@@ -77,5 +77,6 @@ namespace Fal
         public EstimatePricingResponseError2()
         {
         }
+
     }
 }

@@ -42,5 +42,6 @@ namespace Fal
         public GetFocusReportResponse4()
         {
         }
+
     }
 }

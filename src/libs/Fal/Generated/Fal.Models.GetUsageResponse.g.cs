@@ -75,5 +75,6 @@ namespace Fal
         public GetUsageResponse()
         {
         }
+
     }
 }

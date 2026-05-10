@@ -77,5 +77,6 @@ namespace Fal
         public GetPricingResponseError2()
         {
         }
+
     }
 }

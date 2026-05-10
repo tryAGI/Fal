@@ -42,5 +42,6 @@ namespace Fal
         public EstimatePricingRequestVariant1Endpoints2()
         {
         }
+
     }
 }

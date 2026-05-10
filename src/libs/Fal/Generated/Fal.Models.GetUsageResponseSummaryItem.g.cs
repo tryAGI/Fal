@@ -113,5 +113,6 @@ namespace Fal
         public GetUsageResponseSummaryItem()
         {
         }
+
     }
 }
