@@ -81,13 +81,12 @@ namespace Fal
         public object? JsonOutput { get; set; }
 
         /// <summary>
-        /// Unique identifier for the runner execution instance<br/>
+        /// Unique identifier for the runner execution instance. Null if no runner was assigned (e.g. the request failed before dispatch).<br/>
         /// Example: f1e2d3c4-b5a6-7890-dcba-0987654321fe
         /// </summary>
         /// <example>f1e2d3c4-b5a6-7890-dcba-0987654321fe</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("runner_id")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Guid RunnerId { get; set; }
+        public global::System.Guid? RunnerId { get; set; }
 
         /// <summary>
         /// Billable units for this request (only present when expand=billing). Null if a billing event has not yet been recorded for this request.<br/>
@@ -122,10 +121,6 @@ namespace Fal
         /// Time when request was sent to the backend<br/>
         /// Example: 2025-01-01T00:00:01Z
         /// </param>
-        /// <param name="runnerId">
-        /// Unique identifier for the runner execution instance<br/>
-        /// Example: f1e2d3c4-b5a6-7890-dcba-0987654321fe
-        /// </param>
         /// <param name="endedAt">
         /// Time when request finished processing<br/>
         /// Example: 2025-01-01T00:00:08Z
@@ -144,6 +139,10 @@ namespace Fal
         /// <param name="jsonOutput">
         /// Output payload for the request
         /// </param>
+        /// <param name="runnerId">
+        /// Unique identifier for the runner execution instance. Null if no runner was assigned (e.g. the request failed before dispatch).<br/>
+        /// Example: f1e2d3c4-b5a6-7890-dcba-0987654321fe
+        /// </param>
         /// <param name="billableUnits">
         /// Billable units for this request (only present when expand=billing). Null if a billing event has not yet been recorded for this request.<br/>
         /// Example: 1.5F
@@ -156,12 +155,12 @@ namespace Fal
             string endpointId,
             global::System.DateTime startedAt,
             global::System.DateTime sentAt,
-            global::System.Guid runnerId,
             global::System.DateTime? endedAt,
             int? statusCode,
             double? duration,
             object? jsonInput,
             object? jsonOutput,
+            global::System.Guid? runnerId,
             double? billableUnits)
         {
             this.RequestId = requestId;
