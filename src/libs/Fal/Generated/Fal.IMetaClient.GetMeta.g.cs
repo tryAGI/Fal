@@ -18,5 +18,19 @@ namespace Fal
         global::System.Threading.Tasks.Task<global::Fal.GetMetaResponse> GetMetaAsync(
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Get platform metadata<br/>
+        /// Returns platform metadata including webhook IP ranges for allowlisting.<br/>
+        /// If your infrastructure requires allowlisting IP addresses for incoming webhook<br/>
+        /// requests, this endpoint provides the current list of IP ranges used by fal.ai<br/>
+        /// webhooks in CIDR notation.<br/>
+        ///     
+        /// </summary>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.GetMetaResponse>> GetMetaAsResponseAsync(
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

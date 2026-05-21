@@ -168,5 +168,6 @@ namespace Fal
         public SearchRequestsResponseResult()
         {
         }
+
     }
 }

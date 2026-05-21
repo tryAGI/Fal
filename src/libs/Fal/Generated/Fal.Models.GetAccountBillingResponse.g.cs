@@ -56,5 +56,6 @@ namespace Fal
         public GetAccountBillingResponse()
         {
         }
+
     }
 }

@@ -1,6 +1,8 @@
 
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace Fal
 {
     public partial class ModelsClient
@@ -32,6 +34,7 @@ namespace Fal
             ref string? query,
             ref string? imageUrl,
             ref string? videoUrl,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
             ref string? endpoint,
             ref bool? excludeApiRequests,
             ref bool? onlyApiRequests,
@@ -44,6 +47,7 @@ namespace Fal
             string? query,
             string? imageUrl,
             string? videoUrl,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
             string? endpoint,
             bool? excludeApiRequests,
             bool? onlyApiRequests,
@@ -70,7 +74,7 @@ namespace Fal
         /// Combine semantic search with hard filters. Filters narrow the candidate set before<br/>
         /// ranking by similarity.<br/>
         /// **Filter Options:**<br/>
-        /// - `endpoint`: Filter by fal endpoint<br/>
+        /// - `endpoint_id`: Filter by one or more fal endpoints (comma-separated or repeated, up to 50 IDs)<br/>
         /// - `exclude_api_requests` / `only_api_requests`: Filter by request source<br/>
         /// **Restricted Request View:**<br/>
         /// For accounts with restricted request view enabled, an admin API key is required.<br/>
@@ -78,8 +82,8 @@ namespace Fal
         /// **Examples:**<br/>
         /// - Semantic text search: `?query=sunset+landscape`<br/>
         /// - Image similarity: `?image_url=https://...&amp;min_similarity=0.5`<br/>
-        /// - Filtered search: `?query=portrait&amp;endpoint=fal-ai/flux/dev`<br/>
-        /// - Browse by endpoint: `?endpoint=fal-ai/flux/dev`
+        /// - Filtered search: `?query=portrait&amp;endpoint_id=fal-ai/flux/dev`<br/>
+        /// - Browse across multiple endpoints: `?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell`
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -101,8 +105,12 @@ namespace Fal
         /// Video URL for similarity search. Mutually exclusive with query and image_url.<br/>
         /// Example: https://v3.fal.media/files/abc123/output.mp4
         /// </param>
+        /// <param name="endpointId">
+        /// Filter by one or more fal endpoints to scope request history. Accepts comma-separated or repeated values (1-50 IDs).<br/>
+        /// Example: [fal-ai/flux/dev]
+        /// </param>
         /// <param name="endpoint">
-        /// Filter by fal endpoint to scope request history.<br/>
+        /// Deprecated: use `endpoint_id`. Single-endpoint filter retained for backward compatibility. If both are provided, `endpoint_id` wins.<br/>
         /// Example: fal-ai/flux/dev
         /// </param>
         /// <param name="excludeApiRequests">
@@ -126,6 +134,105 @@ namespace Fal
             string? query = default,
             string? imageUrl = default,
             string? videoUrl = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
+            string? endpoint = default,
+            bool? excludeApiRequests = default,
+            bool? onlyApiRequests = default,
+            double? minSimilarity = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __response = await SearchRequestsAsResponseAsync(
+                limit: limit,
+                cursor: cursor,
+                query: query,
+                imageUrl: imageUrl,
+                videoUrl: videoUrl,
+                endpointId: endpointId,
+                endpoint: endpoint,
+                excludeApiRequests: excludeApiRequests,
+                onlyApiRequests: onlyApiRequests,
+                minSimilarity: minSimilarity,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Search Requests<br/>
+        /// Search, filter, and browse your request history. Supports three modes:<br/>
+        /// **1. Semantic Search** (`query`, `image_url`, or `video_url` parameter):<br/>
+        /// Find visually or conceptually similar results using AI embeddings. Provide a text<br/>
+        /// query for text-to-image search, an image URL for image-to-image similarity search,<br/>
+        /// or a video URL for video-to-image similarity search.<br/>
+        /// **2. Filtered Browse** (no `query`, `image_url`, or `video_url`):<br/>
+        /// Browse request history with hard filters. Returns results ordered by creation date (newest first).<br/>
+        /// **3. Semantic + Filters** (search params AND filter params):<br/>
+        /// Combine semantic search with hard filters. Filters narrow the candidate set before<br/>
+        /// ranking by similarity.<br/>
+        /// **Filter Options:**<br/>
+        /// - `endpoint_id`: Filter by one or more fal endpoints (comma-separated or repeated, up to 50 IDs)<br/>
+        /// - `exclude_api_requests` / `only_api_requests`: Filter by request source<br/>
+        /// **Restricted Request View:**<br/>
+        /// For accounts with restricted request view enabled, an admin API key is required.<br/>
+        /// Non-admin keys will receive a 403 error.<br/>
+        /// **Examples:**<br/>
+        /// - Semantic text search: `?query=sunset+landscape`<br/>
+        /// - Image similarity: `?image_url=https://...&amp;min_similarity=0.5`<br/>
+        /// - Filtered search: `?query=portrait&amp;endpoint_id=fal-ai/flux/dev`<br/>
+        /// - Browse across multiple endpoints: `?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell`
+        /// </summary>
+        /// <param name="limit">
+        /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
+        /// Example: 50
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor from previous response. Encodes the page number.<br/>
+        /// Example: Mg==
+        /// </param>
+        /// <param name="query">
+        /// Text search query for semantic search. Mutually exclusive with image_url and video_url.<br/>
+        /// Example: sunset landscape
+        /// </param>
+        /// <param name="imageUrl">
+        /// Image URL for similarity search. Mutually exclusive with query and video_url.<br/>
+        /// Example: https://v3.fal.media/files/abc123/output.png
+        /// </param>
+        /// <param name="videoUrl">
+        /// Video URL for similarity search. Mutually exclusive with query and image_url.<br/>
+        /// Example: https://v3.fal.media/files/abc123/output.mp4
+        /// </param>
+        /// <param name="endpointId">
+        /// Filter by one or more fal endpoints to scope request history. Accepts comma-separated or repeated values (1-50 IDs).<br/>
+        /// Example: [fal-ai/flux/dev]
+        /// </param>
+        /// <param name="endpoint">
+        /// Deprecated: use `endpoint_id`. Single-endpoint filter retained for backward compatibility. If both are provided, `endpoint_id` wins.<br/>
+        /// Example: fal-ai/flux/dev
+        /// </param>
+        /// <param name="excludeApiRequests">
+        /// Exclude requests made via API keys (only show playground/UI requests). Mutually exclusive with only_api_requests.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="onlyApiRequests">
+        /// Only include requests made via API keys. Mutually exclusive with exclude_api_requests.<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="minSimilarity">
+        /// Minimum similarity score (0-1) for semantic search results. Only applies when query or image_url is provided.<br/>
+        /// Example: 0.3F
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.SearchRequestsResponse>> SearchRequestsAsResponseAsync(
+            int? limit = default,
+            string? cursor = default,
+            string? query = default,
+            string? imageUrl = default,
+            string? videoUrl = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             string? endpoint = default,
             bool? excludeApiRequests = default,
             bool? onlyApiRequests = default,
@@ -142,6 +249,7 @@ namespace Fal
                 query: ref query,
                 imageUrl: ref imageUrl,
                 videoUrl: ref videoUrl,
+                endpointId: ref endpointId,
                 endpoint: ref endpoint,
                 excludeApiRequests: ref excludeApiRequests,
                 onlyApiRequests: ref onlyApiRequests,
@@ -169,19 +277,21 @@ namespace Fal
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Fal.PathBuilder(
                                 path: "/models/requests/search",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("cursor", cursor)
                                 .AddOptionalParameter("query", query)
                                 .AddOptionalParameter("image_url", imageUrl)
                                 .AddOptionalParameter("video_url", videoUrl)
+                                .AddOptionalParameter("endpoint_id", endpointId?.ToString())
                                 .AddOptionalParameter("endpoint", endpoint)
                                 .AddOptionalParameter("exclude_api_requests", excludeApiRequests?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("only_api_requests", onlyApiRequests?.ToString().ToLowerInvariant())
-                                .AddOptionalParameter("min_similarity", minSimilarity?.ToString()) 
+                                .AddOptionalParameter("min_similarity", minSimilarity?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -228,6 +338,7 @@ namespace Fal
                     query: query,
                     imageUrl: imageUrl,
                     videoUrl: videoUrl,
+                    endpointId: endpointId,
                     endpoint: endpoint,
                     excludeApiRequests: excludeApiRequests,
                     onlyApiRequests: onlyApiRequests,
@@ -261,6 +372,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -271,6 +384,11 @@ namespace Fal
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -288,6 +406,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -297,8 +417,7 @@ namespace Fal
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -307,6 +426,11 @@ namespace Fal
                         __attempt < __maxAttempts &&
                         global::Fal.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -323,14 +447,15 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -370,6 +495,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -390,6 +517,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Invalid request parameters
@@ -468,24 +597,62 @@ namespace Fal
                                         h => h.Value),
                                 };
                             }
+                            // Access denied
+                            if ((int)__response.StatusCode == 403)
+                            {
+                                string? __content_403 = null;
+                                global::System.Exception? __exception_403 = null;
+                                global::Fal.SearchRequestsResponse4? __value_403 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_403 = global::Fal.SearchRequestsResponse4.FromJson(__content_403, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_403 = global::Fal.SearchRequestsResponse4.FromJson(__content_403, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_403 = __ex;
+                                }
+
+                                throw new global::Fal.ApiException<global::Fal.SearchRequestsResponse4>(
+                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_403,
+                                    statusCode: __response.StatusCode)
+                                {
+                                    ResponseBody = __content_403,
+                                    ResponseObject = __value_403,
+                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value),
+                                };
+                            }
                             // Rate limit exceeded
                             if ((int)__response.StatusCode == 429)
                             {
                                 string? __content_429 = null;
                                 global::System.Exception? __exception_429 = null;
-                                global::Fal.SearchRequestsResponse4? __value_429 = null;
+                                global::Fal.SearchRequestsResponse5? __value_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_429 = global::Fal.SearchRequestsResponse4.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.SearchRequestsResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_429 = global::Fal.SearchRequestsResponse4.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.SearchRequestsResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -493,7 +660,7 @@ namespace Fal
                                     __exception_429 = __ex;
                                 }
 
-                                throw new global::Fal.ApiException<global::Fal.SearchRequestsResponse4>(
+                                throw new global::Fal.ApiException<global::Fal.SearchRequestsResponse5>(
                                     message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
                                     statusCode: __response.StatusCode)
@@ -511,19 +678,19 @@ namespace Fal
                             {
                                 string? __content_500 = null;
                                 global::System.Exception? __exception_500 = null;
-                                global::Fal.SearchRequestsResponse5? __value_500 = null;
+                                global::Fal.SearchRequestsResponse6? __value_500 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_500 = global::Fal.SearchRequestsResponse5.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.SearchRequestsResponse6.FromJson(__content_500, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_500 = global::Fal.SearchRequestsResponse5.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.SearchRequestsResponse6.FromJson(__content_500, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -531,7 +698,7 @@ namespace Fal
                                     __exception_500 = __ex;
                                 }
 
-                                throw new global::Fal.ApiException<global::Fal.SearchRequestsResponse5>(
+                                throw new global::Fal.ApiException<global::Fal.SearchRequestsResponse6>(
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
                                     statusCode: __response.StatusCode)
@@ -566,9 +733,13 @@ namespace Fal
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Fal.SearchRequestsResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Fal.SearchRequestsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.SearchRequestsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -596,9 +767,13 @@ namespace Fal
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Fal.SearchRequestsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Fal.SearchRequestsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.SearchRequestsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

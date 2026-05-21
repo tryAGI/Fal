@@ -6,15 +6,15 @@ namespace Fal
     /// <summary>
     /// Error details
     /// </summary>
-    public sealed partial class GetUsageResponseError5
+    public sealed partial class ListRequestsByEndpointResponseError6
     {
         /// <summary>
         /// The category of error that occurred
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.GetUsageResponseErrorType5JsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6JsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.GetUsageResponseErrorType5 Type { get; set; }
+        public required global::Fal.ListRequestsByEndpointResponseErrorType6 Type { get; set; }
 
         /// <summary>
         /// Human-readable error message
@@ -42,7 +42,7 @@ namespace Fal
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetUsageResponseError5" /> class.
+        /// Initializes a new instance of the <see cref="ListRequestsByEndpointResponseError6" /> class.
         /// </summary>
         /// <param name="type">
         /// The category of error that occurred
@@ -59,8 +59,8 @@ namespace Fal
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public GetUsageResponseError5(
-            global::Fal.GetUsageResponseErrorType5 type,
+        public ListRequestsByEndpointResponseError6(
+            global::Fal.ListRequestsByEndpointResponseErrorType6 type,
             string message,
             string? docsUrl,
             string? requestId)
@@ -72,10 +72,11 @@ namespace Fal
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetUsageResponseError5" /> class.
+        /// Initializes a new instance of the <see cref="ListRequestsByEndpointResponseError6" /> class.
         /// </summary>
-        public GetUsageResponseError5()
+        public ListRequestsByEndpointResponseError6()
         {
         }
+
     }
 }

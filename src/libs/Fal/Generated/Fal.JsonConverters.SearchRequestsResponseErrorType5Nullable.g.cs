@@ -3,10 +3,10 @@
 namespace Fal.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class GetUsageResponseErrorType5JsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.GetUsageResponseErrorType5>
+    public sealed class SearchRequestsResponseErrorType5NullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.SearchRequestsResponseErrorType5?>
     {
         /// <inheritdoc />
-        public override global::Fal.GetUsageResponseErrorType5 Read(
+        public override global::Fal.SearchRequestsResponseErrorType5? Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Fal.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Fal.GetUsageResponseErrorType5Extensions.ToEnum(stringValue) ?? default;
+                        return global::Fal.SearchRequestsResponseErrorType5Extensions.ToEnum(stringValue);
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Fal.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Fal.GetUsageResponseErrorType5)numValue;
+                    return (global::Fal.SearchRequestsResponseErrorType5)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Fal.GetUsageResponseErrorType5);
+                    return default(global::Fal.SearchRequestsResponseErrorType5?);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,12 +42,19 @@ namespace Fal.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Fal.GetUsageResponseErrorType5 value,
+            global::Fal.SearchRequestsResponseErrorType5? value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::Fal.GetUsageResponseErrorType5Extensions.ToValueString(value));
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::Fal.SearchRequestsResponseErrorType5Extensions.ToValueString(value.Value));
+            }
         }
     }
 }

@@ -101,5 +101,6 @@ namespace Fal
         public ServerlessLogsHistoryResponseItem()
         {
         }
+
     }
 }

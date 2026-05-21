@@ -63,7 +63,8 @@ namespace Fal
         /// - Flexible date range filtering<br/>
         /// - Optional endpoint filtering<br/>
         /// - Cursor-based pagination for efficient large dataset queries<br/>
-        /// - Limited to 100 records per page for performance<br/>
+        /// - Limited to 10000 records per page for performance<br/>
+        /// - Date range capped at 90 days per request<br/>
         /// **Common Use Cases:**<br/>
         /// - Audit individual billing events<br/>
         /// - Track request patterns and volumes<br/>
@@ -114,6 +115,82 @@ namespace Fal
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetBillingEventsAsResponseAsync(
+                limit: limit,
+                cursor: cursor,
+                start: start,
+                end: end,
+                endpointId: endpointId,
+                requestId: requestId,
+                expand: expand,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Billing Events<br/>
+        /// Returns paginated individual billing event records with filters<br/>
+        /// for endpoint and date range. Each record includes the request ID, timestamp,<br/>
+        /// endpoint, and output units billed.<br/>
+        /// **Key Features:**<br/>
+        /// - Individual billing event records for each API request<br/>
+        /// - Flexible date range filtering<br/>
+        /// - Optional endpoint filtering<br/>
+        /// - Cursor-based pagination for efficient large dataset queries<br/>
+        /// - Limited to 10000 records per page for performance<br/>
+        /// - Date range capped at 90 days per request<br/>
+        /// **Common Use Cases:**<br/>
+        /// - Audit individual billing events<br/>
+        /// - Track request patterns and volumes<br/>
+        /// - Debug specific requests by ID<br/>
+        /// - Monitor billing unit consumption per request<br/>
+        /// See [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.<br/>
+        ///     
+        /// </summary>
+        /// <param name="limit">
+        /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
+        /// Example: 50
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor from previous response. Encodes the page number.<br/>
+        /// Example: Mg==
+        /// </param>
+        /// <param name="start">
+        /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>
+        /// Example: 2025-01-01T00:00:00Z
+        /// </param>
+        /// <param name="end">
+        /// End date in ISO8601 format, exclusive (e.g., '2025-02-01T00:00:00Z' or '2025-02-01'). Data up to but not including this timestamp is returned. Defaults to current time.<br/>
+        /// Example: 2025-02-01T00:00:00Z
+        /// </param>
+        /// <param name="endpointId">
+        /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
+        /// Example: [fal-ai/flux/dev]
+        /// </param>
+        /// <param name="requestId">
+        /// Filter by specific request ID(s). Accepts 1-50 request IDs. Supports comma-separated values: ?request_id=req1,req2 or array syntax: ?request_id=req1&amp;request_id=req2<br/>
+        /// Example: [req-abc123]
+        /// </param>
+        /// <param name="expand">
+        /// Data to include in the response. Use 'auth_method' to include authentication method information (formatted with user key aliases).<br/>
+        /// Example: auth_method
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.GetBillingEventsResponse>> GetBillingEventsAsResponseAsync(
+            int? limit = default,
+            string? cursor = default,
+            global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
+            global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? requestId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetBillingEventsArguments(
@@ -148,9 +225,10 @@ namespace Fal
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Fal.PathBuilder(
                                 path: "/models/billing-events",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("cursor", cursor)
@@ -158,7 +236,7 @@ namespace Fal
                                 .AddOptionalParameter("end", end?.ToString())
                                 .AddOptionalParameter("endpoint_id", endpointId?.ToString())
                                 .AddOptionalParameter("request_id", requestId?.ToString())
-                                .AddOptionalParameter("expand", expand?.ToString()) 
+                                .AddOptionalParameter("expand", expand?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -236,6 +314,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -246,6 +326,11 @@ namespace Fal
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -263,6 +348,8 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -272,8 +359,7 @@ namespace Fal
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -282,6 +368,11 @@ namespace Fal
                         __attempt < __maxAttempts &&
                         global::Fal.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -298,14 +389,15 @@ namespace Fal
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -345,6 +437,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -365,6 +459,8 @@ namespace Fal
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // Invalid request parameters
@@ -579,9 +675,13 @@ namespace Fal
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Fal.GetBillingEventsResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Fal.GetBillingEventsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.GetBillingEventsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -609,9 +709,13 @@ namespace Fal
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Fal.GetBillingEventsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Fal.GetBillingEventsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.GetBillingEventsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

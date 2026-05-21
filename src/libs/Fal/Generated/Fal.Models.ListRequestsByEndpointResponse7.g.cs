@@ -6,14 +6,14 @@ namespace Fal
     /// <summary>
     /// Standard error response format
     /// </summary>
-    public sealed partial class GetUsageResponse6
+    public sealed partial class ListRequestsByEndpointResponse7
     {
         /// <summary>
         /// Error details
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.GetUsageResponseError5 Error { get; set; }
+        public required global::Fal.ListRequestsByEndpointResponseError6 Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -22,7 +22,7 @@ namespace Fal
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetUsageResponse6" /> class.
+        /// Initializes a new instance of the <see cref="ListRequestsByEndpointResponse7" /> class.
         /// </summary>
         /// <param name="error">
         /// Error details
@@ -30,17 +30,18 @@ namespace Fal
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public GetUsageResponse6(
-            global::Fal.GetUsageResponseError5 error)
+        public ListRequestsByEndpointResponse7(
+            global::Fal.ListRequestsByEndpointResponseError6 error)
         {
             this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetUsageResponse6" /> class.
+        /// Initializes a new instance of the <see cref="ListRequestsByEndpointResponse7" /> class.
         /// </summary>
-        public GetUsageResponse6()
+        public ListRequestsByEndpointResponse7()
         {
         }
+
     }
 }

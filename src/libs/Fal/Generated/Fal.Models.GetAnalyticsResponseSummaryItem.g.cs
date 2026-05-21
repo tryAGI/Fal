@@ -152,5 +152,6 @@ namespace Fal
         public GetAnalyticsResponseSummaryItem()
         {
         }
+
     }
 }

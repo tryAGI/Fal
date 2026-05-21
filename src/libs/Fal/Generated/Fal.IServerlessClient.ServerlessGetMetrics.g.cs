@@ -23,5 +23,24 @@ namespace Fal
         global::System.Threading.Tasks.Task<string> ServerlessGetMetricsAsync(
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Metrics<br/>
+        /// Returns Prometheus-compatible metrics in text format for integration into your<br/>
+        /// observability stack<br/>
+        /// **Authentication:** Required - Uses API key authentication<br/>
+        /// **Format:** Returns text/plain in Prometheus exposition format<br/>
+        /// **Common Use Cases:**<br/>
+        /// - Export app stats to your observability provider (grafana, datadog etc)<br/>
+        /// - Track runner health and performance<br/>
+        /// - Set up alerts and monitoring<br/>
+        /// See [Prometheus documentation](https://prometheus.io/docs/instrumenting/exposition_formats/) for format details.<br/>
+        ///     
+        /// </summary>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<string>> ServerlessGetMetricsAsResponseAsync(
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

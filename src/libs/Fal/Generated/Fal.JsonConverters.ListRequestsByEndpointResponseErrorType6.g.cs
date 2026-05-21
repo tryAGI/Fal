@@ -3,10 +3,10 @@
 namespace Fal.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class GetUsageResponseErrorType5NullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.GetUsageResponseErrorType5?>
+    public sealed class ListRequestsByEndpointResponseErrorType6JsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.ListRequestsByEndpointResponseErrorType6>
     {
         /// <inheritdoc />
-        public override global::Fal.GetUsageResponseErrorType5? Read(
+        public override global::Fal.ListRequestsByEndpointResponseErrorType6 Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Fal.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Fal.GetUsageResponseErrorType5Extensions.ToEnum(stringValue);
+                        return global::Fal.ListRequestsByEndpointResponseErrorType6Extensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Fal.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Fal.GetUsageResponseErrorType5)numValue;
+                    return (global::Fal.ListRequestsByEndpointResponseErrorType6)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Fal.GetUsageResponseErrorType5?);
+                    return default(global::Fal.ListRequestsByEndpointResponseErrorType6);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,19 +42,12 @@ namespace Fal.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Fal.GetUsageResponseErrorType5? value,
+            global::Fal.ListRequestsByEndpointResponseErrorType6 value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            if (value == null)
-            {
-                writer.WriteNullValue();
-            }
-            else
-            {
-                writer.WriteStringValue(global::Fal.GetUsageResponseErrorType5Extensions.ToValueString(value.Value));
-            }
+            writer.WriteStringValue(global::Fal.ListRequestsByEndpointResponseErrorType6Extensions.ToValueString(value));
         }
     }
 }

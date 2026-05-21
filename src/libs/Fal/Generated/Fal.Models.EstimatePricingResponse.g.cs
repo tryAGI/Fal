@@ -68,5 +68,6 @@ namespace Fal
         public EstimatePricingResponse()
         {
         }
+
     }
 }

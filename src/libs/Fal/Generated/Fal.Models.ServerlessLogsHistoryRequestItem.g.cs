@@ -67,5 +67,6 @@ namespace Fal
         public ServerlessLogsHistoryRequestItem()
         {
         }
+
     }
 }
