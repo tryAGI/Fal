@@ -21,9 +21,6 @@ namespace Fal
         /// **Filter Options:**<br/>
         /// - `endpoint_id`: Filter by one or more fal endpoints (comma-separated or repeated, up to 50 IDs)<br/>
         /// - `exclude_api_requests` / `only_api_requests`: Filter by request source<br/>
-        /// **Restricted Request View:**<br/>
-        /// For accounts with restricted request view enabled, an admin API key is required.<br/>
-        /// Non-admin keys will receive a 403 error.<br/>
         /// **Examples:**<br/>
         /// - Semantic text search: `?query=sunset+landscape`<br/>
         /// - Image similarity: `?image_url=https://...&amp;min_similarity=0.5`<br/>
@@ -101,9 +98,6 @@ namespace Fal
         /// **Filter Options:**<br/>
         /// - `endpoint_id`: Filter by one or more fal endpoints (comma-separated or repeated, up to 50 IDs)<br/>
         /// - `exclude_api_requests` / `only_api_requests`: Filter by request source<br/>
-        /// **Restricted Request View:**<br/>
-        /// For accounts with restricted request view enabled, an admin API key is required.<br/>
-        /// Non-admin keys will receive a 403 error.<br/>
         /// **Examples:**<br/>
         /// - Semantic text search: `?query=sunset+landscape`<br/>
         /// - Image similarity: `?image_url=https://...&amp;min_similarity=0.5`<br/>
