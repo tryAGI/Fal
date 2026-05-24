@@ -372,18 +372,17 @@ namespace Fal
                                     __exception_401 = __ex;
                                 }
 
-                                throw new global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse2>(
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse2>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_401,
-                                    ResponseObject = __value_401,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_401,
+                                    responseObject: __value_401,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Access denied
                             if ((int)__response.StatusCode == 403)
@@ -410,18 +409,17 @@ namespace Fal
                                     __exception_403 = __ex;
                                 }
 
-                                throw new global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse3>(
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse3>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_403,
-                                    ResponseObject = __value_403,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_403,
+                                    responseObject: __value_403,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Resource not found
                             if ((int)__response.StatusCode == 404)
@@ -448,18 +446,17 @@ namespace Fal
                                     __exception_404 = __ex;
                                 }
 
-                                throw new global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse4>(
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse4>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_404,
-                                    ResponseObject = __value_404,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Rate limit exceeded
                             if ((int)__response.StatusCode == 429)
@@ -486,18 +483,17 @@ namespace Fal
                                     __exception_429 = __ex;
                                 }
 
-                                throw new global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse5>(
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse5>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_429,
-                                    ResponseObject = __value_429,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_429,
+                                    responseObject: __value_429,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
                             // Internal server error
                             if ((int)__response.StatusCode == 500)
@@ -524,18 +520,17 @@ namespace Fal
                                     __exception_500 = __ex;
                                 }
 
-                                throw new global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse6>(
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetAppQueueInfoResponse6>.Create(
+                                    statusCode: __response.StatusCode,
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
-                                    statusCode: __response.StatusCode)
-                                {
-                                    ResponseBody = __content_500,
-                                    ResponseObject = __value_500,
-                                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                    responseBody: __content_500,
+                                    responseObject: __value_500,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
-                                        h => h.Value),
-                                };
+                                        h => h.Value));
                             }
 
                             if (__effectiveReadResponseAsString)
@@ -569,17 +564,15 @@ namespace Fal
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    throw new global::Fal.ApiException(
+                                    throw global::Fal.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
                             else
@@ -616,17 +609,15 @@ namespace Fal
                                     {
                                     }
 
-                                    throw new global::Fal.ApiException(
+                                    throw global::Fal.ApiException.Create(
+                                        statusCode: __response.StatusCode,
                                         message: __content ?? __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
-                                        statusCode: __response.StatusCode)
-                                    {
-                                        ResponseBody = __content,
-                                        ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                             __response.Headers,
                                             h => h.Key,
-                                            h => h.Value),
-                                    };
+                                            h => h.Value));
                                 }
                             }
 
