@@ -1,0 +1,60 @@
+#nullable enable
+
+namespace Fal.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class UpdateAssetCollectionResponseCollectionTypeNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.UpdateAssetCollectionResponseCollectionType?>
+    {
+        /// <inheritdoc />
+        public override global::Fal.UpdateAssetCollectionResponseCollectionType? Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::Fal.UpdateAssetCollectionResponseCollectionTypeExtensions.ToEnum(stringValue);
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::Fal.UpdateAssetCollectionResponseCollectionType)numValue;
+                }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::Fal.UpdateAssetCollectionResponseCollectionType?);
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::Fal.UpdateAssetCollectionResponseCollectionType? value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::Fal.UpdateAssetCollectionResponseCollectionTypeExtensions.ToValueString(value.Value));
+            }
+        }
+    }
+}

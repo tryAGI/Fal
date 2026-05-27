@@ -57,6 +57,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
+        public AssetsClient Assets { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ComputeClient Compute { get; }
 
         /// <summary>
