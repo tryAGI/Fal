@@ -29,11 +29,11 @@ namespace Fal
         public required string Description { get; set; }
 
         /// <summary>
-        /// Reference images for the character. Each entry may be a fal-hosted image URL, asset ID, request ID, or vector ID.
+        /// Reference images for the character. Prefer vector IDs or request IDs for existing fal-generated assets. Use fal-hosted image URLs only for standalone images.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("reference_image_urls")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("reference_images")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<string> ReferenceImageUrls { get; set; }
+        public required global::System.Collections.Generic.IList<string> ReferenceImages { get; set; }
 
         /// <summary>
         /// Optional fal-hosted cover image URL for the character
@@ -56,8 +56,8 @@ namespace Fal
         /// <param name="description">
         /// Text description used for character semantic matching
         /// </param>
-        /// <param name="referenceImageUrls">
-        /// Reference images for the character. Each entry may be a fal-hosted image URL, asset ID, request ID, or vector ID.
+        /// <param name="referenceImages">
+        /// Reference images for the character. Prefer vector IDs or request IDs for existing fal-generated assets. Use fal-hosted image URLs only for standalone images.
         /// </param>
         /// <param name="identifier">
         /// Optional @mention identifier for the character
@@ -71,14 +71,14 @@ namespace Fal
         public CreateAssetCharacterRequest(
             string name,
             string description,
-            global::System.Collections.Generic.IList<string> referenceImageUrls,
+            global::System.Collections.Generic.IList<string> referenceImages,
             string? identifier,
             string? coverImageUrl)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Identifier = identifier;
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
-            this.ReferenceImageUrls = referenceImageUrls ?? throw new global::System.ArgumentNullException(nameof(referenceImageUrls));
+            this.ReferenceImages = referenceImages ?? throw new global::System.ArgumentNullException(nameof(referenceImages));
             this.CoverImageUrl = coverImageUrl;
         }
 

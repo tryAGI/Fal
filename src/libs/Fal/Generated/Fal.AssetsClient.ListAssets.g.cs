@@ -81,7 +81,7 @@ namespace Fal
         /// </param>
         /// <param name="searchImageUrl">
         /// fal-hosted image URL to use for semantic image search<br/>
-        /// Example: https://fal.media/files/example.png
+        /// Example: https://v3b.fal.media/files/b/0a9b4900/PDbTGyzqRh1aijW2WQiY9_opengraph-1%20%281%29.png
         /// </param>
         /// <param name="searchVideoUrl">
         /// fal-hosted video URL to use for semantic video search<br/>
@@ -104,7 +104,7 @@ namespace Fal
         /// </param>
         /// <param name="collectionId">
         /// Collection scope to browse<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="characterIdentifier">
         /// Character identifiers to use as @mention semantic filters<br/>
@@ -114,7 +114,7 @@ namespace Fal
         /// <param name="tagId">
         /// Tag IDs to filter by<br/>
         /// Default Value: []<br/>
-        /// Example: [tag_01hxyq3m9k6d2r7p8v4n5c1b2a]
+        /// Example: [43ce3411-1a25-4d14-875e-3562d341b090]
         /// </param>
         /// <param name="tagMode">
         /// Whether tag filters match any tag or all tags<br/>
@@ -177,7 +177,7 @@ namespace Fal
         /// </param>
         /// <param name="searchImageUrl">
         /// fal-hosted image URL to use for semantic image search<br/>
-        /// Example: https://fal.media/files/example.png
+        /// Example: https://v3b.fal.media/files/b/0a9b4900/PDbTGyzqRh1aijW2WQiY9_opengraph-1%20%281%29.png
         /// </param>
         /// <param name="searchVideoUrl">
         /// fal-hosted video URL to use for semantic video search<br/>
@@ -200,7 +200,7 @@ namespace Fal
         /// </param>
         /// <param name="collectionId">
         /// Collection scope to browse<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="characterIdentifier">
         /// Character identifiers to use as @mention semantic filters<br/>
@@ -210,7 +210,7 @@ namespace Fal
         /// <param name="tagId">
         /// Tag IDs to filter by<br/>
         /// Default Value: []<br/>
-        /// Example: [tag_01hxyq3m9k6d2r7p8v4n5c1b2a]
+        /// Example: [43ce3411-1a25-4d14-875e-3562d341b090]
         /// </param>
         /// <param name="tagMode">
         /// Whether tag filters match any tag or all tags<br/>

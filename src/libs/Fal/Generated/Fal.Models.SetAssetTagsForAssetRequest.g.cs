@@ -9,12 +9,6 @@ namespace Fal
     public sealed partial class SetAssetTagsForAssetRequest
     {
         /// <summary>
-        /// Persisted asset ID
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("asset_id")]
-        public string? AssetId { get; set; }
-
-        /// <summary>
         /// Request ID to save as an asset before mutating
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
@@ -45,9 +39,6 @@ namespace Fal
         /// <param name="tagIds">
         /// Full replacement set of tag IDs
         /// </param>
-        /// <param name="assetId">
-        /// Persisted asset ID
-        /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
         /// </param>
@@ -59,11 +50,9 @@ namespace Fal
 #endif
         public SetAssetTagsForAssetRequest(
             global::System.Collections.Generic.IList<string> tagIds,
-            string? assetId,
             string? requestId,
             string? vectorId)
         {
-            this.AssetId = assetId;
             this.RequestId = requestId;
             this.VectorId = vectorId;
             this.TagIds = tagIds ?? throw new global::System.ArgumentNullException(nameof(tagIds));

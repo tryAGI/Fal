@@ -87,11 +87,11 @@ namespace Fal
         public required string UpdatedAt { get; set; }
 
         /// <summary>
-        /// Reference image URLs used for character matching
+        /// Reference images used for character matching
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("reference_image_urls")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("reference_images")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<string> ReferenceImageUrls { get; set; }
+        public required global::System.Collections.Generic.IList<string> ReferenceImages { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -117,8 +117,8 @@ namespace Fal
         /// <param name="updatedAt">
         /// Collection update time
         /// </param>
-        /// <param name="referenceImageUrls">
-        /// Reference image URLs used for character matching
+        /// <param name="referenceImages">
+        /// Reference images used for character matching
         /// </param>
         /// <param name="type">
         /// Collection type
@@ -150,7 +150,7 @@ namespace Fal
             bool isFavorited,
             string createdAt,
             string updatedAt,
-            global::System.Collections.Generic.IList<string> referenceImageUrls,
+            global::System.Collections.Generic.IList<string> referenceImages,
             global::Fal.GetAssetCharacterResponseCharacterType type,
             string? description,
             string? icon,
@@ -171,7 +171,7 @@ namespace Fal
             this.AssetCount = assetCount;
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
             this.UpdatedAt = updatedAt ?? throw new global::System.ArgumentNullException(nameof(updatedAt));
-            this.ReferenceImageUrls = referenceImageUrls ?? throw new global::System.ArgumentNullException(nameof(referenceImageUrls));
+            this.ReferenceImages = referenceImages ?? throw new global::System.ArgumentNullException(nameof(referenceImages));
         }
 
         /// <summary>
