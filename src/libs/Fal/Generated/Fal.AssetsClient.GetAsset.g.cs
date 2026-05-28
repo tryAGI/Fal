@@ -27,11 +27,11 @@ namespace Fal
             };
         partial void PrepareGetAssetArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string assetId);
+            ref string vectorId);
         partial void PrepareGetAssetRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string assetId);
+            string vectorId);
         partial void ProcessGetAssetResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -43,22 +43,22 @@ namespace Fal
 
         /// <summary>
         /// Get asset<br/>
-        /// Get a persisted asset from the authenticated user's fal Assets library.
+        /// Get an asset document by vector ID from the authenticated user's fal Assets library. The vector may exist only in Turbopuffer; in that case the response returns the Turbopuffer document with empty local state.
         /// </summary>
-        /// <param name="assetId">
-        /// Asset ID<br/>
-        /// Example: ast_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// <param name="vectorId">
+        /// Vector ID<br/>
+        /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Fal.GetAssetResponse> GetAssetAsync(
-            string assetId,
+            string vectorId,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await GetAssetAsResponseAsync(
-                assetId: assetId,
+                vectorId: vectorId,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -67,17 +67,17 @@ namespace Fal
         }
         /// <summary>
         /// Get asset<br/>
-        /// Get a persisted asset from the authenticated user's fal Assets library.
+        /// Get an asset document by vector ID from the authenticated user's fal Assets library. The vector may exist only in Turbopuffer; in that case the response returns the Turbopuffer document with empty local state.
         /// </summary>
-        /// <param name="assetId">
-        /// Asset ID<br/>
-        /// Example: ast_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// <param name="vectorId">
+        /// Vector ID<br/>
+        /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.GetAssetResponse>> GetAssetAsResponseAsync(
-            string assetId,
+            string vectorId,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -85,7 +85,7 @@ namespace Fal
                 client: HttpClient);
             PrepareGetAssetArguments(
                 httpClient: HttpClient,
-                assetId: ref assetId);
+                vectorId: ref vectorId);
 
 
             var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
@@ -111,7 +111,7 @@ namespace Fal
             {
 
                             var __pathBuilder = new global::Fal.PathBuilder(
-                                path: $"/assets/{assetId}",
+                                path: $"/assets/{vectorId}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -153,7 +153,7 @@ namespace Fal
                 PrepareGetAssetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    assetId: assetId!);
+                    vectorId: vectorId!);
 
                 return __httpRequest;
             }
@@ -172,7 +172,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "GetAsset",
                                 methodName: "GetAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}\"",
+                                pathTemplate: "$\"/assets/{vectorId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -206,7 +206,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "GetAsset",
                                 methodName: "GetAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}\"",
+                                pathTemplate: "$\"/assets/{vectorId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -247,7 +247,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "GetAsset",
                                 methodName: "GetAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}\"",
+                                pathTemplate: "$\"/assets/{vectorId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -295,7 +295,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "GetAsset",
                                 methodName: "GetAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}\"",
+                                pathTemplate: "$\"/assets/{vectorId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -317,7 +317,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "GetAsset",
                                 methodName: "GetAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}\"",
+                                pathTemplate: "$\"/assets/{vectorId}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,

@@ -42,11 +42,11 @@ namespace Fal
 
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection by asset ID, request ID, or vector ID.
+        /// Remove an asset from a manual or character collection by request ID or vector ID.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -75,11 +75,11 @@ namespace Fal
         }
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection by asset ID, request ID, or vector ID.
+        /// Remove an asset from a manual or character collection by request ID or vector ID.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -781,18 +781,15 @@ namespace Fal
         }
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection by asset ID, request ID, or vector ID.
+        /// Remove an asset from a manual or character collection by request ID or vector ID.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
         /// Example: 550e8400-e29b-41d4-a716-446655440000
-        /// </param>
-        /// <param name="assetId">
-        /// Persisted asset ID
         /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
@@ -806,7 +803,6 @@ namespace Fal
         public async global::System.Threading.Tasks.Task RemoveAssetFromCollectionAsync(
             string collectionId,
             string? idempotencyKey = default,
-            string? assetId = default,
             string? requestId = default,
             string? vectorId = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
@@ -814,7 +810,6 @@ namespace Fal
         {
             var __request = new global::Fal.RemoveAssetFromCollectionRequest
             {
-                AssetId = assetId,
                 RequestId = requestId,
                 VectorId = vectorId,
             };

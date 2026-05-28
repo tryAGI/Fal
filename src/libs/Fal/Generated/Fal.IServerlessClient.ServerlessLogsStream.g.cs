@@ -47,7 +47,7 @@ namespace Fal
         /// </param>
         /// <param name="requestId">
         /// Filter by request id<br/>
-        /// Example: req_abc123
+        /// Example: 019e6d0a-e5be-7b82-b329-35ae64296902
         /// </param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

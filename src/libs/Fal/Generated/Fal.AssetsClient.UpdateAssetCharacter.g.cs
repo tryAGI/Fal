@@ -47,11 +47,11 @@ namespace Fal
 
         /// <summary>
         /// Update asset character<br/>
-        /// Update an asset character for the authenticated user's fal Assets library. Reference images may be fal-hosted image URLs, asset IDs, request IDs, or vector IDs; unresolved references are saved automatically.
+        /// Update an asset character for the authenticated user's fal Assets library. Prefer vector IDs or request IDs in reference_images for existing fal-generated assets; use fal-hosted image URLs only for standalone images. Unresolved ID references are materialized before character state is added.
         /// </summary>
         /// <param name="characterId">
         /// Character collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d7tatpsregjaga2cf3d0
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -82,11 +82,11 @@ namespace Fal
         }
         /// <summary>
         /// Update asset character<br/>
-        /// Update an asset character for the authenticated user's fal Assets library. Reference images may be fal-hosted image URLs, asset IDs, request IDs, or vector IDs; unresolved references are saved automatically.
+        /// Update an asset character for the authenticated user's fal Assets library. Prefer vector IDs or request IDs in reference_images for existing fal-generated assets; use fal-hosted image URLs only for standalone images. Unresolved ID references are materialized before character state is added.
         /// </summary>
         /// <param name="characterId">
         /// Character collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d7tatpsregjaga2cf3d0
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -804,11 +804,11 @@ namespace Fal
         }
         /// <summary>
         /// Update asset character<br/>
-        /// Update an asset character for the authenticated user's fal Assets library. Reference images may be fal-hosted image URLs, asset IDs, request IDs, or vector IDs; unresolved references are saved automatically.
+        /// Update an asset character for the authenticated user's fal Assets library. Prefer vector IDs or request IDs in reference_images for existing fal-generated assets; use fal-hosted image URLs only for standalone images. Unresolved ID references are materialized before character state is added.
         /// </summary>
         /// <param name="characterId">
         /// Character collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d7tatpsregjaga2cf3d0
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -820,8 +820,8 @@ namespace Fal
         /// <param name="description">
         /// Text description used for character semantic matching
         /// </param>
-        /// <param name="referenceImageUrls">
-        /// Reference images for the character. Each entry may be a fal-hosted image URL, asset ID, request ID, or vector ID.
+        /// <param name="referenceImages">
+        /// Reference images for the character. Prefer vector IDs or request IDs for existing fal-generated assets. Use fal-hosted image URLs only for standalone images.
         /// </param>
         /// <param name="coverImageUrl">
         /// Optional fal-hosted cover image URL for the character
@@ -834,7 +834,7 @@ namespace Fal
             string? idempotencyKey = default,
             string? name = default,
             string? description = default,
-            global::System.Collections.Generic.IList<string>? referenceImageUrls = default,
+            global::System.Collections.Generic.IList<string>? referenceImages = default,
             string? coverImageUrl = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -843,7 +843,7 @@ namespace Fal
             {
                 Name = name,
                 Description = description,
-                ReferenceImageUrls = referenceImageUrls,
+                ReferenceImages = referenceImages,
                 CoverImageUrl = coverImageUrl,
             };
 

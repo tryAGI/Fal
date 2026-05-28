@@ -27,11 +27,11 @@ namespace Fal
             };
         partial void PrepareListAssetTagsForAssetArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string assetId);
+            ref string vectorId);
         partial void PrepareListAssetTagsForAssetRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string assetId);
+            string vectorId);
         partial void ProcessListAssetTagsForAssetResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -43,22 +43,22 @@ namespace Fal
 
         /// <summary>
         /// List tags for an asset<br/>
-        /// List tags for a persisted asset.
+        /// List tags for an asset by vector ID. Vectors that have not been saved as assets return an empty tag list.
         /// </summary>
-        /// <param name="assetId">
-        /// Asset ID<br/>
-        /// Example: ast_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// <param name="vectorId">
+        /// Vector ID<br/>
+        /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Fal.ListAssetTagsForAssetResponse> ListAssetTagsForAssetAsync(
-            string assetId,
+            string vectorId,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await ListAssetTagsForAssetAsResponseAsync(
-                assetId: assetId,
+                vectorId: vectorId,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -67,17 +67,17 @@ namespace Fal
         }
         /// <summary>
         /// List tags for an asset<br/>
-        /// List tags for a persisted asset.
+        /// List tags for an asset by vector ID. Vectors that have not been saved as assets return an empty tag list.
         /// </summary>
-        /// <param name="assetId">
-        /// Asset ID<br/>
-        /// Example: ast_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// <param name="vectorId">
+        /// Vector ID<br/>
+        /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.ListAssetTagsForAssetResponse>> ListAssetTagsForAssetAsResponseAsync(
-            string assetId,
+            string vectorId,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -85,7 +85,7 @@ namespace Fal
                 client: HttpClient);
             PrepareListAssetTagsForAssetArguments(
                 httpClient: HttpClient,
-                assetId: ref assetId);
+                vectorId: ref vectorId);
 
 
             var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
@@ -111,7 +111,7 @@ namespace Fal
             {
 
                             var __pathBuilder = new global::Fal.PathBuilder(
-                                path: $"/assets/{assetId}/tags",
+                                path: $"/assets/{vectorId}/tags",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -153,7 +153,7 @@ namespace Fal
                 PrepareListAssetTagsForAssetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    assetId: assetId!);
+                    vectorId: vectorId!);
 
                 return __httpRequest;
             }
@@ -172,7 +172,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ListAssetTagsForAsset",
                                 methodName: "ListAssetTagsForAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}/tags\"",
+                                pathTemplate: "$\"/assets/{vectorId}/tags\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -206,7 +206,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ListAssetTagsForAsset",
                                 methodName: "ListAssetTagsForAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}/tags\"",
+                                pathTemplate: "$\"/assets/{vectorId}/tags\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -247,7 +247,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ListAssetTagsForAsset",
                                 methodName: "ListAssetTagsForAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}/tags\"",
+                                pathTemplate: "$\"/assets/{vectorId}/tags\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -295,7 +295,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ListAssetTagsForAsset",
                                 methodName: "ListAssetTagsForAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}/tags\"",
+                                pathTemplate: "$\"/assets/{vectorId}/tags\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -317,7 +317,7 @@ namespace Fal
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
                                 operationId: "ListAssetTagsForAsset",
                                 methodName: "ListAssetTagsForAssetAsync",
-                                pathTemplate: "$\"/assets/{assetId}/tags\"",
+                                pathTemplate: "$\"/assets/{vectorId}/tags\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
