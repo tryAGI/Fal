@@ -552,6 +552,17 @@
     },
     {
       "Order": 51,
+      "Title": "Organization Teams",
+      "Slug": "getorganizationteams",
+      "Description": "Returns the list of teams in your organization with their details.\n\n\u003E **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.\n\nMust be called with an admin API key on the organization\u0027s root team.\n\n**Key Features:**\n- List all teams within the organization\n- Identify the organization\u0027s root team via \u0060is_org_root\u0060\n- View team usernames and display names\n\nSee [fal.ai docs](https://docs.fal.ai) for more details.",
+      "Language": "csharp",
+      "Code": "using var client = new FalClient(apiKey);\nvar response = await client.Organization.GetOrganizationTeamsAsync();\n\n// Example response:\n// {\n//   \u0022teams\u0022: [\n//     {\n//       \u0022username\u0022: \u0022acme-corp\u0022,\n//       \u0022name\u0022: \u0022Acme Corporation\u0022,\n//       \u0022is_org_root\u0022: true,\n//       \u0022created_at\u0022: \u00222024-01-15T10:30:00Z\u0022\n//     },\n//     {\n//       \u0022username\u0022: \u0022acme-ml-team\u0022,\n//       \u0022name\u0022: \u0022ML Research Team\u0022,\n//       \u0022is_org_root\u0022: false,\n//       \u0022created_at\u0022: \u00222024-03-01T14:00:00Z\u0022\n//     }\n//   ]\n// }",
+      "Format": "sdk",
+      "OperationId": "getOrganizationTeams",
+      "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 52,
       "Title": "Download file",
       "Slug": "serverlessdownloadfile",
       "Description": "Downloads a file by its path. Proxies the underlying storage response.",
@@ -562,7 +573,7 @@
       "Setup": null
     },
     {
-      "Order": 52,
+      "Order": 53,
       "Title": "Flush Application Queue",
       "Slug": "serverlessflushappqueue",
       "Description": "Flushes all pending requests from an application\u0027s queue.\n\n**Authentication:** Required via API key\n\n**Idempotency:**\n- Optional \u0060Idempotency-Key\u0060 header prevents duplicate flushes on retries\n- Responses cached for 10 minutes per unique key\n\n**Use Cases:**\n- Clear stuck or outdated requests from the queue\n- Reset queue state during development or testing\n- Cancel all pending requests for an application\n\n**Important:**\n- This operation is irreversible\n- All pending requests in the queue will be cancelled\n- Requests already being processed will not be affected",
@@ -573,7 +584,7 @@
       "Setup": null
     },
     {
-      "Order": 53,
+      "Order": 54,
       "Title": "Analytics",
       "Slug": "serverlessgetanalytics",
       "Description": "Time-bucketed metrics for your serverless app endpoints, including request counts,\nsuccess/error rates, and latency percentiles across all inbound traffic.\n\u0060prepare_duration\u0060 reflects queue/prepare time before execution;\n\u0060duration\u0060 is request execution time.\n\nThis endpoint shows all inbound requests to endpoints you own \u2014 not just\nyour own calls. This is ideal for monitoring your deployed apps, tracking\nSLAs, and exporting data to tools like BigQuery or Grafana. You must own\nall requested endpoints; returns 403 otherwise.\n\n**Metric Selection:**\nYou must specify which metrics to include using the \u0060expand\u0060 query\nparameter. Only requested metrics will be populated in the response,\nallowing you to optimize query performance and data transfer.\n\n**Available Metrics:**\n- \u0060request_count\u0060: Total number of requests in the time bucket\n- \u0060success_count\u0060: Number of successful requests (2xx responses)\n- \u0060user_error_count\u0060: Number of user errors (4xx responses)\n- \u0060error_count\u0060: Number of server errors (5xx responses)\n- \u0060p50_prepare_duration\u0060: 50th percentile queue/prepare time\n- \u0060p75_prepare_duration\u0060: 75th percentile queue/prepare time\n- \u0060p90_prepare_duration\u0060: 90th percentile queue/prepare time\n- \u0060p50_duration\u0060: 50th percentile request execution duration\n- \u0060p75_duration\u0060: 75th percentile request execution duration\n- \u0060p90_duration\u0060: 90th percentile request execution duration\n\n**Key Features:**\n- See all traffic to your apps across all callers\n- Selective metric inclusion via expand parameter\n- Performance metrics (latency percentiles, duration stats)\n- Reliability metrics (success/error rates, request counts)\n- Time-bucketed data for trend analysis\n- Flexible date range and timeframe options\n\n**Common Use Cases:**\n- Monitor your serverless app performance and reliability\n- Export analytics to your own observability tools\n- Analyze latency trends across all callers\n- Track error rates and SLA compliance",
@@ -584,7 +595,7 @@
       "Setup": null
     },
     {
-      "Order": 54,
+      "Order": 55,
       "Title": "Queue Size",
       "Slug": "serverlessgetappqueueinfo",
       "Description": "Retrieves the current queue size for a specific application.",
@@ -595,7 +606,7 @@
       "Setup": null
     },
     {
-      "Order": 55,
+      "Order": 56,
       "Title": "Metrics",
       "Slug": "serverlessgetmetrics",
       "Description": "Returns Prometheus-compatible metrics in text format for integration into your\nobservability stack\n\n**Authentication:** Required - Uses API key authentication\n\n**Format:** Returns text/plain in Prometheus exposition format\n\n**Common Use Cases:**\n- Export app stats to your observability provider (grafana, datadog etc)\n- Track runner health and performance\n- Set up alerts and monitoring\n\nSee [Prometheus documentation](https://prometheus.io/docs/instrumenting/exposition_formats/) for format details.",
@@ -606,7 +617,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 56,
+      "Order": 57,
       "Title": "List files (directory)",
       "Slug": "serverlesslistdirectory",
       "Description": "Lists files and folders within the specified directory path.",
@@ -617,7 +628,7 @@
       "Setup": null
     },
     {
-      "Order": 57,
+      "Order": 58,
       "Title": "List requests by endpoint(s)",
       "Slug": "serverlesslistrequestsbyendpoint",
       "Description": "Lists requests for one or more endpoints owned by the authenticated user.\nUse repeated or comma-separated \u0060endpoint_id\u0060 (same as other platform list APIs).\n\n**Authentication:** Requires API key.\n\n**Filters:**\n- Time range via start / end. If \u0060start\u0060 is omitted, defaults to the last 24 hours \u2014 unless \u0060request_id\u0060 is provided, in which case the default start bound is widened to 90 days.\n- Status (success, error, user_error)\n- Request ID\n- Pagination via cursor/limit (limit defaults to 50, max 100)\n\n**Sorting:**\n- By end time (default) or duration\n\n**Expansions:**\n- Include payloads by adding expand=payloads\n- Include per-request \u0060billable_units\u0060 by adding expand=billing (endpoint owner only)",
@@ -628,7 +639,7 @@
       "Setup": null
     },
     {
-      "Order": 58,
+      "Order": 59,
       "Title": "List files (root)",
       "Slug": "serverlesslistroot",
       "Description": "Lists files and folders in the root of your project storage.",
@@ -639,7 +650,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 59,
+      "Order": 60,
       "Title": "Logs history (paginated)",
       "Slug": "serverlesslogshistory",
       "Description": "Returns paginated historical logs that match the provided filters.",
@@ -650,7 +661,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 60,
+      "Order": 61,
       "Title": "Logs stream (SSE)",
       "Slug": "serverlesslogsstream",
       "Description": "Streams live logs that match the provided filters using Server-Sent Events.",
@@ -661,7 +672,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 61,
+      "Order": 62,
       "Title": "Upload file from URL",
       "Slug": "serverlessuploadfromurl",
       "Description": "Creates a new file at the target path by downloading it from the provided URL.",
@@ -672,7 +683,7 @@
       "Setup": null
     },
     {
-      "Order": 62,
+      "Order": 63,
       "Title": "Upload local file (multipart/form-data)",
       "Slug": "serverlessuploadlocalfile",
       "Description": "Uploads a local file using multipart/form-data. The file field name must be \u0060file_upload\u0060.",
@@ -683,7 +694,7 @@
       "Setup": null
     },
     {
-      "Order": 63,
+      "Order": 64,
       "Title": "Get workflow details",
       "Slug": "getworkflow",
       "Description": "Get detailed information about a specific workflow, including its full contents/definition.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Load a workflow for editing\n- View workflow configuration\n- Export workflow definition",
@@ -694,7 +705,7 @@
       "Setup": null
     },
     {
-      "Order": 64,
+      "Order": 65,
       "Title": "List user workflows",
       "Slug": "listworkflows",
       "Description": "List workflows for the authenticated user with optional search and filtering.\n\n**Features:**\n- Paginated results with cursor-based pagination\n- Search by workflow name or title\n- Filter by model endpoints used in the workflow\n\n**Authentication:** Required. Returns only workflows owned by the authenticated user.\n\n**Common Use Cases:**\n- Display user\u0027s workflow library\n- Search for specific workflows\n- Find workflows using particular models",
