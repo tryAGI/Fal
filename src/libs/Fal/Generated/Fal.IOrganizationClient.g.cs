@@ -4,11 +4,10 @@
 namespace Fal
 {
     /// <summary>
-    /// fal REST API for programmatic access to platform resources.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public partial interface IFalClient : global::System.IDisposable
+    public partial interface IOrganizationClient : global::System.IDisposable
     {
         /// <summary>
         /// The HttpClient instance.
@@ -48,51 +47,6 @@ namespace Fal
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public AccountClient Account { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public AssetsClient Assets { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ComputeClient Compute { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public KeysClient Keys { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public MetaClient Meta { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ModelsClient Models { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public OrganizationClient Organization { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public ServerlessClient Serverless { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public WorkflowsClient Workflows { get; }
 
     }
 }
