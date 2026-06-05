@@ -137,6 +137,14 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeNullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeNullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusNullableJsonConverter),
@@ -1973,6 +1981,30 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetOrganizationTeamsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter),
@@ -2067,6 +2099,14 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>),
@@ -2148,6 +2188,8 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportSource), TypeInfoPropertyName = "GetFocusReportSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportTimeframe), TypeInfoPropertyName = "GetFocusReportTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportBoundToTimeframe), TypeInfoPropertyName = "GetFocusReportBoundToTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageTimeframe), TypeInfoPropertyName = "GetOrganizationUsageTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageBoundToTimeframe), TypeInfoPropertyName = "GetOrganizationUsageBoundToTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetModelsResponseModel>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModel))]
@@ -2571,8 +2613,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.FavoriteAssetCollectionResponseError8))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.FavoriteAssetCollectionResponseErrorType8), TypeInfoPropertyName = "FavoriteAssetCollectionResponseErrorType82")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.FavoriteAssetCollectionResponse10))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.FavoriteAssetCollectionResponseError9))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.FavoriteAssetCollectionResponseErrorType9), TypeInfoPropertyName = "FavoriteAssetCollectionResponseErrorType92")]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -2707,6 +2747,14 @@ namespace Fal
             typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeNullableJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusJsonConverter),
 
@@ -4544,6 +4592,30 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetOrganizationTeamsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter),
@@ -4638,12 +4710,22 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>),
 
             typeof(global::Fal.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.FavoriteAssetCollectionResponseError9))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.FavoriteAssetCollectionResponseErrorType9), TypeInfoPropertyName = "FavoriteAssetCollectionResponseErrorType92")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UnfavoriteAssetCollectionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UnfavoriteAssetCollectionResponseCollection))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UnfavoriteAssetCollectionResponseCollectionType), TypeInfoPropertyName = "UnfavoriteAssetCollectionResponseCollectionType2")]
@@ -5142,8 +5224,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponseError7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponseErrorType7), TypeInfoPropertyName = "UploadAssetResponseErrorType72")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponse9))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponseError8))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponseErrorType8), TypeInfoPropertyName = "UploadAssetResponseErrorType82")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -5278,6 +5358,14 @@ namespace Fal
             typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeNullableJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusJsonConverter),
 
@@ -7115,6 +7203,30 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetOrganizationTeamsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter),
@@ -7209,12 +7321,22 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>),
 
             typeof(global::Fal.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponseError8))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponseErrorType8), TypeInfoPropertyName = "UploadAssetResponseErrorType82")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponse10))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponseError9))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UploadAssetResponseErrorType9), TypeInfoPropertyName = "UploadAssetResponseErrorType92")]
@@ -7713,8 +7835,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType2), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError3))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -7849,6 +7969,14 @@ namespace Fal
             typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetFocusReportBoundToTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageTimeframeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeNullableJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusJsonConverter),
 
@@ -9686,6 +9814,30 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.GetOrganizationTeamsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter),
@@ -9780,12 +9932,22 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>),
 
             typeof(global::Fal.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType3), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError4))]
@@ -9811,6 +9973,31 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationTeamsResponse7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationTeamsResponseError6))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationTeamsResponseErrorType6), TypeInfoPropertyName = "GetOrganizationTeamsResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetOrganizationUsageResponseTimeSerie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseTimeSerie))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetOrganizationUsageResponseTimeSerieResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseTimeSerieResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetOrganizationUsageResponseSummaryItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseSummaryItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseErrorType), TypeInfoPropertyName = "GetOrganizationUsageResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseErrorType2), TypeInfoPropertyName = "GetOrganizationUsageResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseErrorType3), TypeInfoPropertyName = "GetOrganizationUsageResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponse5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseErrorType4), TypeInfoPropertyName = "GetOrganizationUsageResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseErrorType5), TypeInfoPropertyName = "GetOrganizationUsageResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseErrorType6), TypeInfoPropertyName = "GetOrganizationUsageResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseError))]
@@ -9860,6 +10047,9 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ListComputeInstancesResponseInstance>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ListApiKeysResponseKey>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetOrganizationTeamsResponseTeam>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetOrganizationUsageResponseTimeSerie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetOrganizationUsageResponseTimeSerieResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetOrganizationUsageResponseSummaryItem>))]
     internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -9968,6 +10158,10 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportTimeframeNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportBoundToTimeframeJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetFocusReportBoundToTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageTimeframeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageBoundToTimeframeNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataStatusNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetModelsResponseModelMetadataLicenseTypeJsonConverter());
@@ -10886,6 +11080,18 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationTeamsResponseErrorType5NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationTeamsResponseErrorType6JsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationTeamsResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.GetOrganizationUsageResponseErrorType6NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetMetaResponseErrorTypeJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.GetMetaResponseErrorType2JsonConverter());
@@ -10933,6 +11139,10 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>());
             options.Converters.Add(new global::Fal.JsonConverters.UnixTimestampJsonConverter());
