@@ -18,7 +18,17 @@ namespace Fal
         public required string Username { get; set; }
 
         /// <summary>
-        /// Endpoint identifier that was used (e.g., 'fal-ai/flux/dev')<br/>
+        /// Product line the usage belongs to: 'model_apis' (fal Model APIs — endpoint calls), 'serverless' (fal Serverless SDK billing), or 'compute' (fal Compute — raw instances).<br/>
+        /// Example: model_apis
+        /// </summary>
+        /// <example>model_apis</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("product")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.GetOrganizationUsageResponseTimeSerieResultProductJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Fal.GetOrganizationUsageResponseTimeSerieResultProduct Product { get; set; }
+
+        /// <summary>
+        /// Identifier of the billed resource. For 'model_apis' this is the endpoint slug (e.g., 'fal-ai/flux/dev'); for 'serverless' it is the SDK billing line; for 'compute' it is the machine type line (e.g., 'type: gpu_1x_h100_sxm5 (my-app, prod)').<br/>
         /// Example: fal-ai/flux/dev
         /// </summary>
         /// <example>fal-ai/flux/dev</example>
@@ -92,8 +102,12 @@ namespace Fal
         /// Team username within the organization — identifies which team incurred this line item.<br/>
         /// Example: acme-ml-team
         /// </param>
+        /// <param name="product">
+        /// Product line the usage belongs to: 'model_apis' (fal Model APIs — endpoint calls), 'serverless' (fal Serverless SDK billing), or 'compute' (fal Compute — raw instances).<br/>
+        /// Example: model_apis
+        /// </param>
         /// <param name="endpointId">
-        /// Endpoint identifier that was used (e.g., 'fal-ai/flux/dev')<br/>
+        /// Identifier of the billed resource. For 'model_apis' this is the endpoint slug (e.g., 'fal-ai/flux/dev'); for 'serverless' it is the SDK billing line; for 'compute' it is the machine type line (e.g., 'type: gpu_1x_h100_sxm5 (my-app, prod)').<br/>
         /// Example: fal-ai/flux/dev
         /// </param>
         /// <param name="unit">
@@ -125,6 +139,7 @@ namespace Fal
 #endif
         public GetOrganizationUsageResponseTimeSerieResult(
             string username,
+            global::Fal.GetOrganizationUsageResponseTimeSerieResultProduct product,
             string endpointId,
             string unit,
             double quantity,
@@ -134,6 +149,7 @@ namespace Fal
             string? authMethod)
         {
             this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
+            this.Product = product;
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
             this.Unit = unit ?? throw new global::System.ArgumentNullException(nameof(unit));
             this.Quantity = quantity;
