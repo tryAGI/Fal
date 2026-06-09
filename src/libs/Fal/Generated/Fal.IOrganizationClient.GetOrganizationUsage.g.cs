@@ -6,15 +6,19 @@ namespace Fal
     {
         /// <summary>
         /// Organization Usage<br/>
-        /// Returns paginated usage records across all teams in your organization, with<br/>
-        /// each record attributed to a specific team via the `username` field.<br/>
+        /// Returns paginated usage records across all teams and product lines in your<br/>
+        /// organization, with each record attributed to a specific team via the<br/>
+        /// `username` field and a product line via the `product` field.<br/>
+        /// Covers all three fal product lines:<br/>
+        /// - `model_apis` — model API endpoint calls (e.g. `fal-ai/flux/dev`)<br/>
+        /// - `serverless` — fal Serverless SDK billing<br/>
+        /// - `compute` — fal Compute (raw instance time)<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// Must be called with an admin API key on the organization's root team.<br/>
         /// **Key Features:**<br/>
-        /// - Organization-wide usage data across all teams<br/>
-        /// - Filter by specific team using `team_username`<br/>
-        /// - Filter by endpoint, date range, and auth method<br/>
-        /// - Per-team attribution on every usage record<br/>
+        /// - Organization-wide usage data across all teams and products<br/>
+        /// - Filter by team (`team_username`), product line (`product`), endpoint, date range, and auth method<br/>
+        /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
         /// See [fal.ai docs](https://docs.fal.ai) for more details.<br/>
         ///     
@@ -56,6 +60,10 @@ namespace Fal
         /// <param name="teamUsername">
         /// Filter by a specific team username within the organization. If not provided, returns usage across all teams.<br/>
         /// Example: acme-ml-team
+        /// </param>
+        /// <param name="product">
+        /// Restrict results to one or more product lines. Accepts a comma-separated list or repeated parameter. Defaults to all three (model_apis, serverless, compute).<br/>
+        /// Example: [model_apis, compute]
         /// </param>
         /// <param name="expand">
         /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, and 'auth_method' to include authentication method information. At least one of 'time_series' or 'summary' is required.<br/>
@@ -75,20 +83,25 @@ namespace Fal
             global::Fal.GetOrganizationUsageBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             string? teamUsername = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? product = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Organization Usage<br/>
-        /// Returns paginated usage records across all teams in your organization, with<br/>
-        /// each record attributed to a specific team via the `username` field.<br/>
+        /// Returns paginated usage records across all teams and product lines in your<br/>
+        /// organization, with each record attributed to a specific team via the<br/>
+        /// `username` field and a product line via the `product` field.<br/>
+        /// Covers all three fal product lines:<br/>
+        /// - `model_apis` — model API endpoint calls (e.g. `fal-ai/flux/dev`)<br/>
+        /// - `serverless` — fal Serverless SDK billing<br/>
+        /// - `compute` — fal Compute (raw instance time)<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// Must be called with an admin API key on the organization's root team.<br/>
         /// **Key Features:**<br/>
-        /// - Organization-wide usage data across all teams<br/>
-        /// - Filter by specific team using `team_username`<br/>
-        /// - Filter by endpoint, date range, and auth method<br/>
-        /// - Per-team attribution on every usage record<br/>
+        /// - Organization-wide usage data across all teams and products<br/>
+        /// - Filter by team (`team_username`), product line (`product`), endpoint, date range, and auth method<br/>
+        /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
         /// See [fal.ai docs](https://docs.fal.ai) for more details.<br/>
         ///     
@@ -131,6 +144,10 @@ namespace Fal
         /// Filter by a specific team username within the organization. If not provided, returns usage across all teams.<br/>
         /// Example: acme-ml-team
         /// </param>
+        /// <param name="product">
+        /// Restrict results to one or more product lines. Accepts a comma-separated list or repeated parameter. Defaults to all three (model_apis, serverless, compute).<br/>
+        /// Example: [model_apis, compute]
+        /// </param>
         /// <param name="expand">
         /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, and 'auth_method' to include authentication method information. At least one of 'time_series' or 'summary' is required.<br/>
         /// Default Value: [time_series]<br/>
@@ -149,6 +166,7 @@ namespace Fal
             global::Fal.GetOrganizationUsageBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             string? teamUsername = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? product = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
