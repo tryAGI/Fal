@@ -706,6 +706,17 @@
     },
     {
       "Order": 65,
+      "Title": "Create a workflow",
+      "Slug": "createworkflow",
+      "Description": "Create a new workflow owned by the authenticated user.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Save a newly built workflow\n- Programmatically provision workflows\n\n**Note:** Workflow names must be unique within your namespace. Creating a\nworkflow with a name you already use returns a 400 validation error.",
+      "Language": "csharp",
+      "Code": "using var client = new FalClient(apiKey);\n\nvar request = global::System.Text.Json.JsonSerializer.Deserialize\u003Cglobal::Fal.CreateWorkflowRequest\u003E(\n    @\u0022{\n  \u0022\u0022name\u0022\u0022: \u0022\u0022my-image-workflow\u0022\u0022,\n  \u0022\u0022title\u0022\u0022: \u0022\u0022My Image Generation Workflow\u0022\u0022,\n  \u0022\u0022is_public\u0022\u0022: false,\n  \u0022\u0022contents\u0022\u0022: {\n    \u0022\u0022name\u0022\u0022: \u0022\u0022my-image-workflow\u0022\u0022,\n    \u0022\u0022version\u0022\u0022: \u0022\u00221.0.0\u0022\u0022,\n    \u0022\u0022nodes\u0022\u0022: {\n      \u0022\u0022node_a1b2c3\u0022\u0022: {\n        \u0022\u0022id\u0022\u0022: \u0022\u0022node_a1b2c3\u0022\u0022,\n        \u0022\u0022type\u0022\u0022: \u0022\u0022run\u0022\u0022,\n        \u0022\u0022app\u0022\u0022: \u0022\u0022fal-ai/flux/dev\u0022\u0022,\n        \u0022\u0022depends\u0022\u0022: [],\n        \u0022\u0022input\u0022\u0022: {\n          \u0022\u0022prompt\u0022\u0022: \u0022\u0022$input.prompt\u0022\u0022\n        },\n        \u0022\u0022metadata\u0022\u0022: {\n          \u0022\u0022position\u0022\u0022: {\n            \u0022\u0022x\u0022\u0022: 300,\n            \u0022\u0022y\u0022\u0022: 100\n          }\n        }\n      }\n    },\n    \u0022\u0022output\u0022\u0022: {\n      \u0022\u0022image\u0022\u0022: \u0022\u0022$node_a1b2c3.images.0.url\u0022\u0022\n    },\n    \u0022\u0022schema\u0022\u0022: {\n      \u0022\u0022input\u0022\u0022: {\n        \u0022\u0022prompt\u0022\u0022: {\n          \u0022\u0022type\u0022\u0022: \u0022\u0022string\u0022\u0022\n        }\n      },\n      \u0022\u0022output\u0022\u0022: {\n        \u0022\u0022image\u0022\u0022: {\n          \u0022\u0022type\u0022\u0022: \u0022\u0022string\u0022\u0022\n        }\n      }\n    }\n  }\n}\u0022)!;\n\nvar response = await client.Workflows.CreateWorkflowAsync(\n    request: request\n);\n\n// Example response:\n// {\n//   \u0022workflow\u0022: {\n//     \u0022name\u0022: \u0022my-image-workflow\u0022,\n//     \u0022title\u0022: \u0022My Image Generation Workflow\u0022,\n//     \u0022user_nickname\u0022: \u0022johndoe\u0022,\n//     \u0022created_at\u0022: \u00222025-01-15T12:00:00Z\u0022,\n//     \u0022is_public\u0022: false,\n//     \u0022contents\u0022: {\n//       \u0022name\u0022: \u0022my-image-workflow\u0022,\n//       \u0022version\u0022: \u00221.0.0\u0022,\n//       \u0022nodes\u0022: {\n//         \u0022node_a1b2c3\u0022: {\n//           \u0022id\u0022: \u0022node_a1b2c3\u0022,\n//           \u0022type\u0022: \u0022run\u0022,\n//           \u0022app\u0022: \u0022fal-ai/flux/dev\u0022,\n//           \u0022depends\u0022: [],\n//           \u0022input\u0022: {\n//             \u0022prompt\u0022: \u0022$input.prompt\u0022\n//           },\n//           \u0022metadata\u0022: {\n//             \u0022position\u0022: {\n//               \u0022x\u0022: 300,\n//               \u0022y\u0022: 100\n//             }\n//           }\n//         }\n//       },\n//       \u0022output\u0022: {\n//         \u0022image\u0022: \u0022$node_a1b2c3.images.0.url\u0022\n//       },\n//       \u0022schema\u0022: {\n//         \u0022input\u0022: {\n//           \u0022prompt\u0022: {\n//             \u0022type\u0022: \u0022string\u0022\n//           }\n//         },\n//         \u0022output\u0022: {\n//           \u0022image\u0022: {\n//             \u0022type\u0022: \u0022string\u0022\n//           }\n//         }\n//       }\n//     }\n//   }\n// }",
+      "Format": "sdk",
+      "OperationId": "createWorkflow",
+      "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 66,
       "Title": "Get workflow details",
       "Slug": "getworkflow",
       "Description": "Get detailed information about a specific workflow, including its full contents/definition.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Load a workflow for editing\n- View workflow configuration\n- Export workflow definition",
@@ -716,7 +727,7 @@
       "Setup": null
     },
     {
-      "Order": 66,
+      "Order": 67,
       "Title": "List user workflows",
       "Slug": "listworkflows",
       "Description": "List workflows for the authenticated user with optional search and filtering.\n\n**Features:**\n- Paginated results with cursor-based pagination\n- Search by workflow name or title\n- Filter by model endpoints used in the workflow\n\n**Authentication:** Required. Returns only workflows owned by the authenticated user.\n\n**Common Use Cases:**\n- Display user\u0027s workflow library\n- Search for specific workflows\n- Find workflows using particular models",
