@@ -92,6 +92,11 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
+        public StorageClient Storage { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public WorkflowsClient Workflows { get; }
 
     }
