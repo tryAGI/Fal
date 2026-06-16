@@ -1,0 +1,867 @@
+
+#nullable enable
+
+namespace Fal
+{
+    public partial class ServerlessClient
+    {
+
+
+        private static readonly global::Fal.EndPointSecurityRequirement s_ServerlessGetUsageSecurityRequirement0 =
+            new global::Fal.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
+                {                    new global::Fal.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        SchemeId = "HttpBearer",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_ServerlessGetUsageSecurityRequirements =
+            new global::Fal.EndPointSecurityRequirement[]
+            {                s_ServerlessGetUsageSecurityRequirement0,
+            };
+        partial void PrepareServerlessGetUsageArguments(
+            global::System.Net.Http.HttpClient httpClient,
+            ref int? limit,
+            ref string? cursor,
+            ref global::Fal.AnyOf<global::System.DateTime?, string>? start,
+            ref global::Fal.AnyOf<global::System.DateTime?, string>? end,
+            ref string? timezone,
+            ref global::Fal.ServerlessGetUsageTimeframe? timeframe,
+            ref global::Fal.ServerlessGetUsageBoundToTimeframe? boundToTimeframe,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? app,
+            ref string? search,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
+        partial void PrepareServerlessGetUsageRequest(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            int? limit,
+            string? cursor,
+            global::Fal.AnyOf<global::System.DateTime?, string>? start,
+            global::Fal.AnyOf<global::System.DateTime?, string>? end,
+            string? timezone,
+            global::Fal.ServerlessGetUsageTimeframe? timeframe,
+            global::Fal.ServerlessGetUsageBoundToTimeframe? boundToTimeframe,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? app,
+            string? search,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
+        partial void ProcessServerlessGetUsageResponse(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage);
+
+        partial void ProcessServerlessGetUsageResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
+        /// <summary>
+        /// Usage<br/>
+        /// Time-bucketed, aggregated serverless compute usage for **your own account** —<br/>
+        /// the machine-seconds your deployed serverless apps consumed, priced with your<br/>
+        /// machine prices and net of discounts. This matches the serverless portion of the<br/>
+        /// dashboard usage view. Unlike `/v1/models/usage` (which reports model API<br/>
+        /// endpoint calls), this reports the `sdk_billing_event` compute spend of the apps<br/>
+        /// you run on fal Serverless. Authenticate with your own API key (no admin/org key<br/>
+        /// required); results are always scoped to the apps you own.<br/>
+        /// **Filtering by app:**<br/>
+        /// - `app` — exact match on one or more app names (comma-separated or repeated,<br/>
+        ///   up to 50): `?app=my-app-dev,my-app-prod`. Use the value exactly as it appears<br/>
+        ///   in the response `app` field.<br/>
+        /// - `search` — case-insensitive substring match on the app name, for when you<br/>
+        ///   know the name but not the exact environment/version suffix: `?search=my-app`<br/>
+        ///   returns every `my-app*` variant.<br/>
+        /// - Provide both to AND them. Omit both to return every app you own — useful for<br/>
+        ///   discovering the exact app names to filter on.<br/>
+        /// **Expansions:**<br/>
+        /// - `time_series`: usage grouped into time buckets (default)<br/>
+        /// - `summary`: a single aggregate row per app × machine type across the window<br/>
+        /// **Notes:**<br/>
+        /// - Each row is machine-seconds (`unit` is always `"second"`); surge and<br/>
+        ///   non-surge usage of the same app/machine come back as separate rows<br/>
+        ///   (`is_surge`), so sum across them for a per-app total.<br/>
+        /// - Time-series `bucket` timestamps are returned in the `timezone` you request<br/>
+        ///   (ISO 8601 with offset, e.g. `2025-01-15T00:00:00-05:00`), which also controls<br/>
+        ///   how usage is grouped into buckets.<br/>
+        /// **Common Use Cases:**<br/>
+        /// - Track your serverless apps' compute consumption and cost over time<br/>
+        /// - Break down spend per app, environment, and machine type<br/>
+        /// - Export usage to your own billing/observability tooling<br/>
+        ///     
+        /// </summary>
+        /// <param name="limit">
+        /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
+        /// Example: 50
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor from previous response. Encodes the page number.<br/>
+        /// Example: Mg==
+        /// </param>
+        /// <param name="start">
+        /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>
+        /// Example: 2025-01-01T00:00:00Z
+        /// </param>
+        /// <param name="end">
+        /// End date in ISO8601 format, exclusive (e.g., '2025-02-01T00:00:00Z' or '2025-02-01'). Data up to but not including this timestamp is returned. Defaults to current time.<br/>
+        /// Example: 2025-02-01T00:00:00Z
+        /// </param>
+        /// <param name="timezone">
+        /// Timezone for date aggregation and boundaries. All timestamps in responses are in UTC, but this controls how dates are bucketed.<br/>
+        /// Default Value: UTC<br/>
+        /// Example: UTC
+        /// </param>
+        /// <param name="timeframe">
+        /// Aggregation timeframe for timeseries data (auto-detected from date range if not specified). Auto-detection uses: minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).<br/>
+        /// Example: day
+        /// </param>
+        /// <param name="boundToTimeframe">
+        /// Whether to adjust start/end dates to align with timeframe boundaries and use exclusive end. Defaults to true. When true, dates are aligned to the start of the timeframe period (e.g., start of day) and end is made exclusive (e.g., start of next day). When false, uses exact dates provided.<br/>
+        /// Default Value: true<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="app">
+        /// Filter to one or more serverless apps, matched exactly against the `app` value in the response (deployed name, owner prefix stripped). Accepts a comma-separated list or repeated parameter (1-50). For partial/name-only matching use `search`.<br/>
+        /// Example: [autohdr-raw-to-jpg-dev]
+        /// </param>
+        /// <param name="search">
+        /// Case-insensitive substring match on the app name — returns every app whose name contains this term (e.g. `search=autohdr` matches all `autohdr-*` apps across environments). Combined with `app` via AND when both are given.<br/>
+        /// Example: autohdr-raw-to-jpg
+        /// </param>
+        /// <param name="expand">
+        /// Data to include in the response. Use 'time_series' for time-bucketed data and 'summary' for aggregate statistics across the entire window. At least one is required.<br/>
+        /// Default Value: [time_series]<br/>
+        /// Example: [time_series, summary]
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Fal.ServerlessGetUsageResponse> ServerlessGetUsageAsync(
+            int? limit = default,
+            string? cursor = default,
+            global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
+            global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
+            string? timezone = default,
+            global::Fal.ServerlessGetUsageTimeframe? timeframe = default,
+            global::Fal.ServerlessGetUsageBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? app = default,
+            string? search = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __response = await ServerlessGetUsageAsResponseAsync(
+                limit: limit,
+                cursor: cursor,
+                start: start,
+                end: end,
+                timezone: timezone,
+                timeframe: timeframe,
+                boundToTimeframe: boundToTimeframe,
+                app: app,
+                search: search,
+                expand: expand,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Usage<br/>
+        /// Time-bucketed, aggregated serverless compute usage for **your own account** —<br/>
+        /// the machine-seconds your deployed serverless apps consumed, priced with your<br/>
+        /// machine prices and net of discounts. This matches the serverless portion of the<br/>
+        /// dashboard usage view. Unlike `/v1/models/usage` (which reports model API<br/>
+        /// endpoint calls), this reports the `sdk_billing_event` compute spend of the apps<br/>
+        /// you run on fal Serverless. Authenticate with your own API key (no admin/org key<br/>
+        /// required); results are always scoped to the apps you own.<br/>
+        /// **Filtering by app:**<br/>
+        /// - `app` — exact match on one or more app names (comma-separated or repeated,<br/>
+        ///   up to 50): `?app=my-app-dev,my-app-prod`. Use the value exactly as it appears<br/>
+        ///   in the response `app` field.<br/>
+        /// - `search` — case-insensitive substring match on the app name, for when you<br/>
+        ///   know the name but not the exact environment/version suffix: `?search=my-app`<br/>
+        ///   returns every `my-app*` variant.<br/>
+        /// - Provide both to AND them. Omit both to return every app you own — useful for<br/>
+        ///   discovering the exact app names to filter on.<br/>
+        /// **Expansions:**<br/>
+        /// - `time_series`: usage grouped into time buckets (default)<br/>
+        /// - `summary`: a single aggregate row per app × machine type across the window<br/>
+        /// **Notes:**<br/>
+        /// - Each row is machine-seconds (`unit` is always `"second"`); surge and<br/>
+        ///   non-surge usage of the same app/machine come back as separate rows<br/>
+        ///   (`is_surge`), so sum across them for a per-app total.<br/>
+        /// - Time-series `bucket` timestamps are returned in the `timezone` you request<br/>
+        ///   (ISO 8601 with offset, e.g. `2025-01-15T00:00:00-05:00`), which also controls<br/>
+        ///   how usage is grouped into buckets.<br/>
+        /// **Common Use Cases:**<br/>
+        /// - Track your serverless apps' compute consumption and cost over time<br/>
+        /// - Break down spend per app, environment, and machine type<br/>
+        /// - Export usage to your own billing/observability tooling<br/>
+        ///     
+        /// </summary>
+        /// <param name="limit">
+        /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
+        /// Example: 50
+        /// </param>
+        /// <param name="cursor">
+        /// Pagination cursor from previous response. Encodes the page number.<br/>
+        /// Example: Mg==
+        /// </param>
+        /// <param name="start">
+        /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>
+        /// Example: 2025-01-01T00:00:00Z
+        /// </param>
+        /// <param name="end">
+        /// End date in ISO8601 format, exclusive (e.g., '2025-02-01T00:00:00Z' or '2025-02-01'). Data up to but not including this timestamp is returned. Defaults to current time.<br/>
+        /// Example: 2025-02-01T00:00:00Z
+        /// </param>
+        /// <param name="timezone">
+        /// Timezone for date aggregation and boundaries. All timestamps in responses are in UTC, but this controls how dates are bucketed.<br/>
+        /// Default Value: UTC<br/>
+        /// Example: UTC
+        /// </param>
+        /// <param name="timeframe">
+        /// Aggregation timeframe for timeseries data (auto-detected from date range if not specified). Auto-detection uses: minute (&lt;2h), hour (&lt;2d), day (&lt;64d), week (&lt;183d), month (&gt;=183d).<br/>
+        /// Example: day
+        /// </param>
+        /// <param name="boundToTimeframe">
+        /// Whether to adjust start/end dates to align with timeframe boundaries and use exclusive end. Defaults to true. When true, dates are aligned to the start of the timeframe period (e.g., start of day) and end is made exclusive (e.g., start of next day). When false, uses exact dates provided.<br/>
+        /// Default Value: true<br/>
+        /// Example: true
+        /// </param>
+        /// <param name="app">
+        /// Filter to one or more serverless apps, matched exactly against the `app` value in the response (deployed name, owner prefix stripped). Accepts a comma-separated list or repeated parameter (1-50). For partial/name-only matching use `search`.<br/>
+        /// Example: [autohdr-raw-to-jpg-dev]
+        /// </param>
+        /// <param name="search">
+        /// Case-insensitive substring match on the app name — returns every app whose name contains this term (e.g. `search=autohdr` matches all `autohdr-*` apps across environments). Combined with `app` via AND when both are given.<br/>
+        /// Example: autohdr-raw-to-jpg
+        /// </param>
+        /// <param name="expand">
+        /// Data to include in the response. Use 'time_series' for time-bucketed data and 'summary' for aggregate statistics across the entire window. At least one is required.<br/>
+        /// Default Value: [time_series]<br/>
+        /// Example: [time_series, summary]
+        /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Fal.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.ServerlessGetUsageResponse>> ServerlessGetUsageAsResponseAsync(
+            int? limit = default,
+            string? cursor = default,
+            global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
+            global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
+            string? timezone = default,
+            global::Fal.ServerlessGetUsageTimeframe? timeframe = default,
+            global::Fal.ServerlessGetUsageBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? app = default,
+            string? search = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
+            global::Fal.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            PrepareArguments(
+                client: HttpClient);
+            PrepareServerlessGetUsageArguments(
+                httpClient: HttpClient,
+                limit: ref limit,
+                cursor: ref cursor,
+                start: ref start,
+                end: ref end,
+                timezone: ref timezone,
+                timeframe: ref timeframe,
+                boundToTimeframe: ref boundToTimeframe,
+                app: ref app,
+                search: ref search,
+                expand: ref expand);
+
+
+            var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ServerlessGetUsageSecurityRequirements,
+                operationName: "ServerlessGetUsageAsync");
+
+            using var __timeoutCancellationTokenSource = global::Fal.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken);
+            var __effectiveCancellationToken = __timeoutCancellationTokenSource?.Token ?? cancellationToken;
+            var __effectiveReadResponseAsString = global::Fal.AutoSDKRequestOptionsSupport.GetReadResponseAsString(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                fallbackValue: ReadResponseAsString);
+            var __maxAttempts = global::Fal.AutoSDKRequestOptionsSupport.GetMaxAttempts(
+                clientOptions: Options,
+                requestOptions: requestOptions,
+                supportsRetry: true);
+
+            global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
+            {
+
+                            var __pathBuilder = new global::Fal.PathBuilder(
+                                path: "/serverless/usage",
+                                baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddOptionalParameter("limit", limit?.ToString())
+                                .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("start", start?.ToString())
+                                .AddOptionalParameter("end", end?.ToString())
+                                .AddOptionalParameter("timezone", timezone)
+                                .AddOptionalParameter("timeframe", timeframe?.ToValueString())
+                                .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString())
+                                .AddOptionalParameter("app", app?.ToString())
+                                .AddOptionalParameter("search", search)
+                                .AddOptionalParameter("expand", expand?.ToString())
+                                ;
+                            var __path = __pathBuilder.ToString();
+                __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
+                    path: __path,
+                    clientParameters: Options.QueryParameters,
+                    requestParameters: requestOptions?.QueryParameters);
+                var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
+                    method: global::System.Net.Http.HttpMethod.Get,
+                    requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
+#if NET6_0_OR_GREATER
+                __httpRequest.Version = global::System.Net.HttpVersion.Version11;
+                __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
+#endif
+
+            foreach (var __authorization in __authorizations)
+            {
+                if (__authorization.Type == "Http" ||
+                    __authorization.Type == "OAuth2" ||
+                    __authorization.Type == "OpenIdConnect")
+                {
+                    __httpRequest.Headers.Authorization = new global::System.Net.Http.Headers.AuthenticationHeaderValue(
+                        scheme: __authorization.Name,
+                        parameter: __authorization.Value);
+                }
+                else if (__authorization.Type == "ApiKey" &&
+                         __authorization.Location == "Header")
+                {
+                    __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
+                } 
+            }
+                global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
+                    request: __httpRequest,
+                    clientHeaders: Options.Headers,
+                    requestHeaders: requestOptions?.Headers);
+
+                PrepareRequest(
+                    client: HttpClient,
+                    request: __httpRequest);
+                PrepareServerlessGetUsageRequest(
+                    httpClient: HttpClient,
+                    httpRequestMessage: __httpRequest,
+                    limit: limit,
+                    cursor: cursor,
+                    start: start,
+                    end: end,
+                    timezone: timezone,
+                    timeframe: timeframe,
+                    boundToTimeframe: boundToTimeframe,
+                    app: app,
+                    search: search,
+                    expand: expand);
+
+                return __httpRequest;
+            }
+
+            global::System.Net.Http.HttpRequestMessage? __httpRequest = null;
+            global::System.Net.Http.HttpResponseMessage? __response = null;
+            var __attemptNumber = 0;
+            try
+            {
+                for (var __attempt = 1; __attempt <= __maxAttempts; __attempt++)
+                {
+                    __attemptNumber = __attempt;
+                    __httpRequest = __CreateHttpRequest();
+                    await global::Fal.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
+                            clientOptions: Options,
+                            context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "ServerlessGetUsage",
+                                methodName: "ServerlessGetUsageAsync",
+                                pathTemplate: "\"/serverless/usage\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: null,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                    try
+                    {
+                        __response = await HttpClient.SendAsync(
+                request: __httpRequest,
+                completionOption: global::System.Net.Http.HttpCompletionOption.ResponseContentRead,
+                cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
+                    }
+                    catch (global::System.Net.Http.HttpRequestException __exception)
+                    {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
+                        var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
+                        await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "ServerlessGetUsage",
+                                methodName: "ServerlessGetUsageAsync",
+                                pathTemplate: "\"/serverless/usage\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: null,
+                                exception: __exception,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                        if (!__willRetry)
+                        {
+                            throw;
+                        }
+
+                        __httpRequest.Dispose();
+                        __httpRequest = null;
+                        await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
+                            retryDelay: __retryDelay,
+                            cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
+                        continue;
+                    }
+
+                    if (__response != null &&
+                        __attempt < __maxAttempts &&
+                        global::Fal.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
+                    {
+                        var __retryDelay = global::Fal.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
+                        await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "ServerlessGetUsage",
+                                methodName: "ServerlessGetUsageAsync",
+                                pathTemplate: "\"/serverless/usage\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attempt,
+                                maxAttempts: __maxAttempts,
+                                willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                        __response.Dispose();
+                        __response = null;
+                        __httpRequest.Dispose();
+                        __httpRequest = null;
+                        await global::Fal.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
+                            retryDelay: __retryDelay,
+                            cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
+                        continue;
+                    }
+
+                    break;
+                }
+
+                if (__response == null)
+                {
+                    throw new global::System.InvalidOperationException("No response received.");
+                }
+
+                using (__response)
+                {
+
+                ProcessResponse(
+                    client: HttpClient,
+                    response: __response);
+                ProcessServerlessGetUsageResponse(
+                    httpClient: HttpClient,
+                    httpResponseMessage: __response);
+                if (__response.IsSuccessStatusCode)
+                {
+                    await global::Fal.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
+                            clientOptions: Options,
+                            context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "ServerlessGetUsage",
+                                methodName: "ServerlessGetUsageAsync",
+                                pathTemplate: "\"/serverless/usage\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attemptNumber,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                }
+                else
+                {
+                    await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
+                            clientOptions: Options,
+                            context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
+                                operationId: "ServerlessGetUsage",
+                                methodName: "ServerlessGetUsageAsync",
+                                pathTemplate: "\"/serverless/usage\"",
+                                httpMethod: "GET",
+                                baseUri: BaseUri,
+                                request: __httpRequest!,
+                                response: __response,
+                                exception: null,
+                                clientOptions: Options,
+                                requestOptions: requestOptions,
+                                attempt: __attemptNumber,
+                                maxAttempts: __maxAttempts,
+                                willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
+                                cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
+                }
+                            // Invalid request parameters
+                            if ((int)__response.StatusCode == 400)
+                            {
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
+                                global::Fal.ServerlessGetUsageResponse2? __value_400 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_400 = global::Fal.ServerlessGetUsageResponse2.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_400 = global::Fal.ServerlessGetUsageResponse2.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_400 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetUsageResponse2>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Authentication required
+                            if ((int)__response.StatusCode == 401)
+                            {
+                                string? __content_401 = null;
+                                global::System.Exception? __exception_401 = null;
+                                global::Fal.ServerlessGetUsageResponse3? __value_401 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_401 = global::Fal.ServerlessGetUsageResponse3.FromJson(__content_401, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_401 = global::Fal.ServerlessGetUsageResponse3.FromJson(__content_401, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_401 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetUsageResponse3>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_401,
+                                    responseBody: __content_401,
+                                    responseObject: __value_401,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Access denied
+                            if ((int)__response.StatusCode == 403)
+                            {
+                                string? __content_403 = null;
+                                global::System.Exception? __exception_403 = null;
+                                global::Fal.ServerlessGetUsageResponse4? __value_403 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_403 = global::Fal.ServerlessGetUsageResponse4.FromJson(__content_403, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_403 = global::Fal.ServerlessGetUsageResponse4.FromJson(__content_403, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_403 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetUsageResponse4>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_403,
+                                    responseBody: __content_403,
+                                    responseObject: __value_403,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Resource not found
+                            if ((int)__response.StatusCode == 404)
+                            {
+                                string? __content_404 = null;
+                                global::System.Exception? __exception_404 = null;
+                                global::Fal.ServerlessGetUsageResponse5? __value_404 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_404 = global::Fal.ServerlessGetUsageResponse5.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_404 = global::Fal.ServerlessGetUsageResponse5.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_404 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetUsageResponse5>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_404,
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Rate limit exceeded
+                            if ((int)__response.StatusCode == 429)
+                            {
+                                string? __content_429 = null;
+                                global::System.Exception? __exception_429 = null;
+                                global::Fal.ServerlessGetUsageResponse6? __value_429 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_429 = global::Fal.ServerlessGetUsageResponse6.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_429 = global::Fal.ServerlessGetUsageResponse6.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_429 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetUsageResponse6>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_429,
+                                    responseBody: __content_429,
+                                    responseObject: __value_429,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // Internal server error
+                            if ((int)__response.StatusCode == 500)
+                            {
+                                string? __content_500 = null;
+                                global::System.Exception? __exception_500 = null;
+                                global::Fal.ServerlessGetUsageResponse7? __value_500 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_500 = global::Fal.ServerlessGetUsageResponse7.FromJson(__content_500, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_500 = global::Fal.ServerlessGetUsageResponse7.FromJson(__content_500, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_500 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessGetUsageResponse7>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_500,
+                                    responseBody: __content_500,
+                                    responseObject: __value_500,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+
+                            if (__effectiveReadResponseAsString)
+                            {
+                                var __content = await __response.Content.ReadAsStringAsync(
+                #if NET5_0_OR_GREATER
+                                    __effectiveCancellationToken
+                #endif
+                                ).ConfigureAwait(false);
+
+                                ProcessResponseContent(
+                                    client: HttpClient,
+                                    response: __response,
+                                    content: ref __content);
+                                ProcessServerlessGetUsageResponseContent(
+                                    httpClient: HttpClient,
+                                    httpResponseMessage: __response,
+                                    content: ref __content);
+
+                                try
+                                {
+                                    __response.EnsureSuccessStatusCode();
+
+                                    var __value = global::Fal.ServerlessGetUsageResponse.FromJson(__content, JsonSerializerContext) ??
+                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.ServerlessGetUsageResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    throw global::Fal.ApiException.Create(
+                                        statusCode: __response.StatusCode,
+                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        innerException: __ex,
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                            __response.Headers,
+                                            h => h.Key,
+                                            h => h.Value));
+                                }
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    __response.EnsureSuccessStatusCode();
+                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
+
+                                    var __value = await global::Fal.ServerlessGetUsageResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Fal.AutoSDKHttpResponse<global::Fal.ServerlessGetUsageResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Fal.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    string? __content = null;
+                                    try
+                                    {
+                                        __content = await __response.Content.ReadAsStringAsync(
+                #if NET5_0_OR_GREATER
+                                            __effectiveCancellationToken
+                #endif
+                                        ).ConfigureAwait(false);
+                                    }
+                                    catch (global::System.Exception)
+                                    {
+                                    }
+
+                                    throw global::Fal.ApiException.Create(
+                                        statusCode: __response.StatusCode,
+                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        innerException: __ex,
+                                        responseBody: __content,
+                                        responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                            __response.Headers,
+                                            h => h.Key,
+                                            h => h.Value));
+                                }
+                            }
+
+                }
+            }
+            finally
+            {
+                __httpRequest?.Dispose();
+            }
+        }
+    }
+}
