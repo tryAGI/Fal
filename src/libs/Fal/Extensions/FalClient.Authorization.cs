@@ -3,22 +3,30 @@ namespace Fal;
 public partial class FalClient
 {
     // Fal API uses 'Authorization: Key <api_key>' instead of 'Authorization: Bearer <api_key>'.
-    // Override the generated Bearer auth to use Key scheme after construction.
+    // Keep the generated Bearer authorization name for endpoint security matching, then
+    // rewrite the outbound header scheme at request time.
     partial void Authorized(System.Net.Http.HttpClient client)
     {
-        for (var i = 0; i < Authorizations.Count; i++)
+        foreach (var auth in Authorizations)
         {
-            var auth = Authorizations[i];
             if (auth.Type == "Http" && auth.Name == "Bearer")
             {
-                Authorizations[i] = new EndPointAuthorization
-                {
-                    Type = auth.Type,
-                    Location = auth.Location,
-                    Name = "Key",
-                    Value = auth.Value,
-                };
+                client.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Key", auth.Value);
             }
+        }
+    }
+
+    partial void PrepareRequest(
+        System.Net.Http.HttpClient client,
+        System.Net.Http.HttpRequestMessage request)
+    {
+        if (Authorizations.Count >= 0 && request.Headers.Authorization?.Scheme == "Bearer")
+        {
+            request.Headers.Authorization =
+                new System.Net.Http.Headers.AuthenticationHeaderValue(
+                    "Key",
+                    request.Headers.Authorization.Parameter);
         }
     }
 }
