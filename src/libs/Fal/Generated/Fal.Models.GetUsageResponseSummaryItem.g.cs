@@ -57,6 +57,12 @@ namespace Fal
         public string? AuthMethod { get; set; }
 
         /// <summary>
+        /// Structured authentication method identity. Only populated when 'auth_method_structured' is included in expand parameter.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auth_method_structured")]
+        public global::Fal.GetUsageResponseSummaryItemAuthMethodStructured? AuthMethodStructured { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -86,6 +92,9 @@ namespace Fal
         /// <param name="authMethod">
         /// Authentication method label (e.g., 'Key 1', 'Key 2', 'User token'). Only populated when 'auth_method' is included in expand parameter.
         /// </param>
+        /// <param name="authMethodStructured">
+        /// Structured authentication method identity. Only populated when 'auth_method_structured' is included in expand parameter.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -96,7 +105,8 @@ namespace Fal
             double unitPrice,
             double cost,
             string currency,
-            string? authMethod)
+            string? authMethod,
+            global::Fal.GetUsageResponseSummaryItemAuthMethodStructured? authMethodStructured)
         {
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
             this.Unit = unit ?? throw new global::System.ArgumentNullException(nameof(unit));
@@ -105,6 +115,7 @@ namespace Fal
             this.Cost = cost;
             this.Currency = currency ?? throw new global::System.ArgumentNullException(nameof(currency));
             this.AuthMethod = authMethod;
+            this.AuthMethodStructured = authMethodStructured;
         }
 
         /// <summary>

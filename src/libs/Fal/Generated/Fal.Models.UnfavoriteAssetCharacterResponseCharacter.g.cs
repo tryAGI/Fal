@@ -60,6 +60,12 @@ namespace Fal
         public string? CharacterIdentifier { get; set; }
 
         /// <summary>
+        /// Parent collection ID for a nested (manual) collection; null when top-level
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parent_collection_id")]
+        public string? ParentCollectionId { get; set; }
+
+        /// <summary>
         /// Whether the collection is favorited
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_favorited")]
@@ -138,6 +144,9 @@ namespace Fal
         /// <param name="characterIdentifier">
         /// Character @mention identifier for character collections
         /// </param>
+        /// <param name="parentCollectionId">
+        /// Parent collection ID for a nested (manual) collection; null when top-level
+        /// </param>
         /// <param name="assetCount">
         /// Exact asset count when available; null for smart/character collections
         /// </param>
@@ -157,6 +166,7 @@ namespace Fal
             string? color,
             string? coverImageUrl,
             string? characterIdentifier,
+            string? parentCollectionId,
             double? assetCount)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -167,6 +177,7 @@ namespace Fal
             this.Color = color;
             this.CoverImageUrl = coverImageUrl;
             this.CharacterIdentifier = characterIdentifier;
+            this.ParentCollectionId = parentCollectionId;
             this.IsFavorited = isFavorited;
             this.AssetCount = assetCount;
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));

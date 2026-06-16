@@ -741,6 +741,46 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.UnfavoriteAssetCollectionResponseErrorType9NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeNullableJsonConverter),
@@ -2249,6 +2289,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
@@ -2361,6 +2405,7 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateAssetCollectionRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetCollectionRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AddAssetToCollectionRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RemoveAssetFromCollectionRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateAssetCharacterRequest))]
@@ -2497,8 +2542,10 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseTimeSerie))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetUsageResponseTimeSerieResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseTimeSerieResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseTimeSerieResultAuthMethodStructured))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetUsageResponseSummaryItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseSummaryItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseSummaryItemAuthMethodStructured))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType), TypeInfoPropertyName = "GetUsageResponseErrorType2_3")]
@@ -2836,9 +2883,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponseError5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponseErrorType5), TypeInfoPropertyName = "DeleteAssetCollectionResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponseErrorType6), TypeInfoPropertyName = "DeleteAssetCollectionResponseErrorType62")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponse7))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -3578,6 +3622,46 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.UnfavoriteAssetCollectionResponseErrorType9NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeNullableJsonConverter),
@@ -5086,6 +5170,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
@@ -5176,6 +5264,9 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponseErrorType6), TypeInfoPropertyName = "DeleteAssetCollectionResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponse7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponseError7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponseErrorType7), TypeInfoPropertyName = "DeleteAssetCollectionResponseErrorType72")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCollectionResponse8))]
@@ -5244,6 +5335,36 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UnfavoriteAssetCollectionResponse10))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UnfavoriteAssetCollectionResponseError9))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UnfavoriteAssetCollectionResponseErrorType9), TypeInfoPropertyName = "UnfavoriteAssetCollectionResponseErrorType92")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseCollection))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseCollectionType), TypeInfoPropertyName = "MoveAssetCollectionResponseCollectionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType2), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType3), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType4), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType5), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType6), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse8))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType7), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType72")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse9))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError8))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType8), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType82")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponse10))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseError9))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.MoveAssetCollectionResponseErrorType9), TypeInfoPropertyName = "MoveAssetCollectionResponseErrorType92")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListAssetCollectionAssetsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ListAssetCollectionAssetsResponseAsset>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListAssetCollectionAssetsResponseAsset))]
@@ -5643,39 +5764,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType4), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType5), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType6), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType62")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse8))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType7), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType72")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse9))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError8))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType8), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType82")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse10))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError9))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType9), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType92")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType2), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType3), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType4), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType5), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType6), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType62")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -6415,6 +6503,46 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.UnfavoriteAssetCollectionResponseErrorType9NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeNullableJsonConverter),
@@ -7923,6 +8051,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
@@ -8013,6 +8145,39 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType5), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType6), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse8))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType7), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType72")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse9))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError8))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType8), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType82")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponse10))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseError9))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetTagResponseErrorType9), TypeInfoPropertyName = "UpdateAssetTagResponseErrorType92")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType2), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType3), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType4), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType5), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType6), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponse7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseError7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetTagResponseErrorType7), TypeInfoPropertyName = "DeleteAssetTagResponseErrorType72")]
@@ -8480,39 +8645,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType2), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType3), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType4), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType5), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType6), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType62")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetUsageResponseTimeSerie>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseTimeSerie))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetUsageResponseTimeSerieResult>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseTimeSerieResult))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetUsageResponseSummaryItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseSummaryItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType), TypeInfoPropertyName = "ServerlessGetUsageResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType2), TypeInfoPropertyName = "ServerlessGetUsageResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType3), TypeInfoPropertyName = "ServerlessGetUsageResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse5))]
     internal sealed partial class SourceGenerationContextChunk2 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -9252,6 +9384,46 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.UnfavoriteAssetCollectionResponseErrorType9NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9JsonConverter),
+
+            typeof(global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeNullableJsonConverter),
@@ -10760,6 +10932,10 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
 
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
+            typeof(global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>),
+
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
 
             typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>),
@@ -10850,6 +11026,39 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType2), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType3), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType4), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType5), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType6), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetUsageResponseTimeSerie>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseTimeSerie))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetUsageResponseTimeSerieResult>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseTimeSerieResult))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetUsageResponseSummaryItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseSummaryItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType), TypeInfoPropertyName = "ServerlessGetUsageResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType2), TypeInfoPropertyName = "ServerlessGetUsageResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType3), TypeInfoPropertyName = "ServerlessGetUsageResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseError4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType4), TypeInfoPropertyName = "ServerlessGetUsageResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse6))]
@@ -11539,6 +11748,26 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.UnfavoriteAssetCollectionResponseErrorType8NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.UnfavoriteAssetCollectionResponseErrorType9JsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.UnfavoriteAssetCollectionResponseErrorType9NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseCollectionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType7NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType8NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.MoveAssetCollectionResponseErrorType9NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ListAssetCollectionAssetsResponseAssetTypeNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ListAssetCollectionAssetsResponseErrorTypeJsonConverter());
@@ -12291,6 +12520,8 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());

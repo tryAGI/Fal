@@ -35,6 +35,8 @@ namespace Fal
             ref global::Fal.GetUsageTimeframe? timeframe,
             ref global::Fal.GetUsageBoundToTimeframe? boundToTimeframe,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void PrepareGetUsageRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -47,6 +49,8 @@ namespace Fal
             global::Fal.GetUsageTimeframe? timeframe,
             global::Fal.GetUsageBoundToTimeframe? boundToTimeframe,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void ProcessGetUsageResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -110,8 +114,16 @@ namespace Fal
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
         /// </param>
+        /// <param name="apiKeyId">
+        /// Filter by specific API key ID(s). Accepts 1-50 key IDs. Supports comma-separated values: ?api_key_id=key1,key2 or array syntax: ?api_key_id=key1&amp;api_key_id=key2<br/>
+        /// Example: [abc123]
+        /// </param>
+        /// <param name="loginUsername">
+        /// Filter by team member login username(s) (nickname). Accepts 1-50 usernames. Supports comma-separated values: ?login_username=alice,bob or array syntax: ?login_username=alice&amp;login_username=bob<br/>
+        /// Example: [alice]
+        /// </param>
         /// <param name="expand">
-        /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, and 'auth_method' to include authentication method information (formatted with user key aliases). At least one of 'time_series' or 'summary' is required.<br/>
+        /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, 'auth_method' to include a formatted authentication method label, and 'auth_method_structured' to include a machine-readable auth method object (detail, api_key_id, login_username). At least one of 'time_series' or 'summary' is required.<br/>
         /// Default Value: [time_series]<br/>
         /// Example: [time_series, auth_method]
         /// </param>
@@ -127,6 +139,8 @@ namespace Fal
             global::Fal.GetUsageTimeframe? timeframe = default,
             global::Fal.GetUsageBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -140,6 +154,8 @@ namespace Fal
                 timeframe: timeframe,
                 boundToTimeframe: boundToTimeframe,
                 endpointId: endpointId,
+                apiKeyId: apiKeyId,
+                loginUsername: loginUsername,
                 expand: expand,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
@@ -200,8 +216,16 @@ namespace Fal
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
         /// </param>
+        /// <param name="apiKeyId">
+        /// Filter by specific API key ID(s). Accepts 1-50 key IDs. Supports comma-separated values: ?api_key_id=key1,key2 or array syntax: ?api_key_id=key1&amp;api_key_id=key2<br/>
+        /// Example: [abc123]
+        /// </param>
+        /// <param name="loginUsername">
+        /// Filter by team member login username(s) (nickname). Accepts 1-50 usernames. Supports comma-separated values: ?login_username=alice,bob or array syntax: ?login_username=alice&amp;login_username=bob<br/>
+        /// Example: [alice]
+        /// </param>
         /// <param name="expand">
-        /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, and 'auth_method' to include authentication method information (formatted with user key aliases). At least one of 'time_series' or 'summary' is required.<br/>
+        /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, 'auth_method' to include a formatted authentication method label, and 'auth_method_structured' to include a machine-readable auth method object (detail, api_key_id, login_username). At least one of 'time_series' or 'summary' is required.<br/>
         /// Default Value: [time_series]<br/>
         /// Example: [time_series, auth_method]
         /// </param>
@@ -217,6 +241,8 @@ namespace Fal
             global::Fal.GetUsageTimeframe? timeframe = default,
             global::Fal.GetUsageBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -233,6 +259,8 @@ namespace Fal
                 timeframe: ref timeframe,
                 boundToTimeframe: ref boundToTimeframe,
                 endpointId: ref endpointId,
+                apiKeyId: ref apiKeyId,
+                loginUsername: ref loginUsername,
                 expand: ref expand);
 
 
@@ -270,6 +298,8 @@ namespace Fal
                                 .AddOptionalParameter("timeframe", timeframe?.ToValueString())
                                 .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString())
                                 .AddOptionalParameter("endpoint_id", endpointId?.ToString())
+                                .AddOptionalParameter("api_key_id", apiKeyId?.ToString())
+                                .AddOptionalParameter("login_username", loginUsername?.ToString())
                                 .AddOptionalParameter("expand", expand?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
@@ -320,6 +350,8 @@ namespace Fal
                     timeframe: timeframe,
                     boundToTimeframe: boundToTimeframe,
                     endpointId: endpointId,
+                    apiKeyId: apiKeyId,
+                    loginUsername: loginUsername,
                     expand: expand);
 
                 return __httpRequest;

@@ -810,6 +810,9 @@ namespace Fal
         /// <param name="coverImageUrl">
         /// Optional fal-hosted cover image URL for the collection
         /// </param>
+        /// <param name="parentCollectionId">
+        /// Optional parent collection ID to nest this collection under (manual collections only). Omit or null to create a top-level collection.
+        /// </param>
         /// <param name="filters">
         /// Assets filter DSL
         /// </param>
@@ -823,6 +826,7 @@ namespace Fal
             string? icon = default,
             string? color = default,
             string? coverImageUrl = default,
+            string? parentCollectionId = default,
             object? filters = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -834,6 +838,7 @@ namespace Fal
                 Icon = icon,
                 Color = color,
                 CoverImageUrl = coverImageUrl,
+                ParentCollectionId = parentCollectionId,
                 Filters = filters,
             };
 

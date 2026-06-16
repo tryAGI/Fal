@@ -40,6 +40,12 @@ namespace Fal
         public string? CoverImageUrl { get; set; }
 
         /// <summary>
+        /// Optional parent collection ID to nest this collection under (manual collections only). Omit or null to create a top-level collection.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parent_collection_id")]
+        public string? ParentCollectionId { get; set; }
+
+        /// <summary>
         /// Assets filter DSL
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filters")]
@@ -69,6 +75,9 @@ namespace Fal
         /// <param name="coverImageUrl">
         /// Optional fal-hosted cover image URL for the collection
         /// </param>
+        /// <param name="parentCollectionId">
+        /// Optional parent collection ID to nest this collection under (manual collections only). Omit or null to create a top-level collection.
+        /// </param>
         /// <param name="filters">
         /// Assets filter DSL
         /// </param>
@@ -81,6 +90,7 @@ namespace Fal
             string? icon,
             string? color,
             string? coverImageUrl,
+            string? parentCollectionId,
             object? filters)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -88,6 +98,7 @@ namespace Fal
             this.Icon = icon;
             this.Color = color;
             this.CoverImageUrl = coverImageUrl;
+            this.ParentCollectionId = parentCollectionId;
             this.Filters = filters;
         }
 
