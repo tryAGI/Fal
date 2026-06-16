@@ -6,11 +6,11 @@ namespace Fal
     {
         /// <summary>
         /// Add asset to collection<br/>
-        /// Add an asset to a manual or character collection. Provide an asset ID, request ID, or vector ID; unresolved references are saved automatically before they are added. For character collections, the asset is added by applying the character tag.
+        /// Add an asset to a manual or character collection. Provide a request ID or vector ID; unresolved references are materialized before local collection state is added. For character collections, the asset is added by applying the character tag.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -29,11 +29,11 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add asset to collection<br/>
-        /// Add an asset to a manual or character collection. Provide an asset ID, request ID, or vector ID; unresolved references are saved automatically before they are added. For character collections, the asset is added by applying the character tag.
+        /// Add an asset to a manual or character collection. Provide a request ID or vector ID; unresolved references are materialized before local collection state is added. For character collections, the asset is added by applying the character tag.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -52,18 +52,15 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add asset to collection<br/>
-        /// Add an asset to a manual or character collection. Provide an asset ID, request ID, or vector ID; unresolved references are saved automatically before they are added. For character collections, the asset is added by applying the character tag.
+        /// Add an asset to a manual or character collection. Provide a request ID or vector ID; unresolved references are materialized before local collection state is added. For character collections, the asset is added by applying the character tag.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
         /// Example: 550e8400-e29b-41d4-a716-446655440000
-        /// </param>
-        /// <param name="assetId">
-        /// Persisted asset ID
         /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
@@ -77,7 +74,6 @@ namespace Fal
         global::System.Threading.Tasks.Task<global::Fal.AddAssetToCollectionResponse> AddAssetToCollectionAsync(
             string collectionId,
             string? idempotencyKey = default,
-            string? assetId = default,
             string? requestId = default,
             string? vectorId = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,

@@ -45,7 +45,7 @@ namespace Fal
 
         /// <summary>
         /// Set tags for an asset<br/>
-        /// Set tags for an asset. Provide an asset ID, request ID, or vector ID; unresolved references are saved automatically before tags are assigned.
+        /// Set tags for an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -74,7 +74,7 @@ namespace Fal
         }
         /// <summary>
         /// Set tags for an asset<br/>
-        /// Set tags for an asset. Provide an asset ID, request ID, or vector ID; unresolved references are saved automatically before tags are assigned.
+        /// Set tags for an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -789,14 +789,11 @@ namespace Fal
         }
         /// <summary>
         /// Set tags for an asset<br/>
-        /// Set tags for an asset. Provide an asset ID, request ID, or vector ID; unresolved references are saved automatically before tags are assigned.
+        /// Set tags for an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
         /// Example: 550e8400-e29b-41d4-a716-446655440000
-        /// </param>
-        /// <param name="assetId">
-        /// Persisted asset ID
         /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
@@ -813,7 +810,6 @@ namespace Fal
         public async global::System.Threading.Tasks.Task<global::Fal.SetAssetTagsForAssetResponse> SetAssetTagsForAssetAsync(
             global::System.Collections.Generic.IList<string> tagIds,
             string? idempotencyKey = default,
-            string? assetId = default,
             string? requestId = default,
             string? vectorId = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
@@ -821,7 +817,6 @@ namespace Fal
         {
             var __request = new global::Fal.SetAssetTagsForAssetRequest
             {
-                AssetId = assetId,
                 RequestId = requestId,
                 VectorId = vectorId,
                 TagIds = tagIds,

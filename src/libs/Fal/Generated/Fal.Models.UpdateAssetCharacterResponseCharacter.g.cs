@@ -60,6 +60,12 @@ namespace Fal
         public string? CharacterIdentifier { get; set; }
 
         /// <summary>
+        /// Parent collection ID for a nested (manual) collection; null when top-level
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parent_collection_id")]
+        public string? ParentCollectionId { get; set; }
+
+        /// <summary>
         /// Whether the collection is favorited
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_favorited")]
@@ -87,11 +93,11 @@ namespace Fal
         public required string UpdatedAt { get; set; }
 
         /// <summary>
-        /// Reference image URLs used for character matching
+        /// Reference images used for character matching
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("reference_image_urls")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("reference_images")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<string> ReferenceImageUrls { get; set; }
+        public required global::System.Collections.Generic.IList<string> ReferenceImages { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -117,8 +123,8 @@ namespace Fal
         /// <param name="updatedAt">
         /// Collection update time
         /// </param>
-        /// <param name="referenceImageUrls">
-        /// Reference image URLs used for character matching
+        /// <param name="referenceImages">
+        /// Reference images used for character matching
         /// </param>
         /// <param name="type">
         /// Collection type
@@ -138,6 +144,9 @@ namespace Fal
         /// <param name="characterIdentifier">
         /// Character @mention identifier for character collections
         /// </param>
+        /// <param name="parentCollectionId">
+        /// Parent collection ID for a nested (manual) collection; null when top-level
+        /// </param>
         /// <param name="assetCount">
         /// Exact asset count when available; null for smart/character collections
         /// </param>
@@ -150,13 +159,14 @@ namespace Fal
             bool isFavorited,
             string createdAt,
             string updatedAt,
-            global::System.Collections.Generic.IList<string> referenceImageUrls,
+            global::System.Collections.Generic.IList<string> referenceImages,
             global::Fal.UpdateAssetCharacterResponseCharacterType type,
             string? description,
             string? icon,
             string? color,
             string? coverImageUrl,
             string? characterIdentifier,
+            string? parentCollectionId,
             double? assetCount)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -167,11 +177,12 @@ namespace Fal
             this.Color = color;
             this.CoverImageUrl = coverImageUrl;
             this.CharacterIdentifier = characterIdentifier;
+            this.ParentCollectionId = parentCollectionId;
             this.IsFavorited = isFavorited;
             this.AssetCount = assetCount;
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
             this.UpdatedAt = updatedAt ?? throw new global::System.ArgumentNullException(nameof(updatedAt));
-            this.ReferenceImageUrls = referenceImageUrls ?? throw new global::System.ArgumentNullException(nameof(referenceImageUrls));
+            this.ReferenceImages = referenceImages ?? throw new global::System.ArgumentNullException(nameof(referenceImages));
         }
 
         /// <summary>

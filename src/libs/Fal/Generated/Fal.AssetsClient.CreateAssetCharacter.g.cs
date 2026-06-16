@@ -45,7 +45,7 @@ namespace Fal
 
         /// <summary>
         /// Create asset character<br/>
-        /// Create an asset character for the authenticated user's fal Assets library. Reference images may be fal-hosted image URLs, asset IDs, request IDs, or vector IDs; unresolved references are saved automatically.
+        /// Create an asset character for the authenticated user's fal Assets library. Prefer vector IDs or request IDs in reference_images for existing fal-generated assets; use fal-hosted image URLs only for standalone images. Unresolved ID references are materialized before character state is added.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -74,7 +74,7 @@ namespace Fal
         }
         /// <summary>
         /// Create asset character<br/>
-        /// Create an asset character for the authenticated user's fal Assets library. Reference images may be fal-hosted image URLs, asset IDs, request IDs, or vector IDs; unresolved references are saved automatically.
+        /// Create an asset character for the authenticated user's fal Assets library. Prefer vector IDs or request IDs in reference_images for existing fal-generated assets; use fal-hosted image URLs only for standalone images. Unresolved ID references are materialized before character state is added.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -789,7 +789,7 @@ namespace Fal
         }
         /// <summary>
         /// Create asset character<br/>
-        /// Create an asset character for the authenticated user's fal Assets library. Reference images may be fal-hosted image URLs, asset IDs, request IDs, or vector IDs; unresolved references are saved automatically.
+        /// Create an asset character for the authenticated user's fal Assets library. Prefer vector IDs or request IDs in reference_images for existing fal-generated assets; use fal-hosted image URLs only for standalone images. Unresolved ID references are materialized before character state is added.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -804,8 +804,8 @@ namespace Fal
         /// <param name="description">
         /// Text description used for character semantic matching
         /// </param>
-        /// <param name="referenceImageUrls">
-        /// Reference images for the character. Each entry may be a fal-hosted image URL, asset ID, request ID, or vector ID.
+        /// <param name="referenceImages">
+        /// Reference images for the character. Prefer vector IDs or request IDs for existing fal-generated assets. Use fal-hosted image URLs only for standalone images.
         /// </param>
         /// <param name="coverImageUrl">
         /// Optional fal-hosted cover image URL for the character
@@ -816,7 +816,7 @@ namespace Fal
         public async global::System.Threading.Tasks.Task<global::Fal.CreateAssetCharacterResponse> CreateAssetCharacterAsync(
             string name,
             string description,
-            global::System.Collections.Generic.IList<string> referenceImageUrls,
+            global::System.Collections.Generic.IList<string> referenceImages,
             string? idempotencyKey = default,
             string? identifier = default,
             string? coverImageUrl = default,
@@ -828,7 +828,7 @@ namespace Fal
                 Name = name,
                 Identifier = identifier,
                 Description = description,
-                ReferenceImageUrls = referenceImageUrls,
+                ReferenceImages = referenceImages,
                 CoverImageUrl = coverImageUrl,
             };
 

@@ -9,12 +9,6 @@ namespace Fal
     public sealed partial class AssignAssetTagRequest
     {
         /// <summary>
-        /// Persisted asset ID
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("asset_id")]
-        public string? AssetId { get; set; }
-
-        /// <summary>
         /// Request ID to save as an asset before mutating
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
@@ -35,9 +29,6 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="AssignAssetTagRequest" /> class.
         /// </summary>
-        /// <param name="assetId">
-        /// Persisted asset ID
-        /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
         /// </param>
@@ -48,11 +39,9 @@ namespace Fal
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public AssignAssetTagRequest(
-            string? assetId,
             string? requestId,
             string? vectorId)
         {
-            this.AssetId = assetId;
             this.RequestId = requestId;
             this.VectorId = vectorId;
         }

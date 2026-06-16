@@ -72,21 +72,34 @@ namespace Fal
         /// parameter. Only requested metrics will be populated in the response,<br/>
         /// allowing you to optimize query performance and data transfer.<br/>
         /// **Available Metrics:**<br/>
+        /// The `expand` parameter accepts these values, grouped by category:<br/>
+        /// *Volume*<br/>
         /// - `request_count`: Total number of requests in the time bucket<br/>
-        /// - `success_count`: Number of successful requests (2xx responses)<br/>
-        /// - `user_error_count`: Number of user errors (4xx responses)<br/>
-        /// - `error_count`: Number of server errors (5xx responses)<br/>
-        /// - `p50_prepare_duration`: 50th percentile queue/prepare time<br/>
-        /// - `p75_prepare_duration`: 75th percentile queue/prepare time<br/>
-        /// - `p90_prepare_duration`: 90th percentile queue/prepare time<br/>
-        /// - `p50_duration`: 50th percentile request execution duration<br/>
-        /// - `p75_duration`: 75th percentile request execution duration<br/>
-        /// - `p90_duration`: 90th percentile request execution duration<br/>
+        /// - `success_count`: Successful requests (2xx responses)<br/>
+        /// - `user_error_count`: User errors (4xx responses)<br/>
+        /// - `error_count`: Server errors (5xx responses)<br/>
+        /// *Error type breakdown*<br/>
+        /// - `startup_error_count`: Startup errors (startup timeout, scheduling failure)<br/>
+        /// - `connection_error_count`: Connection errors (timeout, disconnected, refused)<br/>
+        /// - `timeout_error_count`: Request timeout errors<br/>
+        /// - `runtime_error_count`: Runtime errors (internal error, server error)<br/>
+        /// *Queue / prepare latency*<br/>
+        /// - `p50_prepare_duration`, `p75_prepare_duration`, `p90_prepare_duration`, `p95_prepare_duration`, `p99_prepare_duration`: Time from request submission until execution starts<br/>
+        /// *Request execution latency*<br/>
+        /// - `p25_duration`, `p50_duration`, `p75_duration`, `p90_duration`, `p95_duration`, `p99_duration`: Time spent processing the request<br/>
+        /// *Cold boot*<br/>
+        /// - `cold_boot_count`: Requests with cold boot (startup &gt; 1s)<br/>
+        /// - `p50_cold_boot_duration`, `p75_cold_boot_duration`, `p90_cold_boot_duration`: Cold boot duration percentiles<br/>
+        /// *Billing*<br/>
+        /// - `total_billable_duration`: Aggregate billed execution time<br/>
         /// **Key Features:**<br/>
         /// - See all traffic to your apps across all callers<br/>
         /// - Selective metric inclusion via expand parameter<br/>
         /// - Performance metrics (latency percentiles, duration stats)<br/>
         /// - Reliability metrics (success/error rates, request counts)<br/>
+        /// - Error type breakdown (startup, connection, timeout, runtime)<br/>
+        /// - Cold boot metrics (count, latency percentiles)<br/>
+        /// - Billing duration tracking<br/>
         /// - Time-bucketed data for trend analysis<br/>
         /// - Flexible date range and timeframe options<br/>
         /// **Common Use Cases:**<br/>
@@ -182,21 +195,34 @@ namespace Fal
         /// parameter. Only requested metrics will be populated in the response,<br/>
         /// allowing you to optimize query performance and data transfer.<br/>
         /// **Available Metrics:**<br/>
+        /// The `expand` parameter accepts these values, grouped by category:<br/>
+        /// *Volume*<br/>
         /// - `request_count`: Total number of requests in the time bucket<br/>
-        /// - `success_count`: Number of successful requests (2xx responses)<br/>
-        /// - `user_error_count`: Number of user errors (4xx responses)<br/>
-        /// - `error_count`: Number of server errors (5xx responses)<br/>
-        /// - `p50_prepare_duration`: 50th percentile queue/prepare time<br/>
-        /// - `p75_prepare_duration`: 75th percentile queue/prepare time<br/>
-        /// - `p90_prepare_duration`: 90th percentile queue/prepare time<br/>
-        /// - `p50_duration`: 50th percentile request execution duration<br/>
-        /// - `p75_duration`: 75th percentile request execution duration<br/>
-        /// - `p90_duration`: 90th percentile request execution duration<br/>
+        /// - `success_count`: Successful requests (2xx responses)<br/>
+        /// - `user_error_count`: User errors (4xx responses)<br/>
+        /// - `error_count`: Server errors (5xx responses)<br/>
+        /// *Error type breakdown*<br/>
+        /// - `startup_error_count`: Startup errors (startup timeout, scheduling failure)<br/>
+        /// - `connection_error_count`: Connection errors (timeout, disconnected, refused)<br/>
+        /// - `timeout_error_count`: Request timeout errors<br/>
+        /// - `runtime_error_count`: Runtime errors (internal error, server error)<br/>
+        /// *Queue / prepare latency*<br/>
+        /// - `p50_prepare_duration`, `p75_prepare_duration`, `p90_prepare_duration`, `p95_prepare_duration`, `p99_prepare_duration`: Time from request submission until execution starts<br/>
+        /// *Request execution latency*<br/>
+        /// - `p25_duration`, `p50_duration`, `p75_duration`, `p90_duration`, `p95_duration`, `p99_duration`: Time spent processing the request<br/>
+        /// *Cold boot*<br/>
+        /// - `cold_boot_count`: Requests with cold boot (startup &gt; 1s)<br/>
+        /// - `p50_cold_boot_duration`, `p75_cold_boot_duration`, `p90_cold_boot_duration`: Cold boot duration percentiles<br/>
+        /// *Billing*<br/>
+        /// - `total_billable_duration`: Aggregate billed execution time<br/>
         /// **Key Features:**<br/>
         /// - See all traffic to your apps across all callers<br/>
         /// - Selective metric inclusion via expand parameter<br/>
         /// - Performance metrics (latency percentiles, duration stats)<br/>
         /// - Reliability metrics (success/error rates, request counts)<br/>
+        /// - Error type breakdown (startup, connection, timeout, runtime)<br/>
+        /// - Cold boot metrics (count, latency percentiles)<br/>
+        /// - Billing duration tracking<br/>
         /// - Time-bucketed data for trend analysis<br/>
         /// - Flexible date range and timeframe options<br/>
         /// **Common Use Cases:**<br/>

@@ -10,9 +10,9 @@ namespace Fal
     {
         /// <summary>
         /// Tag ID<br/>
-        /// Example: tag_123
+        /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
         /// </summary>
-        /// <example>tag_123</example>
+        /// <example>43ce3411-1a25-4d14-875e-3562d341b090</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
@@ -45,7 +45,7 @@ namespace Fal
         /// </summary>
         /// <param name="id">
         /// Tag ID<br/>
-        /// Example: tag_123
+        /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
         /// </param>
         /// <param name="name">
         /// Tag name<br/>

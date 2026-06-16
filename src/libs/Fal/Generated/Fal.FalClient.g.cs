@@ -107,7 +107,27 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
+        public OrganizationClient Organization => new OrganizationClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ServerlessClient Serverless => new ServerlessClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            CreateIdempotencyKey = CreateIdempotencyKey,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public StorageClient Storage => new StorageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,

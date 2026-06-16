@@ -44,7 +44,7 @@ namespace Fal
         /// </summary>
         /// <param name="characterId">
         /// Character collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d7tatpsregjaga2cf3d0
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -72,7 +72,7 @@ namespace Fal
         /// </summary>
         /// <param name="characterId">
         /// Character collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d7tatpsregjaga2cf3d0
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>

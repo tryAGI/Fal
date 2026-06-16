@@ -10,7 +10,7 @@ namespace Fal
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -33,7 +33,7 @@ namespace Fal
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -56,7 +56,7 @@ namespace Fal
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
-        /// Example: col_01hxyq3m9k6d2r7p8v4n5c1b2a
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>

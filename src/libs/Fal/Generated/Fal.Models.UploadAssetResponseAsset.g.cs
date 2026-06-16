@@ -9,35 +9,27 @@ namespace Fal
     public sealed partial class UploadAssetResponseAsset
     {
         /// <summary>
-        /// Asset ID, null when the result has not been saved as an asset<br/>
-        /// Example: ast_123
-        /// </summary>
-        /// <example>ast_123</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("asset_id")]
-        public string? AssetId { get; set; }
-
-        /// <summary>
         /// Vector ID<br/>
-        /// Example: vec_123
+        /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
         /// </summary>
-        /// <example>vec_123</example>
+        /// <example>b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("vector_id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string VectorId { get; set; }
 
         /// <summary>
         /// Request ID<br/>
-        /// Example: req_123
+        /// Example: 019e6d0a-e5be-7b82-b329-35ae64296902
         /// </summary>
-        /// <example>req_123</example>
+        /// <example>019e6d0a-e5be-7b82-b329-35ae64296902</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
         public string? RequestId { get; set; }
 
         /// <summary>
         /// Media URL<br/>
-        /// Example: https://fal.media/files/example.png
+        /// Example: https://v3b.fal.media/files/b/0a9b4900/PDbTGyzqRh1aijW2WQiY9_opengraph-1%20%281%29.png
         /// </summary>
-        /// <example>https://fal.media/files/example.png</example>
+        /// <example>https://v3b.fal.media/files/b/0a9b4900/PDbTGyzqRh1aijW2WQiY9_opengraph-1%20%281%29.png</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("url")]
         public string? Url { get; set; }
 
@@ -125,9 +117,9 @@ namespace Fal
 
         /// <summary>
         /// Collections containing this asset<br/>
-        /// Example: [col_123]
+        /// Example: [d8b6elcregj72v34jr8g]
         /// </summary>
-        /// <example>[col_123]</example>
+        /// <example>[d8b6elcregj72v34jr8g]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("collection_ids")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.Collections.Generic.IList<string> CollectionIds { get; set; }
@@ -158,7 +150,7 @@ namespace Fal
         /// </summary>
         /// <param name="vectorId">
         /// Vector ID<br/>
-        /// Example: vec_123
+        /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
         /// </param>
         /// <param name="type">
         /// Asset media type
@@ -173,22 +165,18 @@ namespace Fal
         /// </param>
         /// <param name="collectionIds">
         /// Collections containing this asset<br/>
-        /// Example: [col_123]
+        /// Example: [d8b6elcregj72v34jr8g]
         /// </param>
         /// <param name="tags">
         /// Assigned tags
         /// </param>
-        /// <param name="assetId">
-        /// Asset ID, null when the result has not been saved as an asset<br/>
-        /// Example: ast_123
-        /// </param>
         /// <param name="requestId">
         /// Request ID<br/>
-        /// Example: req_123
+        /// Example: 019e6d0a-e5be-7b82-b329-35ae64296902
         /// </param>
         /// <param name="url">
         /// Media URL<br/>
-        /// Example: https://fal.media/files/example.png
+        /// Example: https://v3b.fal.media/files/b/0a9b4900/PDbTGyzqRh1aijW2WQiY9_opengraph-1%20%281%29.png
         /// </param>
         /// <param name="endpoint">
         /// Model endpoint that produced the asset<br/>
@@ -232,7 +220,6 @@ namespace Fal
             bool isFavorited,
             global::System.Collections.Generic.IList<string> collectionIds,
             global::System.Collections.Generic.IList<global::Fal.UploadAssetResponseAssetTag> tags,
-            string? assetId,
             string? requestId,
             string? url,
             string? endpoint,
@@ -244,7 +231,6 @@ namespace Fal
             string? contentType,
             double? similarity)
         {
-            this.AssetId = assetId;
             this.VectorId = vectorId ?? throw new global::System.ArgumentNullException(nameof(vectorId));
             this.RequestId = requestId;
             this.Url = url;

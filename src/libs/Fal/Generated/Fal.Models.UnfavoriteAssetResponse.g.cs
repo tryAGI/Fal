@@ -9,13 +9,6 @@ namespace Fal
     public sealed partial class UnfavoriteAssetResponse
     {
         /// <summary>
-        /// Asset ID
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("asset_id")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string AssetId { get; set; }
-
-        /// <summary>
         /// Whether the asset is now favorited
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("is_favorited")]
@@ -31,9 +24,6 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="UnfavoriteAssetResponse" /> class.
         /// </summary>
-        /// <param name="assetId">
-        /// Asset ID
-        /// </param>
         /// <param name="isFavorited">
         /// Whether the asset is now favorited
         /// </param>
@@ -41,10 +31,8 @@ namespace Fal
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UnfavoriteAssetResponse(
-            string assetId,
             bool isFavorited)
         {
-            this.AssetId = assetId ?? throw new global::System.ArgumentNullException(nameof(assetId));
             this.IsFavorited = isFavorited;
         }
 

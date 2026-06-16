@@ -82,7 +82,17 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
+        public OrganizationClient Organization { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public ServerlessClient Serverless { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public StorageClient Storage { get; }
 
         /// <summary>
         /// 

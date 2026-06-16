@@ -45,7 +45,7 @@ namespace Fal
 
         /// <summary>
         /// Unfavorite asset<br/>
-        /// Unfavorite an asset by asset ID, request ID, or vector ID.
+        /// Unfavorite an asset by request ID or vector ID.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -74,7 +74,7 @@ namespace Fal
         }
         /// <summary>
         /// Unfavorite asset<br/>
-        /// Unfavorite an asset by asset ID, request ID, or vector ID.
+        /// Unfavorite an asset by request ID or vector ID.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -789,14 +789,11 @@ namespace Fal
         }
         /// <summary>
         /// Unfavorite asset<br/>
-        /// Unfavorite an asset by asset ID, request ID, or vector ID.
+        /// Unfavorite an asset by request ID or vector ID.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
         /// Example: 550e8400-e29b-41d4-a716-446655440000
-        /// </param>
-        /// <param name="assetId">
-        /// Persisted asset ID
         /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
@@ -809,7 +806,6 @@ namespace Fal
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Fal.UnfavoriteAssetResponse> UnfavoriteAssetAsync(
             string? idempotencyKey = default,
-            string? assetId = default,
             string? requestId = default,
             string? vectorId = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
@@ -817,7 +813,6 @@ namespace Fal
         {
             var __request = new global::Fal.UnfavoriteAssetRequest
             {
-                AssetId = assetId,
                 RequestId = requestId,
                 VectorId = vectorId,
             };
