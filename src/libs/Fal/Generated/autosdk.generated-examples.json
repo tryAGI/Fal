@@ -629,6 +629,17 @@
     },
     {
       "Order": 58,
+      "Title": "Usage",
+      "Slug": "serverlessgetusage",
+      "Description": "Time-bucketed, aggregated serverless compute usage for **your own account** \u2014\nthe machine-seconds your deployed serverless apps consumed, priced with your\nmachine prices and net of discounts. This matches the serverless portion of the\ndashboard usage view. Unlike \u0060/v1/models/usage\u0060 (which reports model API\nendpoint calls), this reports the \u0060sdk_billing_event\u0060 compute spend of the apps\nyou run on fal Serverless. Authenticate with your own API key (no admin/org key\nrequired); results are always scoped to the apps you own.\n\n**Filtering by app:**\n- \u0060app\u0060 \u2014 exact match on one or more app names (comma-separated or repeated,\n  up to 50): \u0060?app=my-app-dev,my-app-prod\u0060. Use the value exactly as it appears\n  in the response \u0060app\u0060 field.\n- \u0060search\u0060 \u2014 case-insensitive substring match on the app name, for when you\n  know the name but not the exact environment/version suffix: \u0060?search=my-app\u0060\n  returns every \u0060my-app*\u0060 variant.\n- Provide both to AND them. Omit both to return every app you own \u2014 useful for\n  discovering the exact app names to filter on.\n\n**Expansions:**\n- \u0060time_series\u0060: usage grouped into time buckets (default)\n- \u0060summary\u0060: a single aggregate row per app \u00D7 machine type across the window\n\n**Notes:**\n- Each row is machine-seconds (\u0060unit\u0060 is always \u0060\u0022second\u0022\u0060); surge and\n  non-surge usage of the same app/machine come back as separate rows\n  (\u0060is_surge\u0060), so sum across them for a per-app total.\n- Time-series \u0060bucket\u0060 timestamps are returned in the \u0060timezone\u0060 you request\n  (ISO 8601 with offset, e.g. \u00602025-01-15T00:00:00-05:00\u0060), which also controls\n  how usage is grouped into buckets.\n\n**Common Use Cases:**\n- Track your serverless apps\u0027 compute consumption and cost over time\n- Break down spend per app, environment, and machine type\n- Export usage to your own billing/observability tooling",
+      "Language": "csharp",
+      "Code": "using var client = new FalClient(apiKey);\nvar response = await client.Serverless.ServerlessGetUsageAsync();\n\n// Example response:\n// {\n//   \u0022time_series\u0022: [\n//     {\n//       \u0022bucket\u0022: \u00222025-01-15T00:00:00-05:00\u0022,\n//       \u0022results\u0022: [\n//         {\n//           \u0022app\u0022: \u0022my-app-prod\u0022,\n//           \u0022environment\u0022: null,\n//           \u0022machine_type\u0022: \u0022GPU-H100\u0022,\n//           \u0022unit\u0022: \u0022second\u0022,\n//           \u0022quantity\u0022: 1200,\n//           \u0022unit_price\u0022: 0.00099,\n//           \u0022cost\u0022: 1.188,\n//           \u0022currency\u0022: \u0022USD\u0022,\n//           \u0022is_surge\u0022: false\n//         }\n//       ]\n//     }\n//   ],\n//   \u0022next_cursor\u0022: null,\n//   \u0022has_more\u0022: false\n// }",
+      "Format": "sdk",
+      "OperationId": "serverlessGetUsage",
+      "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
+    },
+    {
+      "Order": 59,
       "Title": "List files (directory)",
       "Slug": "serverlesslistdirectory",
       "Description": "Lists files and folders within the specified directory path.",
@@ -639,7 +650,7 @@
       "Setup": null
     },
     {
-      "Order": 59,
+      "Order": 60,
       "Title": "List requests by endpoint(s)",
       "Slug": "serverlesslistrequestsbyendpoint",
       "Description": "Lists requests for one or more endpoints owned by the authenticated user.\nUse repeated or comma-separated \u0060endpoint_id\u0060 (same as other platform list APIs).\n\n**Authentication:** Requires API key.\n\n**Filters:**\n- Time range via start / end. If \u0060start\u0060 is omitted, defaults to the last 24 hours \u2014 unless \u0060request_id\u0060 is provided, in which case the default start bound is widened to 90 days.\n- Status (success, error, user_error)\n- Request ID\n- Pagination via cursor/limit (limit defaults to 50, max 100)\n\n**Sorting:**\n- By end time (default) or duration\n\n**Expansions:**\n- Include payloads by adding expand=payloads\n- Include per-request \u0060billable_units\u0060 by adding expand=billing (endpoint owner only)",
@@ -650,7 +661,7 @@
       "Setup": null
     },
     {
-      "Order": 60,
+      "Order": 61,
       "Title": "List files (root)",
       "Slug": "serverlesslistroot",
       "Description": "Lists files and folders in the root of your project storage.",
@@ -661,7 +672,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 61,
+      "Order": 62,
       "Title": "Logs history (paginated)",
       "Slug": "serverlesslogshistory",
       "Description": "Returns paginated historical logs that match the provided filters.",
@@ -672,7 +683,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 62,
+      "Order": 63,
       "Title": "Logs stream (SSE)",
       "Slug": "serverlesslogsstream",
       "Description": "Streams live logs that match the provided filters using Server-Sent Events.",
@@ -683,7 +694,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 63,
+      "Order": 64,
       "Title": "Upload file from URL",
       "Slug": "serverlessuploadfromurl",
       "Description": "Creates a new file at the target path by downloading it from the provided URL.",
@@ -694,7 +705,7 @@
       "Setup": null
     },
     {
-      "Order": 64,
+      "Order": 65,
       "Title": "Upload local file (multipart/form-data)",
       "Slug": "serverlessuploadlocalfile",
       "Description": "Uploads a local file using multipart/form-data. The file field name must be \u0060file_upload\u0060.",
@@ -705,7 +716,7 @@
       "Setup": null
     },
     {
-      "Order": 65,
+      "Order": 66,
       "Title": "Get file ACL",
       "Slug": "getstoragefileacl",
       "Description": "Returns the Access Control List currently applied to a fal CDN file.\n\nThe ACL consists of a default decision (\u0060allow\u0060, \u0060forbid\u0060, or \u0060hide\u0060) plus\noptional per-user rules that override the default. Rule users are returned as\nnicknames where possible.\n\n**Authentication:** Required. The API key must have the \u0060assets:read\u0060 permission.",
@@ -716,7 +727,7 @@
       "Setup": null
     },
     {
-      "Order": 66,
+      "Order": 67,
       "Title": "Get storage settings",
       "Slug": "getstoragesettings",
       "Description": "Returns the account-level storage lifecycle settings applied to newly uploaded\nfal CDN files:\n\n- \u0060expiration_duration_seconds\u0060: how long files live before being\n  automatically deleted (null disables auto-expiration).\n- \u0060initial_acl\u0060: the default ACL applied to new uploads (null means the\n  system default, which is public).\n\nBoth fields are null when the account has never saved settings.\n\n**Authentication:** Required. The API key must have the \u0060account:settings:read\u0060 permission.",
@@ -727,7 +738,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 67,
+      "Order": 68,
       "Title": "Set file ACL",
       "Slug": "setstoragefileacl",
       "Description": "Replaces the Access Control List of a fal CDN file.\n\nThe ACL consists of a default decision (\u0060allow\u0060, \u0060forbid\u0060, or \u0060hide\u0060) plus\noptional per-user rules that override the default. Rule users may be specified\nby nickname or user ID. Setting \u0060default\u0060 to \u0060allow\u0060 with no rules makes the\nfile public; \u0060forbid\u0060 or \u0060hide\u0060 restricts it to the rules you provide.\n\nRules referencing users that do not exist are dropped. The response reflects\nthe ACL actually applied, so verify it contains the rules you sent.\n\n**Authentication:** Required. The API key must have the \u0060assets:write\u0060 permission.",
@@ -738,7 +749,7 @@
       "Setup": null
     },
     {
-      "Order": 68,
+      "Order": 69,
       "Title": "Sign file URL",
       "Slug": "signstoragefileurl",
       "Description": "Creates a signed URL that grants temporary access to a fal CDN file,\nregardless of its ACL. Useful for sharing access-restricted files.\n\nThe signature is valid for \u0060expiration_seconds\u0060 (up to 7 days).\n\n**Authentication:** Required. The API key must have the \u0060assets:read\u0060 permission.",
@@ -749,7 +760,7 @@
       "Setup": null
     },
     {
-      "Order": 69,
+      "Order": 70,
       "Title": "Update storage settings",
       "Slug": "updatestoragesettings",
       "Description": "Replaces the account-level storage lifecycle settings applied to newly\nuploaded fal CDN files. Omitted or null fields are cleared (reset to the\nsystem default), so always send the full desired configuration.\n\nACL rules referencing users that do not exist are dropped. The response\nreflects the settings actually saved, so verify it contains the rules you sent.\n\nThese are the same settings that the per-request\n\u0060X-Fal-Object-Lifecycle-Preference\u0060 header overrides on individual requests.\n\n**Authentication:** Required. The API key must have the \u0060account:settings:write\u0060 permission.",
@@ -760,7 +771,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 70,
+      "Order": 71,
       "Title": "Create a workflow",
       "Slug": "createworkflow",
       "Description": "Create a new workflow owned by the authenticated user.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Save a newly built workflow\n- Programmatically provision workflows\n\n**Note:** Workflow names must be unique within your namespace. Creating a\nworkflow with a name you already use returns a 400 validation error.",
@@ -771,7 +782,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 71,
+      "Order": 72,
       "Title": "Get workflow details",
       "Slug": "getworkflow",
       "Description": "Get detailed information about a specific workflow, including its full contents/definition.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Load a workflow for editing\n- View workflow configuration\n- Export workflow definition",
@@ -782,7 +793,7 @@
       "Setup": null
     },
     {
-      "Order": 72,
+      "Order": 73,
       "Title": "List user workflows",
       "Slug": "listworkflows",
       "Description": "List workflows for the authenticated user with optional search and filtering.\n\n**Features:**\n- Paginated results with cursor-based pagination\n- Search by workflow name or title\n- Filter by model endpoints used in the workflow\n\n**Authentication:** Required. Returns only workflows owned by the authenticated user.\n\n**Common Use Cases:**\n- Display user\u0027s workflow library\n- Search for specific workflows\n- Find workflows using particular models",
