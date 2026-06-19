@@ -66,8 +66,9 @@ namespace Fal
         /// machine prices and net of discounts. This matches the serverless portion of the<br/>
         /// dashboard usage view. Unlike `/v1/models/usage` (which reports model API<br/>
         /// endpoint calls), this reports the `sdk_billing_event` compute spend of the apps<br/>
-        /// you run on fal Serverless. Authenticate with your own API key (no admin/org key<br/>
-        /// required); results are always scoped to the apps you own.<br/>
+        /// you run on fal Serverless. Requires an `ADMIN`-scoped API key (this endpoint<br/>
+        /// returns billing and usage data, which the standard `API` key scope does not<br/>
+        /// include); results are always scoped to the apps you own.<br/>
         /// **Filtering by app:**<br/>
         /// - `app` — exact match on one or more app names (comma-separated or repeated,<br/>
         ///   up to 50): `?app=my-app-dev,my-app-prod`. Use the value exactly as it appears<br/>
@@ -177,8 +178,9 @@ namespace Fal
         /// machine prices and net of discounts. This matches the serverless portion of the<br/>
         /// dashboard usage view. Unlike `/v1/models/usage` (which reports model API<br/>
         /// endpoint calls), this reports the `sdk_billing_event` compute spend of the apps<br/>
-        /// you run on fal Serverless. Authenticate with your own API key (no admin/org key<br/>
-        /// required); results are always scoped to the apps you own.<br/>
+        /// you run on fal Serverless. Requires an `ADMIN`-scoped API key (this endpoint<br/>
+        /// returns billing and usage data, which the standard `API` key scope does not<br/>
+        /// include); results are always scoped to the apps you own.<br/>
         /// **Filtering by app:**<br/>
         /// - `app` — exact match on one or more app names (comma-separated or repeated,<br/>
         ///   up to 50): `?app=my-app-dev,my-app-prod`. Use the value exactly as it appears<br/>
