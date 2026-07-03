@@ -61,6 +61,12 @@ namespace Fal
         public string? AuthMethod { get; set; }
 
         /// <summary>
+        /// Structured authentication method identity. Only populated when 'auth_method_structured' is included in expand parameter.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auth_method_structured")]
+        public global::Fal.GetBillingEventsResponseBillingEventAuthMethodStructured? AuthMethodStructured { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -93,6 +99,9 @@ namespace Fal
         /// <param name="authMethod">
         /// Authentication method label (e.g., 'Key 1', 'API Key', 'User token'). Only populated when 'auth_method' is included in expand parameter.
         /// </param>
+        /// <param name="authMethodStructured">
+        /// Structured authentication method identity. Only populated when 'auth_method_structured' is included in expand parameter.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -104,7 +113,8 @@ namespace Fal
             double? outputUnits,
             double? unitPrice,
             double? percentDiscount,
-            string? authMethod)
+            string? authMethod,
+            global::Fal.GetBillingEventsResponseBillingEventAuthMethodStructured? authMethodStructured)
         {
             this.RequestId = requestId ?? throw new global::System.ArgumentNullException(nameof(requestId));
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
@@ -114,6 +124,7 @@ namespace Fal
             this.PercentDiscount = percentDiscount;
             this.CostEstimateNanoUsd = costEstimateNanoUsd;
             this.AuthMethod = authMethod;
+            this.AuthMethodStructured = authMethodStructured;
         }
 
         /// <summary>
