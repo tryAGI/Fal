@@ -33,6 +33,8 @@ namespace Fal
             ref global::Fal.AnyOf<global::System.DateTime?, string>? end,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? requestId,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void PrepareGetBillingEventsRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -43,6 +45,8 @@ namespace Fal
             global::Fal.AnyOf<global::System.DateTime?, string>? end,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? requestId,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void ProcessGetBillingEventsResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -97,8 +101,16 @@ namespace Fal
         /// Filter by specific request ID(s). Accepts 1-50 request IDs. Supports comma-separated values: ?request_id=req1,req2 or array syntax: ?request_id=req1&amp;request_id=req2<br/>
         /// Example: [req-abc123]
         /// </param>
+        /// <param name="apiKeyId">
+        /// Filter by specific API key ID(s). Accepts 1-50 key IDs. Supports comma-separated values: ?api_key_id=key1,key2 or array syntax: ?api_key_id=key1&amp;api_key_id=key2<br/>
+        /// Example: [abc123]
+        /// </param>
+        /// <param name="loginUsername">
+        /// Filter by team member login username(s) (nickname). Accepts 1-50 usernames. Supports comma-separated values: ?login_username=alice,bob or array syntax: ?login_username=alice&amp;login_username=bob<br/>
+        /// Example: [alice]
+        /// </param>
         /// <param name="expand">
-        /// Data to include in the response. Use 'auth_method' to include authentication method information (formatted with user key aliases).<br/>
+        /// Data to include in the response. Use 'auth_method' for a formatted authentication method label, and 'auth_method_structured' for a machine-readable auth method object (detail, api_key_id, login_username).<br/>
         /// Example: auth_method
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -111,6 +123,8 @@ namespace Fal
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? requestId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -122,6 +136,8 @@ namespace Fal
                 end: end,
                 endpointId: endpointId,
                 requestId: requestId,
+                apiKeyId: apiKeyId,
+                loginUsername: loginUsername,
                 expand: expand,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
@@ -173,8 +189,16 @@ namespace Fal
         /// Filter by specific request ID(s). Accepts 1-50 request IDs. Supports comma-separated values: ?request_id=req1,req2 or array syntax: ?request_id=req1&amp;request_id=req2<br/>
         /// Example: [req-abc123]
         /// </param>
+        /// <param name="apiKeyId">
+        /// Filter by specific API key ID(s). Accepts 1-50 key IDs. Supports comma-separated values: ?api_key_id=key1,key2 or array syntax: ?api_key_id=key1&amp;api_key_id=key2<br/>
+        /// Example: [abc123]
+        /// </param>
+        /// <param name="loginUsername">
+        /// Filter by team member login username(s) (nickname). Accepts 1-50 usernames. Supports comma-separated values: ?login_username=alice,bob or array syntax: ?login_username=alice&amp;login_username=bob<br/>
+        /// Example: [alice]
+        /// </param>
         /// <param name="expand">
-        /// Data to include in the response. Use 'auth_method' to include authentication method information (formatted with user key aliases).<br/>
+        /// Data to include in the response. Use 'auth_method' for a formatted authentication method label, and 'auth_method_structured' for a machine-readable auth method object (detail, api_key_id, login_username).<br/>
         /// Example: auth_method
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -187,6 +211,8 @@ namespace Fal
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? requestId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -201,6 +227,8 @@ namespace Fal
                 end: ref end,
                 endpointId: ref endpointId,
                 requestId: ref requestId,
+                apiKeyId: ref apiKeyId,
+                loginUsername: ref loginUsername,
                 expand: ref expand);
 
 
@@ -236,6 +264,8 @@ namespace Fal
                                 .AddOptionalParameter("end", end?.ToString())
                                 .AddOptionalParameter("endpoint_id", endpointId?.ToString())
                                 .AddOptionalParameter("request_id", requestId?.ToString())
+                                .AddOptionalParameter("api_key_id", apiKeyId?.ToString())
+                                .AddOptionalParameter("login_username", loginUsername?.ToString())
                                 .AddOptionalParameter("expand", expand?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
@@ -284,6 +314,8 @@ namespace Fal
                     end: end,
                     endpointId: endpointId,
                     requestId: requestId,
+                    apiKeyId: apiKeyId,
+                    loginUsername: loginUsername,
                     expand: expand);
 
                 return __httpRequest;
