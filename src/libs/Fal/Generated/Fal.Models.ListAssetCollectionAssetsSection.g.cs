@@ -21,6 +21,10 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
+        Generated,
+        /// <summary>
+        /// 
+        /// </summary>
         Uploads,
     }
 
@@ -38,6 +42,7 @@ namespace Fal
             {
                 ListAssetCollectionAssetsSection.AllMedia => "all-media",
                 ListAssetCollectionAssetsSection.Favorites => "favorites",
+                ListAssetCollectionAssetsSection.Generated => "generated",
                 ListAssetCollectionAssetsSection.Uploads => "uploads",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -51,6 +56,7 @@ namespace Fal
             {
                 "all-media" => ListAssetCollectionAssetsSection.AllMedia,
                 "favorites" => ListAssetCollectionAssetsSection.Favorites,
+                "generated" => ListAssetCollectionAssetsSection.Generated,
                 "uploads" => ListAssetCollectionAssetsSection.Uploads,
                 _ => null,
             };
