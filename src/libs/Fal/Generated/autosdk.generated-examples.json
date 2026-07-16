@@ -189,6 +189,17 @@
     },
     {
       "Order": 18,
+      "Title": "Get asset collection hierarchy",
+      "Slug": "getassetcollectionhierarchy",
+      "Description": "Get the nested subtree rooted at an asset collection, plus its ancestor collections ordered from the top level down to its direct parent.",
+      "Language": "http",
+      "Code": "### Get asset collection hierarchy\n# @name getAssetCollectionHierarchy\nGET {{host}}/assets/collections/{{collection_id}}/hierarchy\nAuthorization: Bearer {{token}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: Collection hierarchy\n# Content-Type: application/json\n# 400\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 403\n# Description: Access denied\n# Content-Type: application/json\n# 404\n# Description: Resource not found\n# Content-Type: application/json\n# 409\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 422\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json\n# 502\n# Description: Upstream asset service error\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "getAssetCollectionHierarchy",
+      "Setup": null
+    },
+    {
+      "Order": 19,
       "Title": "List asset characters",
       "Slug": "listassetcharacters",
       "Description": "List asset characters for the authenticated user\u0027s fal Assets library.",
@@ -199,7 +210,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 19,
+      "Order": 20,
       "Title": "Browse assets in a collection",
       "Slug": "listassetcollectionassets",
       "Description": "Browse assets in a collection for the authenticated user\u0027s fal Assets library.",
@@ -210,7 +221,7 @@
       "Setup": null
     },
     {
-      "Order": 20,
+      "Order": 21,
       "Title": "List asset collections",
       "Slug": "listassetcollections",
       "Description": "List asset collections for the authenticated user\u0027s fal Assets library.",
@@ -221,7 +232,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 21,
+      "Order": 22,
       "Title": "List asset tags",
       "Slug": "listassettags",
       "Description": "List asset tags for the authenticated user\u0027s fal Assets library.",
@@ -232,7 +243,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 22,
+      "Order": 23,
       "Title": "List tags for an asset",
       "Slug": "listassettagsforasset",
       "Description": "List tags for an asset by vector ID. Vectors that have not been saved as assets return an empty tag list.",
@@ -243,7 +254,7 @@
       "Setup": null
     },
     {
-      "Order": 23,
+      "Order": 24,
       "Title": "Browse assets",
       "Slug": "listassets",
       "Description": "Browse and semantically search fal Assets across all media, uploads, favorites, collections, tags, and character references.",
@@ -254,7 +265,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 24,
+      "Order": 25,
       "Title": "Move asset collection",
       "Slug": "moveassetcollection",
       "Description": "Move a manual asset collection under another collection, or to the top level. Only manual collections can be moved or act as folders; nesting is limited to 5 levels deep and cannot create a cycle.",
@@ -265,7 +276,7 @@
       "Setup": null
     },
     {
-      "Order": 25,
+      "Order": 26,
       "Title": "Remove asset from collection",
       "Slug": "removeassetfromcollection",
       "Description": "Remove an asset from a manual or character collection by request ID or vector ID.",
@@ -276,7 +287,7 @@
       "Setup": null
     },
     {
-      "Order": 26,
+      "Order": 27,
       "Title": "Set tags for an asset",
       "Slug": "setassettagsforasset",
       "Description": "Set tags for an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.",
@@ -287,7 +298,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 27,
+      "Order": 28,
       "Title": "Unassign tag from asset",
       "Slug": "unassignassettag",
       "Description": "Unassign a tag from an asset by request ID or vector ID.",
@@ -298,7 +309,7 @@
       "Setup": null
     },
     {
-      "Order": 28,
+      "Order": 29,
       "Title": "Unfavorite asset",
       "Slug": "unfavoriteasset",
       "Description": "Unfavorite an asset by request ID or vector ID.",
@@ -309,7 +320,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 29,
+      "Order": 30,
       "Title": "Unfavorite asset character",
       "Slug": "unfavoriteassetcharacter",
       "Description": "Unfavorite an asset character for the authenticated user\u0027s fal Assets library.",
@@ -320,7 +331,7 @@
       "Setup": null
     },
     {
-      "Order": 30,
+      "Order": 31,
       "Title": "Unfavorite asset collection",
       "Slug": "unfavoriteassetcollection",
       "Description": "Unfavorite an asset collection for the authenticated user\u0027s fal Assets library.",
@@ -331,7 +342,7 @@
       "Setup": null
     },
     {
-      "Order": 31,
+      "Order": 32,
       "Title": "Update asset character",
       "Slug": "updateassetcharacter",
       "Description": "Update an asset character for the authenticated user\u0027s fal Assets library. Prefer vector IDs or request IDs in reference_images for existing fal-generated assets; use fal-hosted image URLs only for standalone images. Unresolved ID references are materialized before character state is added.",
@@ -342,7 +353,7 @@
       "Setup": null
     },
     {
-      "Order": 32,
+      "Order": 33,
       "Title": "Update asset collection",
       "Slug": "updateassetcollection",
       "Description": "Update asset collection for the authenticated user\u0027s fal Assets library.",
@@ -353,7 +364,7 @@
       "Setup": null
     },
     {
-      "Order": 33,
+      "Order": 34,
       "Title": "Update asset tag",
       "Slug": "updateassettag",
       "Description": "Update asset tag for the authenticated user\u0027s fal Assets library.",
@@ -364,7 +375,7 @@
       "Setup": null
     },
     {
-      "Order": 34,
+      "Order": 35,
       "Title": "Upload asset",
       "Slug": "uploadasset",
       "Description": "Upload asset for the authenticated user\u0027s fal Assets library.",
@@ -375,7 +386,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 35,
+      "Order": 36,
       "Title": "Create Compute Instance",
       "Slug": "createcomputeinstance",
       "Description": "Creates a new compute instance with the specified configuration and SSH key.\n\n**Requirements:**\n- Requires compute permissions (extra_permissions.compute = true)\n- Authentication required via admin API key\n- Valid SSH public key required for instance access\n\n**Key Features:**\n- Create high-performance GPU instances\n- Specify sector for InfiniBand configuration (8x H100 only)\n- SSH key-based authentication\n- Automatic instance provisioning and region assignment\n- Idempotent creation with Idempotency-Key header (optional but recommended)\n\n**Common Use Cases:**\n- Spin up compute resources for ML training\n- Create GPU instances for inference workloads\n- Set up development environments with H100 GPUs\n- Deploy distributed training with InfiniBand networking\n\n**Instance Types:**\n- \u0060gpu_8x_h100_sxm5\u0060: 8x NVIDIA H100 GPUs (high-performance, supports sector configuration for InfiniBand)\n- \u0060gpu_1x_h100_sxm5\u0060: 1x NVIDIA H100 GPU (standard)\n\n**Idempotency:**\n- Optional Idempotency-Key header prevents duplicate instance creation on retries\n- Responses cached for 10 minutes per unique key\n\nSee [fal.ai docs](https://docs.fal.ai/compute) for more details.",
@@ -386,7 +397,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 36,
+      "Order": 37,
       "Title": "Delete Compute Instance",
       "Slug": "deletecomputeinstance",
       "Description": "Deletes a specific compute instance by its ID. This action is irreversible.\n\n**Requirements:**\n- Requires compute permissions (extra_permissions.compute = true)\n- Authentication required via admin API key\n- Instance must belong to the authenticated user\u0027s workspace\n\n**Key Features:**\n- Permanently remove compute instances\n- Free up compute resources\n- Stop billing for the instance\n- Clean up unused resources\n\n**Important:**\n- This action cannot be undone\n- All data on the instance will be lost\n- Instance will be immediately terminated\n- Billing stops after deletion\n\n**Common Use Cases:**\n- Clean up completed workloads\n- Remove failed or stuck instances\n- Manage compute costs\n- Free up quota for new instances\n\nSee [fal.ai docs](https://docs.fal.ai/compute) for more details.",
@@ -397,7 +408,7 @@
       "Setup": null
     },
     {
-      "Order": 37,
+      "Order": 38,
       "Title": "Get Compute Instance",
       "Slug": "getcomputeinstance",
       "Description": "Retrieves detailed information about a specific compute instance by its ID.\n\n**Requirements:**\n- Requires compute permissions (extra_permissions.compute = true)\n- Authentication required via admin API key\n- Instance must belong to the authenticated user\u0027s workspace\n\n**Key Features:**\n- Get current instance status and configuration\n- Access instance IP address when available\n- View region and sector placement\n- Check creator information\n\n**Common Use Cases:**\n- Monitor specific instance status\n- Retrieve connection details (IP address)\n- Check instance readiness before use\n- Audit instance configuration\n\nSee [fal.ai docs](https://docs.fal.ai/compute) for more details.",
@@ -408,7 +419,7 @@
       "Setup": null
     },
     {
-      "Order": 38,
+      "Order": 39,
       "Title": "List Compute Instances",
       "Slug": "listcomputeinstances",
       "Description": "Returns a list of all compute instances belonging to the authenticated user\u0027s workspace.\n\n**Requirements:**\n- Requires compute permissions (extra_permissions.compute = true)\n- Authentication required via admin API key\n\n**Key Features:**\n- View all instances regardless of status\n- Includes instance configuration, region, and current status\n- Paginated results for large instance lists\n\n**Common Use Cases:**\n- Monitor all active compute resources\n- Check instance status and availability\n- Audit compute resource usage\n- Build compute management dashboards\n\nSee [fal.ai docs](https://docs.fal.ai/compute) for more details.",
@@ -419,7 +430,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 39,
+      "Order": 40,
       "Title": "Create API Key",
       "Slug": "createapikey",
       "Description": "Creates a new API key with the specified alias.\n\n**Requirements:**\n- Authentication required via admin API key\n\n**Important Security Notice:**\nThe \u0060key_secret\u0060 is only returned once at creation time. Store it securely immediately\nas it cannot be retrieved again. If lost, you must delete the key and create a new one.\n\n**Key Features:**\n- Create API keys programmatically without UI access\n- Assign meaningful aliases for key identification\n- Keys are immediately active upon creation\n\n**Common Use Cases:**\n- Programmatic key provisioning for CI/CD pipelines\n- Self-serve key generation for team members\n- Automated key rotation workflows\n- Integration with secret management systems",
@@ -430,7 +441,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 40,
+      "Order": 41,
       "Title": "Delete API Key",
       "Slug": "deleteapikey",
       "Description": "Deletes an API key by its ID. This action is irreversible.\n\n**Requirements:**\n- Authentication required via admin API key\n- Key must belong to the authenticated user\u0027s workspace\n\n**Key Features:**\n- Permanently revoke API key access\n- Idempotent operation (safe to retry)\n- Optional Idempotency-Key header for safe retries\n\n**Important:**\n- This action cannot be undone\n- Any applications using this key will immediately lose access\n- Returns 204 even if the key doesn\u0027t exist (idempotent behavior)\n\n**Common Use Cases:**\n- Revoke compromised keys\n- Clean up unused keys\n- Implement key rotation (delete old, create new)\n- Offboard team members",
@@ -441,7 +452,7 @@
       "Setup": null
     },
     {
-      "Order": 41,
+      "Order": 42,
       "Title": "List API Keys",
       "Slug": "listapikeys",
       "Description": "Returns a list of all API keys belonging to the authenticated user\u0027s workspace.\n\n**Requirements:**\n- Authentication required via admin API key\n\n**Key Features:**\n- View all API keys with their aliases and creation dates\n- Optionally expand to include creator information\n- Paginated results for workspaces with many keys\n\n**Expansion Options:**\n- \u0060expand=creator_info\u0060: Include creator_nickname and creator_email for each key\n\n**Common Use Cases:**\n- Audit existing API keys\n- Find keys by alias\n- Monitor key creation activity\n- Build key management interfaces",
@@ -452,7 +463,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 42,
+      "Order": 43,
       "Title": "Get platform metadata",
       "Slug": "getmeta",
       "Description": "Returns platform metadata including webhook IP ranges for allowlisting.\n\nIf your infrastructure requires allowlisting IP addresses for incoming webhook\nrequests, this endpoint provides the current list of IP ranges used by fal.ai\nwebhooks in CIDR notation.",
@@ -463,7 +474,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 43,
+      "Order": 44,
       "Title": "Delete request payloads",
       "Slug": "deleterequestpayloads",
       "Description": "Deletes the IO payloads and associated CDN output files for a specific request.\n\n**Important:**\n- Only **output** CDN files are deleted (input files may be used by other requests)\n- This action is irreversible\n- Requires authentication with an admin API key\n\n**What gets deleted:**\n- Request input/output payload data\n- CDN-hosted output files (images, videos, etc.)\n\n**What is NOT deleted:**\n- Input CDN files (may be referenced by other requests)\n\n**Response:**\n- Returns deletion status for each CDN file\n- Each result includes the file link and any error that occurred\n\n**Idempotency:**\n- Optional Idempotency-Key header prevents duplicate deletions on retries\n- Responses cached for 10 minutes per unique key\n\nSee [fal.ai docs](https://docs.fal.ai/model-apis/payloads) for more details about request payloads.",
@@ -474,7 +485,7 @@
       "Setup": null
     },
     {
-      "Order": 44,
+      "Order": 45,
       "Title": "Estimate cost",
       "Slug": "estimatepricing",
       "Description": "Computes cost estimates using one of two methods:\n\n**1. Historical API Price** (\u0060historical_api_price\u0060):\n- Based on historical pricing per API call from past usage patterns\n- Takes \u0060call_quantity\u0060 (number of API calls) per endpoint\n- Useful for estimating based on actual historical usage patterns\n- Example: \u0022How much will 100 calls to flux/dev cost?\u0022\n\n**2. Unit Price** (\u0060unit_price\u0060):\n- Based on unit price \u00D7 expected billing units from pricing service\n- Takes \u0060unit_quantity\u0060 (number of billing units like images/videos) per endpoint\n- Useful when you know the expected output quantity\n- Example: \u0022How much will 50 images from flux/dev cost?\u0022\n\n**Authentication:** Required. Users must provide a valid API key.\nCustom pricing or discounts may be applied based on account status.\n\n**Common Use Cases:**\n- Pre-calculate costs for batch operations\n- Display cost estimates in user interfaces\n- Budget planning and cost optimization\n\nSee [fal.ai pricing](https://fal.ai/pricing) for more details.",
@@ -485,7 +496,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 45,
+      "Order": 46,
       "Title": "Analytics",
       "Slug": "getanalytics",
       "Description": "Time-bucketed metrics per model endpoint, including request counts, success/error\nrates, and latency percentiles. \u0060prepare_duration\u0060 reflects queue/prepare\ntime before execution; \u0060duration\u0060 is request execution time. Use with the\nQueue/Webhooks flow to monitor SLAs.\n\n**Metric Selection:**\nYou must specify which metrics to include using the \u0060expand\u0060 query\nparameter. Only requested metrics will be populated in the response,\nallowing you to optimize query performance and data transfer.\n\n**Available Metrics:**\n\nThe \u0060expand\u0060 parameter accepts these values, grouped by category:\n\n*Volume*\n- \u0060request_count\u0060: Total number of requests in the time bucket\n- \u0060success_count\u0060: Successful requests (2xx responses)\n- \u0060user_error_count\u0060: User errors (4xx responses)\n- \u0060error_count\u0060: Server errors (5xx responses)\n\n*Error type breakdown*\n- \u0060startup_error_count\u0060: Startup errors (startup timeout, scheduling failure)\n- \u0060connection_error_count\u0060: Connection errors (timeout, disconnected, refused)\n- \u0060timeout_error_count\u0060: Request timeout errors\n- \u0060runtime_error_count\u0060: Runtime errors (internal error, server error)\n\n*Queue / prepare latency*\n- \u0060p50_prepare_duration\u0060, \u0060p75_prepare_duration\u0060, \u0060p90_prepare_duration\u0060, \u0060p95_prepare_duration\u0060, \u0060p99_prepare_duration\u0060: Time from request submission until execution starts\n\n*Request execution latency*\n- \u0060p25_duration\u0060, \u0060p50_duration\u0060, \u0060p75_duration\u0060, \u0060p90_duration\u0060, \u0060p95_duration\u0060, \u0060p99_duration\u0060: Time spent processing the request\n\n*Cold boot*\n- \u0060cold_boot_count\u0060: Requests with cold boot (startup \u003E 1s)\n- \u0060p50_cold_boot_duration\u0060, \u0060p75_cold_boot_duration\u0060, \u0060p90_cold_boot_duration\u0060: Cold boot duration percentiles\n\n*Billing*\n- \u0060total_billable_duration\u0060: Aggregate billed execution time\n\n**Key Features:**\n- Selective metric inclusion via expand parameter\n- Performance metrics (latency percentiles, duration stats)\n- Reliability metrics (success/error rates, request counts)\n- Error type breakdown (startup, connection, timeout, runtime)\n- Cold boot metrics (count, latency percentiles)\n- Billing duration tracking\n- Time-bucketed data for trend analysis\n- Single or multi-model analytics\n- Flexible date range and timeframe options\n\n**Common Use Cases:**\n- Monitor model performance and reliability\n- Generate performance dashboards\n- Analyze latency trends and patterns\n- Track error rates and success metrics\n\nSee [Queue API docs](https://docs.fal.ai/model-apis/model-endpoints/queue) for more details.",
@@ -496,7 +507,7 @@
       "Setup": null
     },
     {
-      "Order": 46,
+      "Order": 47,
       "Title": "Billing Events",
       "Slug": "getbillingevents",
       "Description": "Returns paginated individual billing event records with filters\nfor endpoint and date range. Each record includes the request ID, timestamp,\nendpoint, and output units billed.\n\n**Key Features:**\n- Individual billing event records for each API request\n- Flexible date range filtering\n- Optional endpoint filtering\n- Cursor-based pagination for efficient large dataset queries\n- Limited to 10000 records per page for performance\n- Date range capped at 90 days per request\n\n**Common Use Cases:**\n- Audit individual billing events\n- Track request patterns and volumes\n- Debug specific requests by ID\n- Monitor billing unit consumption per request\n\nSee [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.",
@@ -507,7 +518,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 47,
+      "Order": 48,
       "Title": "Model search",
       "Slug": "getmodels",
       "Description": "Unified endpoint for discovering model endpoints. Supports three usage modes:\n\n**1. List Mode** (no parameters):\nPaginated list of all available model endpoints with minimal metadata.\n\n**2. Find Mode** (\u0060endpoint_id\u0060 parameter):\nRetrieve specific model endpoint(s) by ID. Supports single or multiple IDs.\n\n**3. Search Mode** (search parameters):\nFilter models by free-text query, category, or status.\n\n**Expansion:**\nUse \u0060expand\u0060 to include additional data in each model object:\n- \u0060openapi-3.0\u0060 \u2014 full OpenAPI 3.0 schema in the \u0060openapi\u0060 field\n- \u0060enterprise_status\u0060 \u2014 enterprise readiness status (\u0060ready\u0060 or \u0060pending\u0060) in the \u0060enterprise_status\u0060 field\n\n**Examples of \u0060endpoint_id\u0060 values:**\n- \u0060fal-ai/flux/dev\u0060\n- \u0060fal-ai/wan/v2.2-a14b/text-to-video\u0060\n- \u0060fal-ai/minimax/video-01/image-to-video\u0060\n- \u0060fal-ai/hunyuan3d-v21\u0060\n\nSee [fal.ai Model APIs](https://docs.fal.ai/model-apis) for more details.\n\n**Authentication:** Optional. Providing an API key grants higher rate limits.\n\n**Common Use Cases:**\n- Browse available models for integration\n- Retrieve metadata for specific endpoints\n- Search for models by category or keywords\n- Get OpenAPI schemas for code generation\n- Build model selection interfaces",
@@ -518,7 +529,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 48,
+      "Order": 49,
       "Title": "Pricing",
       "Slug": "getpricing",
       "Description": "Returns unit pricing for requested endpoint IDs. Most models use\n**output-based** pricing (e.g., per image/video with proportional\nadjustments for resolution/length). Some models use **GPU-based** pricing\ndepending on architecture. Values are expressed per model\u0027s billing unit\nin a given currency.\n\n**Authentication:** Required. Users must provide a valid API key. \nCustom pricing or discounts may be applied based on account status.\n\n**Common Use Cases:**\n- Display pricing in user interfaces\n- Compare pricing across different models\n- Build cost estimation tools\n- Check current billing rates\n\nSee [fal.ai pricing](https://fal.ai/pricing) for more details.",
@@ -529,7 +540,7 @@
       "Setup": null
     },
     {
-      "Order": 49,
+      "Order": 50,
       "Title": "Usage",
       "Slug": "getusage",
       "Description": "Returns paginated usage records for your workspace with filters for endpoint,\nuser, date range, and auth method. Each item includes the billed unit\nquantity and unit price used to compute cost.\n\n**Key Features:**\n- Usage data for all endpoints or filtered by specific endpoint(s)\n- Flexible date range filtering\n- User-specific usage tracking\n- Detailed usage line items with unit quantity and price\n- Paginated results for large datasets\n\n**Common Use Cases:**\n- Generate usage reports for all endpoints or specific models\n- Track usage patterns\n- Monitor endpoint usage across different auth methods\n- Build usage dashboards and visualizations\n\nSee [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.",
@@ -540,7 +551,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 50,
+      "Order": 51,
       "Title": "List requests by endpoint(s)",
       "Slug": "listrequestsbyendpoint",
       "Description": "Lists requests for one or more endpoints (same \u0060endpoint_id\u0060 style as usage/explore:\ncomma-separated or repeated query params, up to 50 IDs).\n\n**Authentication:** Requires API key (user or enterprise).\n\n**Filters:**\n- Time range via start / end. If \u0060start\u0060 is omitted, defaults to the last 24 hours \u2014 unless \u0060request_id\u0060 is provided, in which case the default start bound is widened to 90 days.\n- Status (success, error, user_error)\n- Request ID\n- Pagination via cursor/limit (limit defaults to 50, max 100)\n\n**Sorting:**\n- By end time (default) or duration\n\n**Expansions:**\n- Include payloads by adding expand=payloads",
@@ -551,7 +562,7 @@
       "Setup": null
     },
     {
-      "Order": 51,
+      "Order": 52,
       "Title": "Search Requests",
       "Slug": "searchrequests",
       "Description": "Search, filter, and browse your request history. Supports three modes:\n\n**1. Semantic Search** (\u0060query\u0060, \u0060image_url\u0060, or \u0060video_url\u0060 parameter):\nFind visually or conceptually similar results using AI embeddings. Provide a text\nquery for text-to-image search, an image URL for image-to-image similarity search,\nor a video URL for video-to-image similarity search.\n\n**2. Filtered Browse** (no \u0060query\u0060, \u0060image_url\u0060, or \u0060video_url\u0060):\nBrowse request history with hard filters. Returns results ordered by creation date (newest first).\n\n**3. Semantic \u002B Filters** (search params AND filter params):\nCombine semantic search with hard filters. Filters narrow the candidate set before\nranking by similarity.\n\n**Filter Options:**\n- \u0060endpoint_id\u0060: Filter by one or more fal endpoints (comma-separated or repeated, up to 50 IDs)\n- \u0060exclude_api_requests\u0060 / \u0060only_api_requests\u0060: Filter by request source\n\n**Examples:**\n- Semantic text search: \u0060?query=sunset\u002Blandscape\u0060\n- Image similarity: \u0060?image_url=https://...\u0026min_similarity=0.5\u0060\n- Filtered search: \u0060?query=portrait\u0026endpoint_id=fal-ai/flux/dev\u0060\n- Browse across multiple endpoints: \u0060?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell\u0060",
@@ -562,7 +573,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 52,
+      "Order": 53,
       "Title": "Organization Teams",
       "Slug": "getorganizationteams",
       "Description": "Returns the list of teams in your organization with their details.\n\n\u003E **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.\n\nMust be called with an admin API key on the organization\u0027s root team.\n\n**Key Features:**\n- List all teams within the organization\n- Identify the organization\u0027s root team via \u0060is_org_root\u0060\n- View team usernames and display names\n\nSee [fal.ai docs](https://docs.fal.ai) for more details.",
@@ -573,7 +584,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 53,
+      "Order": 54,
       "Title": "Organization Usage",
       "Slug": "getorganizationusage",
       "Description": "Returns paginated usage records across all teams and product lines in your\norganization, with each record attributed to a specific team via the\n\u0060username\u0060 field and a product line via the \u0060product\u0060 field.\n\nCovers all three fal product lines:\n- \u0060model_apis\u0060 \u2014 model API endpoint calls (e.g. \u0060fal-ai/flux/dev\u0060)\n- \u0060serverless\u0060 \u2014 fal Serverless SDK billing\n- \u0060compute\u0060 \u2014 fal Compute (raw instance time)\n\n\u003E **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.\n\nMust be called with an admin API key on the organization\u0027s root team.\n\n**Key Features:**\n- Organization-wide usage data across all teams and products\n- Filter by team (\u0060team_username\u0060), product line (\u0060product\u0060), endpoint, date range, and auth method\n- Per-team and per-product attribution on every usage record\n- Paginated time series and aggregate summary views\n\nSee [fal.ai docs](https://docs.fal.ai) for more details.",
@@ -584,7 +595,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 54,
+      "Order": 55,
       "Title": "Download file",
       "Slug": "serverlessdownloadfile",
       "Description": "Downloads a file by its path. Proxies the underlying storage response.",
@@ -595,7 +606,7 @@
       "Setup": null
     },
     {
-      "Order": 55,
+      "Order": 56,
       "Title": "Flush Application Queue",
       "Slug": "serverlessflushappqueue",
       "Description": "Flushes all pending requests from an application\u0027s queue.\n\n**Authentication:** Required via API key\n\n**Idempotency:**\n- Optional \u0060Idempotency-Key\u0060 header prevents duplicate flushes on retries\n- Responses cached for 10 minutes per unique key\n\n**Use Cases:**\n- Clear stuck or outdated requests from the queue\n- Reset queue state during development or testing\n- Cancel all pending requests for an application\n\n**Important:**\n- This operation is irreversible\n- All pending requests in the queue will be cancelled\n- Requests already being processed will not be affected",
@@ -606,7 +617,7 @@
       "Setup": null
     },
     {
-      "Order": 56,
+      "Order": 57,
       "Title": "Analytics",
       "Slug": "serverlessgetanalytics",
       "Description": "Time-bucketed metrics for your serverless app endpoints, including request counts,\nsuccess/error rates, and latency percentiles across all inbound traffic.\n\u0060prepare_duration\u0060 reflects queue/prepare time before execution;\n\u0060duration\u0060 is request execution time.\n\nThis endpoint shows all inbound requests to endpoints you own \u2014 not just\nyour own calls. This is ideal for monitoring your deployed apps, tracking\nSLAs, and exporting data to tools like BigQuery or Grafana. You must own\nall requested endpoints; returns 403 otherwise.\n\n**Metric Selection:**\nYou must specify which metrics to include using the \u0060expand\u0060 query\nparameter. Only requested metrics will be populated in the response,\nallowing you to optimize query performance and data transfer.\n\n**Available Metrics:**\n\nThe \u0060expand\u0060 parameter accepts these values, grouped by category:\n\n*Volume*\n- \u0060request_count\u0060: Total number of requests in the time bucket\n- \u0060success_count\u0060: Successful requests (2xx responses)\n- \u0060user_error_count\u0060: User errors (4xx responses)\n- \u0060error_count\u0060: Server errors (5xx responses)\n\n*Error type breakdown*\n- \u0060startup_error_count\u0060: Startup errors (startup timeout, scheduling failure)\n- \u0060connection_error_count\u0060: Connection errors (timeout, disconnected, refused)\n- \u0060timeout_error_count\u0060: Request timeout errors\n- \u0060runtime_error_count\u0060: Runtime errors (internal error, server error)\n\n*Queue / prepare latency*\n- \u0060p50_prepare_duration\u0060, \u0060p75_prepare_duration\u0060, \u0060p90_prepare_duration\u0060, \u0060p95_prepare_duration\u0060, \u0060p99_prepare_duration\u0060: Time from request submission until execution starts\n\n*Request execution latency*\n- \u0060p25_duration\u0060, \u0060p50_duration\u0060, \u0060p75_duration\u0060, \u0060p90_duration\u0060, \u0060p95_duration\u0060, \u0060p99_duration\u0060: Time spent processing the request\n\n*Cold boot*\n- \u0060cold_boot_count\u0060: Requests with cold boot (startup \u003E 1s)\n- \u0060p50_cold_boot_duration\u0060, \u0060p75_cold_boot_duration\u0060, \u0060p90_cold_boot_duration\u0060: Cold boot duration percentiles\n\n*Billing*\n- \u0060total_billable_duration\u0060: Aggregate billed execution time\n\n**Key Features:**\n- See all traffic to your apps across all callers\n- Selective metric inclusion via expand parameter\n- Performance metrics (latency percentiles, duration stats)\n- Reliability metrics (success/error rates, request counts)\n- Error type breakdown (startup, connection, timeout, runtime)\n- Cold boot metrics (count, latency percentiles)\n- Billing duration tracking\n- Time-bucketed data for trend analysis\n- Flexible date range and timeframe options\n\n**Common Use Cases:**\n- Monitor your serverless app performance and reliability\n- Export analytics to your own observability tools\n- Analyze latency trends across all callers\n- Track error rates and SLA compliance",
@@ -617,7 +628,7 @@
       "Setup": null
     },
     {
-      "Order": 57,
+      "Order": 58,
       "Title": "Queue Size",
       "Slug": "serverlessgetappqueueinfo",
       "Description": "Retrieves the current queue size for a specific application.",
@@ -628,7 +639,7 @@
       "Setup": null
     },
     {
-      "Order": 58,
+      "Order": 59,
       "Title": "Metrics",
       "Slug": "serverlessgetmetrics",
       "Description": "Returns Prometheus-compatible metrics in text format for integration into your\nobservability stack\n\n**Authentication:** Required - Uses API key authentication\n\n**Format:** Returns text/plain in Prometheus exposition format\n\n**Common Use Cases:**\n- Export app stats to your observability provider (grafana, datadog etc)\n- Track runner health and performance\n- Set up alerts and monitoring\n\nSee [Prometheus documentation](https://prometheus.io/docs/instrumenting/exposition_formats/) for format details.",
@@ -639,7 +650,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 59,
+      "Order": 60,
       "Title": "Runner State History",
       "Slug": "serverlessgetrunnerhistory",
       "Description": "Returns historical runner counts by state (running, idle, pending, draining)\nfor an application, bucketed over time.\n\n**Use cases:**\n- Capacity/utilization analysis: compare idle vs running over days or weeks\n  to see how much reserved capacity goes unused (use \u0060aggregation=avg\u0060)\n- Incident forensics: correlate error spikes with runner drops or drain\n  events around the incident window (use \u0060aggregation=max\u0060)\n\n**Time range:** up to 90 days of history. Defaults to the last 24 hours when\n\u0060start\u0060/\u0060end\u0060 are omitted. Bucket size is auto-detected from the range\nunless \u0060timeframe\u0060 is specified.\n\n**Authentication:** Required via API key. Only the app owner can query it.",
@@ -650,7 +661,7 @@
       "Setup": null
     },
     {
-      "Order": 60,
+      "Order": 61,
       "Title": "Usage",
       "Slug": "serverlessgetusage",
       "Description": "Time-bucketed, aggregated serverless compute usage for **your own account** \u2014\nthe machine-seconds your deployed serverless apps consumed, priced with your\nmachine prices and net of discounts. This matches the serverless portion of the\ndashboard usage view. Unlike \u0060/v1/models/usage\u0060 (which reports model API\nendpoint calls), this reports the \u0060sdk_billing_event\u0060 compute spend of the apps\nyou run on fal Serverless. Requires an \u0060ADMIN\u0060-scoped API key (this endpoint\nreturns billing and usage data, which the standard \u0060API\u0060 key scope does not\ninclude); results are always scoped to the apps you own.\n\n**Filtering by app:**\n- \u0060app\u0060 \u2014 exact match on one or more app names (comma-separated or repeated,\n  up to 50): \u0060?app=my-app-dev,my-app-prod\u0060. Use the value exactly as it appears\n  in the response \u0060app\u0060 field.\n- \u0060search\u0060 \u2014 case-insensitive substring match on the app name, for when you\n  know the name but not the exact environment/version suffix: \u0060?search=my-app\u0060\n  returns every \u0060my-app*\u0060 variant.\n- Provide both to AND them. Omit both to return every app you own \u2014 useful for\n  discovering the exact app names to filter on.\n\n**Expansions:**\n- \u0060time_series\u0060: usage grouped into time buckets (default)\n- \u0060summary\u0060: a single aggregate row per app \u00D7 machine type across the window\n\n**Notes:**\n- Each row is machine-seconds (\u0060unit\u0060 is always \u0060\u0022second\u0022\u0060); surge and\n  non-surge usage of the same app/machine come back as separate rows\n  (\u0060is_surge\u0060), so sum across them for a per-app total.\n- Time-series \u0060bucket\u0060 timestamps are returned in the \u0060timezone\u0060 you request\n  (ISO 8601 with offset, e.g. \u00602025-01-15T00:00:00-05:00\u0060), which also controls\n  how usage is grouped into buckets.\n\n**Common Use Cases:**\n- Track your serverless apps\u0027 compute consumption and cost over time\n- Break down spend per app, environment, and machine type\n- Export usage to your own billing/observability tooling",
@@ -661,7 +672,18 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 61,
+      "Order": 62,
+      "Title": "Application Events",
+      "Slug": "serverlesslistappevents",
+      "Description": "Returns the operational event history for an application: deployments,\nconfiguration changes, and runner lifecycle transitions (started, failed,\ndraining, etc.), newest first.\n\n**Use cases:**\n- Incident correlation: answer \u0022what changed around this time?\u0022 \u2014 did a\n  deploy, config change, or runner failure coincide with an error spike?\n- Deployment audit: see when revisions went out and who triggered them\n\n**Time range:** defaults to the last 24 hours when \u0060start\u0060/\u0060end\u0060 are\nomitted. Use \u0060category\u0060 filters to narrow to specific event types.\n\n**Authentication:** Required via API key. Only the app owner can query it.",
+      "Language": "http",
+      "Code": "### Application Events\n# @name serverlessListAppEvents\nGET {{host}}/serverless/apps/{{owner}}/{{name}}/events?start={{start}}\u0026end={{end}}\u0026category={{category}}\u0026limit=50\u0026cursor={{cursor}}\nAuthorization: Bearer {{token}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: Successfully retrieved application events\n# Content-Type: application/json\n# 400\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 403\n# Description: Access denied\n# Content-Type: application/json\n# 404\n# Description: Resource not found\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "serverlessListAppEvents",
+      "Setup": null
+    },
+    {
+      "Order": 63,
       "Title": "List Applications",
       "Slug": "serverlesslistapps",
       "Description": "Lists the serverless applications owned by the authenticated account, with\nthe configuration needed for follow-up calls.\n\nEach application includes its canonical \u0060endpoint_id\u0060 (\u0027\u003Cowner\u003E/\u003Cname\u003E\u0027),\nwhich is the identifier accepted by the analytics, requests, logs, and\nqueue endpoints \u2014 use this endpoint to discover identifiers instead of\nasking users to paste them.\n\n**Authentication:** Required via API key. Only applications owned by the\nauthenticated account are returned.",
@@ -672,7 +694,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 62,
+      "Order": 64,
       "Title": "List files (directory)",
       "Slug": "serverlesslistdirectory",
       "Description": "Lists files and folders within the specified directory path.",
@@ -683,7 +705,7 @@
       "Setup": null
     },
     {
-      "Order": 63,
+      "Order": 65,
       "Title": "List requests by endpoint(s)",
       "Slug": "serverlesslistrequestsbyendpoint",
       "Description": "Lists requests for one or more endpoints owned by the authenticated user.\nUse repeated or comma-separated \u0060endpoint_id\u0060 (same as other platform list APIs).\n\n**Authentication:** Requires API key.\n\n**Filters:**\n- Time range via start / end. If \u0060start\u0060 is omitted, defaults to the last 24 hours \u2014 unless \u0060request_id\u0060 is provided, in which case the default start bound is widened to 90 days.\n- Status (success, error, user_error)\n- Request ID\n- Pagination via cursor/limit (limit defaults to 50, max 100)\n\n**Sorting:**\n- By end time (default) or duration\n\n**Expansions:**\n- Include payloads by adding expand=payloads\n- Include per-request \u0060billable_units\u0060 by adding expand=billing (endpoint owner only)",
@@ -694,7 +716,7 @@
       "Setup": null
     },
     {
-      "Order": 64,
+      "Order": 66,
       "Title": "List files (root)",
       "Slug": "serverlesslistroot",
       "Description": "Lists files and folders in the root of your project storage.",
@@ -705,7 +727,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 65,
+      "Order": 67,
       "Title": "Logs history (paginated)",
       "Slug": "serverlesslogshistory",
       "Description": "Returns paginated historical logs that match the provided filters.",
@@ -716,7 +738,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 66,
+      "Order": 68,
       "Title": "Logs stream (SSE)",
       "Slug": "serverlesslogsstream",
       "Description": "Streams live logs that match the provided filters using Server-Sent Events.",
@@ -727,7 +749,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 67,
+      "Order": 69,
       "Title": "Upload file from URL",
       "Slug": "serverlessuploadfromurl",
       "Description": "Creates a new file at the target path by downloading it from the provided URL.",
@@ -738,7 +760,7 @@
       "Setup": null
     },
     {
-      "Order": 68,
+      "Order": 70,
       "Title": "Upload local file (multipart/form-data)",
       "Slug": "serverlessuploadlocalfile",
       "Description": "Uploads a local file using multipart/form-data. The file field name must be \u0060file_upload\u0060.",
@@ -749,7 +771,7 @@
       "Setup": null
     },
     {
-      "Order": 69,
+      "Order": 71,
       "Title": "Get file ACL",
       "Slug": "getstoragefileacl",
       "Description": "Returns the Access Control List currently applied to a fal CDN file.\n\nThe ACL consists of a default decision (\u0060allow\u0060, \u0060forbid\u0060, or \u0060hide\u0060) plus\noptional per-user rules that override the default. Rule users are returned as\nnicknames where possible.\n\n**Authentication:** Required. The API key must have the \u0060assets:read\u0060 permission.",
@@ -760,7 +782,7 @@
       "Setup": null
     },
     {
-      "Order": 70,
+      "Order": 72,
       "Title": "Get storage settings",
       "Slug": "getstoragesettings",
       "Description": "Returns the account-level storage lifecycle settings applied to newly uploaded\nfal CDN files:\n\n- \u0060expiration_duration_seconds\u0060: how long files live before being\n  automatically deleted (null disables auto-expiration).\n- \u0060initial_acl\u0060: the default ACL applied to new uploads (null means the\n  system default, which is public).\n\nBoth fields are null when the account has never saved settings.\n\n**Authentication:** Required. The API key must have the \u0060account:settings:read\u0060 permission.",
@@ -771,7 +793,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 71,
+      "Order": 73,
       "Title": "Set file ACL",
       "Slug": "setstoragefileacl",
       "Description": "Replaces the Access Control List of a fal CDN file.\n\nThe ACL consists of a default decision (\u0060allow\u0060, \u0060forbid\u0060, or \u0060hide\u0060) plus\noptional per-user rules that override the default. Rule users may be specified\nby nickname or user ID. Setting \u0060default\u0060 to \u0060allow\u0060 with no rules makes the\nfile public; \u0060forbid\u0060 or \u0060hide\u0060 restricts it to the rules you provide.\n\nRules referencing users that do not exist are dropped. The response reflects\nthe ACL actually applied, so verify it contains the rules you sent.\n\n**Authentication:** Required. The API key must have the \u0060assets:write\u0060 permission.",
@@ -782,7 +804,7 @@
       "Setup": null
     },
     {
-      "Order": 72,
+      "Order": 74,
       "Title": "Sign file URL",
       "Slug": "signstoragefileurl",
       "Description": "Creates a signed URL that grants temporary access to a fal CDN file,\nregardless of its ACL. Useful for sharing access-restricted files.\n\nThe signature is valid for \u0060expiration_seconds\u0060 (up to 7 days).\n\n**Authentication:** Required. The API key must have the \u0060assets:read\u0060 permission.",
@@ -793,7 +815,7 @@
       "Setup": null
     },
     {
-      "Order": 73,
+      "Order": 75,
       "Title": "Update storage settings",
       "Slug": "updatestoragesettings",
       "Description": "Replaces the account-level storage lifecycle settings applied to newly\nuploaded fal CDN files. Omitted or null fields are cleared (reset to the\nsystem default), so always send the full desired configuration.\n\nACL rules referencing users that do not exist are dropped. The response\nreflects the settings actually saved, so verify it contains the rules you sent.\n\nThese are the same settings that the per-request\n\u0060X-Fal-Object-Lifecycle-Preference\u0060 header overrides on individual requests.\n\n**Authentication:** Required. The API key must have the \u0060account:settings:write\u0060 permission.",
@@ -804,7 +826,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 74,
+      "Order": 76,
       "Title": "Create a workflow",
       "Slug": "createworkflow",
       "Description": "Create a new workflow owned by the authenticated user.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Save a newly built workflow\n- Programmatically provision workflows\n\n**Note:** Workflow names must be unique within your namespace. Creating a\nworkflow with a name you already use returns a 400 validation error.",
@@ -815,7 +837,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 75,
+      "Order": 77,
       "Title": "Get workflow details",
       "Slug": "getworkflow",
       "Description": "Get detailed information about a specific workflow, including its full contents/definition.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Load a workflow for editing\n- View workflow configuration\n- Export workflow definition",
@@ -826,7 +848,7 @@
       "Setup": null
     },
     {
-      "Order": 76,
+      "Order": 78,
       "Title": "List user workflows",
       "Slug": "listworkflows",
       "Description": "List workflows for the authenticated user with optional search and filtering.\n\n**Features:**\n- Paginated results with cursor-based pagination\n- Search by workflow name or title\n- Filter by model endpoints used in the workflow\n\n**Authentication:** Required. Returns only workflows owned by the authenticated user.\n\n**Common Use Cases:**\n- Display user\u0027s workflow library\n- Search for specific workflows\n- Find workflows using particular models",
