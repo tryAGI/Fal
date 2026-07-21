@@ -8,12 +8,13 @@ namespace Fal
         /// Usage<br/>
         /// Returns paginated usage records for your workspace with filters for endpoint,<br/>
         /// user, date range, and auth method. Each item includes the billed unit<br/>
-        /// quantity and unit price used to compute cost.<br/>
+        /// quantity, the pre-discount unit price and cost_subtotal, any percentage discount<br/>
+        /// applied, and the final cost_total (cost_subtotal − cost_discount).<br/>
         /// **Key Features:**<br/>
         /// - Usage data for all endpoints or filtered by specific endpoint(s)<br/>
         /// - Flexible date range filtering<br/>
         /// - User-specific usage tracking<br/>
-        /// - Detailed usage line items with unit quantity and price<br/>
+        /// - Detailed usage line items with unit quantity, price, and discount breakdown<br/>
         /// - Paginated results for large datasets<br/>
         /// **Common Use Cases:**<br/>
         /// - Generate usage reports for all endpoints or specific models<br/>
@@ -91,12 +92,13 @@ namespace Fal
         /// Usage<br/>
         /// Returns paginated usage records for your workspace with filters for endpoint,<br/>
         /// user, date range, and auth method. Each item includes the billed unit<br/>
-        /// quantity and unit price used to compute cost.<br/>
+        /// quantity, the pre-discount unit price and cost_subtotal, any percentage discount<br/>
+        /// applied, and the final cost_total (cost_subtotal − cost_discount).<br/>
         /// **Key Features:**<br/>
         /// - Usage data for all endpoints or filtered by specific endpoint(s)<br/>
         /// - Flexible date range filtering<br/>
         /// - User-specific usage tracking<br/>
-        /// - Detailed usage line items with unit quantity and price<br/>
+        /// - Detailed usage line items with unit quantity, price, and discount breakdown<br/>
         /// - Paginated results for large datasets<br/>
         /// **Common Use Cases:**<br/>
         /// - Generate usage reports for all endpoints or specific models<br/>

@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Fal
@@ -42,14 +44,41 @@ namespace Fal
         public required double Quantity { get; set; }
 
         /// <summary>
-        /// Per-second price for this machine type, including any customer-specific machine pricing
+        /// Per-second price for this machine type before percentage discounts, including any customer-specific machine pricing
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unit_price")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double UnitPrice { get; set; }
 
         /// <summary>
-        /// Computed cost (quantity × unit_price, net of discounts)
+        /// Percentage discount applied to this line item (e.g., 20 = 20% discount). Null when no percentage discount applies. Usage billed at different discount rates appears as separate rows, like unit_price.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("percent_discount")]
+        public double? PercentDiscount { get; set; }
+
+        /// <summary>
+        /// Cost before discounts (quantity × unit_price)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_subtotal")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostSubtotal { get; set; }
+
+        /// <summary>
+        /// Discount applied to this line item (cost_subtotal − cost_total)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_discount")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostDiscount { get; set; }
+
+        /// <summary>
+        /// Amount charged after discounts (cost_subtotal − cost_discount)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_total")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostTotal { get; set; }
+
+        /// <summary>
+        /// Deprecated: use cost_total. Same value as cost_total.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cost")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -88,10 +117,19 @@ namespace Fal
         /// Quantity of usage in the specified billing unit
         /// </param>
         /// <param name="unitPrice">
-        /// Per-second price for this machine type, including any customer-specific machine pricing
+        /// Per-second price for this machine type before percentage discounts, including any customer-specific machine pricing
+        /// </param>
+        /// <param name="costSubtotal">
+        /// Cost before discounts (quantity × unit_price)
+        /// </param>
+        /// <param name="costDiscount">
+        /// Discount applied to this line item (cost_subtotal − cost_total)
+        /// </param>
+        /// <param name="costTotal">
+        /// Amount charged after discounts (cost_subtotal − cost_discount)
         /// </param>
         /// <param name="cost">
-        /// Computed cost (quantity × unit_price, net of discounts)
+        /// Deprecated: use cost_total. Same value as cost_total.
         /// </param>
         /// <param name="currency">
         /// Three-letter currency code (ISO 4217, e.g., 'USD')
@@ -105,6 +143,9 @@ namespace Fal
         /// <param name="environment">
         /// Deployment environment of the app (e.g., 'production') when present on the billing line item, null otherwise.
         /// </param>
+        /// <param name="percentDiscount">
+        /// Percentage discount applied to this line item (e.g., 20 = 20% discount). Null when no percentage discount applies. Usage billed at different discount rates appears as separate rows, like unit_price.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -113,11 +154,15 @@ namespace Fal
             string unit,
             double quantity,
             double unitPrice,
+            double costSubtotal,
+            double costDiscount,
+            double costTotal,
             double cost,
             string currency,
             bool isSurge,
             string? app,
-            string? environment)
+            string? environment,
+            double? percentDiscount)
         {
             this.App = app;
             this.Environment = environment;
@@ -125,6 +170,10 @@ namespace Fal
             this.Unit = unit ?? throw new global::System.ArgumentNullException(nameof(unit));
             this.Quantity = quantity;
             this.UnitPrice = unitPrice;
+            this.PercentDiscount = percentDiscount;
+            this.CostSubtotal = costSubtotal;
+            this.CostDiscount = costDiscount;
+            this.CostTotal = costTotal;
             this.Cost = cost;
             this.Currency = currency ?? throw new global::System.ArgumentNullException(nameof(currency));
             this.IsSurge = isSurge;

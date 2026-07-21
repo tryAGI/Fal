@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Fal
@@ -30,14 +32,41 @@ namespace Fal
         public required double Quantity { get; set; }
 
         /// <summary>
-        /// Unit price used to compute charges for this line item
+        /// Per-unit price before percentage discounts
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unit_price")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double UnitPrice { get; set; }
 
         /// <summary>
-        /// Computed cost (quantity × unit_price)
+        /// Percentage discount applied to this line item (e.g., 20 = 20% discount). Null when no percentage discount applies. Usage billed at different discount rates appears as separate rows, like unit_price.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("percent_discount")]
+        public double? PercentDiscount { get; set; }
+
+        /// <summary>
+        /// Cost before discounts (quantity × unit_price)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_subtotal")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostSubtotal { get; set; }
+
+        /// <summary>
+        /// Discount applied to this line item (cost_subtotal − cost_total)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_discount")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostDiscount { get; set; }
+
+        /// <summary>
+        /// Amount charged after discounts (cost_subtotal − cost_discount)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_total")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostTotal { get; set; }
+
+        /// <summary>
+        /// Deprecated: use cost_total. Same value as cost_total.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cost")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -81,13 +110,25 @@ namespace Fal
         /// Quantity of usage in the specified billing unit
         /// </param>
         /// <param name="unitPrice">
-        /// Unit price used to compute charges for this line item
+        /// Per-unit price before percentage discounts
+        /// </param>
+        /// <param name="costSubtotal">
+        /// Cost before discounts (quantity × unit_price)
+        /// </param>
+        /// <param name="costDiscount">
+        /// Discount applied to this line item (cost_subtotal − cost_total)
+        /// </param>
+        /// <param name="costTotal">
+        /// Amount charged after discounts (cost_subtotal − cost_discount)
         /// </param>
         /// <param name="cost">
-        /// Computed cost (quantity × unit_price)
+        /// Deprecated: use cost_total. Same value as cost_total.
         /// </param>
         /// <param name="currency">
         /// Three-letter currency code (ISO 4217, e.g., 'USD')
+        /// </param>
+        /// <param name="percentDiscount">
+        /// Percentage discount applied to this line item (e.g., 20 = 20% discount). Null when no percentage discount applies. Usage billed at different discount rates appears as separate rows, like unit_price.
         /// </param>
         /// <param name="authMethod">
         /// Authentication method label (e.g., 'Key 1', 'Key 2', 'User token'). Only populated when 'auth_method' is included in expand parameter.
@@ -103,8 +144,12 @@ namespace Fal
             string unit,
             double quantity,
             double unitPrice,
+            double costSubtotal,
+            double costDiscount,
+            double costTotal,
             double cost,
             string currency,
+            double? percentDiscount,
             string? authMethod,
             global::Fal.GetUsageResponseSummaryItemAuthMethodStructured? authMethodStructured)
         {
@@ -112,6 +157,10 @@ namespace Fal
             this.Unit = unit ?? throw new global::System.ArgumentNullException(nameof(unit));
             this.Quantity = quantity;
             this.UnitPrice = unitPrice;
+            this.PercentDiscount = percentDiscount;
+            this.CostSubtotal = costSubtotal;
+            this.CostDiscount = costDiscount;
+            this.CostTotal = costTotal;
             this.Cost = cost;
             this.Currency = currency ?? throw new global::System.ArgumentNullException(nameof(currency));
             this.AuthMethod = authMethod;
