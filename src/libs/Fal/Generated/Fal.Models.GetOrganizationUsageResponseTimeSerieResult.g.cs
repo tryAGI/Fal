@@ -90,6 +90,12 @@ namespace Fal
         public string? AuthMethod { get; set; }
 
         /// <summary>
+        /// Structured authentication method identity resolved across the organization. Only populated when 'auth_method_structured' is included in the expand parameter.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("auth_method_structured")]
+        public global::Fal.GetOrganizationUsageResponseTimeSerieResultAuthMethodStructured? AuthMethodStructured { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -134,6 +140,9 @@ namespace Fal
         /// Authentication method label resolved across the organization (e.g., 'my-key (owner: alice)', 'alice &lt;alice@example.com&gt;', or 'None'). Only populated when 'auth_method' is included in the expand parameter. Falls back to the raw upstream label if the decoration service cannot resolve a row.<br/>
         /// Example: production-key (owner: acme-ml-team)
         /// </param>
+        /// <param name="authMethodStructured">
+        /// Structured authentication method identity resolved across the organization. Only populated when 'auth_method_structured' is included in the expand parameter.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -146,7 +155,8 @@ namespace Fal
             double unitPrice,
             double cost,
             string currency,
-            string? authMethod)
+            string? authMethod,
+            global::Fal.GetOrganizationUsageResponseTimeSerieResultAuthMethodStructured? authMethodStructured)
         {
             this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
             this.Product = product;
@@ -157,6 +167,7 @@ namespace Fal
             this.Cost = cost;
             this.Currency = currency ?? throw new global::System.ArgumentNullException(nameof(currency));
             this.AuthMethod = authMethod;
+            this.AuthMethodStructured = authMethodStructured;
         }
 
         /// <summary>

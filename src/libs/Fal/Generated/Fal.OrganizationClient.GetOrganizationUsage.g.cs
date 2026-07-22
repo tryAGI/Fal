@@ -35,7 +35,8 @@ namespace Fal
             ref global::Fal.GetOrganizationUsageTimeframe? timeframe,
             ref global::Fal.GetOrganizationUsageBoundToTimeframe? boundToTimeframe,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
-            ref string? teamUsername,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? teamUsername,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? product,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void PrepareGetOrganizationUsageRequest(
@@ -49,7 +50,8 @@ namespace Fal
             global::Fal.GetOrganizationUsageTimeframe? timeframe,
             global::Fal.GetOrganizationUsageBoundToTimeframe? boundToTimeframe,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
-            string? teamUsername,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? teamUsername,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? product,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void ProcessGetOrganizationUsageResponse(
@@ -74,7 +76,7 @@ namespace Fal
         /// Must be called with an admin API key on the organization's root team.<br/>
         /// **Key Features:**<br/>
         /// - Organization-wide usage data across all teams and products<br/>
-        /// - Filter by team (`team_username`), product line (`product`), endpoint, date range, and auth method<br/>
+        /// - Filter by team(s) (`team_username`), product line (`product`), endpoint, API key (`api_key_id`), date range, and auth method<br/>
         /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
         /// See [fal.ai docs](https://docs.fal.ai) for more details.<br/>
@@ -114,16 +116,20 @@ namespace Fal
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
         /// </param>
+        /// <param name="apiKeyId">
+        /// Filter by specific API key ID(s). Accepts 1-50 key IDs. Supports comma-separated values: ?api_key_id=key1,key2 or array syntax: ?api_key_id=key1&amp;api_key_id=key2<br/>
+        /// Example: [abc123]
+        /// </param>
         /// <param name="teamUsername">
-        /// Filter by a specific team username within the organization. If not provided, returns usage across all teams.<br/>
-        /// Example: acme-ml-team
+        /// Filter by one or more team usernames within the organization. Accepts a comma-separated list or repeated parameter. If not provided, returns usage across all teams.<br/>
+        /// Example: [acme-ml-team]
         /// </param>
         /// <param name="product">
         /// Restrict results to one or more product lines. Accepts a comma-separated list or repeated parameter. Defaults to all three (model_apis, serverless, compute).<br/>
         /// Example: [model_apis, compute]
         /// </param>
         /// <param name="expand">
-        /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, and 'auth_method' to include authentication method information. At least one of 'time_series' or 'summary' is required.<br/>
+        /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, 'auth_method' for a resolved authentication method label, and 'auth_method_structured' for a machine-readable auth method object (detail, api_key_id, login_username). At least one of 'time_series' or 'summary' is required.<br/>
         /// Default Value: [time_series]<br/>
         /// Example: [time_series, auth_method]
         /// </param>
@@ -139,7 +145,8 @@ namespace Fal
             global::Fal.GetOrganizationUsageTimeframe? timeframe = default,
             global::Fal.GetOrganizationUsageBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
-            string? teamUsername = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? teamUsername = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? product = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
@@ -154,6 +161,7 @@ namespace Fal
                 timeframe: timeframe,
                 boundToTimeframe: boundToTimeframe,
                 endpointId: endpointId,
+                apiKeyId: apiKeyId,
                 teamUsername: teamUsername,
                 product: product,
                 expand: expand,
@@ -176,7 +184,7 @@ namespace Fal
         /// Must be called with an admin API key on the organization's root team.<br/>
         /// **Key Features:**<br/>
         /// - Organization-wide usage data across all teams and products<br/>
-        /// - Filter by team (`team_username`), product line (`product`), endpoint, date range, and auth method<br/>
+        /// - Filter by team(s) (`team_username`), product line (`product`), endpoint, API key (`api_key_id`), date range, and auth method<br/>
         /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
         /// See [fal.ai docs](https://docs.fal.ai) for more details.<br/>
@@ -216,16 +224,20 @@ namespace Fal
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
         /// </param>
+        /// <param name="apiKeyId">
+        /// Filter by specific API key ID(s). Accepts 1-50 key IDs. Supports comma-separated values: ?api_key_id=key1,key2 or array syntax: ?api_key_id=key1&amp;api_key_id=key2<br/>
+        /// Example: [abc123]
+        /// </param>
         /// <param name="teamUsername">
-        /// Filter by a specific team username within the organization. If not provided, returns usage across all teams.<br/>
-        /// Example: acme-ml-team
+        /// Filter by one or more team usernames within the organization. Accepts a comma-separated list or repeated parameter. If not provided, returns usage across all teams.<br/>
+        /// Example: [acme-ml-team]
         /// </param>
         /// <param name="product">
         /// Restrict results to one or more product lines. Accepts a comma-separated list or repeated parameter. Defaults to all three (model_apis, serverless, compute).<br/>
         /// Example: [model_apis, compute]
         /// </param>
         /// <param name="expand">
-        /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, and 'auth_method' to include authentication method information. At least one of 'time_series' or 'summary' is required.<br/>
+        /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, 'auth_method' for a resolved authentication method label, and 'auth_method_structured' for a machine-readable auth method object (detail, api_key_id, login_username). At least one of 'time_series' or 'summary' is required.<br/>
         /// Default Value: [time_series]<br/>
         /// Example: [time_series, auth_method]
         /// </param>
@@ -241,7 +253,8 @@ namespace Fal
             global::Fal.GetOrganizationUsageTimeframe? timeframe = default,
             global::Fal.GetOrganizationUsageBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
-            string? teamUsername = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? teamUsername = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? product = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
@@ -259,6 +272,7 @@ namespace Fal
                 timeframe: ref timeframe,
                 boundToTimeframe: ref boundToTimeframe,
                 endpointId: ref endpointId,
+                apiKeyId: ref apiKeyId,
                 teamUsername: ref teamUsername,
                 product: ref product,
                 expand: ref expand);
@@ -298,7 +312,8 @@ namespace Fal
                                 .AddOptionalParameter("timeframe", timeframe?.ToValueString())
                                 .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString())
                                 .AddOptionalParameter("endpoint_id", endpointId?.ToString())
-                                .AddOptionalParameter("team_username", teamUsername)
+                                .AddOptionalParameter("api_key_id", apiKeyId?.ToString())
+                                .AddOptionalParameter("team_username", teamUsername?.ToString())
                                 .AddOptionalParameter("product", product?.ToString())
                                 .AddOptionalParameter("expand", expand?.ToString())
                                 ;
@@ -350,6 +365,7 @@ namespace Fal
                     timeframe: timeframe,
                     boundToTimeframe: boundToTimeframe,
                     endpointId: endpointId,
+                    apiKeyId: apiKeyId,
                     teamUsername: teamUsername,
                     product: product,
                     expand: expand);
