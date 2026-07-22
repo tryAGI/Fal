@@ -72,11 +72,11 @@ namespace Fal
         /// Example: invoice
         /// </param>
         /// <param name="billingMonth">
-        /// Invoice billing month (YYYY-MM). The month the invoice was issued (e.g. '2025-02' for January charges). Used with source=invoice. Defaults to most recent available billing month.<br/>
+        /// Billing month (YYYY-MM) — selects invoices by their issue date (when the invoice was issued). Used with source=invoice. Defaults to the current billing month.<br/>
         /// Example: 2025-02
         /// </param>
         /// <param name="chargeMonth">
-        /// Charge month (YYYY-MM). The month charges were incurred. Converted to billing_month by adding 1 month (billing in arrears). Alternative to billing_month. Used with source=invoice.<br/>
+        /// Charge month (YYYY-MM) — selects line items by the period charges were incurred, capturing them even when split across invoices issued in different months. Alternative to billing_month. Used with source=invoice.<br/>
         /// Example: 2025-01
         /// </param>
         /// <param name="start">
@@ -148,11 +148,11 @@ namespace Fal
         /// Example: invoice
         /// </param>
         /// <param name="billingMonth">
-        /// Invoice billing month (YYYY-MM). The month the invoice was issued (e.g. '2025-02' for January charges). Used with source=invoice. Defaults to most recent available billing month.<br/>
+        /// Billing month (YYYY-MM) — selects invoices by their issue date (when the invoice was issued). Used with source=invoice. Defaults to the current billing month.<br/>
         /// Example: 2025-02
         /// </param>
         /// <param name="chargeMonth">
-        /// Charge month (YYYY-MM). The month charges were incurred. Converted to billing_month by adding 1 month (billing in arrears). Alternative to billing_month. Used with source=invoice.<br/>
+        /// Charge month (YYYY-MM) — selects line items by the period charges were incurred, capturing them even when split across invoices issued in different months. Alternative to billing_month. Used with source=invoice.<br/>
         /// Example: 2025-01
         /// </param>
         /// <param name="start">
