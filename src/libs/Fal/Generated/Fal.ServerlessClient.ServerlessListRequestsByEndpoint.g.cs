@@ -61,6 +61,10 @@ namespace Fal
         /// List requests by endpoint(s)<br/>
         /// Lists requests for one or more endpoints owned by the authenticated user.<br/>
         /// Use repeated or comma-separated `endpoint_id` (same as other platform list APIs).<br/>
+        /// A bare app id ('&lt;owner&gt;/&lt;name&gt;') automatically includes the app's registered<br/>
+        /// route-level endpoints (e.g. '&lt;owner&gt;/&lt;name&gt;/turbo'); each returned row keeps<br/>
+        /// the route-level `endpoint_id` it was recorded under. Pass a route-level id<br/>
+        /// to filter to that route exactly.<br/>
         /// **Authentication:** Requires API key.<br/>
         /// **Filters:**<br/>
         /// - Time range via start / end. If `start` is omitted, defaults to the last 24 hours — unless `request_id` is provided, in which case the default start bound is widened to 90 days.<br/>
@@ -147,6 +151,10 @@ namespace Fal
         /// List requests by endpoint(s)<br/>
         /// Lists requests for one or more endpoints owned by the authenticated user.<br/>
         /// Use repeated or comma-separated `endpoint_id` (same as other platform list APIs).<br/>
+        /// A bare app id ('&lt;owner&gt;/&lt;name&gt;') automatically includes the app's registered<br/>
+        /// route-level endpoints (e.g. '&lt;owner&gt;/&lt;name&gt;/turbo'); each returned row keeps<br/>
+        /// the route-level `endpoint_id` it was recorded under. Pass a route-level id<br/>
+        /// to filter to that route exactly.<br/>
         /// **Authentication:** Requires API key.<br/>
         /// **Filters:**<br/>
         /// - Time range via start / end. If `start` is omitted, defaults to the last 24 hours — unless `request_id` is provided, in which case the default start bound is widened to 90 days.<br/>

@@ -14,6 +14,10 @@ namespace Fal
         /// your own calls. This is ideal for monitoring your deployed apps, tracking<br/>
         /// SLAs, and exporting data to tools like BigQuery or Grafana. You must own<br/>
         /// all requested endpoints; returns 403 otherwise.<br/>
+        /// A bare app id ('&lt;owner&gt;/&lt;name&gt;') automatically includes the app's registered<br/>
+        /// route-level endpoints (e.g. '&lt;owner&gt;/&lt;name&gt;/turbo'); results stay grouped by<br/>
+        /// the route-level id they were recorded under. Pass a route-level id to filter<br/>
+        /// to that route exactly.<br/>
         /// **Metric Selection:**<br/>
         /// You must specify which metrics to include using the `expand` query<br/>
         /// parameter. Only requested metrics will be populated in the response,<br/>
@@ -120,6 +124,10 @@ namespace Fal
         /// your own calls. This is ideal for monitoring your deployed apps, tracking<br/>
         /// SLAs, and exporting data to tools like BigQuery or Grafana. You must own<br/>
         /// all requested endpoints; returns 403 otherwise.<br/>
+        /// A bare app id ('&lt;owner&gt;/&lt;name&gt;') automatically includes the app's registered<br/>
+        /// route-level endpoints (e.g. '&lt;owner&gt;/&lt;name&gt;/turbo'); results stay grouped by<br/>
+        /// the route-level id they were recorded under. Pass a route-level id to filter<br/>
+        /// to that route exactly.<br/>
         /// **Metric Selection:**<br/>
         /// You must specify which metrics to include using the `expand` query<br/>
         /// parameter. Only requested metrics will be populated in the response,<br/>

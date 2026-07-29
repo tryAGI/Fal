@@ -28,12 +28,14 @@ namespace Fal
         partial void PrepareServerlessListAppsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? environment,
-            ref string? search);
+            ref string? search,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void PrepareServerlessListAppsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string? environment,
-            string? search);
+            string? search,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void ProcessServerlessListAppsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -51,6 +53,9 @@ namespace Fal
         /// which is the identifier accepted by the analytics, requests, logs, and<br/>
         /// queue endpoints — use this endpoint to discover identifiers instead of<br/>
         /// asking users to paste them.<br/>
+        /// Add `expand=endpoints` to also include each app's registered route-level<br/>
+        /// endpoint ids (e.g. '&lt;owner&gt;/&lt;name&gt;/turbo'). Multi-route apps record their<br/>
+        /// requests/analytics data under these route-level ids.<br/>
         /// **Authentication:** Required via API key. Only applications owned by the<br/>
         /// authenticated account are returned.
         /// </summary>
@@ -62,18 +67,24 @@ namespace Fal
         /// Case-insensitive substring match on the app name<br/>
         /// Example: image
         /// </param>
+        /// <param name="expand">
+        /// Fields to expand in the response. Use endpoints to include each app's registered route-level endpoint ids.<br/>
+        /// Example: [endpoints]
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Fal.ServerlessListAppsResponse> ServerlessListAppsAsync(
             string? environment = default,
             string? search = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await ServerlessListAppsAsResponseAsync(
                 environment: environment,
                 search: search,
+                expand: expand,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -88,6 +99,9 @@ namespace Fal
         /// which is the identifier accepted by the analytics, requests, logs, and<br/>
         /// queue endpoints — use this endpoint to discover identifiers instead of<br/>
         /// asking users to paste them.<br/>
+        /// Add `expand=endpoints` to also include each app's registered route-level<br/>
+        /// endpoint ids (e.g. '&lt;owner&gt;/&lt;name&gt;/turbo'). Multi-route apps record their<br/>
+        /// requests/analytics data under these route-level ids.<br/>
         /// **Authentication:** Required via API key. Only applications owned by the<br/>
         /// authenticated account are returned.
         /// </summary>
@@ -99,12 +113,17 @@ namespace Fal
         /// Case-insensitive substring match on the app name<br/>
         /// Example: image
         /// </param>
+        /// <param name="expand">
+        /// Fields to expand in the response. Use endpoints to include each app's registered route-level endpoint ids.<br/>
+        /// Example: [endpoints]
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.ServerlessListAppsResponse>> ServerlessListAppsAsResponseAsync(
             string? environment = default,
             string? search = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -113,7 +132,8 @@ namespace Fal
             PrepareServerlessListAppsArguments(
                 httpClient: HttpClient,
                 environment: ref environment,
-                search: ref search);
+                search: ref search,
+                expand: ref expand);
 
 
             var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
@@ -144,6 +164,7 @@ namespace Fal
                             __pathBuilder
                                 .AddOptionalParameter("environment", environment)
                                 .AddOptionalParameter("search", search)
+                                .AddOptionalParameter("expand", expand?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -186,7 +207,8 @@ namespace Fal
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     environment: environment,
-                    search: search);
+                    search: search,
+                    expand: expand);
 
                 return __httpRequest;
             }
