@@ -127,6 +127,14 @@ namespace Fal
         public required string UpdatedAt { get; set; }
 
         /// <summary>
+        /// Registered route-level endpoint ids for this app (only present when expand=endpoints). Multi-route apps record traffic under these ids, not the bare endpoint_id.<br/>
+        /// Example: [user_123/my-app, user_123/my-app/turbo]
+        /// </summary>
+        /// <example>[user_123/my-app, user_123/my-app/turbo]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("endpoints")]
+        public global::System.Collections.Generic.IList<string>? Endpoints { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -187,6 +195,10 @@ namespace Fal
         /// Last update timestamp (UTC ISO8601)<br/>
         /// Example: 2026-07-01T12:00:00Z
         /// </param>
+        /// <param name="endpoints">
+        /// Registered route-level endpoint ids for this app (only present when expand=endpoints). Multi-route apps record traffic under these ids, not the bare endpoint_id.<br/>
+        /// Example: [user_123/my-app, user_123/my-app/turbo]
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -203,7 +215,8 @@ namespace Fal
             double requestTimeout,
             double startupTimeout,
             global::System.Collections.Generic.IList<string> validRegions,
-            string updatedAt)
+            string updatedAt,
+            global::System.Collections.Generic.IList<string>? endpoints)
         {
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
@@ -218,6 +231,7 @@ namespace Fal
             this.StartupTimeout = startupTimeout;
             this.ValidRegions = validRegions ?? throw new global::System.ArgumentNullException(nameof(validRegions));
             this.UpdatedAt = updatedAt ?? throw new global::System.ArgumentNullException(nameof(updatedAt));
+            this.Endpoints = endpoints;
         }
 
         /// <summary>
