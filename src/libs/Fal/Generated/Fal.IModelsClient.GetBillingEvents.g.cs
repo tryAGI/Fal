@@ -8,9 +8,11 @@ namespace Fal
         /// Billing Events<br/>
         /// Returns paginated individual billing event records with filters<br/>
         /// for endpoint and date range. Each record includes the request ID, timestamp,<br/>
-        /// endpoint, and output units billed.<br/>
+        /// endpoint, output units billed, and a cost breakdown in USD (cost_subtotal,<br/>
+        /// cost_discount, cost_total; cost_estimate_nano_usd carries cost_total in nano USD).<br/>
         /// **Key Features:**<br/>
         /// - Individual billing event records for each API request<br/>
+        /// - Per-request cost breakdown before and after discounts<br/>
         /// - Flexible date range filtering<br/>
         /// - Optional endpoint filtering<br/>
         /// - Cursor-based pagination for efficient large dataset queries<br/>
@@ -79,9 +81,11 @@ namespace Fal
         /// Billing Events<br/>
         /// Returns paginated individual billing event records with filters<br/>
         /// for endpoint and date range. Each record includes the request ID, timestamp,<br/>
-        /// endpoint, and output units billed.<br/>
+        /// endpoint, output units billed, and a cost breakdown in USD (cost_subtotal,<br/>
+        /// cost_discount, cost_total; cost_estimate_nano_usd carries cost_total in nano USD).<br/>
         /// **Key Features:**<br/>
         /// - Individual billing event records for each API request<br/>
+        /// - Per-request cost breakdown before and after discounts<br/>
         /// - Flexible date range filtering<br/>
         /// - Optional endpoint filtering<br/>
         /// - Cursor-based pagination for efficient large dataset queries<br/>

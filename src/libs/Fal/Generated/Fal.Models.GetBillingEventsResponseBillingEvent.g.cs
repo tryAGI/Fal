@@ -48,7 +48,28 @@ namespace Fal
         public double? PercentDiscount { get; set; }
 
         /// <summary>
-        /// Estimated cost in nano USD (1 USD = 1,000,000,000 nano USD)
+        /// Cost before discounts in USD (output_units × unit_price)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_subtotal")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostSubtotal { get; set; }
+
+        /// <summary>
+        /// Discount applied to this request in USD (cost_subtotal − cost_total)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_discount")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostDiscount { get; set; }
+
+        /// <summary>
+        /// Amount charged after discounts in USD (cost_subtotal − cost_discount)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_total")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostTotal { get; set; }
+
+        /// <summary>
+        /// Amount charged after discounts in nano USD — the same charge as cost_total (1 USD = 1,000,000,000 nano USD)
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cost_estimate_nano_usd")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -84,8 +105,17 @@ namespace Fal
         /// <param name="timestamp">
         /// Request timestamp in ISO8601 format
         /// </param>
+        /// <param name="costSubtotal">
+        /// Cost before discounts in USD (output_units × unit_price)
+        /// </param>
+        /// <param name="costDiscount">
+        /// Discount applied to this request in USD (cost_subtotal − cost_total)
+        /// </param>
+        /// <param name="costTotal">
+        /// Amount charged after discounts in USD (cost_subtotal − cost_discount)
+        /// </param>
         /// <param name="costEstimateNanoUsd">
-        /// Estimated cost in nano USD (1 USD = 1,000,000,000 nano USD)
+        /// Amount charged after discounts in nano USD — the same charge as cost_total (1 USD = 1,000,000,000 nano USD)
         /// </param>
         /// <param name="outputUnits">
         /// Custom billing units for this request
@@ -109,6 +139,9 @@ namespace Fal
             string requestId,
             string endpointId,
             string timestamp,
+            double costSubtotal,
+            double costDiscount,
+            double costTotal,
             double costEstimateNanoUsd,
             double? outputUnits,
             double? unitPrice,
@@ -122,6 +155,9 @@ namespace Fal
             this.OutputUnits = outputUnits;
             this.UnitPrice = unitPrice;
             this.PercentDiscount = percentDiscount;
+            this.CostSubtotal = costSubtotal;
+            this.CostDiscount = costDiscount;
+            this.CostTotal = costTotal;
             this.CostEstimateNanoUsd = costEstimateNanoUsd;
             this.AuthMethod = authMethod;
             this.AuthMethodStructured = authMethodStructured;
