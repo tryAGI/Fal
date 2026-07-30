@@ -2049,6 +2049,34 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeNullableJsonConverter),
@@ -5185,6 +5213,34 @@ namespace Fal
             typeof(global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6JsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6NullableJsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter),
 
@@ -8323,6 +8379,34 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeNullableJsonConverter),
@@ -11460,6 +11544,34 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeNullableJsonConverter),
@@ -12142,6 +12254,28 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsResponse7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsResponseError6))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsResponseErrorType6), TypeInfoPropertyName = "ServerlessListAppEventsResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessListAppRevisionsResponseRevision>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseRevision))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseRevisionStatus), TypeInfoPropertyName = "ServerlessListAppRevisionsResponseRevisionStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType), TypeInfoPropertyName = "ServerlessListAppRevisionsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType2), TypeInfoPropertyName = "ServerlessListAppRevisionsResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType3), TypeInfoPropertyName = "ServerlessListAppRevisionsResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponse5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType4), TypeInfoPropertyName = "ServerlessListAppRevisionsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType5), TypeInfoPropertyName = "ServerlessListAppRevisionsResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType6), TypeInfoPropertyName = "ServerlessListAppRevisionsResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessListRootResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRootResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRootResponse))]
@@ -12528,28 +12662,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListAssetCollectionAssetsTagMode?), TypeInfoPropertyName = "NullableListAssetCollectionAssetsTagMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsTimeframe?), TypeInfoPropertyName = "NullableServerlessGetAnalyticsTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsBoundToTimeframe?), TypeInfoPropertyName = "NullableServerlessGetAnalyticsBoundToTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetRunnerHistoryTimeframe?), TypeInfoPropertyName = "NullableServerlessGetRunnerHistoryTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetRunnerHistoryAggregation?), TypeInfoPropertyName = "NullableServerlessGetRunnerHistoryAggregation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.ServerlessListAppEventsCategory2?, global::System.Collections.Generic.IList<global::Fal.ServerlessListAppEventsCategoryItem>>?), TypeInfoPropertyName = "NullableAnyOfServerlessListAppEventsCategory2IListServerlessListAppEventsCategoryItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsCategory2?), TypeInfoPropertyName = "NullableServerlessListAppEventsCategory22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsCategoryItem?), TypeInfoPropertyName = "NullableServerlessListAppEventsCategoryItem2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryRunSource?), TypeInfoPropertyName = "NullableServerlessLogsHistoryRunSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamRunSource?), TypeInfoPropertyName = "NullableServerlessLogsStreamRunSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointStatus?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointSortBy?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointSortBy2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageTimeframe?), TypeInfoPropertyName = "NullableServerlessGetUsageTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageBoundToTimeframe?), TypeInfoPropertyName = "NullableServerlessGetUsageBoundToTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportSource?), TypeInfoPropertyName = "NullableGetFocusReportSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportTimeframe?), TypeInfoPropertyName = "NullableGetFocusReportTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportBoundToTimeframe?), TypeInfoPropertyName = "NullableGetFocusReportBoundToTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageTimeframe?), TypeInfoPropertyName = "NullableGetOrganizationUsageTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageBoundToTimeframe?), TypeInfoPropertyName = "NullableGetOrganizationUsageBoundToTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelMetadataStatus?), TypeInfoPropertyName = "NullableGetModelsResponseModelMetadataStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelMetadataLicenseType?), TypeInfoPropertyName = "NullableGetModelsResponseModelMetadataLicenseType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelMetadataKind?), TypeInfoPropertyName = "NullableGetModelsResponseModelMetadataKind2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>?), TypeInfoPropertyName = "NullableAnyOfGetModelsResponseModelOpenapiVariant1GetModelsResponseModelOpenapiVariant22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>?), TypeInfoPropertyName = "NullableAnyOfGetModelsResponseModelEnterpriseStatusEnumGetModelsResponseModelEnterpriseStatusEnum22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum?), TypeInfoPropertyName = "NullableGetModelsResponseModelEnterpriseStatusEnum2")]
     internal sealed partial class SourceGenerationContextChunk3 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -14597,6 +14709,34 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeNullableJsonConverter),
@@ -15191,6 +15331,28 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_898695ff2bd5345d")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetRunnerHistoryTimeframe?), TypeInfoPropertyName = "NullableServerlessGetRunnerHistoryTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetRunnerHistoryAggregation?), TypeInfoPropertyName = "NullableServerlessGetRunnerHistoryAggregation2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.ServerlessListAppEventsCategory2?, global::System.Collections.Generic.IList<global::Fal.ServerlessListAppEventsCategoryItem>>?), TypeInfoPropertyName = "NullableAnyOfServerlessListAppEventsCategory2IListServerlessListAppEventsCategoryItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsCategory2?), TypeInfoPropertyName = "NullableServerlessListAppEventsCategory22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsCategoryItem?), TypeInfoPropertyName = "NullableServerlessListAppEventsCategoryItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryRunSource?), TypeInfoPropertyName = "NullableServerlessLogsHistoryRunSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamRunSource?), TypeInfoPropertyName = "NullableServerlessLogsStreamRunSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointStatus?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointSortBy?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointSortBy2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageTimeframe?), TypeInfoPropertyName = "NullableServerlessGetUsageTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageBoundToTimeframe?), TypeInfoPropertyName = "NullableServerlessGetUsageBoundToTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportSource?), TypeInfoPropertyName = "NullableGetFocusReportSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportTimeframe?), TypeInfoPropertyName = "NullableGetFocusReportTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportBoundToTimeframe?), TypeInfoPropertyName = "NullableGetFocusReportBoundToTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageTimeframe?), TypeInfoPropertyName = "NullableGetOrganizationUsageTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageBoundToTimeframe?), TypeInfoPropertyName = "NullableGetOrganizationUsageBoundToTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelMetadataStatus?), TypeInfoPropertyName = "NullableGetModelsResponseModelMetadataStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelMetadataLicenseType?), TypeInfoPropertyName = "NullableGetModelsResponseModelMetadataLicenseType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelMetadataKind?), TypeInfoPropertyName = "NullableGetModelsResponseModelMetadataKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>?), TypeInfoPropertyName = "NullableAnyOfGetModelsResponseModelOpenapiVariant1GetModelsResponseModelOpenapiVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>?), TypeInfoPropertyName = "NullableAnyOfGetModelsResponseModelEnterpriseStatusEnumGetModelsResponseModelEnterpriseStatusEnum22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum?), TypeInfoPropertyName = "NullableGetModelsResponseModelEnterpriseStatusEnum2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType2?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType3?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType32")]
@@ -15654,39 +15816,17 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessListAppEventsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsResponseErrorType5?), TypeInfoPropertyName = "NullableServerlessListAppEventsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppEventsResponseErrorType6?), TypeInfoPropertyName = "NullableServerlessListAppEventsResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseRevisionStatus?), TypeInfoPropertyName = "NullableServerlessListAppRevisionsResponseRevisionStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType?), TypeInfoPropertyName = "NullableServerlessListAppRevisionsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessListAppRevisionsResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessListAppRevisionsResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessListAppRevisionsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType5?), TypeInfoPropertyName = "NullableServerlessListAppRevisionsResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListAppRevisionsResponseErrorType6?), TypeInfoPropertyName = "NullableServerlessListAppRevisionsResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRootResponseErrorType?), TypeInfoPropertyName = "NullableServerlessListRootResponseErrorType2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRootResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessListRootResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRootResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessListRootResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListDirectoryResponseErrorType?), TypeInfoPropertyName = "NullableServerlessListDirectoryResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListDirectoryResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessListDirectoryResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListDirectoryResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessListDirectoryResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessDownloadFileResponseErrorType?), TypeInfoPropertyName = "NullableServerlessDownloadFileResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessDownloadFileResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessDownloadFileResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessDownloadFileResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessDownloadFileResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessDownloadFileResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessDownloadFileResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadFromUrlResponseErrorType?), TypeInfoPropertyName = "NullableServerlessUploadFromUrlResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadFromUrlResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessUploadFromUrlResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadFromUrlResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessUploadFromUrlResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadLocalFileResponseErrorType?), TypeInfoPropertyName = "NullableServerlessUploadLocalFileResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadLocalFileResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessUploadLocalFileResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadLocalFileResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessUploadLocalFileResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadLocalFileResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessUploadLocalFileResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetMetricsResponseErrorType?), TypeInfoPropertyName = "NullableServerlessGetMetricsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetMetricsResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessGetMetricsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetMetricsResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessGetMetricsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryResponseErrorType?), TypeInfoPropertyName = "NullableServerlessLogsHistoryResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessLogsHistoryResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessLogsHistoryResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamResponseErrorType?), TypeInfoPropertyName = "NullableServerlessLogsStreamResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessLogsStreamResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessLogsStreamResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType5?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType6?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType62")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType?), TypeInfoPropertyName = "NullableServerlessGetUsageResponseErrorType2_3")]
     internal sealed partial class SourceGenerationContextChunk4 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -17734,6 +17874,34 @@ namespace Fal
 
             typeof(global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6NullableJsonConverter),
 
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeNullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5NullableJsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6JsonConverter),
+
+            typeof(global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6NullableJsonConverter),
+
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter),
 
             typeof(global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeNullableJsonConverter),
@@ -18328,6 +18496,35 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_898695ff2bd5345d")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListDirectoryResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessListDirectoryResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListDirectoryResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessListDirectoryResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessDownloadFileResponseErrorType?), TypeInfoPropertyName = "NullableServerlessDownloadFileResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessDownloadFileResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessDownloadFileResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessDownloadFileResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessDownloadFileResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessDownloadFileResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessDownloadFileResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadFromUrlResponseErrorType?), TypeInfoPropertyName = "NullableServerlessUploadFromUrlResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadFromUrlResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessUploadFromUrlResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadFromUrlResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessUploadFromUrlResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadLocalFileResponseErrorType?), TypeInfoPropertyName = "NullableServerlessUploadLocalFileResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadLocalFileResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessUploadLocalFileResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadLocalFileResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessUploadLocalFileResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessUploadLocalFileResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessUploadLocalFileResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetMetricsResponseErrorType?), TypeInfoPropertyName = "NullableServerlessGetMetricsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetMetricsResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessGetMetricsResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetMetricsResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessGetMetricsResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryResponseErrorType?), TypeInfoPropertyName = "NullableServerlessLogsHistoryResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessLogsHistoryResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsHistoryResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessLogsHistoryResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamResponseErrorType?), TypeInfoPropertyName = "NullableServerlessLogsStreamResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessLogsStreamResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessLogsStreamResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType5?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType6?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType?), TypeInfoPropertyName = "NullableServerlessGetUsageResponseErrorType2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessGetUsageResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessGetUsageResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessGetUsageResponseErrorType42")]
@@ -18462,6 +18659,7 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListAppsResponseApp>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessGetRunnerHistoryResponseHistoryItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListAppEventsResponseEvent>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListAppRevisionsResponseRevision>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListRootResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListDirectoryResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessLogsHistoryResponseItem>))]
@@ -19543,6 +19741,20 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType5NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6JsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppEventsResponseErrorType6NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseRevisionStatusNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType2NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType3NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType4NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType5NullableJsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6JsonConverter());
+            options.Converters.Add(new global::Fal.JsonConverters.ServerlessListAppRevisionsResponseErrorType6NullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorTypeNullableJsonConverter());
             options.Converters.Add(new global::Fal.JsonConverters.ServerlessListRootResponseErrorType2JsonConverter());
