@@ -611,7 +611,7 @@
       "Slug": "serverlessdownloadfile",
       "Description": "Downloads a file by its path. Proxies the underlying storage response.",
       "Language": "http",
-      "Code": "### Download file\n# @name serverlessDownloadFile\nGET {{host}}/serverless/files/file/{{file}}\nAuthorization: Bearer {{token}}\nAccept: application/json, application/octet-stream\n\n## Responses\n# 200\n# Description: File stream\n# Content-Type: application/octet-stream\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 404\n# Description: Resource not found\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
+      "Code": "### Download file\n# @name serverlessDownloadFile\nGET {{host}}/serverless/files/file/{{file}}\nAuthorization: Bearer {{token}}\nAccept: application/json, application/octet-stream\n\n## Responses\n# 200\n# Description: File stream\n# Content-Type: application/octet-stream\n# 400\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 404\n# Description: Resource not found\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
       "Format": "http",
       "OperationId": "serverlessDownloadFile",
       "Setup": null
@@ -721,7 +721,7 @@
       "Slug": "serverlesslistdirectory",
       "Description": "Lists files and folders within the specified directory path.",
       "Language": "http",
-      "Code": "### List files (directory)\n# @name serverlessListDirectory\nGET {{host}}/serverless/files/list/{{dir}}\nAuthorization: Bearer {{token}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: Successfully listed files\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
+      "Code": "### List files (directory)\n# @name serverlessListDirectory\nGET {{host}}/serverless/files/list/{{dir}}\nAuthorization: Bearer {{token}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: Successfully listed files\n# Content-Type: application/json\n# 400\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
       "Format": "http",
       "OperationId": "serverlessListDirectory",
       "Setup": null
@@ -776,7 +776,7 @@
       "Slug": "serverlessuploadfromurl",
       "Description": "Creates a new file at the target path by downloading it from the provided URL.",
       "Language": "http",
-      "Code": "### Upload file from URL\n# @name serverlessUploadFromUrl\nPOST {{host}}/serverless/files/file/url/{{file}}\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022url\u0022: \u0022https://example.com/cat.jpg\u0022\n}\n\n## Responses\n# 200\n# Description: Upload initiated\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
+      "Code": "### Upload file from URL\n# @name serverlessUploadFromUrl\nPOST {{host}}/serverless/files/file/url/{{file}}\nAuthorization: Bearer {{token}}\nContent-Type: application/json\nAccept: application/json\n\n{\n  \u0022url\u0022: \u0022https://example.com/cat.jpg\u0022\n}\n\n## Responses\n# 200\n# Description: Upload initiated\n# Content-Type: application/json\n# 400\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
       "Format": "http",
       "OperationId": "serverlessUploadFromUrl",
       "Setup": null

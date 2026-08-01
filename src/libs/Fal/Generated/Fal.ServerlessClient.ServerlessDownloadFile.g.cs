@@ -332,24 +332,61 @@ namespace Fal
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Invalid request parameters
+                            if ((int)__response.StatusCode == 400)
+                            {
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
+                                global::Fal.ServerlessDownloadFileResponse2? __value_400 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_400 = global::Fal.ServerlessDownloadFileResponse2.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_400 = global::Fal.ServerlessDownloadFileResponse2.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_400 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse2>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
                             // Authentication required
                             if ((int)__response.StatusCode == 401)
                             {
                                 string? __content_401 = null;
                                 global::System.Exception? __exception_401 = null;
-                                global::Fal.ServerlessDownloadFileResponse2? __value_401 = null;
+                                global::Fal.ServerlessDownloadFileResponse3? __value_401 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Fal.ServerlessDownloadFileResponse2.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = global::Fal.ServerlessDownloadFileResponse3.FromJson(__content_401, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = global::Fal.ServerlessDownloadFileResponse2.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = global::Fal.ServerlessDownloadFileResponse3.FromJson(__content_401, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -358,7 +395,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse2>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse3>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
@@ -374,19 +411,19 @@ namespace Fal
                             {
                                 string? __content_404 = null;
                                 global::System.Exception? __exception_404 = null;
-                                global::Fal.ServerlessDownloadFileResponse3? __value_404 = null;
+                                global::Fal.ServerlessDownloadFileResponse4? __value_404 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Fal.ServerlessDownloadFileResponse3.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = global::Fal.ServerlessDownloadFileResponse4.FromJson(__content_404, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = global::Fal.ServerlessDownloadFileResponse3.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = global::Fal.ServerlessDownloadFileResponse4.FromJson(__content_404, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -395,7 +432,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse3>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse4>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
@@ -411,19 +448,19 @@ namespace Fal
                             {
                                 string? __content_429 = null;
                                 global::System.Exception? __exception_429 = null;
-                                global::Fal.ServerlessDownloadFileResponse4? __value_429 = null;
+                                global::Fal.ServerlessDownloadFileResponse5? __value_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_429 = global::Fal.ServerlessDownloadFileResponse4.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.ServerlessDownloadFileResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_429 = global::Fal.ServerlessDownloadFileResponse4.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.ServerlessDownloadFileResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -432,7 +469,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse4>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse5>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
@@ -448,19 +485,19 @@ namespace Fal
                             {
                                 string? __content_500 = null;
                                 global::System.Exception? __exception_500 = null;
-                                global::Fal.ServerlessDownloadFileResponse5? __value_500 = null;
+                                global::Fal.ServerlessDownloadFileResponse6? __value_500 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_500 = global::Fal.ServerlessDownloadFileResponse5.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.ServerlessDownloadFileResponse6.FromJson(__content_500, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_500 = global::Fal.ServerlessDownloadFileResponse5.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.ServerlessDownloadFileResponse6.FromJson(__content_500, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -469,7 +506,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse5>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse6>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
@@ -798,24 +835,61 @@ namespace Fal
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Invalid request parameters
+                            if ((int)__response.StatusCode == 400)
+                            {
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
+                                global::Fal.ServerlessDownloadFileResponse2? __value_400 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_400 = global::Fal.ServerlessDownloadFileResponse2.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_400 = global::Fal.ServerlessDownloadFileResponse2.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_400 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse2>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
                             // Authentication required
                             if ((int)__response.StatusCode == 401)
                             {
                                 string? __content_401 = null;
                                 global::System.Exception? __exception_401 = null;
-                                global::Fal.ServerlessDownloadFileResponse2? __value_401 = null;
+                                global::Fal.ServerlessDownloadFileResponse3? __value_401 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Fal.ServerlessDownloadFileResponse2.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = global::Fal.ServerlessDownloadFileResponse3.FromJson(__content_401, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = global::Fal.ServerlessDownloadFileResponse2.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = global::Fal.ServerlessDownloadFileResponse3.FromJson(__content_401, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -824,7 +898,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse2>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse3>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
@@ -840,19 +914,19 @@ namespace Fal
                             {
                                 string? __content_404 = null;
                                 global::System.Exception? __exception_404 = null;
-                                global::Fal.ServerlessDownloadFileResponse3? __value_404 = null;
+                                global::Fal.ServerlessDownloadFileResponse4? __value_404 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = global::Fal.ServerlessDownloadFileResponse3.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = global::Fal.ServerlessDownloadFileResponse4.FromJson(__content_404, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = global::Fal.ServerlessDownloadFileResponse3.FromJson(__content_404, JsonSerializerContext);
+                                        __value_404 = global::Fal.ServerlessDownloadFileResponse4.FromJson(__content_404, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -861,7 +935,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse3>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse4>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
@@ -877,19 +951,19 @@ namespace Fal
                             {
                                 string? __content_429 = null;
                                 global::System.Exception? __exception_429 = null;
-                                global::Fal.ServerlessDownloadFileResponse4? __value_429 = null;
+                                global::Fal.ServerlessDownloadFileResponse5? __value_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_429 = global::Fal.ServerlessDownloadFileResponse4.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.ServerlessDownloadFileResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_429 = global::Fal.ServerlessDownloadFileResponse4.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.ServerlessDownloadFileResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -898,7 +972,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse4>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse5>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
@@ -914,19 +988,19 @@ namespace Fal
                             {
                                 string? __content_500 = null;
                                 global::System.Exception? __exception_500 = null;
-                                global::Fal.ServerlessDownloadFileResponse5? __value_500 = null;
+                                global::Fal.ServerlessDownloadFileResponse6? __value_500 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_500 = global::Fal.ServerlessDownloadFileResponse5.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.ServerlessDownloadFileResponse6.FromJson(__content_500, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_500 = global::Fal.ServerlessDownloadFileResponse5.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.ServerlessDownloadFileResponse6.FromJson(__content_500, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -935,7 +1009,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse5>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessDownloadFileResponse6>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
