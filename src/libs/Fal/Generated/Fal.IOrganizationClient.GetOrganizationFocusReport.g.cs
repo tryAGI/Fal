@@ -2,42 +2,43 @@
 
 namespace Fal
 {
-    public partial interface IAccountClient
+    public partial interface IOrganizationClient
     {
         /// <summary>
-        /// FOCUS Report<br/>
-        /// Returns a FOCUS compliant billing report as a CSV download.<br/>
-        /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// Organization FOCUS Report<br/>
+        /// Returns a FOCUS compliant billing report as a CSV download, spanning every team<br/>
+        /// in your organization. Each invoiced Orb customer is reported as a<br/>
+        /// `BillingAccount`. Under shared (pooled) billing — one Orb customer covering<br/>
+        /// multiple teams — each row is additionally attributed to the calling team via the<br/>
+        /// `SubAccountId` / `SubAccountName` columns.<br/>
+        /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// Must be called with an admin API key on the organization's root team.<br/>
         /// Supports two data sources:<br/>
-        /// - **invoice**: Finalized invoice data for a billing month. Includes usage charges, credits, and taxes.<br/>
-        /// - **estimate**: Real-time usage estimates for a date range. Pre-invoice data that may change once invoiced.<br/>
-        /// The report follows the [FinOps FOCUS specification](https://focus.finops.org/) for cloud billing data interoperability.<br/>
+        /// - **estimate**: Real-time usage estimates for a date range. Under pooled billing every row is attributed to the calling team.<br/>
+        /// - **invoice**: Finalized invoice data for a billing month. Under pooled billing, per-team `SubAccount` attribution is available on endpoint (Model API) lines that carry a caller; app and compute lines carry no caller and have no SubAccount.<br/>
+        /// Use `team_username` to restrict the report to a single team. Under shared<br/>
+        /// (pooled) billing this is rejected for `source=invoice` — the invoice is issued<br/>
+        /// to one Orb customer shared across teams and cannot be split per team; use<br/>
+        /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
-        /// **Organization roots** may pass `expand=organization` to report the whole<br/>
-        /// organization — each team as a `BillingAccount`, plus per-team `SubAccount`<br/>
-        /// attribution under shared (pooled) billing. Without it, the report is<br/>
-        /// single-account, and the estimate covers only the calling account. Note: under<br/>
-        /// pooled billing the **invoice** source already spans all pooled teams even<br/>
-        /// without `expand` (they share one Orb customer); `expand=organization` adds the<br/>
-        /// per-team `SubAccount` breakdown.<br/>
         ///     
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
-        /// Example: invoice
+        /// Example: estimate
         /// </param>
         /// <param name="billingMonth">
-        /// Billing month (YYYY-MM) — selects invoices by their issue date (when the invoice was issued). Used with source=invoice. Defaults to the current billing month.<br/>
+        /// Invoice billing month (YYYY-MM). The month the invoice was issued (e.g. '2025-02' for January charges). Used with source=invoice. Defaults to most recent available billing month.<br/>
         /// Example: 2025-02
         /// </param>
         /// <param name="chargeMonth">
         /// Charge month (YYYY-MM) — selects line items by the period charges were incurred, capturing them even when split across invoices issued in different months. Alternative to billing_month. Used with source=invoice.<br/>
         /// Example: 2025-01
         /// </param>
-        /// <param name="expand">
-        /// Expand the report to the whole organization. Only valid for an organization root; each team is reported as a BillingAccount and, under shared (pooled) billing, per-team SubAccount attribution is added. Omit for a single-account report.<br/>
-        /// Example: organization
+        /// <param name="teamUsername">
+        /// Restrict the report to a single team (workspace nickname) in the organization. Omit to report across all teams.<br/>
+        /// Example: acme-ml-team
         /// </param>
         /// <param name="start">
         /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>
@@ -64,52 +65,53 @@ namespace Fal
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
-        global::System.Threading.Tasks.Task<string> GetFocusReportAsync(
-            global::Fal.GetFocusReportSource source,
+        global::System.Threading.Tasks.Task<string> GetOrganizationFocusReportAsync(
+            global::Fal.GetOrganizationFocusReportSource source,
             string? billingMonth = default,
             string? chargeMonth = default,
-            global::Fal.GetFocusReportExpand? expand = default,
+            string? teamUsername = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
             string? timezone = default,
-            global::Fal.GetFocusReportTimeframe? timeframe = default,
-            global::Fal.GetFocusReportBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.GetOrganizationFocusReportTimeframe? timeframe = default,
+            global::Fal.GetOrganizationFocusReportBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// FOCUS Report<br/>
-        /// Returns a FOCUS compliant billing report as a CSV download.<br/>
-        /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// Organization FOCUS Report<br/>
+        /// Returns a FOCUS compliant billing report as a CSV download, spanning every team<br/>
+        /// in your organization. Each invoiced Orb customer is reported as a<br/>
+        /// `BillingAccount`. Under shared (pooled) billing — one Orb customer covering<br/>
+        /// multiple teams — each row is additionally attributed to the calling team via the<br/>
+        /// `SubAccountId` / `SubAccountName` columns.<br/>
+        /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// Must be called with an admin API key on the organization's root team.<br/>
         /// Supports two data sources:<br/>
-        /// - **invoice**: Finalized invoice data for a billing month. Includes usage charges, credits, and taxes.<br/>
-        /// - **estimate**: Real-time usage estimates for a date range. Pre-invoice data that may change once invoiced.<br/>
-        /// The report follows the [FinOps FOCUS specification](https://focus.finops.org/) for cloud billing data interoperability.<br/>
+        /// - **estimate**: Real-time usage estimates for a date range. Under pooled billing every row is attributed to the calling team.<br/>
+        /// - **invoice**: Finalized invoice data for a billing month. Under pooled billing, per-team `SubAccount` attribution is available on endpoint (Model API) lines that carry a caller; app and compute lines carry no caller and have no SubAccount.<br/>
+        /// Use `team_username` to restrict the report to a single team. Under shared<br/>
+        /// (pooled) billing this is rejected for `source=invoice` — the invoice is issued<br/>
+        /// to one Orb customer shared across teams and cannot be split per team; use<br/>
+        /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
-        /// **Organization roots** may pass `expand=organization` to report the whole<br/>
-        /// organization — each team as a `BillingAccount`, plus per-team `SubAccount`<br/>
-        /// attribution under shared (pooled) billing. Without it, the report is<br/>
-        /// single-account, and the estimate covers only the calling account. Note: under<br/>
-        /// pooled billing the **invoice** source already spans all pooled teams even<br/>
-        /// without `expand` (they share one Orb customer); `expand=organization` adds the<br/>
-        /// per-team `SubAccount` breakdown.<br/>
         ///     
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
-        /// Example: invoice
+        /// Example: estimate
         /// </param>
         /// <param name="billingMonth">
-        /// Billing month (YYYY-MM) — selects invoices by their issue date (when the invoice was issued). Used with source=invoice. Defaults to the current billing month.<br/>
+        /// Invoice billing month (YYYY-MM). The month the invoice was issued (e.g. '2025-02' for January charges). Used with source=invoice. Defaults to most recent available billing month.<br/>
         /// Example: 2025-02
         /// </param>
         /// <param name="chargeMonth">
         /// Charge month (YYYY-MM) — selects line items by the period charges were incurred, capturing them even when split across invoices issued in different months. Alternative to billing_month. Used with source=invoice.<br/>
         /// Example: 2025-01
         /// </param>
-        /// <param name="expand">
-        /// Expand the report to the whole organization. Only valid for an organization root; each team is reported as a BillingAccount and, under shared (pooled) billing, per-team SubAccount attribution is added. Omit for a single-account report.<br/>
-        /// Example: organization
+        /// <param name="teamUsername">
+        /// Restrict the report to a single team (workspace nickname) in the organization. Omit to report across all teams.<br/>
+        /// Example: acme-ml-team
         /// </param>
         /// <param name="start">
         /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>
@@ -136,16 +138,16 @@ namespace Fal
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<string>> GetFocusReportAsResponseAsync(
-            global::Fal.GetFocusReportSource source,
+        global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<string>> GetOrganizationFocusReportAsResponseAsync(
+            global::Fal.GetOrganizationFocusReportSource source,
             string? billingMonth = default,
             string? chargeMonth = default,
-            global::Fal.GetFocusReportExpand? expand = default,
+            string? teamUsername = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
             string? timezone = default,
-            global::Fal.GetFocusReportTimeframe? timeframe = default,
-            global::Fal.GetFocusReportBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.GetOrganizationFocusReportTimeframe? timeframe = default,
+            global::Fal.GetOrganizationFocusReportBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
