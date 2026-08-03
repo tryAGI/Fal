@@ -3,11 +3,11 @@
 
 namespace Fal
 {
-    public partial class AccountClient
+    public partial class OrganizationClient
     {
 
 
-        private static readonly global::Fal.EndPointSecurityRequirement s_GetFocusReportSecurityRequirement0 =
+        private static readonly global::Fal.EndPointSecurityRequirement s_GetOrganizationFocusReportSecurityRequirement0 =
             new global::Fal.EndPointSecurityRequirement
             {
                 Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
@@ -21,76 +21,77 @@ namespace Fal
                     },
                 },
             };
-        private static readonly global::Fal.EndPointSecurityRequirement[] s_GetFocusReportSecurityRequirements =
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_GetOrganizationFocusReportSecurityRequirements =
             new global::Fal.EndPointSecurityRequirement[]
-            {                s_GetFocusReportSecurityRequirement0,
+            {                s_GetOrganizationFocusReportSecurityRequirement0,
             };
-        partial void PrepareGetFocusReportArguments(
+        partial void PrepareGetOrganizationFocusReportArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref global::Fal.GetFocusReportSource source,
+            ref global::Fal.GetOrganizationFocusReportSource source,
             ref string? billingMonth,
             ref string? chargeMonth,
-            ref global::Fal.GetFocusReportExpand? expand,
+            ref string? teamUsername,
             ref global::Fal.AnyOf<global::System.DateTime?, string>? start,
             ref global::Fal.AnyOf<global::System.DateTime?, string>? end,
             ref string? timezone,
-            ref global::Fal.GetFocusReportTimeframe? timeframe,
-            ref global::Fal.GetFocusReportBoundToTimeframe? boundToTimeframe);
-        partial void PrepareGetFocusReportRequest(
+            ref global::Fal.GetOrganizationFocusReportTimeframe? timeframe,
+            ref global::Fal.GetOrganizationFocusReportBoundToTimeframe? boundToTimeframe);
+        partial void PrepareGetOrganizationFocusReportRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Fal.GetFocusReportSource source,
+            global::Fal.GetOrganizationFocusReportSource source,
             string? billingMonth,
             string? chargeMonth,
-            global::Fal.GetFocusReportExpand? expand,
+            string? teamUsername,
             global::Fal.AnyOf<global::System.DateTime?, string>? start,
             global::Fal.AnyOf<global::System.DateTime?, string>? end,
             string? timezone,
-            global::Fal.GetFocusReportTimeframe? timeframe,
-            global::Fal.GetFocusReportBoundToTimeframe? boundToTimeframe);
-        partial void ProcessGetFocusReportResponse(
+            global::Fal.GetOrganizationFocusReportTimeframe? timeframe,
+            global::Fal.GetOrganizationFocusReportBoundToTimeframe? boundToTimeframe);
+        partial void ProcessGetOrganizationFocusReportResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetFocusReportResponseContent(
+        partial void ProcessGetOrganizationFocusReportResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// FOCUS Report<br/>
-        /// Returns a FOCUS compliant billing report as a CSV download.<br/>
-        /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// Organization FOCUS Report<br/>
+        /// Returns a FOCUS compliant billing report as a CSV download, spanning every team<br/>
+        /// in your organization. Each invoiced Orb customer is reported as a<br/>
+        /// `BillingAccount`. Under shared (pooled) billing — one Orb customer covering<br/>
+        /// multiple teams — each row is additionally attributed to the calling team via the<br/>
+        /// `SubAccountId` / `SubAccountName` columns.<br/>
+        /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// Must be called with an admin API key on the organization's root team.<br/>
         /// Supports two data sources:<br/>
-        /// - **invoice**: Finalized invoice data for a billing month. Includes usage charges, credits, and taxes.<br/>
-        /// - **estimate**: Real-time usage estimates for a date range. Pre-invoice data that may change once invoiced.<br/>
-        /// The report follows the [FinOps FOCUS specification](https://focus.finops.org/) for cloud billing data interoperability.<br/>
+        /// - **estimate**: Real-time usage estimates for a date range. Under pooled billing every row is attributed to the calling team.<br/>
+        /// - **invoice**: Finalized invoice data for a billing month. Under pooled billing, per-team `SubAccount` attribution is available on endpoint (Model API) lines that carry a caller; app and compute lines carry no caller and have no SubAccount.<br/>
+        /// Use `team_username` to restrict the report to a single team. Under shared<br/>
+        /// (pooled) billing this is rejected for `source=invoice` — the invoice is issued<br/>
+        /// to one Orb customer shared across teams and cannot be split per team; use<br/>
+        /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
-        /// **Organization roots** may pass `expand=organization` to report the whole<br/>
-        /// organization — each team as a `BillingAccount`, plus per-team `SubAccount`<br/>
-        /// attribution under shared (pooled) billing. Without it, the report is<br/>
-        /// single-account, and the estimate covers only the calling account. Note: under<br/>
-        /// pooled billing the **invoice** source already spans all pooled teams even<br/>
-        /// without `expand` (they share one Orb customer); `expand=organization` adds the<br/>
-        /// per-team `SubAccount` breakdown.<br/>
         ///     
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
-        /// Example: invoice
+        /// Example: estimate
         /// </param>
         /// <param name="billingMonth">
-        /// Billing month (YYYY-MM) — selects invoices by their issue date (when the invoice was issued). Used with source=invoice. Defaults to the current billing month.<br/>
+        /// Invoice billing month (YYYY-MM). The month the invoice was issued (e.g. '2025-02' for January charges). Used with source=invoice. Defaults to most recent available billing month.<br/>
         /// Example: 2025-02
         /// </param>
         /// <param name="chargeMonth">
         /// Charge month (YYYY-MM) — selects line items by the period charges were incurred, capturing them even when split across invoices issued in different months. Alternative to billing_month. Used with source=invoice.<br/>
         /// Example: 2025-01
         /// </param>
-        /// <param name="expand">
-        /// Expand the report to the whole organization. Only valid for an organization root; each team is reported as a BillingAccount and, under shared (pooled) billing, per-team SubAccount attribution is added. Omit for a single-account report.<br/>
-        /// Example: organization
+        /// <param name="teamUsername">
+        /// Restrict the report to a single team (workspace nickname) in the organization. Omit to report across all teams.<br/>
+        /// Example: acme-ml-team
         /// </param>
         /// <param name="start">
         /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>
@@ -117,24 +118,24 @@ namespace Fal
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> GetFocusReportAsync(
-            global::Fal.GetFocusReportSource source,
+        public async global::System.Threading.Tasks.Task<string> GetOrganizationFocusReportAsync(
+            global::Fal.GetOrganizationFocusReportSource source,
             string? billingMonth = default,
             string? chargeMonth = default,
-            global::Fal.GetFocusReportExpand? expand = default,
+            string? teamUsername = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
             string? timezone = default,
-            global::Fal.GetFocusReportTimeframe? timeframe = default,
-            global::Fal.GetFocusReportBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.GetOrganizationFocusReportTimeframe? timeframe = default,
+            global::Fal.GetOrganizationFocusReportBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetFocusReportAsResponseAsync(
+            var __response = await GetOrganizationFocusReportAsResponseAsync(
                 source: source,
                 billingMonth: billingMonth,
                 chargeMonth: chargeMonth,
-                expand: expand,
+                teamUsername: teamUsername,
                 start: start,
                 end: end,
                 timezone: timezone,
@@ -147,39 +148,40 @@ namespace Fal
             return __response.Body;
         }
         /// <summary>
-        /// FOCUS Report<br/>
-        /// Returns a FOCUS compliant billing report as a CSV download.<br/>
-        /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// Organization FOCUS Report<br/>
+        /// Returns a FOCUS compliant billing report as a CSV download, spanning every team<br/>
+        /// in your organization. Each invoiced Orb customer is reported as a<br/>
+        /// `BillingAccount`. Under shared (pooled) billing — one Orb customer covering<br/>
+        /// multiple teams — each row is additionally attributed to the calling team via the<br/>
+        /// `SubAccountId` / `SubAccountName` columns.<br/>
+        /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
+        /// Must be called with an admin API key on the organization's root team.<br/>
         /// Supports two data sources:<br/>
-        /// - **invoice**: Finalized invoice data for a billing month. Includes usage charges, credits, and taxes.<br/>
-        /// - **estimate**: Real-time usage estimates for a date range. Pre-invoice data that may change once invoiced.<br/>
-        /// The report follows the [FinOps FOCUS specification](https://focus.finops.org/) for cloud billing data interoperability.<br/>
+        /// - **estimate**: Real-time usage estimates for a date range. Under pooled billing every row is attributed to the calling team.<br/>
+        /// - **invoice**: Finalized invoice data for a billing month. Under pooled billing, per-team `SubAccount` attribution is available on endpoint (Model API) lines that carry a caller; app and compute lines carry no caller and have no SubAccount.<br/>
+        /// Use `team_username` to restrict the report to a single team. Under shared<br/>
+        /// (pooled) billing this is rejected for `source=invoice` — the invoice is issued<br/>
+        /// to one Orb customer shared across teams and cannot be split per team; use<br/>
+        /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
-        /// **Organization roots** may pass `expand=organization` to report the whole<br/>
-        /// organization — each team as a `BillingAccount`, plus per-team `SubAccount`<br/>
-        /// attribution under shared (pooled) billing. Without it, the report is<br/>
-        /// single-account, and the estimate covers only the calling account. Note: under<br/>
-        /// pooled billing the **invoice** source already spans all pooled teams even<br/>
-        /// without `expand` (they share one Orb customer); `expand=organization` adds the<br/>
-        /// per-team `SubAccount` breakdown.<br/>
         ///     
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
-        /// Example: invoice
+        /// Example: estimate
         /// </param>
         /// <param name="billingMonth">
-        /// Billing month (YYYY-MM) — selects invoices by their issue date (when the invoice was issued). Used with source=invoice. Defaults to the current billing month.<br/>
+        /// Invoice billing month (YYYY-MM). The month the invoice was issued (e.g. '2025-02' for January charges). Used with source=invoice. Defaults to most recent available billing month.<br/>
         /// Example: 2025-02
         /// </param>
         /// <param name="chargeMonth">
         /// Charge month (YYYY-MM) — selects line items by the period charges were incurred, capturing them even when split across invoices issued in different months. Alternative to billing_month. Used with source=invoice.<br/>
         /// Example: 2025-01
         /// </param>
-        /// <param name="expand">
-        /// Expand the report to the whole organization. Only valid for an organization root; each team is reported as a BillingAccount and, under shared (pooled) billing, per-team SubAccount attribution is added. Omit for a single-account report.<br/>
-        /// Example: organization
+        /// <param name="teamUsername">
+        /// Restrict the report to a single team (workspace nickname) in the organization. Omit to report across all teams.<br/>
+        /// Example: acme-ml-team
         /// </param>
         /// <param name="start">
         /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>
@@ -206,27 +208,27 @@ namespace Fal
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<string>> GetFocusReportAsResponseAsync(
-            global::Fal.GetFocusReportSource source,
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<string>> GetOrganizationFocusReportAsResponseAsync(
+            global::Fal.GetOrganizationFocusReportSource source,
             string? billingMonth = default,
             string? chargeMonth = default,
-            global::Fal.GetFocusReportExpand? expand = default,
+            string? teamUsername = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
             string? timezone = default,
-            global::Fal.GetFocusReportTimeframe? timeframe = default,
-            global::Fal.GetFocusReportBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.GetOrganizationFocusReportTimeframe? timeframe = default,
+            global::Fal.GetOrganizationFocusReportBoundToTimeframe? boundToTimeframe = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetFocusReportArguments(
+            PrepareGetOrganizationFocusReportArguments(
                 httpClient: HttpClient,
                 source: ref source,
                 billingMonth: ref billingMonth,
                 chargeMonth: ref chargeMonth,
-                expand: ref expand,
+                teamUsername: ref teamUsername,
                 start: ref start,
                 end: ref end,
                 timezone: ref timezone,
@@ -236,8 +238,8 @@ namespace Fal
 
             var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetFocusReportSecurityRequirements,
-                operationName: "GetFocusReportAsync");
+                securityRequirements: s_GetOrganizationFocusReportSecurityRequirements,
+                operationName: "GetOrganizationFocusReportAsync");
 
             using var __timeoutCancellationTokenSource = global::Fal.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -257,13 +259,13 @@ namespace Fal
             {
 
                             var __pathBuilder = new global::Fal.PathBuilder(
-                                path: "/account/focus",
+                                path: "/organization/focus",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddRequiredParameter("source", source.ToValueString())
                                 .AddOptionalParameter("billing_month", billingMonth)
                                 .AddOptionalParameter("charge_month", chargeMonth)
-                                .AddOptionalParameter("expand", expand?.ToValueString())
+                                .AddOptionalParameter("team_username", teamUsername)
                                 .AddOptionalParameter("start", start?.ToString())
                                 .AddOptionalParameter("end", end?.ToString())
                                 .AddOptionalParameter("timezone", timezone)
@@ -307,13 +309,13 @@ namespace Fal
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetFocusReportRequest(
+                PrepareGetOrganizationFocusReportRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     source: source!,
                     billingMonth: billingMonth,
                     chargeMonth: chargeMonth,
-                    expand: expand,
+                    teamUsername: teamUsername,
                     start: start,
                     end: end,
                     timezone: timezone,
@@ -335,9 +337,9 @@ namespace Fal
                     await global::Fal.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetFocusReport",
-                                methodName: "GetFocusReportAsync",
-                                pathTemplate: "\"/account/focus\"",
+                                operationId: "GetOrganizationFocusReport",
+                                methodName: "GetOrganizationFocusReportAsync",
+                                pathTemplate: "\"/organization/focus\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -369,9 +371,9 @@ namespace Fal
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetFocusReport",
-                                methodName: "GetFocusReportAsync",
-                                pathTemplate: "\"/account/focus\"",
+                                operationId: "GetOrganizationFocusReport",
+                                methodName: "GetOrganizationFocusReportAsync",
+                                pathTemplate: "\"/organization/focus\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -410,9 +412,9 @@ namespace Fal
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetFocusReport",
-                                methodName: "GetFocusReportAsync",
-                                pathTemplate: "\"/account/focus\"",
+                                operationId: "GetOrganizationFocusReport",
+                                methodName: "GetOrganizationFocusReportAsync",
+                                pathTemplate: "\"/organization/focus\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -450,7 +452,7 @@ namespace Fal
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetFocusReportResponse(
+                ProcessGetOrganizationFocusReportResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -458,9 +460,9 @@ namespace Fal
                     await global::Fal.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetFocusReport",
-                                methodName: "GetFocusReportAsync",
-                                pathTemplate: "\"/account/focus\"",
+                                operationId: "GetOrganizationFocusReport",
+                                methodName: "GetOrganizationFocusReportAsync",
+                                pathTemplate: "\"/organization/focus\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -480,9 +482,9 @@ namespace Fal
                     await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "GetFocusReport",
-                                methodName: "GetFocusReportAsync",
-                                pathTemplate: "\"/account/focus\"",
+                                operationId: "GetOrganizationFocusReport",
+                                methodName: "GetOrganizationFocusReportAsync",
+                                pathTemplate: "\"/organization/focus\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -502,19 +504,19 @@ namespace Fal
                             {
                                 string? __content_400 = null;
                                 global::System.Exception? __exception_400 = null;
-                                global::Fal.GetFocusReportResponse? __value_400 = null;
+                                global::Fal.GetOrganizationFocusReportResponse? __value_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = global::Fal.GetFocusReportResponse.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Fal.GetOrganizationFocusReportResponse.FromJson(__content_400, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = global::Fal.GetFocusReportResponse.FromJson(__content_400, JsonSerializerContext);
+                                        __value_400 = global::Fal.GetOrganizationFocusReportResponse.FromJson(__content_400, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -523,7 +525,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.GetFocusReportResponse>.Create(
+                                throw global::Fal.ApiException<global::Fal.GetOrganizationFocusReportResponse>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
@@ -539,19 +541,19 @@ namespace Fal
                             {
                                 string? __content_401 = null;
                                 global::System.Exception? __exception_401 = null;
-                                global::Fal.GetFocusReportResponse2? __value_401 = null;
+                                global::Fal.GetOrganizationFocusReportResponse2? __value_401 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Fal.GetFocusReportResponse2.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = global::Fal.GetOrganizationFocusReportResponse2.FromJson(__content_401, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = global::Fal.GetFocusReportResponse2.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = global::Fal.GetOrganizationFocusReportResponse2.FromJson(__content_401, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -560,7 +562,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.GetFocusReportResponse2>.Create(
+                                throw global::Fal.ApiException<global::Fal.GetOrganizationFocusReportResponse2>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
@@ -576,19 +578,19 @@ namespace Fal
                             {
                                 string? __content_403 = null;
                                 global::System.Exception? __exception_403 = null;
-                                global::Fal.GetFocusReportResponse3? __value_403 = null;
+                                global::Fal.GetOrganizationFocusReportResponse3? __value_403 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_403 = global::Fal.GetFocusReportResponse3.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = global::Fal.GetOrganizationFocusReportResponse3.FromJson(__content_403, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_403 = global::Fal.GetFocusReportResponse3.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = global::Fal.GetOrganizationFocusReportResponse3.FromJson(__content_403, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -597,7 +599,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.GetFocusReportResponse3>.Create(
+                                throw global::Fal.ApiException<global::Fal.GetOrganizationFocusReportResponse3>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,
@@ -608,24 +610,61 @@ namespace Fal
                                         h => h.Key,
                                         h => h.Value));
                             }
+                            // Resource not found
+                            if ((int)__response.StatusCode == 404)
+                            {
+                                string? __content_404 = null;
+                                global::System.Exception? __exception_404 = null;
+                                global::Fal.GetOrganizationFocusReportResponse4? __value_404 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_404 = global::Fal.GetOrganizationFocusReportResponse4.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_404 = global::Fal.GetOrganizationFocusReportResponse4.FromJson(__content_404, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_404 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.GetOrganizationFocusReportResponse4>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_404,
+                                    responseBody: __content_404,
+                                    responseObject: __value_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
                             // Rate limit exceeded
                             if ((int)__response.StatusCode == 429)
                             {
                                 string? __content_429 = null;
                                 global::System.Exception? __exception_429 = null;
-                                global::Fal.GetFocusReportResponse4? __value_429 = null;
+                                global::Fal.GetOrganizationFocusReportResponse5? __value_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_429 = global::Fal.GetFocusReportResponse4.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.GetOrganizationFocusReportResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_429 = global::Fal.GetFocusReportResponse4.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.GetOrganizationFocusReportResponse5.FromJson(__content_429, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -634,7 +673,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.GetFocusReportResponse4>.Create(
+                                throw global::Fal.ApiException<global::Fal.GetOrganizationFocusReportResponse5>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
@@ -650,19 +689,19 @@ namespace Fal
                             {
                                 string? __content_500 = null;
                                 global::System.Exception? __exception_500 = null;
-                                global::Fal.GetFocusReportResponse5? __value_500 = null;
+                                global::Fal.GetOrganizationFocusReportResponse6? __value_500 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_500 = global::Fal.GetFocusReportResponse5.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.GetOrganizationFocusReportResponse6.FromJson(__content_500, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_500 = global::Fal.GetFocusReportResponse5.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.GetOrganizationFocusReportResponse6.FromJson(__content_500, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -671,7 +710,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.GetFocusReportResponse5>.Create(
+                                throw global::Fal.ApiException<global::Fal.GetOrganizationFocusReportResponse6>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
@@ -695,7 +734,7 @@ namespace Fal
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetFocusReportResponseContent(
+                                ProcessGetOrganizationFocusReportResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
