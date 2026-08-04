@@ -36,6 +36,22 @@ namespace Fal
         public required bool IsCurrent { get; set; }
 
         /// <summary>
+        /// Freeform message attached to this revision at deploy time (fal deploy --message). Null when the deploy did not set one.<br/>
+        /// Example: a1b2c3d fix cold-start
+        /// </summary>
+        /// <example>a1b2c3d fix cold-start</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
+        public string? Message { get; set; }
+
+        /// <summary>
+        /// Custom key/value annotations attached to this revision at deploy time (fal deploy --annotation KEY=VALUE). Null when the deploy did not set any.<br/>
+        /// Example: {"GIT_SHA":"a1b2c3d4"}
+        /// </summary>
+        /// <example>{"GIT_SHA":"a1b2c3d4"}</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("annotations")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Annotations { get; set; }
+
+        /// <summary>
         /// Deployment status derived from recent deployment events. Null when no deployment events are available for this revision (e.g. revisions older than the event retention window).<br/>
         /// Example: deployed
         /// </summary>
@@ -73,6 +89,14 @@ namespace Fal
         /// Whether this revision is the one currently serving traffic<br/>
         /// Example: true
         /// </param>
+        /// <param name="message">
+        /// Freeform message attached to this revision at deploy time (fal deploy --message). Null when the deploy did not set one.<br/>
+        /// Example: a1b2c3d fix cold-start
+        /// </param>
+        /// <param name="annotations">
+        /// Custom key/value annotations attached to this revision at deploy time (fal deploy --annotation KEY=VALUE). Null when the deploy did not set any.<br/>
+        /// Example: {"GIT_SHA":"a1b2c3d4"}
+        /// </param>
         /// <param name="status">
         /// Deployment status derived from recent deployment events. Null when no deployment events are available for this revision (e.g. revisions older than the event retention window).<br/>
         /// Example: deployed
@@ -88,12 +112,16 @@ namespace Fal
             string revisionId,
             string createdAt,
             bool isCurrent,
+            string? message,
+            global::System.Collections.Generic.Dictionary<string, string>? annotations,
             global::Fal.ServerlessListAppRevisionsResponseRevisionStatus? status,
             string? deployedBy)
         {
             this.RevisionId = revisionId ?? throw new global::System.ArgumentNullException(nameof(revisionId));
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
             this.IsCurrent = isCurrent;
+            this.Message = message;
+            this.Annotations = annotations;
             this.Status = status;
             this.DeployedBy = deployedBy;
         }
