@@ -15,7 +15,9 @@ namespace Fal
         ///   analytics endpoint<br/>
         /// - Rollback context: identify the previous known-good revision<br/>
         /// `status` and `deployed_by` are derived from the last 30 days of<br/>
-        /// deployment events; older revisions return null for both.<br/>
+        /// deployment events; older revisions return null for both. `message` and<br/>
+        /// `annotations` are the deploy-time metadata set via `fal deploy<br/>
+        /// --message`/`--annotation`; both are null when the deploy did not set them.<br/>
         /// **Authentication:** Required via API key. Only the app owner can query it.
         /// </summary>
         /// <param name="owner">
@@ -56,7 +58,9 @@ namespace Fal
         ///   analytics endpoint<br/>
         /// - Rollback context: identify the previous known-good revision<br/>
         /// `status` and `deployed_by` are derived from the last 30 days of<br/>
-        /// deployment events; older revisions return null for both.<br/>
+        /// deployment events; older revisions return null for both. `message` and<br/>
+        /// `annotations` are the deploy-time metadata set via `fal deploy<br/>
+        /// --message`/`--annotation`; both are null when the deploy did not set them.<br/>
         /// **Authentication:** Required via API key. Only the app owner can query it.
         /// </summary>
         /// <param name="owner">
