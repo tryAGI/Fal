@@ -26,7 +26,7 @@ namespace Fal
         /// - Remove failed or stuck instances<br/>
         /// - Manage compute costs<br/>
         /// - Free up quota for new instances<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="id">
         /// Unique identifier for the compute instance<br/>
@@ -61,7 +61,7 @@ namespace Fal
         /// - Remove failed or stuck instances<br/>
         /// - Manage compute costs<br/>
         /// - Free up quota for new instances<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="id">
         /// Unique identifier for the compute instance<br/>

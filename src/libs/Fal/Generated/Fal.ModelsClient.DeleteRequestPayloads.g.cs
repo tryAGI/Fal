@@ -61,7 +61,7 @@ namespace Fal
         /// **Idempotency:**<br/>
         /// - Optional Idempotency-Key header prevents duplicate deletions on retries<br/>
         /// - Responses cached for 10 minutes per unique key<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/model-apis/payloads) for more details about request payloads.
+        /// See [fal.ai docs](https://fal.ai/docs/platform-apis/v1/models/requests/payloads) for more details about request payloads.
         /// </summary>
         /// <param name="requestId">
         /// Unique identifier for the request (UUID format)<br/>
@@ -107,7 +107,7 @@ namespace Fal
         /// **Idempotency:**<br/>
         /// - Optional Idempotency-Key header prevents duplicate deletions on retries<br/>
         /// - Responses cached for 10 minutes per unique key<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/model-apis/payloads) for more details about request payloads.
+        /// See [fal.ai docs](https://fal.ai/docs/platform-apis/v1/models/requests/payloads) for more details about request payloads.
         /// </summary>
         /// <param name="requestId">
         /// Unique identifier for the request (UUID format)<br/>

@@ -58,7 +58,7 @@ namespace Fal
         /// - Check instance status and availability<br/>
         /// - Audit compute resource usage<br/>
         /// - Build compute management dashboards<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -101,7 +101,7 @@ namespace Fal
         /// - Check instance status and availability<br/>
         /// - Audit compute resource usage<br/>
         /// - Build compute management dashboards<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

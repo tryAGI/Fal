@@ -50,7 +50,7 @@ namespace Fal
         /// - Generate performance dashboards<br/>
         /// - Analyze latency trends and patterns<br/>
         /// - Track error rates and success metrics<br/>
-        /// See [Queue API docs](https://docs.fal.ai/model-apis/model-endpoints/queue) for more details.<br/>
+        /// See [Queue API docs](https://fal.ai/docs/documentation/model-apis/inference/queue) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">
@@ -153,7 +153,7 @@ namespace Fal
         /// - Generate performance dashboards<br/>
         /// - Analyze latency trends and patterns<br/>
         /// - Track error rates and success metrics<br/>
-        /// See [Queue API docs](https://docs.fal.ai/model-apis/model-endpoints/queue) for more details.<br/>
+        /// See [Queue API docs](https://fal.ai/docs/documentation/model-apis/inference/queue) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">
