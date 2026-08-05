@@ -23,7 +23,7 @@ namespace Fal
         /// - Track request patterns and volumes<br/>
         /// - Debug specific requests by ID<br/>
         /// - Monitor billing unit consumption per request<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">
@@ -96,7 +96,7 @@ namespace Fal
         /// - Track request patterns and volumes<br/>
         /// - Debug specific requests by ID<br/>
         /// - Monitor billing unit consumption per request<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">

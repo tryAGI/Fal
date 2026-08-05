@@ -79,7 +79,7 @@ namespace Fal
         /// - Filter by team(s) (`team_username`), product line (`product`), endpoint, API key (`api_key_id`), date range, and auth method<br/>
         /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
-        /// See [fal.ai docs](https://docs.fal.ai) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">
@@ -187,7 +187,7 @@ namespace Fal
         /// - Filter by team(s) (`team_username`), product line (`product`), endpoint, API key (`api_key_id`), date range, and auth method<br/>
         /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
-        /// See [fal.ai docs](https://docs.fal.ai) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">

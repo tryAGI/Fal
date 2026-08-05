@@ -78,7 +78,7 @@ namespace Fal
         /// - Track usage patterns<br/>
         /// - Monitor endpoint usage across different auth methods<br/>
         /// - Build usage dashboards and visualizations<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">
@@ -181,7 +181,7 @@ namespace Fal
         /// - Track usage patterns<br/>
         /// - Monitor endpoint usage across different auth methods<br/>
         /// - Build usage dashboards and visualizations<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">

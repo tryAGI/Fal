@@ -48,7 +48,7 @@ namespace Fal
         /// - List all teams within the organization<br/>
         /// - Identify the organization's root team via `is_org_root`<br/>
         /// - View team usernames and display names<br/>
-        /// See [fal.ai docs](https://docs.fal.ai) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -74,7 +74,7 @@ namespace Fal
         /// - List all teams within the organization<br/>
         /// - Identify the organization's root team via `is_org_root`<br/>
         /// - View team usernames and display names<br/>
-        /// See [fal.ai docs](https://docs.fal.ai) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

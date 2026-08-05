@@ -58,7 +58,7 @@ namespace Fal
         /// - Retrieve connection details (IP address)<br/>
         /// - Check instance readiness before use<br/>
         /// - Audit instance configuration<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="id">
         /// Unique identifier for the compute instance<br/>
@@ -97,7 +97,7 @@ namespace Fal
         /// - Retrieve connection details (IP address)<br/>
         /// - Check instance readiness before use<br/>
         /// - Audit instance configuration<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="id">
         /// Unique identifier for the compute instance<br/>

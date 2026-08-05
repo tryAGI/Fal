@@ -21,7 +21,7 @@ namespace Fal
         /// - Cursor-based pagination for efficient large dataset queries<br/>
         /// - Limited to 100 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">
@@ -92,7 +92,7 @@ namespace Fal
         /// - Cursor-based pagination for efficient large dataset queries<br/>
         /// - Limited to 100 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/model-apis/faq) for more details.<br/>
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
         ///     
         /// </summary>
         /// <param name="limit">

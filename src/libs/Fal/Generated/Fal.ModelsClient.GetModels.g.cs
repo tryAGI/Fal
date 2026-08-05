@@ -71,7 +71,7 @@ namespace Fal
         /// - `fal-ai/wan/v2.2-a14b/text-to-video`<br/>
         /// - `fal-ai/minimax/video-01/image-to-video`<br/>
         /// - `fal-ai/hunyuan3d-v21`<br/>
-        /// See [fal.ai Model APIs](https://docs.fal.ai/model-apis) for more details.<br/>
+        /// See [fal.ai Model APIs](https://fal.ai/docs/documentation/model-apis/overview) for more details.<br/>
         /// **Authentication:** Optional. Providing an API key grants higher rate limits.<br/>
         /// **Common Use Cases:**<br/>
         /// - Browse available models for integration<br/>
@@ -155,7 +155,7 @@ namespace Fal
         /// - `fal-ai/wan/v2.2-a14b/text-to-video`<br/>
         /// - `fal-ai/minimax/video-01/image-to-video`<br/>
         /// - `fal-ai/hunyuan3d-v21`<br/>
-        /// See [fal.ai Model APIs](https://docs.fal.ai/model-apis) for more details.<br/>
+        /// See [fal.ai Model APIs](https://fal.ai/docs/documentation/model-apis/overview) for more details.<br/>
         /// **Authentication:** Optional. Providing an API key grants higher rate limits.<br/>
         /// **Common Use Cases:**<br/>
         /// - Browse available models for integration<br/>

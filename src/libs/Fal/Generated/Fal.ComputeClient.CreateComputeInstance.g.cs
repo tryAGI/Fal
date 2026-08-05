@@ -67,7 +67,7 @@ namespace Fal
         /// **Idempotency:**<br/>
         /// - Optional Idempotency-Key header prevents duplicate instance creation on retries<br/>
         /// - Responses cached for 10 minutes per unique key<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -118,7 +118,7 @@ namespace Fal
         /// **Idempotency:**<br/>
         /// - Optional Idempotency-Key header prevents duplicate instance creation on retries<br/>
         /// - Responses cached for 10 minutes per unique key<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -707,7 +707,7 @@ namespace Fal
         /// **Idempotency:**<br/>
         /// - Optional Idempotency-Key header prevents duplicate instance creation on retries<br/>
         /// - Responses cached for 10 minutes per unique key<br/>
-        /// See [fal.ai docs](https://docs.fal.ai/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
