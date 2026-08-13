@@ -7,10 +7,11 @@ namespace Fal
         /// <summary>
         /// Organization FOCUS Report<br/>
         /// Returns a FOCUS compliant billing report as a CSV download, spanning every team<br/>
-        /// in your organization. Each invoiced Orb customer is reported as a<br/>
-        /// `BillingAccount`. Under shared (pooled) billing — one Orb customer covering<br/>
+        /// in your organization. Each invoiced billing customer is reported as a<br/>
+        /// `BillingAccount`. Under shared (pooled) billing — one billing customer covering<br/>
         /// multiple teams — each row is additionally attributed to the calling team via the<br/>
-        /// `SubAccountId` / `SubAccountName` columns.<br/>
+        /// `SubAccountId` / `SubAccountName` columns. `SubAccountId` is that team's own<br/>
+        /// billing customer ID, so both account columns share one identifier namespace.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// Must be called with an admin API key on the organization's root team.<br/>
         /// Supports two data sources:<br/>
@@ -18,7 +19,7 @@ namespace Fal
         /// - **invoice**: Finalized invoice data for a billing month. Under pooled billing, per-team `SubAccount` attribution is available on endpoint (Model API) lines that carry a caller; app and compute lines carry no caller and have no SubAccount.<br/>
         /// Use `team_username` to restrict the report to a single team. Under shared<br/>
         /// (pooled) billing this is rejected for `source=invoice` — the invoice is issued<br/>
-        /// to one Orb customer shared across teams and cannot be split per team; use<br/>
+        /// to one billing customer shared across teams and cannot be split per team; use<br/>
         /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
@@ -80,10 +81,11 @@ namespace Fal
         /// <summary>
         /// Organization FOCUS Report<br/>
         /// Returns a FOCUS compliant billing report as a CSV download, spanning every team<br/>
-        /// in your organization. Each invoiced Orb customer is reported as a<br/>
-        /// `BillingAccount`. Under shared (pooled) billing — one Orb customer covering<br/>
+        /// in your organization. Each invoiced billing customer is reported as a<br/>
+        /// `BillingAccount`. Under shared (pooled) billing — one billing customer covering<br/>
         /// multiple teams — each row is additionally attributed to the calling team via the<br/>
-        /// `SubAccountId` / `SubAccountName` columns.<br/>
+        /// `SubAccountId` / `SubAccountName` columns. `SubAccountId` is that team's own<br/>
+        /// billing customer ID, so both account columns share one identifier namespace.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// Must be called with an admin API key on the organization's root team.<br/>
         /// Supports two data sources:<br/>
@@ -91,7 +93,7 @@ namespace Fal
         /// - **invoice**: Finalized invoice data for a billing month. Under pooled billing, per-team `SubAccount` attribution is available on endpoint (Model API) lines that carry a caller; app and compute lines carry no caller and have no SubAccount.<br/>
         /// Use `team_username` to restrict the report to a single team. Under shared<br/>
         /// (pooled) billing this is rejected for `source=invoice` — the invoice is issued<br/>
-        /// to one Orb customer shared across teams and cannot be split per team; use<br/>
+        /// to one billing customer shared across teams and cannot be split per team; use<br/>
         /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>

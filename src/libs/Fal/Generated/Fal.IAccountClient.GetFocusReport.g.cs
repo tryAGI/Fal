@@ -19,7 +19,7 @@ namespace Fal
         /// attribution under shared (pooled) billing. Without it, the report is<br/>
         /// single-account, and the estimate covers only the calling account. Note: under<br/>
         /// pooled billing the **invoice** source already spans all pooled teams even<br/>
-        /// without `expand` (they share one Orb customer); `expand=organization` adds the<br/>
+        /// without `expand` (they share one billing customer); `expand=organization` adds the<br/>
         /// per-team `SubAccount` breakdown.<br/>
         ///     
         /// </summary>
@@ -91,7 +91,7 @@ namespace Fal
         /// attribution under shared (pooled) billing. Without it, the report is<br/>
         /// single-account, and the estimate covers only the calling account. Note: under<br/>
         /// pooled billing the **invoice** source already spans all pooled teams even<br/>
-        /// without `expand` (they share one Orb customer); `expand=organization` adds the<br/>
+        /// without `expand` (they share one billing customer); `expand=organization` adds the<br/>
         /// per-team `SubAccount` breakdown.<br/>
         ///     
         /// </summary>
