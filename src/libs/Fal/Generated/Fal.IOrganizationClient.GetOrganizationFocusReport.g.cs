@@ -22,7 +22,7 @@ namespace Fal
         /// to one billing customer shared across teams and cannot be split per team; use<br/>
         /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
-        /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
+        /// **Usage estimates** default to the last 24 hours, with a maximum 90-day date range.<br/>
         ///     
         /// </summary>
         /// <param name="source">
@@ -96,7 +96,7 @@ namespace Fal
         /// to one billing customer shared across teams and cannot be split per team; use<br/>
         /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
-        /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
+        /// **Usage estimates** default to the last 24 hours, with a maximum 90-day date range.<br/>
         ///     
         /// </summary>
         /// <param name="source">

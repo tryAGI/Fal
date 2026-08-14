@@ -13,7 +13,7 @@ namespace Fal
         /// - **estimate**: Real-time usage estimates for a date range. Pre-invoice data that may change once invoiced.<br/>
         /// The report follows the [FinOps FOCUS specification](https://focus.finops.org/) for cloud billing data interoperability.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
-        /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
+        /// **Usage estimates** default to the last 24 hours, with a maximum 90-day date range.<br/>
         /// **Organization roots** may pass `expand=organization` to report the whole<br/>
         /// organization — each team as a `BillingAccount`, plus per-team `SubAccount`<br/>
         /// attribution under shared (pooled) billing. Without it, the report is<br/>
@@ -85,7 +85,7 @@ namespace Fal
         /// - **estimate**: Real-time usage estimates for a date range. Pre-invoice data that may change once invoiced.<br/>
         /// The report follows the [FinOps FOCUS specification](https://focus.finops.org/) for cloud billing data interoperability.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
-        /// **Usage estimates** default to the last 24 hours, with a maximum 90-day lookback.<br/>
+        /// **Usage estimates** default to the last 24 hours, with a maximum 90-day date range.<br/>
         /// **Organization roots** may pass `expand=organization` to report the whole<br/>
         /// organization — each team as a `BillingAccount`, plus per-team `SubAccount`<br/>
         /// attribution under shared (pooled) billing. Without it, the report is<br/>
