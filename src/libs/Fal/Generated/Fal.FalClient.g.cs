@@ -38,10 +38,17 @@ namespace Fal
 
         /// <inheritdoc/>
         public global::System.Func<string> CreateIdempotencyKey { get; set; } = () => global::System.Guid.NewGuid().ToString("D");
+
+        internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Fal.SourceGenerationContext.Default);
+
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; } = global::Fal.SourceGenerationContext.Default;
+        public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
+        {
+            get => JsonSerializerContextProvider.Value;
+            set => JsonSerializerContextProvider = new(() => value);
+        }
 
 
         /// <summary>
@@ -51,7 +58,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -61,7 +68,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -71,7 +78,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -81,7 +88,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -91,7 +98,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -101,7 +108,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -111,7 +118,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -121,7 +128,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -131,7 +138,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
@@ -141,7 +148,7 @@ namespace Fal
         {
             ReadResponseAsString = ReadResponseAsString,
             CreateIdempotencyKey = CreateIdempotencyKey,
-            JsonSerializerContext = JsonSerializerContext,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
         };
 
         /// <summary>
