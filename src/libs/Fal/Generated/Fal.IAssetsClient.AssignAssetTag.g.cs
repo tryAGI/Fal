@@ -10,7 +10,7 @@ namespace Fal
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
-        /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
+        /// Example: d9k7q2m4n6p8r1s3t5uv
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -33,7 +33,7 @@ namespace Fal
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
-        /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
+        /// Example: d9k7q2m4n6p8r1s3t5uv
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -56,17 +56,20 @@ namespace Fal
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
-        /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
+        /// Example: d9k7q2m4n6p8r1s3t5uv
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
         /// Example: 550e8400-e29b-41d4-a716-446655440000
         /// </param>
+        /// <param name="assetId">
+        /// Asset ID (canonical catalog identity)
+        /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
         /// </param>
         /// <param name="vectorId">
-        /// Vector ID to save as an asset before mutating
+        /// Vector ID to save as an asset before mutating. Prefer asset_id
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -74,6 +77,7 @@ namespace Fal
         global::System.Threading.Tasks.Task<global::Fal.AssignAssetTagResponse> AssignAssetTagAsync(
             string tagId,
             string? idempotencyKey = default,
+            string? assetId = default,
             string? requestId = default,
             string? vectorId = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,

@@ -10,7 +10,7 @@ namespace Fal
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
-        /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
+        /// Example: d9k7q2m4n6p8r1s3t5uv
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -33,7 +33,7 @@ namespace Fal
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
-        /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
+        /// Example: d9k7q2m4n6p8r1s3t5uv
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -56,7 +56,7 @@ namespace Fal
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
-        /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
+        /// Example: d9k7q2m4n6p8r1s3t5uv
         /// </param>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>

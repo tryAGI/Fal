@@ -9,13 +9,19 @@ namespace Fal
     public sealed partial class UnassignAssetTagRequest
     {
         /// <summary>
+        /// Asset ID (canonical catalog identity)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("asset_id")]
+        public string? AssetId { get; set; }
+
+        /// <summary>
         /// Request ID to save as an asset before mutating
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("request_id")]
         public string? RequestId { get; set; }
 
         /// <summary>
-        /// Vector ID to save as an asset before mutating
+        /// Vector ID to save as an asset before mutating. Prefer asset_id
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("vector_id")]
         public string? VectorId { get; set; }
@@ -29,19 +35,24 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="UnassignAssetTagRequest" /> class.
         /// </summary>
+        /// <param name="assetId">
+        /// Asset ID (canonical catalog identity)
+        /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
         /// </param>
         /// <param name="vectorId">
-        /// Vector ID to save as an asset before mutating
+        /// Vector ID to save as an asset before mutating. Prefer asset_id
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UnassignAssetTagRequest(
+            string? assetId,
             string? requestId,
             string? vectorId)
         {
+            this.AssetId = assetId;
             this.RequestId = requestId;
             this.VectorId = vectorId;
         }
