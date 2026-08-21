@@ -9,7 +9,15 @@ namespace Fal
     public sealed partial class GetAssetResponseAsset
     {
         /// <summary>
-        /// Vector ID<br/>
+        /// Asset ID (canonical catalog identity)<br/>
+        /// Example: d8b6elcregj72v34jr8g
+        /// </summary>
+        /// <example>d8b6elcregj72v34jr8g</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("asset_id")]
+        public string? AssetId { get; set; }
+
+        /// <summary>
+        /// Vector ID. Prefer asset_id for addressing<br/>
         /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
         /// </summary>
         /// <example>b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc</example>
@@ -149,7 +157,7 @@ namespace Fal
         /// Initializes a new instance of the <see cref="GetAssetResponseAsset" /> class.
         /// </summary>
         /// <param name="vectorId">
-        /// Vector ID<br/>
+        /// Vector ID. Prefer asset_id for addressing<br/>
         /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
         /// </param>
         /// <param name="type">
@@ -169,6 +177,10 @@ namespace Fal
         /// </param>
         /// <param name="tags">
         /// Assigned tags
+        /// </param>
+        /// <param name="assetId">
+        /// Asset ID (canonical catalog identity)<br/>
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="requestId">
         /// Request ID<br/>
@@ -220,6 +232,7 @@ namespace Fal
             bool isFavorited,
             global::System.Collections.Generic.IList<string> collectionIds,
             global::System.Collections.Generic.IList<global::Fal.GetAssetResponseAssetTag> tags,
+            string? assetId,
             string? requestId,
             string? url,
             string? endpoint,
@@ -231,6 +244,7 @@ namespace Fal
             string? contentType,
             double? similarity)
         {
+            this.AssetId = assetId;
             this.VectorId = vectorId ?? throw new global::System.ArgumentNullException(nameof(vectorId));
             this.RequestId = requestId;
             this.Url = url;

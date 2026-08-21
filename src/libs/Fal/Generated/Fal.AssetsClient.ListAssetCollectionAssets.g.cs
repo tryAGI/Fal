@@ -114,7 +114,7 @@ namespace Fal
         /// <param name="tagId">
         /// Tag IDs to filter by<br/>
         /// Default Value: []<br/>
-        /// Example: [43ce3411-1a25-4d14-875e-3562d341b090]
+        /// Example: [d9k7q2m4n6p8r1s3t5uv]
         /// </param>
         /// <param name="tagMode">
         /// Whether tag filters match any tag or all tags<br/>
@@ -210,7 +210,7 @@ namespace Fal
         /// <param name="tagId">
         /// Tag IDs to filter by<br/>
         /// Default Value: []<br/>
-        /// Example: [43ce3411-1a25-4d14-875e-3562d341b090]
+        /// Example: [d9k7q2m4n6p8r1s3t5uv]
         /// </param>
         /// <param name="tagMode">
         /// Whether tag filters match any tag or all tags<br/>

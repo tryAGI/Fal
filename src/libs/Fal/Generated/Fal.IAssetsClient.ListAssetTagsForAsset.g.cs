@@ -6,32 +6,32 @@ namespace Fal
     {
         /// <summary>
         /// List tags for an asset<br/>
-        /// List tags for an asset by vector ID. Vectors that have not been saved as assets return an empty tag list.
+        /// List tags for an asset by asset ID; a vector ID is also accepted. Assets without a live catalog record return an empty tag list.
         /// </summary>
-        /// <param name="vectorId">
-        /// Vector ID<br/>
-        /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
+        /// <param name="assetId">
+        /// Asset ID. A vector ID is also accepted<br/>
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Fal.ListAssetTagsForAssetResponse> ListAssetTagsForAssetAsync(
-            string vectorId,
+            string assetId,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// List tags for an asset<br/>
-        /// List tags for an asset by vector ID. Vectors that have not been saved as assets return an empty tag list.
+        /// List tags for an asset by asset ID; a vector ID is also accepted. Assets without a live catalog record return an empty tag list.
         /// </summary>
-        /// <param name="vectorId">
-        /// Vector ID<br/>
-        /// Example: b1a2b4a5-cb89-51dc-a108-6dbfd8e742fc
+        /// <param name="assetId">
+        /// Asset ID. A vector ID is also accepted<br/>
+        /// Example: d8b6elcregj72v34jr8g
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse<global::Fal.ListAssetTagsForAssetResponse>> ListAssetTagsForAssetAsResponseAsync(
-            string vectorId,
+            string assetId,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

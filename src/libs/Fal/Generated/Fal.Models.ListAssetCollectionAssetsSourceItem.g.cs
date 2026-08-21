@@ -11,10 +11,6 @@ namespace Fal
         /// <summary>
         /// 
         /// </summary>
-        Request,
-        /// <summary>
-        /// 
-        /// </summary>
         Response,
         /// <summary>
         /// 
@@ -34,7 +30,6 @@ namespace Fal
         {
             return value switch
             {
-                ListAssetCollectionAssetsSourceItem.Request => "request",
                 ListAssetCollectionAssetsSourceItem.Response => "response",
                 ListAssetCollectionAssetsSourceItem.Upload => "upload",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -47,7 +42,6 @@ namespace Fal
         {
             return value switch
             {
-                "request" => ListAssetCollectionAssetsSourceItem.Request,
                 "response" => ListAssetCollectionAssetsSourceItem.Response,
                 "upload" => ListAssetCollectionAssetsSourceItem.Upload,
                 _ => null,

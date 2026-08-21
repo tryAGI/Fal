@@ -6,7 +6,7 @@ namespace Fal
     {
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection by request ID or vector ID.
+        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -29,7 +29,7 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection by request ID or vector ID.
+        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -52,7 +52,7 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection by request ID or vector ID.
+        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -62,11 +62,14 @@ namespace Fal
         /// Optional idempotency key for safe request retries<br/>
         /// Example: 550e8400-e29b-41d4-a716-446655440000
         /// </param>
+        /// <param name="assetId">
+        /// Asset ID (canonical catalog identity)
+        /// </param>
         /// <param name="requestId">
         /// Request ID to save as an asset before mutating
         /// </param>
         /// <param name="vectorId">
-        /// Vector ID to save as an asset before mutating
+        /// Vector ID to save as an asset before mutating. Prefer asset_id
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -74,6 +77,7 @@ namespace Fal
         global::System.Threading.Tasks.Task RemoveAssetFromCollectionAsync(
             string collectionId,
             string? idempotencyKey = default,
+            string? assetId = default,
             string? requestId = default,
             string? vectorId = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
