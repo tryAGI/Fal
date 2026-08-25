@@ -176,18 +176,6 @@ namespace Fal
             }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(targetPath ?? string.Empty),
-                                name: "\"target_path\"");
-
-                            if (unzip != default)
-                            {
-
-                                __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent((global::System.Convert.ToString(unzip, global::System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty).ToLowerInvariant()),
-                                    name: "\"unzip\"");
-
-                            }
                             if (request.FileUpload != default)
                             {
 
