@@ -809,7 +809,7 @@
       "Slug": "serverlessuploadlocalfile",
       "Description": "Uploads a local file using multipart/form-data. The file field name must be \u0060file_upload\u0060.",
       "Language": "http",
-      "Code": "### Upload local file (multipart/form-data)\n# @name serverlessUploadLocalFile\nPOST {{host}}/serverless/files/file/local/{{target_path}}?unzip=false\nAuthorization: Bearer {{token}}\nContent-Type: multipart/form-data\nAccept: application/json\n\n## Responses\n# 200\n# Description: Upload completed\n# Content-Type: application/json\n# 400\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
+      "Code": "### Upload local file (multipart/form-data)\n# @name serverlessUploadLocalFile\nPOST {{host}}/serverless/files/file/local/{{target_path}}?unzip=false\nAuthorization: Bearer {{token}}\nContent-Type: multipart/form-data; boundary=AutoSDKBoundary\nAccept: application/json\n\n--AutoSDKBoundary\nContent-Disposition: form-data; name=\u0022file_upload\u0022\n\nstring\n--AutoSDKBoundary--\n\n## Responses\n# 200\n# Description: Upload completed\n# Content-Type: application/json\n# 400\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
       "Format": "http",
       "OperationId": "serverlessUploadLocalFile",
       "Setup": null
