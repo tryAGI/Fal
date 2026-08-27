@@ -10,11 +10,11 @@ namespace Fal
     public enum ServerlessGetRunnerHistoryResponseAggregation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Avg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Max,
     }

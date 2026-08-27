@@ -9,11 +9,11 @@ namespace Fal
     public enum GetModelsResponseModelEnterpriseStatusEnum
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ready,
     }

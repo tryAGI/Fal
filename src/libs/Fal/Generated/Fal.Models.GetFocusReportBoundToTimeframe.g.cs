@@ -11,11 +11,11 @@ namespace Fal
     public enum GetFocusReportBoundToTimeframe
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         False,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         True,
     }

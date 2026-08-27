@@ -10,7 +10,7 @@ namespace Fal
     public enum GetAssetLineageResponseLineageEdgeEntitieEntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Character,
     }

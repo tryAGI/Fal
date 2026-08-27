@@ -11,11 +11,11 @@ namespace Fal
     public enum GetOrganizationUsageBoundToTimeframe
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         False,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         True,
     }

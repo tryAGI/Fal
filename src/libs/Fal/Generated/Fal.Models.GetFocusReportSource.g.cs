@@ -10,11 +10,11 @@ namespace Fal
     public enum GetFocusReportSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Estimate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Invoice,
     }

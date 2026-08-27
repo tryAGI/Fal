@@ -10,15 +10,15 @@ namespace Fal
     public enum ServerlessListAppsResponseAppAuthMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Shared,
     }

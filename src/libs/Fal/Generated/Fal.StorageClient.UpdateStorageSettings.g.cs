@@ -51,7 +51,7 @@ namespace Fal
         /// These are the same settings that the per-request<br/>
         /// `X-Fal-Object-Lifecycle-Preference` header overrides on individual requests.<br/>
         /// **Authentication:** Required. The API key must have the `account:settings:write` permission.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -82,7 +82,7 @@ namespace Fal
         /// These are the same settings that the per-request<br/>
         /// `X-Fal-Object-Lifecycle-Preference` header overrides on individual requests.<br/>
         /// **Authentication:** Required. The API key must have the `account:settings:write` permission.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -155,7 +155,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -644,7 +644,7 @@ namespace Fal
         /// These are the same settings that the per-request<br/>
         /// `X-Fal-Object-Lifecycle-Preference` header overrides on individual requests.<br/>
         /// **Authentication:** Required. The API key must have the `account:settings:write` permission.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="expirationDurationSeconds">
         /// Seconds after which newly uploaded files automatically expire and are deleted. Null disables auto-expiration.<br/>

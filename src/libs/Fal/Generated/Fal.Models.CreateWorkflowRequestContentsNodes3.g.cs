@@ -4,7 +4,7 @@
 namespace Fal
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWorkflowRequestContentsNodes3
     {

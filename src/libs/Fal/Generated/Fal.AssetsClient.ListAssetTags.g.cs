@@ -126,7 +126,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

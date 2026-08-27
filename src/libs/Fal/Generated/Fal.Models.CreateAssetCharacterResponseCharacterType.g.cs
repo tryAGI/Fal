@@ -9,7 +9,7 @@ namespace Fal
     public enum CreateAssetCharacterResponseCharacterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Character,
     }

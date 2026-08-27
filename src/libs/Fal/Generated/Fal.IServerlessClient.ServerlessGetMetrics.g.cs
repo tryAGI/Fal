@@ -15,7 +15,7 @@ namespace Fal
         /// - Track runner health and performance<br/>
         /// - Set up alerts and monitoring<br/>
         /// See [Prometheus documentation](https://prometheus.io/docs/instrumenting/exposition_formats/) for format details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -34,7 +34,7 @@ namespace Fal
         /// - Track runner health and performance<br/>
         /// - Set up alerts and monitoring<br/>
         /// See [Prometheus documentation](https://prometheus.io/docs/instrumenting/exposition_formats/) for format details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

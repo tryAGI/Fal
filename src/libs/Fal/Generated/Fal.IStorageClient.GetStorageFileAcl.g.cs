@@ -11,7 +11,7 @@ namespace Fal
         /// optional per-user rules that override the default. Rule users are returned as<br/>
         /// nicknames where possible.<br/>
         /// **Authentication:** Required. The API key must have the `assets:read` permission.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>
@@ -31,7 +31,7 @@ namespace Fal
         /// optional per-user rules that override the default. Rule users are returned as<br/>
         /// nicknames where possible.<br/>
         /// **Authentication:** Required. The API key must have the `assets:read` permission.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>

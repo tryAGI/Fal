@@ -74,7 +74,7 @@ namespace Fal
         /// pooled billing the **invoice** source already spans all pooled teams even<br/>
         /// without `expand` (they share one billing customer); `expand=organization` adds the<br/>
         /// per-team `SubAccount` breakdown.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
@@ -163,7 +163,7 @@ namespace Fal
         /// pooled billing the **invoice** source already spans all pooled teams even<br/>
         /// without `expand` (they share one billing customer); `expand=organization` adds the<br/>
         /// per-team `SubAccount` breakdown.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
@@ -297,7 +297,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

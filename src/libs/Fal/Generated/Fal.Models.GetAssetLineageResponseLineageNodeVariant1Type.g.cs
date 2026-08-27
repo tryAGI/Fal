@@ -9,23 +9,23 @@ namespace Fal
     public enum GetAssetLineageResponseLineageNodeVariant1Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Image,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Video,
     }

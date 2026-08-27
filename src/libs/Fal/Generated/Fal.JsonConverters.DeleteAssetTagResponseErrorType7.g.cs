@@ -20,7 +20,7 @@ namespace Fal.JsonConverters
                     {
                         return global::Fal.DeleteAssetTagResponseErrorType7Extensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

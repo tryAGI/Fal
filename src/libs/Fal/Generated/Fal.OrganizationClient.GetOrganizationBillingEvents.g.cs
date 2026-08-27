@@ -75,7 +75,7 @@ namespace Fal
         /// - Limited to 100 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -163,7 +163,7 @@ namespace Fal
         /// - Limited to 100 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -295,7 +295,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

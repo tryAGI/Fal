@@ -10,7 +10,7 @@ namespace Fal
     public enum GetAssetLineageResponseLineageNodeVariant4EntityType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Character,
     }

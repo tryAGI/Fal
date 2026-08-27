@@ -9,7 +9,7 @@ namespace Fal
     public enum EstimatePricingRequestVariant2EstimateType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnitPrice,
     }

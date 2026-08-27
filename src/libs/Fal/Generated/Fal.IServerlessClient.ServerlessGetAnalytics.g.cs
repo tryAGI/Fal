@@ -58,7 +58,7 @@ namespace Fal
         /// - Export analytics to your own observability tools<br/>
         /// - Analyze latency trends across all callers<br/>
         /// - Track error rates and SLA compliance<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -168,7 +168,7 @@ namespace Fal
         /// - Export analytics to your own observability tools<br/>
         /// - Analyze latency trends across all callers<br/>
         /// - Track error rates and SLA compliance<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

@@ -9,11 +9,11 @@ namespace Fal
     public enum GetModelsResponseModelMetadataKind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Inference,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Training,
     }

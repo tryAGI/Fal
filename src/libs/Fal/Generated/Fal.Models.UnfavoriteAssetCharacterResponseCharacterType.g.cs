@@ -9,7 +9,7 @@ namespace Fal
     public enum UnfavoriteAssetCharacterResponseCharacterType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Character,
     }

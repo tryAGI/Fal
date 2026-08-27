@@ -22,7 +22,7 @@ namespace Fal
         /// - Monitor endpoint usage across different auth methods<br/>
         /// - Build usage dashboards and visualizations<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -106,7 +106,7 @@ namespace Fal
         /// - Monitor endpoint usage across different auth methods<br/>
         /// - Build usage dashboards and visualizations<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

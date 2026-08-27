@@ -9,7 +9,7 @@ namespace Fal
     public enum GetAssetLineageResponseLineageNodeVariant2Kind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExternalInput,
     }

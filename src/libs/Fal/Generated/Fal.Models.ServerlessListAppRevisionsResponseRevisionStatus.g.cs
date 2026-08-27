@@ -10,15 +10,15 @@ namespace Fal
     public enum ServerlessListAppRevisionsResponseRevisionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deployed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deploying,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Failed,
     }

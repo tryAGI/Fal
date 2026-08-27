@@ -10,7 +10,7 @@ namespace Fal
         /// If your infrastructure requires allowlisting IP addresses for incoming webhook<br/>
         /// requests, this endpoint provides the current list of IP ranges used by fal.ai<br/>
         /// webhooks in CIDR notation.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -24,7 +24,7 @@ namespace Fal
         /// If your infrastructure requires allowlisting IP addresses for incoming webhook<br/>
         /// requests, this endpoint provides the current list of IP ranges used by fal.ai<br/>
         /// webhooks in CIDR notation.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

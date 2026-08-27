@@ -9,11 +9,11 @@ namespace Fal
     public enum EstimatePricingResponseEstimateType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HistoricalApiPrice,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnitPrice,
     }

@@ -10,19 +10,19 @@ namespace Fal
     public enum ServerlessLogsHistoryRunSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cron,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gateway,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GrpcRegister,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GrpcRun,
     }

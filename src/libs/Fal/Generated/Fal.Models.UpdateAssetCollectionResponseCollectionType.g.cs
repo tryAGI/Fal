@@ -9,15 +9,15 @@ namespace Fal
     public enum UpdateAssetCollectionResponseCollectionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Character,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Smart,
     }

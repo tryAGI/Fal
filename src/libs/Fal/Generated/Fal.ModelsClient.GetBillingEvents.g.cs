@@ -77,7 +77,7 @@ namespace Fal
         /// - Debug specific requests by ID<br/>
         /// - Monitor billing unit consumption per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -167,7 +167,7 @@ namespace Fal
         /// - Debug specific requests by ID<br/>
         /// - Monitor billing unit consumption per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -299,7 +299,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

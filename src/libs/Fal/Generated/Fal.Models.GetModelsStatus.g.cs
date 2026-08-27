@@ -10,11 +10,11 @@ namespace Fal
     public enum GetModelsStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deprecated,
     }

@@ -92,7 +92,7 @@ namespace Fal
         /// - Track your serverless apps' compute consumption and cost over time<br/>
         /// - Break down spend per app, environment, and machine type<br/>
         /// - Export usage to your own billing/observability tooling<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -204,7 +204,7 @@ namespace Fal
         /// - Track your serverless apps' compute consumption and cost over time<br/>
         /// - Break down spend per app, environment, and machine type<br/>
         /// - Export usage to your own billing/observability tooling<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -346,7 +346,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

@@ -9,19 +9,19 @@ namespace Fal
     public enum ServerlessLogsHistoryRequestItemConditionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Equals,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         In,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotEquals,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotIn,
     }

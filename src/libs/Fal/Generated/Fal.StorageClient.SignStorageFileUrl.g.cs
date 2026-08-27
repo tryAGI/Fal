@@ -49,7 +49,7 @@ namespace Fal
         /// regardless of its ACL. Useful for sharing access-restricted files.<br/>
         /// The signature is valid for `expiration_seconds` (up to 7 days).<br/>
         /// **Authentication:** Required. The API key must have the `assets:read` permission.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>
@@ -82,7 +82,7 @@ namespace Fal
         /// regardless of its ACL. Useful for sharing access-restricted files.<br/>
         /// The signature is valid for `expiration_seconds` (up to 7 days).<br/>
         /// **Authentication:** Required. The API key must have the `assets:read` permission.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>
@@ -164,7 +164,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -687,7 +687,7 @@ namespace Fal
         /// regardless of its ACL. Useful for sharing access-restricted files.<br/>
         /// The signature is valid for `expiration_seconds` (up to 7 days).<br/>
         /// **Authentication:** Required. The API key must have the `assets:read` permission.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>

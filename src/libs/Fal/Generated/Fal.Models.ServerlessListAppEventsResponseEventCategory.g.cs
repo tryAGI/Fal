@@ -10,71 +10,71 @@ namespace Fal
     public enum ServerlessListAppEventsResponseEventCategory
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConfigChanged,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeploymentEnded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeploymentFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeploymentRecreateApplied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeploymentRollingEnded,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeploymentRollingFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeploymentRollingStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DeploymentStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerDockerPull,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerDraining,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerFinished,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerPending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerSetup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerStartupFailure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunnerStopping,
     }

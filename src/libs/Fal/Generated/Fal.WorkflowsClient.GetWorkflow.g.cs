@@ -51,7 +51,7 @@ namespace Fal
         /// - Load a workflow for editing<br/>
         /// - View workflow configuration<br/>
         /// - Export workflow definition<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="username">
         /// The username of the workflow owner<br/>
@@ -87,7 +87,7 @@ namespace Fal
         /// - Load a workflow for editing<br/>
         /// - View workflow configuration<br/>
         /// - Export workflow definition<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="username">
         /// The username of the workflow owner<br/>
@@ -166,7 +166,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

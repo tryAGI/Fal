@@ -10,15 +10,15 @@ namespace Fal
     public enum ServerlessListRequestsByEndpointStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Success,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserError,
     }
