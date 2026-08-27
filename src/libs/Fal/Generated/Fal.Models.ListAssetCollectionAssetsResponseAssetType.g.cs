@@ -9,19 +9,19 @@ namespace Fal
     public enum ListAssetCollectionAssetsResponseAssetType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Image,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Video,
     }

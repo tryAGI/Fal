@@ -9,15 +9,15 @@ namespace Fal
     public enum GetAssetLineageResponseLineageEdgeKind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GeneratedBy,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InputTo,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReferencedEntity,
     }

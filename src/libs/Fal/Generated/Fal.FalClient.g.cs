@@ -42,7 +42,7 @@ namespace Fal
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Fal.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -52,7 +52,7 @@ namespace Fal
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AccountClient Account => new AccountClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -62,7 +62,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssetsClient Assets => new AssetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -72,7 +72,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputeClient Compute => new ComputeClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -82,7 +82,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KeysClient Keys => new KeysClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -92,7 +92,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MetaClient Meta => new MetaClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -102,7 +102,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models => new ModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -112,7 +112,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrganizationClient Organization => new OrganizationClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -122,7 +122,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ServerlessClient Serverless => new ServerlessClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -132,7 +132,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public StorageClient Storage => new StorageClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -142,7 +142,7 @@ namespace Fal
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WorkflowsClient Workflows => new WorkflowsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

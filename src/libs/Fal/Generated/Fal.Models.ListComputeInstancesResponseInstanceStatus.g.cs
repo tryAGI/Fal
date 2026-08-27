@@ -10,27 +10,27 @@ namespace Fal
     public enum ListComputeInstancesResponseInstanceStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Init,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Provisioning,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Ready,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Stopped,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Unknown,
     }

@@ -9,27 +9,27 @@ namespace Fal
     public enum CreateAssetCollectionResponseErrorType9
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AuthorizationError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotImplemented,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RateLimited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ValidationError,
     }

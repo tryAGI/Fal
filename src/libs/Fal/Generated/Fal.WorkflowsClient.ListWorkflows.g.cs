@@ -59,7 +59,7 @@ namespace Fal
         /// - Display user's workflow library<br/>
         /// - Search for specific workflows<br/>
         /// - Find workflows using particular models<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -111,7 +111,7 @@ namespace Fal
         /// - Display user's workflow library<br/>
         /// - Search for specific workflows<br/>
         /// - Find workflows using particular models<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -208,7 +208,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                 global::Fal.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,

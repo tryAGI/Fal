@@ -10,27 +10,27 @@ namespace Fal
     public enum ListComputeInstancesResponseInstanceRegion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuNorth,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EuWest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsCentral,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsEast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsWest,
     }

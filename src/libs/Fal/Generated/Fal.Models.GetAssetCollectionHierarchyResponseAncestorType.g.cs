@@ -9,15 +9,15 @@ namespace Fal
     public enum GetAssetCollectionHierarchyResponseAncestorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Character,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Smart,
     }

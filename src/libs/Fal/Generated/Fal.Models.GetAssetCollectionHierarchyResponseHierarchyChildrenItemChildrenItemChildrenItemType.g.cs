@@ -9,15 +9,15 @@ namespace Fal
     public enum GetAssetCollectionHierarchyResponseHierarchyChildrenItemChildrenItemChildrenItemType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Character,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Smart,
     }

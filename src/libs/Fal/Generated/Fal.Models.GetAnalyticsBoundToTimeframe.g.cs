@@ -11,11 +11,11 @@ namespace Fal
     public enum GetAnalyticsBoundToTimeframe
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         False,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         True,
     }

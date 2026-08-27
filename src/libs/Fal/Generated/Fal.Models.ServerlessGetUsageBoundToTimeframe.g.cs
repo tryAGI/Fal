@@ -11,11 +11,11 @@ namespace Fal
     public enum ServerlessGetUsageBoundToTimeframe
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         False,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         True,
     }

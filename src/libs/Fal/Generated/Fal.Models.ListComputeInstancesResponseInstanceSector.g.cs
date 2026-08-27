@@ -10,15 +10,15 @@ namespace Fal
     public enum ListComputeInstancesResponseInstanceSector
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sector1,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sector2,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sector3,
     }

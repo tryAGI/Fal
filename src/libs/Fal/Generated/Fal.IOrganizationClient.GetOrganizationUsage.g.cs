@@ -21,7 +21,7 @@ namespace Fal
         /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -109,7 +109,7 @@ namespace Fal
         /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

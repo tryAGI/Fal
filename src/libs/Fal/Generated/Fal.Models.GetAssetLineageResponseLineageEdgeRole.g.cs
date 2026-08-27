@@ -9,19 +9,19 @@ namespace Fal
     public enum GetAssetLineageResponseLineageEdgeRole
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContentRef,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Control,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Mask,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Source,
     }

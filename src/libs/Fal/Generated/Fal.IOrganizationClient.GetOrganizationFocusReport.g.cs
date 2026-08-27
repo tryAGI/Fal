@@ -23,7 +23,7 @@ namespace Fal
         /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day date range.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
@@ -97,7 +97,7 @@ namespace Fal
         /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day date range.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>

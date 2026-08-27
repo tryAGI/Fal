@@ -9,27 +9,27 @@ namespace Fal
     public enum ServerlessGetAppQueueInfoResponseErrorType2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AuthorizationError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NotImplemented,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RateLimited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ServerError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ValidationError,
     }

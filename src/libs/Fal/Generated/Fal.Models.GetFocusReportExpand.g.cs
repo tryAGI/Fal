@@ -10,7 +10,7 @@ namespace Fal
     public enum GetFocusReportExpand
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Organization,
     }

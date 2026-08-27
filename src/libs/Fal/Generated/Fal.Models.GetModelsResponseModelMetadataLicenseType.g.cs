@@ -9,15 +9,15 @@ namespace Fal
     public enum GetModelsResponseModelMetadataLicenseType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Commercial,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Private,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Research,
     }

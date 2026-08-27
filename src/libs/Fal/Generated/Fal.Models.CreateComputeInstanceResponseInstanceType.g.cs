@@ -10,11 +10,11 @@ namespace Fal
     public enum CreateComputeInstanceResponseInstanceType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpu1xH100Sxm5,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gpu8xH100Sxm5,
     }

@@ -10,7 +10,7 @@ namespace Fal
     public enum ListApiKeysResponseKeyScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Api,
     }

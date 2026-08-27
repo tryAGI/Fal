@@ -11,11 +11,11 @@ namespace Fal
     public enum ListAssetCollectionAssetsTagMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Any,
     }

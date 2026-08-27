@@ -9,11 +9,11 @@ namespace Fal
     public enum ListAssetCollectionAssetsSourceItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Response,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Upload,
     }

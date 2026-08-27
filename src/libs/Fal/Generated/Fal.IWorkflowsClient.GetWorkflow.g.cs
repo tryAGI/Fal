@@ -12,7 +12,7 @@ namespace Fal
         /// - Load a workflow for editing<br/>
         /// - View workflow configuration<br/>
         /// - Export workflow definition<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="username">
         /// The username of the workflow owner<br/>
@@ -38,7 +38,7 @@ namespace Fal
         /// - Load a workflow for editing<br/>
         /// - View workflow configuration<br/>
         /// - Export workflow definition<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="username">
         /// The username of the workflow owner<br/>

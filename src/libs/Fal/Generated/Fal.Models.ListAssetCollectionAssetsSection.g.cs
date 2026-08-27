@@ -11,19 +11,19 @@ namespace Fal
     public enum ListAssetCollectionAssetsSection
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AllMedia,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Favorites,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Generated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uploads,
     }

@@ -44,58 +44,58 @@ namespace Fal
         public global::System.Func<string> CreateIdempotencyKey { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AccountClient Account { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AssetsClient Assets { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ComputeClient Compute { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public KeysClient Keys { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MetaClient Meta { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrganizationClient Organization { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ServerlessClient Serverless { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public StorageClient Storage { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public WorkflowsClient Workflows { get; }
 

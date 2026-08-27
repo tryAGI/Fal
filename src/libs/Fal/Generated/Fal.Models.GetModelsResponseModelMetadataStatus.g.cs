@@ -9,11 +9,11 @@ namespace Fal
     public enum GetModelsResponseModelMetadataStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deprecated,
     }

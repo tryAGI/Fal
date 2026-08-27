@@ -9,7 +9,7 @@ namespace Fal
     public enum GetAssetLineageResponseLineageNodeVariant3Kind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Request,
     }

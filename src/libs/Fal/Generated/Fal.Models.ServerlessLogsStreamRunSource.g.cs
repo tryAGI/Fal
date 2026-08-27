@@ -10,19 +10,19 @@ namespace Fal
     public enum ServerlessLogsStreamRunSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cron,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gateway,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GrpcRegister,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GrpcRun,
     }

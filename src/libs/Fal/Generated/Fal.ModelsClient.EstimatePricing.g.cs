@@ -61,7 +61,7 @@ namespace Fal
         /// - Display cost estimates in user interfaces<br/>
         /// - Budget planning and cost optimization<br/>
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -102,7 +102,7 @@ namespace Fal
         /// - Display cost estimates in user interfaces<br/>
         /// - Budget planning and cost optimization<br/>
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -173,7 +173,7 @@ namespace Fal
                          __authorization.Location == "Header")
                 {
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
-                } 
+                }
             }
                             var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
@@ -635,7 +635,7 @@ namespace Fal
         /// - Display cost estimates in user interfaces<br/>
         /// - Budget planning and cost optimization<br/>
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

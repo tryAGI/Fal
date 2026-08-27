@@ -10,15 +10,15 @@ namespace Fal
     public enum SetStorageFileAclRequestRuleDecision
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Allow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Forbid,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hide,
     }

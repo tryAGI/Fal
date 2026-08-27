@@ -10,23 +10,23 @@ namespace Fal
     public enum ServerlessGetRunnerHistoryResponseTimeframe
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Day,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hour,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Minute,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Month,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Week,
     }

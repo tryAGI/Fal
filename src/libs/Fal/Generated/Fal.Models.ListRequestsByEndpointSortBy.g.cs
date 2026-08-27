@@ -11,11 +11,11 @@ namespace Fal
     public enum ListRequestsByEndpointSortBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndedAt,
     }

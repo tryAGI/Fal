@@ -11,11 +11,11 @@ namespace Fal
     public enum ServerlessListRequestsByEndpointSortBy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Duration,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndedAt,
     }

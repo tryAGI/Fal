@@ -9,19 +9,19 @@ namespace Fal
     public enum UploadAssetResponseAssetType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x3d,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Audio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Image,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Video,
     }

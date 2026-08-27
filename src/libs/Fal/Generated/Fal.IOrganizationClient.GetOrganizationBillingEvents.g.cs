@@ -22,7 +22,7 @@ namespace Fal
         /// - Limited to 100 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -93,7 +93,7 @@ namespace Fal
         /// - Limited to 100 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

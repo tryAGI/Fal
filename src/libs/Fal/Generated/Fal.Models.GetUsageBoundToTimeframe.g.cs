@@ -11,11 +11,11 @@ namespace Fal
     public enum GetUsageBoundToTimeframe
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         False,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         True,
     }

@@ -9,7 +9,7 @@ namespace Fal
         /// Returns the current model access controls for your organization as a CSV download.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with model access controls enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// The report includes each model's endpoint ID, title, category, enterprise readiness status, and the resolved UI and API access state (ALLOWED or BLOCKED).<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -22,7 +22,7 @@ namespace Fal
         /// Returns the current model access controls for your organization as a CSV download.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with model access controls enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// The report includes each model's endpoint ID, title, category, enterprise readiness status, and the resolved UI and API access state (ALLOWED or BLOCKED).<br/>
-        ///     
+        ///
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
