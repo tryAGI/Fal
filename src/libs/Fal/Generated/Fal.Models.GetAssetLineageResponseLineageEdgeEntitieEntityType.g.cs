@@ -13,6 +13,22 @@ namespace Fal
         ///
         /// </summary>
         Character,
+        /// <summary>
+        ///
+        /// </summary>
+        Environment,
+        /// <summary>
+        ///
+        /// </summary>
+        Prop,
+        /// <summary>
+        ///
+        /// </summary>
+        Scene,
+        /// <summary>
+        ///
+        /// </summary>
+        Style,
     }
 
     /// <summary>
@@ -28,6 +44,10 @@ namespace Fal
             return value switch
             {
                 GetAssetLineageResponseLineageEdgeEntitieEntityType.Character => "character",
+                GetAssetLineageResponseLineageEdgeEntitieEntityType.Environment => "environment",
+                GetAssetLineageResponseLineageEdgeEntitieEntityType.Prop => "prop",
+                GetAssetLineageResponseLineageEdgeEntitieEntityType.Scene => "scene",
+                GetAssetLineageResponseLineageEdgeEntitieEntityType.Style => "style",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -39,6 +59,10 @@ namespace Fal
             return value switch
             {
                 "character" => GetAssetLineageResponseLineageEdgeEntitieEntityType.Character,
+                "environment" => GetAssetLineageResponseLineageEdgeEntitieEntityType.Environment,
+                "prop" => GetAssetLineageResponseLineageEdgeEntitieEntityType.Prop,
+                "scene" => GetAssetLineageResponseLineageEdgeEntitieEntityType.Scene,
+                "style" => GetAssetLineageResponseLineageEdgeEntitieEntityType.Style,
                 _ => null,
             };
         }

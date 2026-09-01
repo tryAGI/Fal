@@ -6,7 +6,7 @@ namespace Fal
     {
         /// <summary>
         /// Get asset lineage<br/>
-        /// Get the derivation lineage of an asset by asset ID: the inputs it was generated from, the generation requests along the way, and any referenced characters, traversed recursively up to `depth` levels. Deleted or expired ancestors stay in the graph flagged as tombstones; inputs that were never captured appear as external inputs.
+        /// Get the derivation lineage of an asset by asset ID: the inputs it was generated from, the generation requests along the way, and any referenced smart entities, traversed recursively up to `depth` levels. Deleted or expired ancestors stay in the graph flagged as tombstones; inputs that were never captured appear as external inputs.
         /// </summary>
         /// <param name="assetId">
         /// Asset ID<br/>
@@ -27,7 +27,7 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get asset lineage<br/>
-        /// Get the derivation lineage of an asset by asset ID: the inputs it was generated from, the generation requests along the way, and any referenced characters, traversed recursively up to `depth` levels. Deleted or expired ancestors stay in the graph flagged as tombstones; inputs that were never captured appear as external inputs.
+        /// Get the derivation lineage of an asset by asset ID: the inputs it was generated from, the generation requests along the way, and any referenced smart entities, traversed recursively up to `depth` levels. Deleted or expired ancestors stay in the graph flagged as tombstones; inputs that were never captured appear as external inputs.
         /// </summary>
         /// <param name="assetId">
         /// Asset ID<br/>

@@ -40,7 +40,8 @@ namespace Fal
         /// <example>character</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.GetAssetLineageResponseLineageNodeVariant4EntityTypeJsonConverter))]
-        public global::Fal.GetAssetLineageResponseLineageNodeVariant4EntityType EntityType { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Fal.GetAssetLineageResponseLineageNodeVariant4EntityType EntityType { get; set; }
 
         /// <summary>
         /// Entity display name; null when the entity is deleted<br/>
@@ -84,16 +85,16 @@ namespace Fal
         /// Smart entity ID<br/>
         /// Example: 43ce3411-1a25-4d14-875e-3562d341b090
         /// </param>
+        /// <param name="entityType">
+        /// Smart entity type<br/>
+        /// Example: character
+        /// </param>
         /// <param name="tombstone">
         /// Whether the entity has been deleted<br/>
         /// Example: false
         /// </param>
         /// <param name="kind">
         /// Node kind
-        /// </param>
-        /// <param name="entityType">
-        /// Smart entity type<br/>
-        /// Example: character
         /// </param>
         /// <param name="name">
         /// Entity display name; null when the entity is deleted<br/>
@@ -109,9 +110,9 @@ namespace Fal
         public GetAssetLineageResponseLineageNodeVariant4(
             string id,
             string entityId,
+            global::Fal.GetAssetLineageResponseLineageNodeVariant4EntityType entityType,
             bool tombstone,
             global::Fal.GetAssetLineageResponseLineageNodeVariant4Kind kind,
-            global::Fal.GetAssetLineageResponseLineageNodeVariant4EntityType entityType,
             string? name,
             string? handle)
         {
