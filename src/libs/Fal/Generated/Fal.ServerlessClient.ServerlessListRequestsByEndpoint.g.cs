@@ -264,12 +264,18 @@ namespace Fal
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("cursor", cursor)
-                                .AddRequiredParameter("endpoint_id", endpointId.ToString() ?? string.Empty)
+                                .AddRequiredParameter("endpoint_id", endpointId.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false) ?? global::System.Array.Empty<string?>(), delimiter: ",", explode: true)
                                 .AddOptionalParameter("start", start?.ToString())
                                 .AddOptionalParameter("end", end?.ToString())
                                 .AddOptionalParameter("status", status?.ToValueString())
                                 .AddOptionalParameter("request_id", requestId?.ToString())
-                                .AddOptionalParameter("expand", expand?.ToString())
+                                .AddOptionalParameter("expand", expand?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
                                 .AddOptionalParameter("sort_by", sortBy?.ToValueString())
                                 ;
                             var __path = __pathBuilder.ToString();

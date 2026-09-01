@@ -281,7 +281,10 @@ namespace Fal
                                 .AddOptionalParameter("query", query)
                                 .AddOptionalParameter("image_url", imageUrl)
                                 .AddOptionalParameter("video_url", videoUrl)
-                                .AddOptionalParameter("endpoint_id", endpointId?.ToString())
+                                .AddOptionalParameter("endpoint_id", endpointId?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
                                 .AddOptionalParameter("endpoint", endpoint)
                                 .AddOptionalParameter("exclude_api_requests", excludeApiRequests?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("only_api_requests", onlyApiRequests?.ToString().ToLowerInvariant())

@@ -168,7 +168,10 @@ namespace Fal
                             __pathBuilder
                                 .AddOptionalParameter("start", start?.ToString())
                                 .AddOptionalParameter("end", end?.ToString())
-                                .AddOptionalParameter("app_id", appId?.ToString())
+                                .AddOptionalParameter("app_id", appId?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
                                 .AddOptionalParameter("revision", revision)
                                 .AddOptionalParameter("run_source", runSource?.ToValueString())
                                 .AddOptionalParameter("traceback", traceback?.ToString().ToLowerInvariant())

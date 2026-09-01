@@ -311,11 +311,26 @@ namespace Fal
                                 .AddOptionalParameter("timezone", timezone)
                                 .AddOptionalParameter("timeframe", timeframe?.ToValueString())
                                 .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString())
-                                .AddOptionalParameter("endpoint_id", endpointId?.ToString())
-                                .AddOptionalParameter("api_key_id", apiKeyId?.ToString())
-                                .AddOptionalParameter("team_username", teamUsername?.ToString())
-                                .AddOptionalParameter("product", product?.ToString())
-                                .AddOptionalParameter("expand", expand?.ToString())
+                                .AddOptionalParameter("endpoint_id", endpointId?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("api_key_id", apiKeyId?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("team_username", teamUsername?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("product", product?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("expand", expand?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
