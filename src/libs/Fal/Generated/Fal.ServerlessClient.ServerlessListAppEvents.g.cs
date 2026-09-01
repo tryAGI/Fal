@@ -220,7 +220,10 @@ namespace Fal
                             __pathBuilder
                                 .AddOptionalParameter("start", start?.ToString())
                                 .AddOptionalParameter("end", end?.ToString())
-                                .AddOptionalParameter("category", category?.ToString())
+                                .AddOptionalParameter("category", category?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x?.ToValueString() },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item.ToValueString()),
+                validate: false), delimiter: ",", explode: true)
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("cursor", cursor)
                                 ;

@@ -140,7 +140,10 @@ namespace Fal
                                 path: "/models/pricing",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddRequiredParameter("endpoint_id", endpointId.ToString() ?? string.Empty)
+                                .AddRequiredParameter("endpoint_id", endpointId.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false) ?? global::System.Array.Empty<string?>(), delimiter: ",", explode: true)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
