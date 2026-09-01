@@ -24,7 +24,8 @@ namespace Fal
         /// <example>character</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("entity_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.GetAssetLineageResponseLineageEdgeEntitieEntityTypeJsonConverter))]
-        public global::Fal.GetAssetLineageResponseLineageEdgeEntitieEntityType EntityType { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Fal.GetAssetLineageResponseLineageEdgeEntitieEntityType EntityType { get; set; }
 
         /// <summary>
         /// Entity display name; null when the entity is deleted<br/>

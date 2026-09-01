@@ -45,7 +45,13 @@ namespace Fal
         /// Update storage settings<br/>
         /// Replaces the account-level storage lifecycle settings applied to newly<br/>
         /// uploaded fal CDN files. Omitted or null fields are cleared (reset to the<br/>
-        /// system default), so always send the full desired configuration.<br/>
+        /// system default), so always send the full desired configuration. Sending an<br/>
+        /// empty JSON object `{}` clears all settings. To change a single setting,<br/>
+        /// first GET the current settings and PUT the full object back with only that<br/>
+        /// field changed.<br/>
+        /// A request whose body is not valid JSON (including a zero-length body) or<br/>
+        /// whose Content-Type is not `application/json` is rejected with a 400<br/>
+        /// `validation_error` and the stored settings are unchanged.<br/>
         /// ACL rules referencing users that do not exist are dropped. The response<br/>
         /// reflects the settings actually saved, so verify it contains the rules you sent.<br/>
         /// These are the same settings that the per-request<br/>
@@ -76,7 +82,13 @@ namespace Fal
         /// Update storage settings<br/>
         /// Replaces the account-level storage lifecycle settings applied to newly<br/>
         /// uploaded fal CDN files. Omitted or null fields are cleared (reset to the<br/>
-        /// system default), so always send the full desired configuration.<br/>
+        /// system default), so always send the full desired configuration. Sending an<br/>
+        /// empty JSON object `{}` clears all settings. To change a single setting,<br/>
+        /// first GET the current settings and PUT the full object back with only that<br/>
+        /// field changed.<br/>
+        /// A request whose body is not valid JSON (including a zero-length body) or<br/>
+        /// whose Content-Type is not `application/json` is rejected with a 400<br/>
+        /// `validation_error` and the stored settings are unchanged.<br/>
         /// ACL rules referencing users that do not exist are dropped. The response<br/>
         /// reflects the settings actually saved, so verify it contains the rules you sent.<br/>
         /// These are the same settings that the per-request<br/>
@@ -638,7 +650,13 @@ namespace Fal
         /// Update storage settings<br/>
         /// Replaces the account-level storage lifecycle settings applied to newly<br/>
         /// uploaded fal CDN files. Omitted or null fields are cleared (reset to the<br/>
-        /// system default), so always send the full desired configuration.<br/>
+        /// system default), so always send the full desired configuration. Sending an<br/>
+        /// empty JSON object `{}` clears all settings. To change a single setting,<br/>
+        /// first GET the current settings and PUT the full object back with only that<br/>
+        /// field changed.<br/>
+        /// A request whose body is not valid JSON (including a zero-length body) or<br/>
+        /// whose Content-Type is not `application/json` is rejected with a 400<br/>
+        /// `validation_error` and the stored settings are unchanged.<br/>
         /// ACL rules referencing users that do not exist are dropped. The response<br/>
         /// reflects the settings actually saved, so verify it contains the rules you sent.<br/>
         /// These are the same settings that the per-request<br/>
