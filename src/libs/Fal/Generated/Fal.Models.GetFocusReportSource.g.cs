@@ -4,7 +4,7 @@
 namespace Fal
 {
     /// <summary>
-    /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
+    /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns the same date range from the tagged usage aggregate, populating the Tags column; it requires tagged reporting to be enabled for the account and at least one activated tag key, and its figures can differ from 'estimate' — the aggregate deduplicates by request, covers endpoint requests only, and refreshes on its own schedule rather than continuously.<br/>
     /// Example: invoice
     /// </summary>
     public enum GetFocusReportSource
@@ -17,6 +17,10 @@ namespace Fal
         ///
         /// </summary>
         Invoice,
+        /// <summary>
+        ///
+        /// </summary>
+        TaggedEstimate,
     }
 
     /// <summary>
@@ -33,6 +37,7 @@ namespace Fal
             {
                 GetFocusReportSource.Estimate => "estimate",
                 GetFocusReportSource.Invoice => "invoice",
+                GetFocusReportSource.TaggedEstimate => "tagged-estimate",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -45,6 +50,7 @@ namespace Fal
             {
                 "estimate" => GetFocusReportSource.Estimate,
                 "invoice" => GetFocusReportSource.Invoice,
+                "tagged-estimate" => GetFocusReportSource.TaggedEstimate,
                 _ => null,
             };
         }

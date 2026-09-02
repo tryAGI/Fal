@@ -26,7 +26,7 @@ namespace Fal
         ///
         /// </summary>
         /// <param name="source">
-        /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
+        /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns the same date range from the tagged usage aggregate, populating the Tags column; it requires tagged reporting to be enabled for the organization and at least one activated tag key, and its figures can differ from 'estimate' — the aggregate deduplicates by request, covers endpoint requests only, and refreshes on its own schedule rather than continuously.<br/>
         /// Example: estimate
         /// </param>
         /// <param name="billingMonth">
@@ -100,7 +100,7 @@ namespace Fal
         ///
         /// </summary>
         /// <param name="source">
-        /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range.<br/>
+        /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns the same date range from the tagged usage aggregate, populating the Tags column; it requires tagged reporting to be enabled for the organization and at least one activated tag key, and its figures can differ from 'estimate' — the aggregate deduplicates by request, covers endpoint requests only, and refreshes on its own schedule rather than continuously.<br/>
         /// Example: estimate
         /// </param>
         /// <param name="billingMonth">
