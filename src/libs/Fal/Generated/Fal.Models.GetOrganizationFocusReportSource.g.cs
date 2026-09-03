@@ -4,7 +4,7 @@
 namespace Fal
 {
     /// <summary>
-    /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns the same date range from the tagged usage aggregate, populating the Tags column; it requires tagged reporting to be enabled for the organization and at least one activated tag key, and its figures can differ from 'estimate' — the aggregate deduplicates by request, covers endpoint requests only, and refreshes on its own schedule rather than continuously.<br/>
+    /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns those same estimates with the Tags column populated from the X-Fal-Tags tags set on your requests; it requires tagged reporting to be enabled for the organization, and recent usage is delayed relative to 'estimate'.<br/>
     /// Example: estimate
     /// </summary>
     public enum GetOrganizationFocusReportSource

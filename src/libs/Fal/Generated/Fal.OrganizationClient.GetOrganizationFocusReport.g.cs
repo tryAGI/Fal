@@ -67,8 +67,9 @@ namespace Fal
         /// billing customer ID, so both account columns share one identifier namespace.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// Must be called with an admin API key on the organization's root team.<br/>
-        /// Supports two data sources:<br/>
+        /// Supports three data sources:<br/>
         /// - **estimate**: Real-time usage estimates for a date range. Under pooled billing every row is attributed to the calling team.<br/>
+        /// - **tagged-estimate**: Those same estimates with the `Tags` column populated from the `X-Fal-Tags` tags set on your requests. Requires tagged reporting to be enabled for the organization; recent usage is delayed relative to `estimate`.<br/>
         /// - **invoice**: Finalized invoice data for a billing month. Under pooled billing, per-team `SubAccount` attribution is available on endpoint (Model API) lines that carry a caller; app and compute lines carry no caller and have no SubAccount.<br/>
         /// Use `team_username` to restrict the report to a single team. Under shared<br/>
         /// (pooled) billing this is rejected for `source=invoice` — the invoice is issued<br/>
@@ -79,7 +80,7 @@ namespace Fal
         ///
         /// </summary>
         /// <param name="source">
-        /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns the same date range from the tagged usage aggregate, populating the Tags column; it requires tagged reporting to be enabled for the organization and at least one activated tag key, and its figures can differ from 'estimate' — the aggregate deduplicates by request, covers endpoint requests only, and refreshes on its own schedule rather than continuously.<br/>
+        /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns those same estimates with the Tags column populated from the X-Fal-Tags tags set on your requests; it requires tagged reporting to be enabled for the organization, and recent usage is delayed relative to 'estimate'.<br/>
         /// Example: estimate
         /// </param>
         /// <param name="billingMonth">
@@ -158,8 +159,9 @@ namespace Fal
         /// billing customer ID, so both account columns share one identifier namespace.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// Must be called with an admin API key on the organization's root team.<br/>
-        /// Supports two data sources:<br/>
+        /// Supports three data sources:<br/>
         /// - **estimate**: Real-time usage estimates for a date range. Under pooled billing every row is attributed to the calling team.<br/>
+        /// - **tagged-estimate**: Those same estimates with the `Tags` column populated from the `X-Fal-Tags` tags set on your requests. Requires tagged reporting to be enabled for the organization; recent usage is delayed relative to `estimate`.<br/>
         /// - **invoice**: Finalized invoice data for a billing month. Under pooled billing, per-team `SubAccount` attribution is available on endpoint (Model API) lines that carry a caller; app and compute lines carry no caller and have no SubAccount.<br/>
         /// Use `team_username` to restrict the report to a single team. Under shared<br/>
         /// (pooled) billing this is rejected for `source=invoice` — the invoice is issued<br/>
@@ -170,7 +172,7 @@ namespace Fal
         ///
         /// </summary>
         /// <param name="source">
-        /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns the same date range from the tagged usage aggregate, populating the Tags column; it requires tagged reporting to be enabled for the organization and at least one activated tag key, and its figures can differ from 'estimate' — the aggregate deduplicates by request, covers endpoint requests only, and refreshes on its own schedule rather than continuously.<br/>
+        /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns those same estimates with the Tags column populated from the X-Fal-Tags tags set on your requests; it requires tagged reporting to be enabled for the organization, and recent usage is delayed relative to 'estimate'.<br/>
         /// Example: estimate
         /// </param>
         /// <param name="billingMonth">
