@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Fal
@@ -37,13 +39,26 @@ namespace Fal
         public required string Timestamp { get; set; }
 
         /// <summary>
-        /// Custom billing units for this request
+        /// Billable units consumed, in the unit named by `unit`. Same value as the deprecated `output_units`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("quantity")]
+        public double? Quantity { get; set; }
+
+        /// <summary>
+        /// Deprecated: use quantity. Same value as quantity.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("output_units")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public double? OutputUnits { get; set; }
 
         /// <summary>
-        /// Unit price for this request
+        /// The billing unit these units are counted in (e.g. 'image', 'second', 'megapixel'). Null when the reporter recorded none.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("unit")]
+        public string? Unit { get; set; }
+
+        /// <summary>
+        /// Per-unit price this line is measured against: the list rate when a discount is reported in percent_discount, otherwise the negotiated rate after any price override and before percentage discounts.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unit_price")]
         public double? UnitPrice { get; set; }
@@ -76,7 +91,7 @@ namespace Fal
         public required double CostTotal { get; set; }
 
         /// <summary>
-        /// Amount charged after discounts in nano USD — the same charge as cost_total (1 USD = 1,000,000,000 nano USD)
+        /// Amount charged after discounts in nano USD. The precision-preserving representation of cost_total, not a legacy duplicate: an integer nano-USD amount avoids the float error that accumulates when summing sub-cent charges (1 USD = 1,000,000,000 nano USD).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("cost_estimate_nano_usd")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -125,13 +140,16 @@ namespace Fal
         /// Amount charged after discounts in USD (cost_subtotal − cost_discount)
         /// </param>
         /// <param name="costEstimateNanoUsd">
-        /// Amount charged after discounts in nano USD — the same charge as cost_total (1 USD = 1,000,000,000 nano USD)
+        /// Amount charged after discounts in nano USD. The precision-preserving representation of cost_total, not a legacy duplicate: an integer nano-USD amount avoids the float error that accumulates when summing sub-cent charges (1 USD = 1,000,000,000 nano USD).
         /// </param>
-        /// <param name="outputUnits">
-        /// Custom billing units for this request
+        /// <param name="quantity">
+        /// Billable units consumed, in the unit named by `unit`. Same value as the deprecated `output_units`.
+        /// </param>
+        /// <param name="unit">
+        /// The billing unit these units are counted in (e.g. 'image', 'second', 'megapixel'). Null when the reporter recorded none.
         /// </param>
         /// <param name="unitPrice">
-        /// Unit price for this request
+        /// Per-unit price this line is measured against: the list rate when a discount is reported in percent_discount, otherwise the negotiated rate after any price override and before percentage discounts.
         /// </param>
         /// <param name="percentDiscount">
         /// Discount percentage applied to this request (e.g., 10 = 10% discount)
@@ -154,7 +172,8 @@ namespace Fal
             double costDiscount,
             double costTotal,
             double costEstimateNanoUsd,
-            double? outputUnits,
+            double? quantity,
+            string? unit,
             double? unitPrice,
             double? percentDiscount,
             string? authMethod,
@@ -164,7 +183,8 @@ namespace Fal
             this.RequestId = requestId ?? throw new global::System.ArgumentNullException(nameof(requestId));
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
             this.Timestamp = timestamp ?? throw new global::System.ArgumentNullException(nameof(timestamp));
-            this.OutputUnits = outputUnits;
+            this.Quantity = quantity;
+            this.Unit = unit;
             this.UnitPrice = unitPrice;
             this.PercentDiscount = percentDiscount;
             this.CostSubtotal = costSubtotal;

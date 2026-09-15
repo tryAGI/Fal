@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Fal
@@ -64,10 +66,45 @@ namespace Fal
         public required double UnitPrice { get; set; }
 
         /// <summary>
-        /// Computed cost (quantity × unit_price)<br/>
+        /// Percentage discount applied to this line item (e.g., 20 = 20% discount). Null when no percentage discount applies.<br/>
+        /// Example: 20
+        /// </summary>
+        /// <example>20</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("percent_discount")]
+        public double? PercentDiscount { get; set; }
+
+        /// <summary>
+        /// Cost before discounts (quantity × unit_price)<br/>
         /// Example: 0.4F
         /// </summary>
         /// <example>0.4F</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_subtotal")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostSubtotal { get; set; }
+
+        /// <summary>
+        /// Discount applied to this line item (cost_subtotal − cost_total)<br/>
+        /// Example: 0.08F
+        /// </summary>
+        /// <example>0.08F</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_discount")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostDiscount { get; set; }
+
+        /// <summary>
+        /// Amount charged after discounts (cost_subtotal − cost_discount)<br/>
+        /// Example: 0.32F
+        /// </summary>
+        /// <example>0.32F</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("cost_total")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double CostTotal { get; set; }
+
+        /// <summary>
+        /// Deprecated: use cost_total. Same value as cost_total.<br/>
+        /// Example: 0.32F
+        /// </summary>
+        /// <example>0.32F</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("cost")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Cost { get; set; }
@@ -128,13 +165,29 @@ namespace Fal
         /// Unit price used to compute charges for this line item<br/>
         /// Example: 0.1F
         /// </param>
-        /// <param name="cost">
-        /// Computed cost (quantity × unit_price)<br/>
+        /// <param name="costSubtotal">
+        /// Cost before discounts (quantity × unit_price)<br/>
         /// Example: 0.4F
+        /// </param>
+        /// <param name="costDiscount">
+        /// Discount applied to this line item (cost_subtotal − cost_total)<br/>
+        /// Example: 0.08F
+        /// </param>
+        /// <param name="costTotal">
+        /// Amount charged after discounts (cost_subtotal − cost_discount)<br/>
+        /// Example: 0.32F
+        /// </param>
+        /// <param name="cost">
+        /// Deprecated: use cost_total. Same value as cost_total.<br/>
+        /// Example: 0.32F
         /// </param>
         /// <param name="currency">
         /// Three-letter currency code (ISO 4217, e.g., 'USD')<br/>
         /// Example: USD
+        /// </param>
+        /// <param name="percentDiscount">
+        /// Percentage discount applied to this line item (e.g., 20 = 20% discount). Null when no percentage discount applies.<br/>
+        /// Example: 20
         /// </param>
         /// <param name="authMethod">
         /// Authentication method label resolved across the organization (e.g., 'my-key (owner: alice)', 'alice &lt;alice@example.com&gt;', or 'None'). Only populated when 'auth_method' is included in the expand parameter. Falls back to the raw upstream label if the decoration service cannot resolve a row.<br/>
@@ -153,8 +206,12 @@ namespace Fal
             string unit,
             double quantity,
             double unitPrice,
+            double costSubtotal,
+            double costDiscount,
+            double costTotal,
             double cost,
             string currency,
+            double? percentDiscount,
             string? authMethod,
             global::Fal.GetOrganizationUsageResponseSummaryItemAuthMethodStructured? authMethodStructured)
         {
@@ -164,6 +221,10 @@ namespace Fal
             this.Unit = unit ?? throw new global::System.ArgumentNullException(nameof(unit));
             this.Quantity = quantity;
             this.UnitPrice = unitPrice;
+            this.PercentDiscount = percentDiscount;
+            this.CostSubtotal = costSubtotal;
+            this.CostDiscount = costDiscount;
+            this.CostTotal = costTotal;
             this.Cost = cost;
             this.Currency = currency ?? throw new global::System.ArgumentNullException(nameof(currency));
             this.AuthMethod = authMethod;

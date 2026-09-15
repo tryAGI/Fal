@@ -51,6 +51,13 @@ namespace Fal
         public required double UnitPrice { get; set; }
 
         /// <summary>
+        /// Per-second price after the percentage discount — the rate this usage is billed at
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("net_unit_price")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required double NetUnitPrice { get; set; }
+
+        /// <summary>
         /// Percentage discount applied to this line item (e.g., 20 = 20% discount). Null when no percentage discount applies. Usage billed at different discount rates appears as separate rows, like unit_price.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("percent_discount")]
@@ -119,6 +126,9 @@ namespace Fal
         /// <param name="unitPrice">
         /// Per-second price for this machine type before percentage discounts, including any customer-specific machine pricing
         /// </param>
+        /// <param name="netUnitPrice">
+        /// Per-second price after the percentage discount — the rate this usage is billed at
+        /// </param>
         /// <param name="costSubtotal">
         /// Cost before discounts (quantity × unit_price)
         /// </param>
@@ -154,6 +164,7 @@ namespace Fal
             string unit,
             double quantity,
             double unitPrice,
+            double netUnitPrice,
             double costSubtotal,
             double costDiscount,
             double costTotal,
@@ -170,6 +181,7 @@ namespace Fal
             this.Unit = unit ?? throw new global::System.ArgumentNullException(nameof(unit));
             this.Quantity = quantity;
             this.UnitPrice = unitPrice;
+            this.NetUnitPrice = netUnitPrice;
             this.PercentDiscount = percentDiscount;
             this.CostSubtotal = costSubtotal;
             this.CostDiscount = costDiscount;
