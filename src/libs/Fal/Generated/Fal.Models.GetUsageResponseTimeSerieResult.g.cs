@@ -86,6 +86,12 @@ namespace Fal
         public string? AuthMethod { get; set; }
 
         /// <summary>
+        /// Activated X-Fal-Tags key/values represented by this row. Only populated when source=tagged-estimate; a key the row's requests did not set is omitted, so a row that set none reports {}.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         /// Structured authentication method identity. Only populated when 'auth_method_structured' is included in expand parameter.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("auth_method_structured")]
@@ -133,6 +139,9 @@ namespace Fal
         /// <param name="authMethod">
         /// Authentication method label (e.g., 'Key 1', 'Key 2', 'User token'). Only populated when 'auth_method' is included in expand parameter.
         /// </param>
+        /// <param name="tags">
+        /// Activated X-Fal-Tags key/values represented by this row. Only populated when source=tagged-estimate; a key the row's requests did not set is omitted, so a row that set none reports {}.
+        /// </param>
         /// <param name="authMethodStructured">
         /// Structured authentication method identity. Only populated when 'auth_method_structured' is included in expand parameter.
         /// </param>
@@ -151,6 +160,7 @@ namespace Fal
             string currency,
             double? percentDiscount,
             string? authMethod,
+            global::System.Collections.Generic.Dictionary<string, string>? tags,
             global::Fal.GetUsageResponseTimeSerieResultAuthMethodStructured? authMethodStructured)
         {
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
@@ -164,6 +174,7 @@ namespace Fal
             this.Cost = cost;
             this.Currency = currency ?? throw new global::System.ArgumentNullException(nameof(currency));
             this.AuthMethod = authMethod;
+            this.Tags = tags;
             this.AuthMethodStructured = authMethodStructured;
         }
 

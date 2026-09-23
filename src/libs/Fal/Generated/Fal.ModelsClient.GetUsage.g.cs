@@ -34,9 +34,11 @@ namespace Fal
             ref string? timezone,
             ref global::Fal.GetUsageTimeframe? timeframe,
             ref global::Fal.GetUsageBoundToTimeframe? boundToTimeframe,
+            ref global::Fal.GetUsageSource? source,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername,
+            ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? tag,
             ref global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void PrepareGetUsageRequest(
             global::System.Net.Http.HttpClient httpClient,
@@ -48,9 +50,11 @@ namespace Fal
             string? timezone,
             global::Fal.GetUsageTimeframe? timeframe,
             global::Fal.GetUsageBoundToTimeframe? boundToTimeframe,
+            global::Fal.GetUsageSource? source,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? tag,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand);
         partial void ProcessGetUsageResponse(
             global::System.Net.Http.HttpClient httpClient,
@@ -73,6 +77,12 @@ namespace Fal
         /// - User-specific usage tracking<br/>
         /// - Detailed usage line items with unit quantity, price, and discount breakdown<br/>
         /// - Paginated results for large datasets<br/>
+        /// **Tagged usage:** pass `source=tagged-estimate` to read the tagged aggregate<br/>
+        /// instead of the default estimate. Each row then carries a `tags` object built<br/>
+        /// from the `X-Fal-Tags` tags set on your requests, and `tag=key=value` filters<br/>
+        /// narrow the results — repeat the parameter to AND several pairs together.<br/>
+        /// Requires tagged reporting to be enabled for the account; recent usage is delayed<br/>
+        /// relative to the default source.<br/>
         /// **Common Use Cases:**<br/>
         /// - Generate usage reports for all endpoints or specific models<br/>
         /// - Track usage patterns<br/>
@@ -111,6 +121,11 @@ namespace Fal
         /// Default Value: true<br/>
         /// Example: true
         /// </param>
+        /// <param name="source">
+        /// Data source. 'estimate' is the default usage estimate. 'tagged-estimate' reads the tagged aggregate instead, populating each row's 'tags' and enabling the 'tag' filter; it requires tagged reporting to be enabled for the account, and recent usage is delayed relative to 'estimate'.<br/>
+        /// Default Value: estimate<br/>
+        /// Example: estimate
+        /// </param>
         /// <param name="endpointId">
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
@@ -122,6 +137,10 @@ namespace Fal
         /// <param name="loginUsername">
         /// Filter by team member login username(s) (nickname). Accepts 1-50 usernames. Supports comma-separated values: ?login_username=alice,bob or array syntax: ?login_username=alice&amp;login_username=bob<br/>
         /// Example: [alice]
+        /// </param>
+        /// <param name="tag">
+        /// Filter by X-Fal-Tags 'key=value' pairs. Accepts 1-10 filters: different keys are AND-combined (?tag=env=prod&amp;tag=team=design), and repeating a key matches any of its values. Use the value '(untagged)' to match requests that did not set the key.<br/>
+        /// Example: [env=prod]
         /// </param>
         /// <param name="expand">
         /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, 'auth_method' to include a formatted authentication method label, and 'auth_method_structured' to include a machine-readable auth method object (detail, api_key_id, login_username). At least one of 'time_series' or 'summary' is required.<br/>
@@ -139,9 +158,11 @@ namespace Fal
             string? timezone = default,
             global::Fal.GetUsageTimeframe? timeframe = default,
             global::Fal.GetUsageBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.GetUsageSource? source = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? tag = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -154,9 +175,11 @@ namespace Fal
                 timezone: timezone,
                 timeframe: timeframe,
                 boundToTimeframe: boundToTimeframe,
+                source: source,
                 endpointId: endpointId,
                 apiKeyId: apiKeyId,
                 loginUsername: loginUsername,
+                tag: tag,
                 expand: expand,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
@@ -176,6 +199,12 @@ namespace Fal
         /// - User-specific usage tracking<br/>
         /// - Detailed usage line items with unit quantity, price, and discount breakdown<br/>
         /// - Paginated results for large datasets<br/>
+        /// **Tagged usage:** pass `source=tagged-estimate` to read the tagged aggregate<br/>
+        /// instead of the default estimate. Each row then carries a `tags` object built<br/>
+        /// from the `X-Fal-Tags` tags set on your requests, and `tag=key=value` filters<br/>
+        /// narrow the results — repeat the parameter to AND several pairs together.<br/>
+        /// Requires tagged reporting to be enabled for the account; recent usage is delayed<br/>
+        /// relative to the default source.<br/>
         /// **Common Use Cases:**<br/>
         /// - Generate usage reports for all endpoints or specific models<br/>
         /// - Track usage patterns<br/>
@@ -214,6 +243,11 @@ namespace Fal
         /// Default Value: true<br/>
         /// Example: true
         /// </param>
+        /// <param name="source">
+        /// Data source. 'estimate' is the default usage estimate. 'tagged-estimate' reads the tagged aggregate instead, populating each row's 'tags' and enabling the 'tag' filter; it requires tagged reporting to be enabled for the account, and recent usage is delayed relative to 'estimate'.<br/>
+        /// Default Value: estimate<br/>
+        /// Example: estimate
+        /// </param>
         /// <param name="endpointId">
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
@@ -225,6 +259,10 @@ namespace Fal
         /// <param name="loginUsername">
         /// Filter by team member login username(s) (nickname). Accepts 1-50 usernames. Supports comma-separated values: ?login_username=alice,bob or array syntax: ?login_username=alice&amp;login_username=bob<br/>
         /// Example: [alice]
+        /// </param>
+        /// <param name="tag">
+        /// Filter by X-Fal-Tags 'key=value' pairs. Accepts 1-10 filters: different keys are AND-combined (?tag=env=prod&amp;tag=team=design), and repeating a key matches any of its values. Use the value '(untagged)' to match requests that did not set the key.<br/>
+        /// Example: [env=prod]
         /// </param>
         /// <param name="expand">
         /// Data to include in the response. Use 'time_series' for time-bucketed data, 'summary' for aggregate statistics, 'auth_method' to include a formatted authentication method label, and 'auth_method_structured' to include a machine-readable auth method object (detail, api_key_id, login_username). At least one of 'time_series' or 'summary' is required.<br/>
@@ -242,9 +280,11 @@ namespace Fal
             string? timezone = default,
             global::Fal.GetUsageTimeframe? timeframe = default,
             global::Fal.GetUsageBoundToTimeframe? boundToTimeframe = default,
+            global::Fal.GetUsageSource? source = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? tag = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -260,9 +300,11 @@ namespace Fal
                 timezone: ref timezone,
                 timeframe: ref timeframe,
                 boundToTimeframe: ref boundToTimeframe,
+                source: ref source,
                 endpointId: ref endpointId,
                 apiKeyId: ref apiKeyId,
                 loginUsername: ref loginUsername,
+                tag: ref tag,
                 expand: ref expand);
 
 
@@ -299,6 +341,7 @@ namespace Fal
                                 .AddOptionalParameter("timezone", timezone)
                                 .AddOptionalParameter("timeframe", timeframe?.ToValueString())
                                 .AddOptionalParameter("bound_to_timeframe", boundToTimeframe?.ToValueString())
+                                .AddOptionalParameter("source", source?.ToValueString())
                                 .AddOptionalParameter("endpoint_id", endpointId?.Match(
                 static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
                 static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
@@ -308,6 +351,10 @@ namespace Fal
                 static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
                 validate: false), delimiter: ",", explode: true)
                                 .AddOptionalParameter("login_username", loginUsername?.Match(
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
+                static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
+                validate: false), delimiter: ",", explode: true)
+                                .AddOptionalParameter("tag", tag?.Match(
                 static x => (global::System.Collections.Generic.IEnumerable<string?>)new string?[] { x },
                 static x => (global::System.Collections.Generic.IEnumerable<string?>)global::System.Linq.Enumerable.Select(x, static item => item),
                 validate: false), delimiter: ",", explode: true)
@@ -363,9 +410,11 @@ namespace Fal
                     timezone: timezone,
                     timeframe: timeframe,
                     boundToTimeframe: boundToTimeframe,
+                    source: source,
                     endpointId: endpointId,
                     apiKeyId: apiKeyId,
                     loginUsername: loginUsername,
+                    tag: tag,
                     expand: expand);
 
                 return __httpRequest;
