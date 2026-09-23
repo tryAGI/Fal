@@ -39,8 +39,10 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageTimeframe), TypeInfoPropertyName = "GetUsageTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageBoundToTimeframe), TypeInfoPropertyName = "GetUsageBoundToTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageSource), TypeInfoPropertyName = "GetUsageSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsTimeframe), TypeInfoPropertyName = "GetAnalyticsTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsBoundToTimeframe), TypeInfoPropertyName = "GetAnalyticsBoundToTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsSource), TypeInfoPropertyName = "GetBillingEventsSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointStatus), TypeInfoPropertyName = "ListRequestsByEndpointStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointSortBy), TypeInfoPropertyName = "ListRequestsByEndpointSortBy2")]
@@ -238,8 +240,10 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageTimeframe?), TypeInfoPropertyName = "NullableGetUsageTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageBoundToTimeframe?), TypeInfoPropertyName = "NullableGetUsageBoundToTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageSource?), TypeInfoPropertyName = "NullableGetUsageSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsTimeframe?), TypeInfoPropertyName = "NullableGetAnalyticsTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsBoundToTimeframe?), TypeInfoPropertyName = "NullableGetAnalyticsBoundToTimeframe2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsSource?), TypeInfoPropertyName = "NullableGetBillingEventsSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Guid?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointStatus?), TypeInfoPropertyName = "NullableListRequestsByEndpointStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointSortBy?), TypeInfoPropertyName = "NullableListRequestsByEndpointSortBy2")]
@@ -364,12 +368,14 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::System.DateTime?, string>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
@@ -468,6 +474,10 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.GetUsageBoundToTimeframe?)
 
+                    || typeToConvert == typeof(global::Fal.GetUsageSource)
+
+                    || typeToConvert == typeof(global::Fal.GetUsageSource?)
+
                     || typeToConvert == typeof(global::Fal.GetAnalyticsTimeframe)
 
                     || typeToConvert == typeof(global::Fal.GetAnalyticsTimeframe?)
@@ -475,6 +485,10 @@ namespace Fal
                     || typeToConvert == typeof(global::Fal.GetAnalyticsBoundToTimeframe)
 
                     || typeToConvert == typeof(global::Fal.GetAnalyticsBoundToTimeframe?)
+
+                    || typeToConvert == typeof(global::Fal.GetBillingEventsSource)
+
+                    || typeToConvert == typeof(global::Fal.GetBillingEventsSource?)
 
                     || typeToConvert == typeof(global::Fal.ListRequestsByEndpointStatus)
 
@@ -735,6 +749,16 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetUsageBoundToTimeframeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Fal.GetUsageSource))
+                {
+                    return new global::Fal.JsonConverters.GetUsageSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetUsageSource?))
+                {
+                    return new global::Fal.JsonConverters.GetUsageSourceNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Fal.GetAnalyticsTimeframe))
                 {
                     return new global::Fal.JsonConverters.GetAnalyticsTimeframeJsonConverter();
@@ -753,6 +777,16 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.GetAnalyticsBoundToTimeframe?))
                 {
                     return new global::Fal.JsonConverters.GetAnalyticsBoundToTimeframeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetBillingEventsSource))
+                {
+                    return new global::Fal.JsonConverters.GetBillingEventsSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetBillingEventsSource?))
+                {
+                    return new global::Fal.JsonConverters.GetBillingEventsSourceNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointStatus))

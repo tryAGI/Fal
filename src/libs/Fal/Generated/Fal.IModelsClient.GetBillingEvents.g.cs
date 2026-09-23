@@ -18,6 +18,13 @@ namespace Fal
         /// - Cursor-based pagination for efficient large dataset queries<br/>
         /// - Limited to 10000 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
+        /// **Tagged billing events:** pass `source=tagged-billed` to read the tagged<br/>
+        /// billing-event pivot instead of the default feed. Each row then carries a `tags`<br/>
+        /// object built from the `X-Fal-Tags` tags set on that request, and<br/>
+        /// `tag=key=value` filters narrow the results — repeating the parameter with<br/>
+        /// different keys ANDs them, repeating one key matches any of its values. Requires<br/>
+        /// tagged reporting to be enabled for the account; recent events are delayed<br/>
+        /// relative to the default source.<br/>
         /// **Common Use Cases:**<br/>
         /// - Audit individual billing events<br/>
         /// - Track request patterns and volumes<br/>
@@ -42,6 +49,11 @@ namespace Fal
         /// End date in ISO8601 format, exclusive (e.g., '2025-02-01T00:00:00Z' or '2025-02-01'). Data up to but not including this timestamp is returned. Defaults to current time.<br/>
         /// Example: 2025-02-01T00:00:00Z
         /// </param>
+        /// <param name="source">
+        /// Data source. 'billed' is the default billed-event feed. 'tagged-billed' reads the tagged billing-event pivot instead, populating each row's 'tags' and enabling the 'tag' filter; it requires tagged reporting to be enabled for the account, and recent events are delayed relative to 'billed'.<br/>
+        /// Default Value: billed<br/>
+        /// Example: billed
+        /// </param>
         /// <param name="endpointId">
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
@@ -49,6 +61,10 @@ namespace Fal
         /// <param name="requestId">
         /// Filter by specific request ID(s). Accepts 1-50 request IDs. Supports comma-separated values: ?request_id=req1,req2 or array syntax: ?request_id=req1&amp;request_id=req2<br/>
         /// Example: [req-abc123]
+        /// </param>
+        /// <param name="tag">
+        /// Filter by X-Fal-Tags 'key=value' pairs. Accepts 1-10 filters: different keys are AND-combined (?tag=env=prod&amp;tag=team=design), and repeating a key matches any of its values. Use the value '(untagged)' to match requests that did not set the key.<br/>
+        /// Example: [env=prod]
         /// </param>
         /// <param name="apiKeyId">
         /// Filter by specific API key ID(s). Accepts 1-50 key IDs. Supports comma-separated values: ?api_key_id=key1,key2 or array syntax: ?api_key_id=key1&amp;api_key_id=key2<br/>
@@ -70,8 +86,10 @@ namespace Fal
             string? cursor = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
+            global::Fal.GetBillingEventsSource? source = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? requestId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? tag = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
@@ -91,6 +109,13 @@ namespace Fal
         /// - Cursor-based pagination for efficient large dataset queries<br/>
         /// - Limited to 10000 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
+        /// **Tagged billing events:** pass `source=tagged-billed` to read the tagged<br/>
+        /// billing-event pivot instead of the default feed. Each row then carries a `tags`<br/>
+        /// object built from the `X-Fal-Tags` tags set on that request, and<br/>
+        /// `tag=key=value` filters narrow the results — repeating the parameter with<br/>
+        /// different keys ANDs them, repeating one key matches any of its values. Requires<br/>
+        /// tagged reporting to be enabled for the account; recent events are delayed<br/>
+        /// relative to the default source.<br/>
         /// **Common Use Cases:**<br/>
         /// - Audit individual billing events<br/>
         /// - Track request patterns and volumes<br/>
@@ -115,6 +140,11 @@ namespace Fal
         /// End date in ISO8601 format, exclusive (e.g., '2025-02-01T00:00:00Z' or '2025-02-01'). Data up to but not including this timestamp is returned. Defaults to current time.<br/>
         /// Example: 2025-02-01T00:00:00Z
         /// </param>
+        /// <param name="source">
+        /// Data source. 'billed' is the default billed-event feed. 'tagged-billed' reads the tagged billing-event pivot instead, populating each row's 'tags' and enabling the 'tag' filter; it requires tagged reporting to be enabled for the account, and recent events are delayed relative to 'billed'.<br/>
+        /// Default Value: billed<br/>
+        /// Example: billed
+        /// </param>
         /// <param name="endpointId">
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
         /// Example: [fal-ai/flux/dev]
@@ -122,6 +152,10 @@ namespace Fal
         /// <param name="requestId">
         /// Filter by specific request ID(s). Accepts 1-50 request IDs. Supports comma-separated values: ?request_id=req1,req2 or array syntax: ?request_id=req1&amp;request_id=req2<br/>
         /// Example: [req-abc123]
+        /// </param>
+        /// <param name="tag">
+        /// Filter by X-Fal-Tags 'key=value' pairs. Accepts 1-10 filters: different keys are AND-combined (?tag=env=prod&amp;tag=team=design), and repeating a key matches any of its values. Use the value '(untagged)' to match requests that did not set the key.<br/>
+        /// Example: [env=prod]
         /// </param>
         /// <param name="apiKeyId">
         /// Filter by specific API key ID(s). Accepts 1-50 key IDs. Supports comma-separated values: ?api_key_id=key1,key2 or array syntax: ?api_key_id=key1&amp;api_key_id=key2<br/>
@@ -143,8 +177,10 @@ namespace Fal
             string? cursor = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? start = default,
             global::Fal.AnyOf<global::System.DateTime?, string>? end = default,
+            global::Fal.GetBillingEventsSource? source = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? endpointId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? requestId = default,
+            global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? tag = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? apiKeyId = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? loginUsername = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,

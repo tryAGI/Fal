@@ -103,6 +103,12 @@ namespace Fal
         public global::Fal.GetBillingEventsResponseBillingEventAuthMethodStructured? AuthMethodStructured { get; set; }
 
         /// <summary>
+        /// Activated X-Fal-Tags key/values set on this request. Only populated when source=tagged-billed; a key the request did not set is omitted, so a request that set none reports {}.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -150,6 +156,9 @@ namespace Fal
         /// <param name="authMethodStructured">
         /// Structured authentication method identity. Only populated when 'auth_method_structured' is included in expand parameter.
         /// </param>
+        /// <param name="tags">
+        /// Activated X-Fal-Tags key/values set on this request. Only populated when source=tagged-billed; a key the request did not set is omitted, so a request that set none reports {}.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -166,7 +175,8 @@ namespace Fal
             double? unitPrice,
             double? percentDiscount,
             string? authMethod,
-            global::Fal.GetBillingEventsResponseBillingEventAuthMethodStructured? authMethodStructured)
+            global::Fal.GetBillingEventsResponseBillingEventAuthMethodStructured? authMethodStructured,
+            global::System.Collections.Generic.Dictionary<string, string>? tags)
         {
             this.RequestId = requestId ?? throw new global::System.ArgumentNullException(nameof(requestId));
             this.EndpointId = endpointId ?? throw new global::System.ArgumentNullException(nameof(endpointId));
@@ -181,6 +191,7 @@ namespace Fal
             this.CostEstimateNanoUsd = costEstimateNanoUsd;
             this.AuthMethod = authMethod;
             this.AuthMethodStructured = authMethodStructured;
+            this.Tags = tags;
         }
 
         /// <summary>
