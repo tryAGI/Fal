@@ -1,19 +1,14 @@
 
 #nullable enable
 
-#pragma warning disable CS0618 // Type or member is obsolete
-#pragma warning disable CS3016 // Arrays as attribute arguments is not CLS-compliant
-
 namespace Fal
 {
     /// <summary>
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
@@ -522,10 +517,8 @@ namespace Fal
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
@@ -1034,10 +1027,8 @@ namespace Fal
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
@@ -1546,10 +1537,8 @@ namespace Fal
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
@@ -2058,10 +2047,8 @@ namespace Fal
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
@@ -2570,10 +2557,8 @@ namespace Fal
     ///
     /// </summary>
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-        Converters = new global::System.Type[]
-        {
-        })]
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
