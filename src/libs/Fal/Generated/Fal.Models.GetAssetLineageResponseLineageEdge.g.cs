@@ -38,9 +38,7 @@ namespace Fal
         /// Input role for input_to / referenced_entity edges; null for generated_by
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetAssetLineageResponseLineageEdgeRole?, object, object>))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.AnyOf<global::Fal.GetAssetLineageResponseLineageEdgeRole?, object, object> Role { get; set; }
+        public global::Fal.GetAssetLineageResponseLineageEdgeRole? Role { get; set; }
 
         /// <summary>
         /// input_to edges only: smart entities this input is the reference image of and that the request referenced
@@ -81,7 +79,7 @@ namespace Fal
             string from,
             string to,
             global::Fal.GetAssetLineageResponseLineageEdgeKind kind,
-            global::Fal.AnyOf<global::Fal.GetAssetLineageResponseLineageEdgeRole?, object, object> role,
+            global::Fal.GetAssetLineageResponseLineageEdgeRole? role,
             global::System.Collections.Generic.IList<global::Fal.GetAssetLineageResponseLineageEdgeEntitie>? entities)
         {
             this.From = from ?? throw new global::System.ArgumentNullException(nameof(from));
