@@ -16,6 +16,24 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType), TypeInfoPropertyName = "GetComputeMetricsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType2), TypeInfoPropertyName = "GetComputeMetricsResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType3), TypeInfoPropertyName = "GetComputeMetricsResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType4), TypeInfoPropertyName = "GetComputeMetricsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponse5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType5), TypeInfoPropertyName = "GetComputeMetricsResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType6), TypeInfoPropertyName = "GetComputeMetricsResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListComputeInstancesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ListComputeInstancesResponseInstance>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListComputeInstancesResponseInstance))]
@@ -72,6 +90,12 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteComputeInstanceResponseErrorType5), TypeInfoPropertyName = "DeleteComputeInstanceResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType?), TypeInfoPropertyName = "NullableGetComputeMetricsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType2?), TypeInfoPropertyName = "NullableGetComputeMetricsResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType3?), TypeInfoPropertyName = "NullableGetComputeMetricsResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType4?), TypeInfoPropertyName = "NullableGetComputeMetricsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType5?), TypeInfoPropertyName = "NullableGetComputeMetricsResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeMetricsResponseErrorType6?), TypeInfoPropertyName = "NullableGetComputeMetricsResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListComputeInstancesResponseInstanceInstanceType?), TypeInfoPropertyName = "NullableListComputeInstancesResponseInstanceInstanceType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListComputeInstancesResponseInstanceRegion?), TypeInfoPropertyName = "NullableListComputeInstancesResponseInstanceRegion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListComputeInstancesResponseInstanceSector?), TypeInfoPropertyName = "NullableListComputeInstancesResponseInstanceSector2")]
@@ -237,7 +261,31 @@ namespace Fal
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::Fal.ListComputeInstancesResponseInstanceInstanceType)
+                    typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType?)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType2)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType2?)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType3)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType3?)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType4)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType4?)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType5)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType5?)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType6)
+
+                    || typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType6?)
+
+                    || typeToConvert == typeof(global::Fal.ListComputeInstancesResponseInstanceInstanceType)
 
                     || typeToConvert == typeof(global::Fal.ListComputeInstancesResponseInstanceInstanceType?)
 
@@ -330,6 +378,66 @@ namespace Fal
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType?))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType2))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType2JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType2?))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType2NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType3))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType3JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType3?))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType3NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType4))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType4JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType4?))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType4NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType5))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType5JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType5?))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType5NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType6))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType6JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetComputeMetricsResponseErrorType6?))
+                {
+                    return new global::Fal.JsonConverters.GetComputeMetricsResponseErrorType6NullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Fal.ListComputeInstancesResponseInstanceInstanceType))
                 {
                     return new global::Fal.JsonConverters.ListComputeInstancesResponseInstanceInstanceTypeJsonConverter();
