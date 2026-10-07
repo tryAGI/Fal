@@ -13,6 +13,11 @@ namespace Fal
         /// Retrieve specific model endpoint(s) by ID. Supports single or multiple IDs.<br/>
         /// **3. Search Mode** (search parameters):<br/>
         /// Filter models by free-text query, category, or status.<br/>
+        /// **Ordering (list/search):**<br/>
+        /// - `sort=relevant` uses Explore's shared Trending browse order without keywords and relevance order with keywords. Trending data can fall back to publication dates when unavailable.<br/>
+        /// - `sort=recent` sorts the complete filtered set by publication date (creation date when the publication date is missing), before pagination.<br/>
+        /// - An explicit sort is acknowledged by `ordering.sort`. Omitting sort preserves the default response. Find mode always preserves the supplied endpoint ID order and has no ordering acknowledgement.<br/>
+        /// - Keep sort, filters and limit unchanged when following `next_cursor`; cursors are page positions, not snapshots, and catalog/ranking updates can change later pages.<br/>
         /// **Expansion:**<br/>
         /// Use `expand` to include additional data in each model object:<br/>
         /// - `openapi-3.0` — full OpenAPI 3.0 schema in the `openapi` field<br/>
@@ -55,6 +60,10 @@ namespace Fal
         /// <param name="status">
         /// Filter models by status - omit to include all statuses<br/>
         /// Example: active
+        /// </param>
+        /// <param name="sort">
+        /// List/search ordering: relevant uses Explore's shared Trending browse order or keyword relevance; recent sorts by publication date (creation date when the publication date is missing). Defaults to relevant. Ignored in endpoint_id find mode, which preserves input order. Keep sort, filters and limit unchanged when following a cursor.<br/>
+        /// Example: recent
         /// </param>
         /// <param name="expand">
         /// Fields to expand in the response. Supported values: 'openapi-3.0' (includes full OpenAPI 3.0 schema in 'openapi' field), 'enterprise_status' (includes enterprise readiness status)<br/>
@@ -70,6 +79,7 @@ namespace Fal
             string? q = default,
             string? category = default,
             global::Fal.GetModelsStatus? status = default,
+            global::Fal.GetModelsSort? sort = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
@@ -82,6 +92,11 @@ namespace Fal
         /// Retrieve specific model endpoint(s) by ID. Supports single or multiple IDs.<br/>
         /// **3. Search Mode** (search parameters):<br/>
         /// Filter models by free-text query, category, or status.<br/>
+        /// **Ordering (list/search):**<br/>
+        /// - `sort=relevant` uses Explore's shared Trending browse order without keywords and relevance order with keywords. Trending data can fall back to publication dates when unavailable.<br/>
+        /// - `sort=recent` sorts the complete filtered set by publication date (creation date when the publication date is missing), before pagination.<br/>
+        /// - An explicit sort is acknowledged by `ordering.sort`. Omitting sort preserves the default response. Find mode always preserves the supplied endpoint ID order and has no ordering acknowledgement.<br/>
+        /// - Keep sort, filters and limit unchanged when following `next_cursor`; cursors are page positions, not snapshots, and catalog/ranking updates can change later pages.<br/>
         /// **Expansion:**<br/>
         /// Use `expand` to include additional data in each model object:<br/>
         /// - `openapi-3.0` — full OpenAPI 3.0 schema in the `openapi` field<br/>
@@ -125,6 +140,10 @@ namespace Fal
         /// Filter models by status - omit to include all statuses<br/>
         /// Example: active
         /// </param>
+        /// <param name="sort">
+        /// List/search ordering: relevant uses Explore's shared Trending browse order or keyword relevance; recent sorts by publication date (creation date when the publication date is missing). Defaults to relevant. Ignored in endpoint_id find mode, which preserves input order. Keep sort, filters and limit unchanged when following a cursor.<br/>
+        /// Example: recent
+        /// </param>
         /// <param name="expand">
         /// Fields to expand in the response. Supported values: 'openapi-3.0' (includes full OpenAPI 3.0 schema in 'openapi' field), 'enterprise_status' (includes enterprise readiness status)<br/>
         /// Example: [openapi-3.0, enterprise_status]
@@ -139,6 +158,7 @@ namespace Fal
             string? q = default,
             string? category = default,
             global::Fal.GetModelsStatus? status = default,
+            global::Fal.GetModelsSort? sort = default,
             global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>? expand = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
