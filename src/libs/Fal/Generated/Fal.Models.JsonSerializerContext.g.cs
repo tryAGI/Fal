@@ -30,6 +30,7 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>), TypeInfoPropertyName = "AnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsStatus), TypeInfoPropertyName = "GetModelsStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsSort), TypeInfoPropertyName = "GetModelsSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::System.DateTime?, string>), TypeInfoPropertyName = "AnyOfDateTimeString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageTimeframe), TypeInfoPropertyName = "GetUsageTimeframe2")]
@@ -57,6 +58,8 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum), TypeInfoPropertyName = "GetModelsResponseModelEnterpriseStatusEnum2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnumError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseOrdering))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseOrderingSort), TypeInfoPropertyName = "GetModelsResponseOrderingSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType), TypeInfoPropertyName = "GetModelsResponseErrorType2_3")]
@@ -231,6 +234,7 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>?), TypeInfoPropertyName = "NullableAnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsStatus?), TypeInfoPropertyName = "NullableGetModelsStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsSort?), TypeInfoPropertyName = "NullableGetModelsSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::System.DateTime?, string>?), TypeInfoPropertyName = "NullableAnyOfDateTimeString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageTimeframe?), TypeInfoPropertyName = "NullableGetUsageTimeframe2")]
@@ -248,6 +252,7 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>?), TypeInfoPropertyName = "NullableAnyOfGetModelsResponseModelOpenapiVariant1GetModelsResponseModelOpenapiVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>?), TypeInfoPropertyName = "NullableAnyOfGetModelsResponseModelEnterpriseStatusEnumGetModelsResponseModelEnterpriseStatusEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum?), TypeInfoPropertyName = "NullableGetModelsResponseModelEnterpriseStatusEnum2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseOrderingSort?), TypeInfoPropertyName = "NullableGetModelsResponseOrderingSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType2?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType3?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType32")]
@@ -464,6 +469,10 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.GetModelsStatus?)
 
+                    || typeToConvert == typeof(global::Fal.GetModelsSort)
+
+                    || typeToConvert == typeof(global::Fal.GetModelsSort?)
+
                     || typeToConvert == typeof(global::Fal.GetUsageTimeframe)
 
                     || typeToConvert == typeof(global::Fal.GetUsageTimeframe?)
@@ -511,6 +520,10 @@ namespace Fal
                     || typeToConvert == typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum)
 
                     || typeToConvert == typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum?)
+
+                    || typeToConvert == typeof(global::Fal.GetModelsResponseOrderingSort)
+
+                    || typeToConvert == typeof(global::Fal.GetModelsResponseOrderingSort?)
 
                     || typeToConvert == typeof(global::Fal.GetModelsResponseErrorType)
 
@@ -727,6 +740,16 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetModelsStatusNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Fal.GetModelsSort))
+                {
+                    return new global::Fal.JsonConverters.GetModelsSortJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetModelsSort?))
+                {
+                    return new global::Fal.JsonConverters.GetModelsSortNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Fal.GetUsageTimeframe))
                 {
                     return new global::Fal.JsonConverters.GetUsageTimeframeJsonConverter();
@@ -845,6 +868,16 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum?))
                 {
                     return new global::Fal.JsonConverters.GetModelsResponseModelEnterpriseStatusEnumNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetModelsResponseOrderingSort))
+                {
+                    return new global::Fal.JsonConverters.GetModelsResponseOrderingSortJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.GetModelsResponseOrderingSort?))
+                {
+                    return new global::Fal.JsonConverters.GetModelsResponseOrderingSortNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.GetModelsResponseErrorType))
