@@ -51,7 +51,7 @@ namespace Fal
         public required double UnitPrice { get; set; }
 
         /// <summary>
-        /// Per-second price after the percentage discount — the rate this usage is billed at
+        /// Deprecated: use cost_total ÷ quantity. Per-second price after the percentage discount; equal to unit_price when no percentage discount applies.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("net_unit_price")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -127,7 +127,7 @@ namespace Fal
         /// Per-second price for this machine type before percentage discounts, including any customer-specific machine pricing
         /// </param>
         /// <param name="netUnitPrice">
-        /// Per-second price after the percentage discount — the rate this usage is billed at
+        /// Deprecated: use cost_total ÷ quantity. Per-second price after the percentage discount; equal to unit_price when no percentage discount applies.
         /// </param>
         /// <param name="costSubtotal">
         /// Cost before discounts (quantity × unit_price)
