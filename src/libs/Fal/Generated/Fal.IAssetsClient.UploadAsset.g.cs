@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Upload asset<br/>
-        /// Upload asset for the authenticated user's fal Assets library.
+        /// Upload asset for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -24,7 +25,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upload asset<br/>
-        /// Upload asset for the authenticated user's fal Assets library.
+        /// Upload asset for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -42,7 +44,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upload asset<br/>
-        /// Upload asset for the authenticated user's fal Assets library.
+        /// Upload asset for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>

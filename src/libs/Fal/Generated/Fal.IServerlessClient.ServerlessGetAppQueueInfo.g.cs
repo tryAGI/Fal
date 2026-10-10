@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Queue Size<br/>
-        /// Retrieves the current queue size for a specific application.
+        /// Retrieves the current queue size for a specific application.<br/>
+        /// **Required permissions:** `serverless:queues:read`. Key presets that include them: `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>
@@ -26,7 +27,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Queue Size<br/>
-        /// Retrieves the current queue size for a specific application.
+        /// Retrieves the current queue size for a specific application.<br/>
+        /// **Required permissions:** `serverless:queues:read`. Key presets that include them: `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>

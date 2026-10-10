@@ -14,14 +14,15 @@ namespace Fal
         /// - `serverless` — fal Serverless SDK billing<br/>
         /// - `compute` — fal Compute (raw instance time)<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
-        /// Must be called with an admin API key on the organization's root team.<br/>
+        /// Must be called with a key on the organization's root team.<br/>
         /// **Key Features:**<br/>
         /// - Organization-wide usage data across all teams and products<br/>
         /// - Filter by team(s) (`team_username`), product line (`product`), endpoint, API key (`api_key_id`), date range, and auth method<br/>
         /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:users:read`, `billing:usage:read`, `auth:keys:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -102,14 +103,15 @@ namespace Fal
         /// - `serverless` — fal Serverless SDK billing<br/>
         /// - `compute` — fal Compute (raw instance time)<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
-        /// Must be called with an admin API key on the organization's root team.<br/>
+        /// Must be called with a key on the organization's root team.<br/>
         /// **Key Features:**<br/>
         /// - Organization-wide usage data across all teams and products<br/>
         /// - Filter by team(s) (`team_username`), product line (`product`), endpoint, API key (`api_key_id`), date range, and auth method<br/>
         /// - Per-team and per-product attribution on every usage record<br/>
         /// - Paginated time series and aggregate summary views<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:users:read`, `billing:usage:read`, `auth:keys:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

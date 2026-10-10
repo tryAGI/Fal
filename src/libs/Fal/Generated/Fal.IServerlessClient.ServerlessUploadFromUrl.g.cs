@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Upload file from URL<br/>
-        /// Creates a new file at the target path by downloading it from the provided URL.
+        /// Creates a new file at the target path by downloading it from the provided URL.<br/>
+        /// **Required permissions:** `serverless:files:write`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="file">
         /// Target file path (including filename)<br/>
@@ -24,7 +25,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upload file from URL<br/>
-        /// Creates a new file at the target path by downloading it from the provided URL.
+        /// Creates a new file at the target path by downloading it from the provided URL.<br/>
+        /// **Required permissions:** `serverless:files:write`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="file">
         /// Target file path (including filename)<br/>
@@ -42,7 +44,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upload file from URL<br/>
-        /// Creates a new file at the target path by downloading it from the provided URL.
+        /// Creates a new file at the target path by downloading it from the provided URL.<br/>
+        /// **Required permissions:** `serverless:files:write`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="file">
         /// Target file path (including filename)<br/>

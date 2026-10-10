@@ -104,7 +104,8 @@ namespace Fal
         /// - Analyze latency trends and patterns<br/>
         /// - Track error rates and success metrics<br/>
         /// See [Queue API docs](https://fal.ai/docs/documentation/model-apis/inference/queue) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `models:metrics:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -224,7 +225,8 @@ namespace Fal
         /// - Analyze latency trends and patterns<br/>
         /// - Track error rates and success metrics<br/>
         /// See [Queue API docs](https://fal.ai/docs/documentation/model-apis/inference/queue) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `models:metrics:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

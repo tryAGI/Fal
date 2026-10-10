@@ -42,7 +42,6 @@ namespace Fal
         /// Delete API Key<br/>
         /// Deletes an API key by its ID. This action is irreversible.<br/>
         /// **Requirements:**<br/>
-        /// - Authentication required via admin API key<br/>
         /// - Key must belong to the authenticated user's workspace<br/>
         /// **Key Features:**<br/>
         /// - Permanently revoke API key access<br/>
@@ -56,7 +55,8 @@ namespace Fal
         /// - Revoke compromised keys<br/>
         /// - Clean up unused keys<br/>
         /// - Implement key rotation (delete old, create new)<br/>
-        /// - Offboard team members
+        /// - Offboard team members<br/>
+        /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="keyId">
         /// Unique identifier of the API key to delete<br/>
@@ -86,7 +86,6 @@ namespace Fal
         /// Delete API Key<br/>
         /// Deletes an API key by its ID. This action is irreversible.<br/>
         /// **Requirements:**<br/>
-        /// - Authentication required via admin API key<br/>
         /// - Key must belong to the authenticated user's workspace<br/>
         /// **Key Features:**<br/>
         /// - Permanently revoke API key access<br/>
@@ -100,7 +99,8 @@ namespace Fal
         /// - Revoke compromised keys<br/>
         /// - Clean up unused keys<br/>
         /// - Implement key rotation (delete old, create new)<br/>
-        /// - Offboard team members
+        /// - Offboard team members<br/>
+        /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="keyId">
         /// Unique identifier of the API key to delete<br/>

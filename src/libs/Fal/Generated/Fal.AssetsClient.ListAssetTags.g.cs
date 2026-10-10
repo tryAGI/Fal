@@ -41,7 +41,8 @@ namespace Fal
 
         /// <summary>
         /// List asset tags<br/>
-        /// List asset tags for the authenticated user's fal Assets library.
+        /// List asset tags for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -59,7 +60,8 @@ namespace Fal
         }
         /// <summary>
         /// List asset tags<br/>
-        /// List asset tags for the authenticated user's fal Assets library.
+        /// List asset tags for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

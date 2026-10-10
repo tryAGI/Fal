@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Delete asset entity<br/>
-        /// Delete a saved entity from the authenticated account. Its reference assets are not deleted.
+        /// Delete a saved entity from the authenticated account. Its reference assets are not deleted.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="entityId">
         /// Smart entity ID
@@ -25,7 +26,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Delete asset entity<br/>
-        /// Delete a saved entity from the authenticated account. Its reference assets are not deleted.
+        /// Delete a saved entity from the authenticated account. Its reference assets are not deleted.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="entityId">
         /// Smart entity ID

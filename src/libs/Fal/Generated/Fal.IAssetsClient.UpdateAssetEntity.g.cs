@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Update asset entity<br/>
-        /// Update a saved entity without recreating it. Omitted fields stay unchanged; reference_images replaces the defining reference set. Entity types cannot be changed. Character handles cannot be changed and character descriptions cannot be cleared. Other entity handles must remain unique within the account.
+        /// Update a saved entity without recreating it. Omitted fields stay unchanged; reference_images replaces the defining reference set. Entity types cannot be changed. Character handles cannot be changed and character descriptions cannot be cleared. Other entity handles must remain unique within the account.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="entityId">
         /// Smart entity ID
@@ -28,7 +29,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update asset entity<br/>
-        /// Update a saved entity without recreating it. Omitted fields stay unchanged; reference_images replaces the defining reference set. Entity types cannot be changed. Character handles cannot be changed and character descriptions cannot be cleared. Other entity handles must remain unique within the account.
+        /// Update a saved entity without recreating it. Omitted fields stay unchanged; reference_images replaces the defining reference set. Entity types cannot be changed. Character handles cannot be changed and character descriptions cannot be cleared. Other entity handles must remain unique within the account.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="entityId">
         /// Smart entity ID
@@ -50,7 +52,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update asset entity<br/>
-        /// Update a saved entity without recreating it. Omitted fields stay unchanged; reference_images replaces the defining reference set. Entity types cannot be changed. Character handles cannot be changed and character descriptions cannot be cleared. Other entity handles must remain unique within the account.
+        /// Update a saved entity without recreating it. Omitted fields stay unchanged; reference_images replaces the defining reference set. Entity types cannot be changed. Character handles cannot be changed and character descriptions cannot be cleared. Other entity handles must remain unique within the account.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="entityId">
         /// Smart entity ID

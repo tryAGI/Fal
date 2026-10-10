@@ -9,7 +9,6 @@ namespace Fal
         /// Returns a list of all compute instances belonging to the authenticated user's workspace.<br/>
         /// **Requirements:**<br/>
         /// - Requires compute permissions (extra_permissions.compute = true)<br/>
-        /// - Authentication required via admin API key<br/>
         /// **Key Features:**<br/>
         /// - View all instances regardless of status<br/>
         /// - Includes instance configuration, region, and current status<br/>
@@ -19,7 +18,8 @@ namespace Fal
         /// - Check instance status and availability<br/>
         /// - Audit compute resource usage<br/>
         /// - Build compute management dashboards<br/>
-        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.<br/>
+        /// **Required permissions:** `compute:instances:read`. Key presets that include them: `COMPUTE`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -42,7 +42,6 @@ namespace Fal
         /// Returns a list of all compute instances belonging to the authenticated user's workspace.<br/>
         /// **Requirements:**<br/>
         /// - Requires compute permissions (extra_permissions.compute = true)<br/>
-        /// - Authentication required via admin API key<br/>
         /// **Key Features:**<br/>
         /// - View all instances regardless of status<br/>
         /// - Includes instance configuration, region, and current status<br/>
@@ -52,7 +51,8 @@ namespace Fal
         /// - Check instance status and availability<br/>
         /// - Audit compute resource usage<br/>
         /// - Build compute management dashboards<br/>
-        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.<br/>
+        /// **Required permissions:** `compute:instances:read`. Key presets that include them: `COMPUTE`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

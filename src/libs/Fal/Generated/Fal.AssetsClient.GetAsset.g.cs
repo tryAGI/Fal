@@ -43,7 +43,8 @@ namespace Fal
 
         /// <summary>
         /// Get asset<br/>
-        /// Get an asset from the authenticated user's fal Assets library by asset ID; a vector ID is also accepted. Returns 404 when the asset has no live catalog record, including one whose deletion has not yet propagated to the search index.
+        /// Get an asset from the authenticated user's fal Assets library by asset ID; a vector ID is also accepted. Returns 404 when the asset has no live catalog record, including one whose deletion has not yet propagated to the search index.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="assetId">
         /// Asset ID. A vector ID is also accepted<br/>
@@ -67,7 +68,8 @@ namespace Fal
         }
         /// <summary>
         /// Get asset<br/>
-        /// Get an asset from the authenticated user's fal Assets library by asset ID; a vector ID is also accepted. Returns 404 when the asset has no live catalog record, including one whose deletion has not yet propagated to the search index.
+        /// Get an asset from the authenticated user's fal Assets library by asset ID; a vector ID is also accepted. Returns 404 when the asset has no live catalog record, including one whose deletion has not yet propagated to the search index.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="assetId">
         /// Asset ID. A vector ID is also accepted<br/>

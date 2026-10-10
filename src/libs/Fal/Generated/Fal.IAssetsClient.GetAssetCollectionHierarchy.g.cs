@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Get asset collection hierarchy<br/>
-        /// Get the nested subtree rooted at an asset collection, plus its ancestor collections ordered from the top level down to its direct parent.
+        /// Get the nested subtree rooted at an asset collection, plus its ancestor collections ordered from the top level down to its direct parent.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -21,7 +22,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get asset collection hierarchy<br/>
-        /// Get the nested subtree rooted at an asset collection, plus its ancestor collections ordered from the top level down to its direct parent.
+        /// Get the nested subtree rooted at an asset collection, plus its ancestor collections ordered from the top level down to its direct parent.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>

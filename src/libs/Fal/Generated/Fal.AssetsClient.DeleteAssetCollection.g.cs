@@ -40,7 +40,8 @@ namespace Fal
 
         /// <summary>
         /// Delete asset collection<br/>
-        /// Delete asset collection for the authenticated user's fal Assets library.
+        /// Delete asset collection for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -68,7 +69,8 @@ namespace Fal
         }
         /// <summary>
         /// Delete asset collection<br/>
-        /// Delete asset collection for the authenticated user's fal Assets library.
+        /// Delete asset collection for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>

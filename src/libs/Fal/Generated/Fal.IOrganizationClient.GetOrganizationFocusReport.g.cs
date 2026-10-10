@@ -13,7 +13,7 @@ namespace Fal
         /// `SubAccountId` / `SubAccountName` columns. `SubAccountId` is that team's own<br/>
         /// billing customer ID, so both account columns share one identifier namespace.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
-        /// Must be called with an admin API key on the organization's root team.<br/>
+        /// Must be called with a key on the organization's root team.<br/>
         /// Supports three data sources:<br/>
         /// - **estimate**: Real-time usage estimates for a date range. Under pooled billing every row is attributed to the calling team.<br/>
         /// - **tagged-estimate**: Those same estimates with the `Tags` column populated from the `X-Fal-Tags` tags set on your requests. Requires tagged reporting to be enabled for the organization; recent usage is delayed relative to `estimate`.<br/>
@@ -24,7 +24,8 @@ namespace Fal
         /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day date range.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:users:read`, `billing:usage:read`, `auth:keys:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns those same estimates with the Tags column populated from the X-Fal-Tags tags set on your requests; it requires tagged reporting to be enabled for the organization, and recent usage is delayed relative to 'estimate'.<br/>
@@ -88,7 +89,7 @@ namespace Fal
         /// `SubAccountId` / `SubAccountName` columns. `SubAccountId` is that team's own<br/>
         /// billing customer ID, so both account columns share one identifier namespace.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with FOCUS reports and organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
-        /// Must be called with an admin API key on the organization's root team.<br/>
+        /// Must be called with a key on the organization's root team.<br/>
         /// Supports three data sources:<br/>
         /// - **estimate**: Real-time usage estimates for a date range. Under pooled billing every row is attributed to the calling team.<br/>
         /// - **tagged-estimate**: Those same estimates with the `Tags` column populated from the `X-Fal-Tags` tags set on your requests. Requires tagged reporting to be enabled for the organization; recent usage is delayed relative to `estimate`.<br/>
@@ -99,7 +100,8 @@ namespace Fal
         /// `source=estimate` for per-team figures.<br/>
         /// **Invoice reports** default to the most recently available billing month.<br/>
         /// **Usage estimates** default to the last 24 hours, with a maximum 90-day date range.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:users:read`, `billing:usage:read`, `auth:keys:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns those same estimates with the Tags column populated from the X-Fal-Tags tags set on your requests; it requires tagged reporting to be enabled for the organization, and recent usage is delayed relative to 'estimate'.<br/>

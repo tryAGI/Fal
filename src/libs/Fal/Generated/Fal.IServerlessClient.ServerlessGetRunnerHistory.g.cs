@@ -16,7 +16,8 @@ namespace Fal
         /// **Time range:** up to 90 days of history. Defaults to the last 24 hours when<br/>
         /// `start`/`end` are omitted. Bucket size is auto-detected from the range<br/>
         /// unless `timeframe` is specified.<br/>
-        /// **Authentication:** Required via API key. Only the app owner can query it.
+        /// **Authentication:** Required via API key. Only the app owner can query it.<br/>
+        /// **Required permissions:** `serverless:apps:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>
@@ -67,7 +68,8 @@ namespace Fal
         /// **Time range:** up to 90 days of history. Defaults to the last 24 hours when<br/>
         /// `start`/`end` are omitted. Bucket size is auto-detected from the range<br/>
         /// unless `timeframe` is specified.<br/>
-        /// **Authentication:** Required via API key. Only the app owner can query it.
+        /// **Authentication:** Required via API key. Only the app owner can query it.<br/>
+        /// **Required permissions:** `serverless:apps:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>

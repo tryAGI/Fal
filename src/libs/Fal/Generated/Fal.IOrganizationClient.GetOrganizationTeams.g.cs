@@ -8,13 +8,14 @@ namespace Fal
         /// Organization Teams<br/>
         /// Returns the list of teams in your organization with their details.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
-        /// Must be called with an admin API key on the organization's root team.<br/>
+        /// Must be called with a key on the organization's root team.<br/>
         /// **Key Features:**<br/>
         /// - List all teams within the organization<br/>
         /// - Identify the organization's root team via `is_org_root`<br/>
         /// - View team usernames and display names<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:users:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -26,13 +27,14 @@ namespace Fal
         /// Organization Teams<br/>
         /// Returns the list of teams in your organization with their details.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
-        /// Must be called with an admin API key on the organization's root team.<br/>
+        /// Must be called with a key on the organization's root team.<br/>
         /// **Key Features:**<br/>
         /// - List all teams within the organization<br/>
         /// - Identify the organization's root team via `is_org_root`<br/>
         /// - View team usernames and display names<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:users:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

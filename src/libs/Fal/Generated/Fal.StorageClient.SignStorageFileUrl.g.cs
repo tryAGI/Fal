@@ -49,7 +49,8 @@ namespace Fal
         /// regardless of its ACL. Useful for sharing access-restricted files.<br/>
         /// The signature is valid for `expiration_seconds` (up to 7 days).<br/>
         /// **Authentication:** Required. The API key must have the `assets:read` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>
@@ -82,7 +83,8 @@ namespace Fal
         /// regardless of its ACL. Useful for sharing access-restricted files.<br/>
         /// The signature is valid for `expiration_seconds` (up to 7 days).<br/>
         /// **Authentication:** Required. The API key must have the `assets:read` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>
@@ -687,7 +689,8 @@ namespace Fal
         /// regardless of its ACL. Useful for sharing access-restricted files.<br/>
         /// The signature is valid for `expiration_seconds` (up to 7 days).<br/>
         /// **Authentication:** Required. The API key must have the `assets:read` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>

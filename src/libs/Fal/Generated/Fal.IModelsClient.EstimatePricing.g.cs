@@ -24,7 +24,8 @@ namespace Fal
         /// - Display cost estimates in user interfaces<br/>
         /// - Budget planning and cost optimization<br/>
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** none. Any authenticated caller can use this API.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -55,7 +56,8 @@ namespace Fal
         /// - Display cost estimates in user interfaces<br/>
         /// - Budget planning and cost optimization<br/>
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** none. Any authenticated caller can use this API.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -86,7 +88,8 @@ namespace Fal
         /// - Display cost estimates in user interfaces<br/>
         /// - Budget planning and cost optimization<br/>
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** none. Any authenticated caller can use this API.
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

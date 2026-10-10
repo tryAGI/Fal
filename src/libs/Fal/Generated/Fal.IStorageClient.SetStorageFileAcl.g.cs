@@ -14,7 +14,8 @@ namespace Fal
         /// Rules referencing users that do not exist are dropped. The response reflects<br/>
         /// the ACL actually applied, so verify it contains the rules you sent.<br/>
         /// **Authentication:** Required. The API key must have the `assets:write` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>
@@ -40,7 +41,8 @@ namespace Fal
         /// Rules referencing users that do not exist are dropped. The response reflects<br/>
         /// the ACL actually applied, so verify it contains the rules you sent.<br/>
         /// **Authentication:** Required. The API key must have the `assets:write` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>
@@ -66,7 +68,8 @@ namespace Fal
         /// Rules referencing users that do not exist are dropped. The response reflects<br/>
         /// the ACL actually applied, so verify it contains the rules you sent.<br/>
         /// **Authentication:** Required. The API key must have the `assets:write` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="url">
         /// Full URL of the fal CDN file, as returned by the upload APIs (https://v3.fal.media/files/b/&lt;id&gt;/&lt;filename&gt;). Must not contain query parameters.<br/>

@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// List files (directory)<br/>
-        /// Lists files and folders within the specified directory path.
+        /// Lists files and folders within the specified directory path.<br/>
+        /// **Required permissions:** `serverless:files:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="dir">
         /// Directory path to list<br/>
@@ -21,7 +22,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// List files (directory)<br/>
-        /// Lists files and folders within the specified directory path.
+        /// Lists files and folders within the specified directory path.<br/>
+        /// **Required permissions:** `serverless:files:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="dir">
         /// Directory path to list<br/>

@@ -20,7 +20,8 @@ namespace Fal
         /// These are the same settings that the per-request<br/>
         /// `X-Fal-Object-Lifecycle-Preference` header overrides on individual requests.<br/>
         /// **Authentication:** Required. The API key must have the `account:settings:write` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:settings:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -47,7 +48,8 @@ namespace Fal
         /// These are the same settings that the per-request<br/>
         /// `X-Fal-Object-Lifecycle-Preference` header overrides on individual requests.<br/>
         /// **Authentication:** Required. The API key must have the `account:settings:write` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:settings:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -74,7 +76,8 @@ namespace Fal
         /// These are the same settings that the per-request<br/>
         /// `X-Fal-Object-Lifecycle-Preference` header overrides on individual requests.<br/>
         /// **Authentication:** Required. The API key must have the `account:settings:write` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:settings:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="expirationDurationSeconds">
         /// Seconds after which newly uploaded files automatically expire and are deleted. Null disables auto-expiration.<br/>

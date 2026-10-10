@@ -65,7 +65,8 @@ namespace Fal
 
         /// <summary>
         /// Browse assets in a collection<br/>
-        /// Browse assets in a collection for the authenticated user's fal Assets library.
+        /// Browse assets in a collection for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -161,7 +162,8 @@ namespace Fal
         }
         /// <summary>
         /// Browse assets in a collection<br/>
-        /// Browse assets in a collection for the authenticated user's fal Assets library.
+        /// Browse assets in a collection for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>

@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Download file<br/>
-        /// Downloads a file by its path. Proxies the underlying storage response.
+        /// Downloads a file by its path. Proxies the underlying storage response.<br/>
+        /// **Required permissions:** `serverless:files:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="file">
         /// Path of the file to download<br/>
@@ -21,7 +22,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Download file<br/>
-        /// Downloads a file by its path. Proxies the underlying storage response.
+        /// Downloads a file by its path. Proxies the underlying storage response.<br/>
+        /// **Required permissions:** `serverless:files:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="file">
         /// Path of the file to download<br/>
@@ -36,7 +38,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Download file<br/>
-        /// Downloads a file by its path. Proxies the underlying storage response.
+        /// Downloads a file by its path. Proxies the underlying storage response.<br/>
+        /// **Required permissions:** `serverless:files:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="file">
         /// Path of the file to download<br/>

@@ -11,8 +11,8 @@ namespace Fal
         /// `username` field. Each record includes a per-request cost breakdown in USD<br/>
         /// (cost_subtotal, cost_discount, cost_total; cost_estimate_nano_usd carries<br/>
         /// cost_total in nano USD).<br/>
-        /// Scoped to fal Model API billing events. Must be called with an admin API key on<br/>
-        /// the organization's root team.<br/>
+        /// Scoped to fal Model API billing events. Must be called with a key on the organization's<br/>
+        /// root team.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// **Key Features:**<br/>
         /// - Organization-wide model-API billing event records across all teams<br/>
@@ -22,7 +22,8 @@ namespace Fal
         /// - Limited to 100 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:users:read`, `billing:usage:read`, `auth:keys:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -82,8 +83,8 @@ namespace Fal
         /// `username` field. Each record includes a per-request cost breakdown in USD<br/>
         /// (cost_subtotal, cost_discount, cost_total; cost_estimate_nano_usd carries<br/>
         /// cost_total in nano USD).<br/>
-        /// Scoped to fal Model API billing events. Must be called with an admin API key on<br/>
-        /// the organization's root team.<br/>
+        /// Scoped to fal Model API billing events. Must be called with a key on the organization's<br/>
+        /// root team.<br/>
         /// &gt; **Availability:** This endpoint is available to enterprise customers with organizations enabled. Contact your account team or support@fal.ai to request access.<br/>
         /// **Key Features:**<br/>
         /// - Organization-wide model-API billing event records across all teams<br/>
@@ -93,7 +94,8 @@ namespace Fal
         /// - Limited to 100 records per page for performance<br/>
         /// - Date range capped at 90 days per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:users:read`, `billing:usage:read`, `auth:keys:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

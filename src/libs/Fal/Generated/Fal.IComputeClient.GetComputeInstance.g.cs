@@ -9,7 +9,6 @@ namespace Fal
         /// Retrieves detailed information about a specific compute instance by its ID.<br/>
         /// **Requirements:**<br/>
         /// - Requires compute permissions (extra_permissions.compute = true)<br/>
-        /// - Authentication required via admin API key<br/>
         /// - Instance must belong to the authenticated user's workspace<br/>
         /// **Key Features:**<br/>
         /// - Get current instance status and configuration<br/>
@@ -21,7 +20,8 @@ namespace Fal
         /// - Retrieve connection details (IP address)<br/>
         /// - Check instance readiness before use<br/>
         /// - Audit instance configuration<br/>
-        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.<br/>
+        /// **Required permissions:** `compute:instances:read`. Key presets that include them: `COMPUTE`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="id">
         /// Unique identifier for the compute instance<br/>
@@ -39,7 +39,6 @@ namespace Fal
         /// Retrieves detailed information about a specific compute instance by its ID.<br/>
         /// **Requirements:**<br/>
         /// - Requires compute permissions (extra_permissions.compute = true)<br/>
-        /// - Authentication required via admin API key<br/>
         /// - Instance must belong to the authenticated user's workspace<br/>
         /// **Key Features:**<br/>
         /// - Get current instance status and configuration<br/>
@@ -51,7 +50,8 @@ namespace Fal
         /// - Retrieve connection details (IP address)<br/>
         /// - Check instance readiness before use<br/>
         /// - Audit instance configuration<br/>
-        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.<br/>
+        /// **Required permissions:** `compute:instances:read`. Key presets that include them: `COMPUTE`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="id">
         /// Unique identifier for the compute instance<br/>

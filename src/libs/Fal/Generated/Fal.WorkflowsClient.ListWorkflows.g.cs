@@ -59,7 +59,8 @@ namespace Fal
         /// - Display user's workflow library<br/>
         /// - Search for specific workflows<br/>
         /// - Find workflows using particular models<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `workflows:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -111,7 +112,8 @@ namespace Fal
         /// - Display user's workflow library<br/>
         /// - Search for specific workflows<br/>
         /// - Find workflows using particular models<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `workflows:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

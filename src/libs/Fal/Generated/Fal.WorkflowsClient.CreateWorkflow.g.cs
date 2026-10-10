@@ -50,7 +50,8 @@ namespace Fal
         /// - Programmatically provision workflows<br/>
         /// **Note:** Workflow names must be unique within your namespace. Creating a<br/>
         /// workflow with a name you already use returns a 400 validation error.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `workflows:write`. Key presets that include them: `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -80,7 +81,8 @@ namespace Fal
         /// - Programmatically provision workflows<br/>
         /// **Note:** Workflow names must be unique within your namespace. Creating a<br/>
         /// workflow with a name you already use returns a 400 validation error.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `workflows:write`. Key presets that include them: `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -641,7 +643,8 @@ namespace Fal
         /// - Programmatically provision workflows<br/>
         /// **Note:** Workflow names must be unique within your namespace. Creating a<br/>
         /// workflow with a name you already use returns a 400 validation error.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `workflows:write`. Key presets that include them: `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="name">
         /// Unique workflow name/slug within the user's namespace<br/>

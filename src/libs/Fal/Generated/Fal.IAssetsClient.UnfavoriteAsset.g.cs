@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Unfavorite asset<br/>
-        /// Unfavorite an asset by request ID or vector ID.
+        /// Unfavorite an asset by request ID or vector ID.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -24,7 +25,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Unfavorite asset<br/>
-        /// Unfavorite an asset by request ID or vector ID.
+        /// Unfavorite an asset by request ID or vector ID.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -42,7 +44,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Unfavorite asset<br/>
-        /// Unfavorite an asset by request ID or vector ID.
+        /// Unfavorite an asset by request ID or vector ID.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>

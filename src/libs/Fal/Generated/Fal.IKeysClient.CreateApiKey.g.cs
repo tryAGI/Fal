@@ -6,9 +6,7 @@ namespace Fal
     {
         /// <summary>
         /// Create API Key<br/>
-        /// Creates a new API key with the specified alias.<br/>
-        /// **Requirements:**<br/>
-        /// - Authentication required via admin API key<br/>
+        /// Creates a new API key on the `API` preset with the specified alias.<br/>
         /// **Important Security Notice:**<br/>
         /// The `key_secret` is only returned once at creation time. Store it securely immediately<br/>
         /// as it cannot be retrieved again. If lost, you must delete the key and create a new one.<br/>
@@ -20,7 +18,8 @@ namespace Fal
         /// - Programmatic key provisioning for CI/CD pipelines<br/>
         /// - Self-serve key generation for team members<br/>
         /// - Automated key rotation workflows<br/>
-        /// - Integration with secret management systems
+        /// - Integration with secret management systems<br/>
+        /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -33,9 +32,7 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create API Key<br/>
-        /// Creates a new API key with the specified alias.<br/>
-        /// **Requirements:**<br/>
-        /// - Authentication required via admin API key<br/>
+        /// Creates a new API key on the `API` preset with the specified alias.<br/>
         /// **Important Security Notice:**<br/>
         /// The `key_secret` is only returned once at creation time. Store it securely immediately<br/>
         /// as it cannot be retrieved again. If lost, you must delete the key and create a new one.<br/>
@@ -47,7 +44,8 @@ namespace Fal
         /// - Programmatic key provisioning for CI/CD pipelines<br/>
         /// - Self-serve key generation for team members<br/>
         /// - Automated key rotation workflows<br/>
-        /// - Integration with secret management systems
+        /// - Integration with secret management systems<br/>
+        /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -60,9 +58,7 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create API Key<br/>
-        /// Creates a new API key with the specified alias.<br/>
-        /// **Requirements:**<br/>
-        /// - Authentication required via admin API key<br/>
+        /// Creates a new API key on the `API` preset with the specified alias.<br/>
         /// **Important Security Notice:**<br/>
         /// The `key_secret` is only returned once at creation time. Store it securely immediately<br/>
         /// as it cannot be retrieved again. If lost, you must delete the key and create a new one.<br/>
@@ -74,7 +70,8 @@ namespace Fal
         /// - Programmatic key provisioning for CI/CD pipelines<br/>
         /// - Self-serve key generation for team members<br/>
         /// - Automated key rotation workflows<br/>
-        /// - Integration with secret management systems
+        /// - Integration with secret management systems<br/>
+        /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="alias">
         /// Required friendly name for the API key<br/>

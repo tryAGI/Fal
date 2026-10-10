@@ -15,7 +15,8 @@ namespace Fal
         /// - Deployment audit: see when revisions went out and who triggered them<br/>
         /// **Time range:** defaults to the last 24 hours when `start`/`end` are<br/>
         /// omitted. Use `category` filters to narrow to specific event types.<br/>
-        /// **Authentication:** Required via API key. Only the app owner can query it.
+        /// **Authentication:** Required via API key. Only the app owner can query it.<br/>
+        /// **Required permissions:** `serverless:apps:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>
@@ -70,7 +71,8 @@ namespace Fal
         /// - Deployment audit: see when revisions went out and who triggered them<br/>
         /// **Time range:** defaults to the last 24 hours when `start`/`end` are<br/>
         /// omitted. Use `category` filters to narrow to specific event types.<br/>
-        /// **Authentication:** Required via API key. Only the app owner can query it.
+        /// **Authentication:** Required via API key. Only the app owner can query it.<br/>
+        /// **Required permissions:** `serverless:apps:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>
