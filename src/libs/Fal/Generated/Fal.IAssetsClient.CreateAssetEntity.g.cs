@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Create asset entity<br/>
-        /// Create a reusable character, prop, environment, style, or scene in fal Assets. The entity is available to @mention in the UI and agent. The handle defaults from the name and must be unique across all entity types in the account. Characters require a description. Reference images accept saved asset IDs, request IDs, vector IDs, or fal-hosted image URLs. Existing character endpoints remain supported.
+        /// Create a reusable character, prop, environment, style, or scene in fal Assets. The entity is available to @mention in the UI and agent. The handle defaults from the name and must be unique across all entity types in the account. Characters require a description. Reference images accept saved asset IDs, request IDs, vector IDs, or fal-hosted image URLs. Existing character endpoints remain supported.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -24,7 +25,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create asset entity<br/>
-        /// Create a reusable character, prop, environment, style, or scene in fal Assets. The entity is available to @mention in the UI and agent. The handle defaults from the name and must be unique across all entity types in the account. Characters require a description. Reference images accept saved asset IDs, request IDs, vector IDs, or fal-hosted image URLs. Existing character endpoints remain supported.
+        /// Create a reusable character, prop, environment, style, or scene in fal Assets. The entity is available to @mention in the UI and agent. The handle defaults from the name and must be unique across all entity types in the account. Characters require a description. Reference images accept saved asset IDs, request IDs, vector IDs, or fal-hosted image URLs. Existing character endpoints remain supported.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>
@@ -42,7 +44,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create asset entity<br/>
-        /// Create a reusable character, prop, environment, style, or scene in fal Assets. The entity is available to @mention in the UI and agent. The handle defaults from the name and must be unique across all entity types in the account. Characters require a description. Reference images accept saved asset IDs, request IDs, vector IDs, or fal-hosted image URLs. Existing character endpoints remain supported.
+        /// Create a reusable character, prop, environment, style, or scene in fal Assets. The entity is available to @mention in the UI and agent. The handle defaults from the name and must be unique across all entity types in the account. Characters require a description. Reference images accept saved asset IDs, request IDs, vector IDs, or fal-hosted image URLs. Existing character endpoints remain supported.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="idempotencyKey">
         /// Optional idempotency key for safe request retries<br/>

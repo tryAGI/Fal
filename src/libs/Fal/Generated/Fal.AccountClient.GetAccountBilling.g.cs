@@ -49,7 +49,8 @@ namespace Fal
         /// - `credits` — Current credit balance and currency<br/>
         /// **Common Use Cases:**<br/>
         /// - Monitor available credit balance programmatically<br/>
-        /// - Display balance in custom dashboards
+        /// - Display balance in custom dashboards<br/>
+        /// **Required permissions:** `billing:usage:read`. Key presets that include them: `BILLING`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="expand">
         /// Data to include in the response. Use 'credits' to include current credit balance.<br/>
@@ -79,7 +80,8 @@ namespace Fal
         /// - `credits` — Current credit balance and currency<br/>
         /// **Common Use Cases:**<br/>
         /// - Monitor available credit balance programmatically<br/>
-        /// - Display balance in custom dashboards
+        /// - Display balance in custom dashboards<br/>
+        /// **Required permissions:** `billing:usage:read`. Key presets that include them: `BILLING`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="expand">
         /// Data to include in the response. Use 'credits' to include current credit balance.<br/>

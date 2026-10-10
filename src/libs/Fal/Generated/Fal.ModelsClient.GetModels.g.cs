@@ -86,7 +86,8 @@ namespace Fal
         /// - Search for models by category or keywords<br/>
         /// - Get OpenAPI schemas for code generation<br/>
         /// - Build model selection interfaces<br/>
-        ///
+        ///     <br/>
+        /// **Authentication:** not required.
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -181,7 +182,8 @@ namespace Fal
         /// - Search for models by category or keywords<br/>
         /// - Get OpenAPI schemas for code generation<br/>
         /// - Build model selection interfaces<br/>
-        ///
+        ///     <br/>
+        /// **Authentication:** not required.
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

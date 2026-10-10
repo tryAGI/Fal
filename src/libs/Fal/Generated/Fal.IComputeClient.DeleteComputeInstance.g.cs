@@ -9,7 +9,6 @@ namespace Fal
         /// Deletes a specific compute instance by its ID. This action is irreversible.<br/>
         /// **Requirements:**<br/>
         /// - Requires compute permissions (extra_permissions.compute = true)<br/>
-        /// - Authentication required via admin API key<br/>
         /// - Instance must belong to the authenticated user's workspace<br/>
         /// **Key Features:**<br/>
         /// - Permanently remove compute instances<br/>
@@ -26,7 +25,8 @@ namespace Fal
         /// - Remove failed or stuck instances<br/>
         /// - Manage compute costs<br/>
         /// - Free up quota for new instances<br/>
-        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.<br/>
+        /// **Required permissions:** `compute:instances:write`. Key presets that include them: `COMPUTE`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="id">
         /// Unique identifier for the compute instance<br/>
@@ -44,7 +44,6 @@ namespace Fal
         /// Deletes a specific compute instance by its ID. This action is irreversible.<br/>
         /// **Requirements:**<br/>
         /// - Requires compute permissions (extra_permissions.compute = true)<br/>
-        /// - Authentication required via admin API key<br/>
         /// - Instance must belong to the authenticated user's workspace<br/>
         /// **Key Features:**<br/>
         /// - Permanently remove compute instances<br/>
@@ -61,7 +60,8 @@ namespace Fal
         /// - Remove failed or stuck instances<br/>
         /// - Manage compute costs<br/>
         /// - Free up quota for new instances<br/>
-        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.
+        /// See [fal.ai docs](https://fal.ai/docs/documentation/compute) for more details.<br/>
+        /// **Required permissions:** `compute:instances:write`. Key presets that include them: `COMPUTE`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="id">
         /// Unique identifier for the compute instance<br/>

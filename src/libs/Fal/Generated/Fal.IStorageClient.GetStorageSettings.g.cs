@@ -14,7 +14,8 @@ namespace Fal
         ///   system default, which is public).<br/>
         /// Both fields are null when the account has never saved settings.<br/>
         /// **Authentication:** Required. The API key must have the `account:settings:read` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:settings:read`. Key presets that include them: `API`, `SERVERLESS`, `DEPLOY`, `COMPUTE`, `BILLING`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -32,7 +33,8 @@ namespace Fal
         ///   system default, which is public).<br/>
         /// Both fields are null when the account has never saved settings.<br/>
         /// **Authentication:** Required. The API key must have the `account:settings:read` permission.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `account:settings:read`. Key presets that include them: `API`, `SERVERLESS`, `DEPLOY`, `COMPUTE`, `BILLING`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

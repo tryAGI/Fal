@@ -42,7 +42,8 @@ namespace Fal
 
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.
+        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -75,7 +76,8 @@ namespace Fal
         }
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.
+        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -781,7 +783,8 @@ namespace Fal
         }
         /// <summary>
         /// Remove asset from collection<br/>
-        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.
+        /// Remove an asset from a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. For character collections, this removes the explicit smart-entity link.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>

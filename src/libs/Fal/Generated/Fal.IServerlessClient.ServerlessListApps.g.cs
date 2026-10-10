@@ -16,7 +16,8 @@ namespace Fal
         /// endpoint ids (e.g. '&lt;owner&gt;/&lt;name&gt;/turbo'). Multi-route apps record their<br/>
         /// requests/analytics data under these route-level ids.<br/>
         /// **Authentication:** Required via API key. Only applications owned by the<br/>
-        /// authenticated account are returned.
+        /// authenticated account are returned.<br/>
+        /// **Required permissions:** `serverless:apps:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="environment">
         /// Environment to list apps from. Defaults to the main environment.<br/>
@@ -51,7 +52,8 @@ namespace Fal
         /// endpoint ids (e.g. '&lt;owner&gt;/&lt;name&gt;/turbo'). Multi-route apps record their<br/>
         /// requests/analytics data under these route-level ids.<br/>
         /// **Authentication:** Required via API key. Only applications owned by the<br/>
-        /// authenticated account are returned.
+        /// authenticated account are returned.<br/>
+        /// **Required permissions:** `serverless:apps:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="environment">
         /// Environment to list apps from. Defaults to the main environment.<br/>

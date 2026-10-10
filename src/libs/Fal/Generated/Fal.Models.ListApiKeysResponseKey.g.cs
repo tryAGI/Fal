@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Fal
@@ -27,12 +29,13 @@ namespace Fal
         public required string Alias { get; set; }
 
         /// <summary>
-        /// Scope of the API key. Only API scope keys can be managed via this API.<br/>
+        /// Deprecated: always `API`. This API lists and manages only keys on the `API` preset or the legacy `API` scope; keys on other presets or custom policies are not listed.<br/>
         /// Example: API
         /// </summary>
         /// <example>API</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.ListApiKeysResponseKeyScopeJsonConverter))]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public global::Fal.ListApiKeysResponseKeyScope Scope { get; set; }
 
         /// <summary>
@@ -81,10 +84,6 @@ namespace Fal
         /// ISO8601 timestamp when the key was created<br/>
         /// Example: 2025-01-15T12:00:00Z
         /// </param>
-        /// <param name="scope">
-        /// Scope of the API key. Only API scope keys can be managed via this API.<br/>
-        /// Example: API
-        /// </param>
         /// <param name="creatorNickname">
         /// Nickname of the user who created this key (when expanded)<br/>
         /// Example: developer
@@ -100,13 +99,11 @@ namespace Fal
             string keyId,
             string alias,
             string createdAt,
-            global::Fal.ListApiKeysResponseKeyScope scope,
             string? creatorNickname,
             string? creatorEmail)
         {
             this.KeyId = keyId ?? throw new global::System.ArgumentNullException(nameof(keyId));
             this.Alias = alias ?? throw new global::System.ArgumentNullException(nameof(alias));
-            this.Scope = scope;
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
             this.CreatorNickname = creatorNickname;
             this.CreatorEmail = creatorEmail;

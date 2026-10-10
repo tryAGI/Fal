@@ -54,7 +54,8 @@ namespace Fal
         /// **Important:**<br/>
         /// - This operation is irreversible<br/>
         /// - All pending requests in the queue will be cancelled<br/>
-        /// - Requests already being processed will not be affected
+        /// - Requests already being processed will not be affected<br/>
+        /// **Required permissions:** `serverless:queues:write`. Key presets that include them: `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>
@@ -100,7 +101,8 @@ namespace Fal
         /// **Important:**<br/>
         /// - This operation is irreversible<br/>
         /// - All pending requests in the queue will be cancelled<br/>
-        /// - Requests already being processed will not be affected
+        /// - Requests already being processed will not be affected<br/>
+        /// **Required permissions:** `serverless:queues:write`. Key presets that include them: `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>

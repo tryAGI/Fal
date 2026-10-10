@@ -43,7 +43,8 @@ namespace Fal
 
         /// <summary>
         /// List tags for an asset<br/>
-        /// List tags for an asset by asset ID; a vector ID is also accepted. Assets without a live catalog record return an empty tag list.
+        /// List tags for an asset by asset ID; a vector ID is also accepted. Assets without a live catalog record return an empty tag list.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="assetId">
         /// Asset ID. A vector ID is also accepted<br/>
@@ -67,7 +68,8 @@ namespace Fal
         }
         /// <summary>
         /// List tags for an asset<br/>
-        /// List tags for an asset by asset ID; a vector ID is also accepted. Assets without a live catalog record return an empty tag list.
+        /// List tags for an asset by asset ID; a vector ID is also accepted. Assets without a live catalog record return an empty tag list.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="assetId">
         /// Asset ID. A vector ID is also accepted<br/>

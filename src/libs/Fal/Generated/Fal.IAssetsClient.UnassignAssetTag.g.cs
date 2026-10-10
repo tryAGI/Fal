@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Unassign tag from asset<br/>
-        /// Unassign a tag from an asset by request ID or vector ID.
+        /// Unassign a tag from an asset by request ID or vector ID.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
@@ -29,7 +30,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Unassign tag from asset<br/>
-        /// Unassign a tag from an asset by request ID or vector ID.
+        /// Unassign a tag from an asset by request ID or vector ID.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
@@ -52,7 +54,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Unassign tag from asset<br/>
-        /// Unassign a tag from an asset by request ID or vector ID.
+        /// Unassign a tag from an asset by request ID or vector ID.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>

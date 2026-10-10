@@ -4,13 +4,13 @@
 namespace Fal
 {
     /// <summary>
-    /// Scope of the API key. Only API scope keys can be managed via this API.<br/>
+    /// Deprecated: always `API`. This API lists and manages only keys on the `API` preset or the legacy `API` scope; keys on other presets or custom policies are not listed.<br/>
     /// Example: API
     /// </summary>
     public enum ListApiKeysResponseKeyScope
     {
         /// <summary>
-        ///
+        /// always `API`. This API lists and manages only keys on the `API` preset or the legacy `API` scope; keys on other presets or custom policies are not listed.
         /// </summary>
         Api,
     }

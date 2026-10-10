@@ -47,7 +47,8 @@ namespace Fal
 
         /// <summary>
         /// List asset entities<br/>
-        /// List saved characters, props, environments, styles, and scenes in the authenticated account. Returns their @mention handles and defining reference images. Uses limit and offset pagination; omit types to include every entity type.
+        /// List saved characters, props, environments, styles, and scenes in the authenticated account. Returns their @mention handles and defining reference images. Uses limit and offset pagination; omit types to include every entity type.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of entities to return<br/>
@@ -85,7 +86,8 @@ namespace Fal
         }
         /// <summary>
         /// List asset entities<br/>
-        /// List saved characters, props, environments, styles, and scenes in the authenticated account. Returns their @mention handles and defining reference images. Uses limit and offset pagination; omit types to include every entity type.
+        /// List saved characters, props, environments, styles, and scenes in the authenticated account. Returns their @mention handles and defining reference images. Uses limit and offset pagination; omit types to include every entity type.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of entities to return<br/>

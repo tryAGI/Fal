@@ -70,7 +70,8 @@ namespace Fal
         /// **Sorting:**<br/>
         /// - By end time (default) or duration<br/>
         /// **Expansions:**<br/>
-        /// - Include payloads by adding expand=payloads
+        /// - Include payloads by adding expand=payloads<br/>
+        /// **Required permissions:** `models:requests:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Number of items to return per page (max 100)<br/>
@@ -155,7 +156,8 @@ namespace Fal
         /// **Sorting:**<br/>
         /// - By end time (default) or duration<br/>
         /// **Expansions:**<br/>
-        /// - Include payloads by adding expand=payloads
+        /// - Include payloads by adding expand=payloads<br/>
+        /// **Required permissions:** `models:requests:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Number of items to return per page (max 100)<br/>

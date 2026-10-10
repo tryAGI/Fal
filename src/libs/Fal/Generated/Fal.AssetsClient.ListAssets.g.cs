@@ -65,7 +65,8 @@ namespace Fal
 
         /// <summary>
         /// Browse assets<br/>
-        /// Browse and semantically search fal Assets across all media, uploads, favorites, collections, tags, and character references.
+        /// Browse and semantically search fal Assets across all media, uploads, favorites, collections, tags, and character references.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -161,7 +162,8 @@ namespace Fal
         }
         /// <summary>
         /// Browse assets<br/>
-        /// Browse and semantically search fal Assets across all media, uploads, favorites, collections, tags, and character references.
+        /// Browse and semantically search fal Assets across all media, uploads, favorites, collections, tags, and character references.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

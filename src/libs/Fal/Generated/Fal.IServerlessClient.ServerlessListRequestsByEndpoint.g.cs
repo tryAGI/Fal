@@ -22,7 +22,8 @@ namespace Fal
         /// - By end time (default) or duration<br/>
         /// **Expansions:**<br/>
         /// - Include payloads by adding expand=payloads<br/>
-        /// - Include per-request `billable_units` by adding expand=billing (endpoint owner only)
+        /// - Include per-request `billable_units` by adding expand=billing (endpoint owner only)<br/>
+        /// **Required permissions:** `serverless:requests:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Number of items to return per page (max 100)<br/>
@@ -54,7 +55,7 @@ namespace Fal
         /// Example: a1b2c3d4-e5f6-7890-abcd-ef1234567890
         /// </param>
         /// <param name="expand">
-        /// Fields to expand in the response. Use payloads to include input and output payloads. Use billing to include billable_units per request.<br/>
+        /// Fields to expand in the response. Use payloads to include input and output payloads. Use billing to include billable_units per request; billing also requires the `billing:usage:read` permission.<br/>
         /// Example: [payloads, billing]
         /// </param>
         /// <param name="sortBy">
@@ -95,7 +96,8 @@ namespace Fal
         /// - By end time (default) or duration<br/>
         /// **Expansions:**<br/>
         /// - Include payloads by adding expand=payloads<br/>
-        /// - Include per-request `billable_units` by adding expand=billing (endpoint owner only)
+        /// - Include per-request `billable_units` by adding expand=billing (endpoint owner only)<br/>
+        /// **Required permissions:** `serverless:requests:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Number of items to return per page (max 100)<br/>
@@ -127,7 +129,7 @@ namespace Fal
         /// Example: a1b2c3d4-e5f6-7890-abcd-ef1234567890
         /// </param>
         /// <param name="expand">
-        /// Fields to expand in the response. Use payloads to include input and output payloads. Use billing to include billable_units per request.<br/>
+        /// Fields to expand in the response. Use payloads to include input and output payloads. Use billing to include billable_units per request; billing also requires the `billing:usage:read` permission.<br/>
         /// Example: [payloads, billing]
         /// </param>
         /// <param name="sortBy">

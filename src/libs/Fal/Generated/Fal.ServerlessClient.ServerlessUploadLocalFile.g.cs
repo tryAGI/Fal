@@ -47,7 +47,8 @@ namespace Fal
 
         /// <summary>
         /// Upload local file (multipart/form-data)<br/>
-        /// Uploads a local file using multipart/form-data. The file field name must be `file_upload`.
+        /// Uploads a local file using multipart/form-data. The file field name must be `file_upload`.<br/>
+        /// **Required permissions:** `serverless:files:write`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="targetPath">
         /// Target path (including filename)<br/>
@@ -83,7 +84,8 @@ namespace Fal
         }
         /// <summary>
         /// Upload local file (multipart/form-data)<br/>
-        /// Uploads a local file using multipart/form-data. The file field name must be `file_upload`.
+        /// Uploads a local file using multipart/form-data. The file field name must be `file_upload`.<br/>
+        /// **Required permissions:** `serverless:files:write`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="targetPath">
         /// Target path (including filename)<br/>
@@ -625,7 +627,8 @@ namespace Fal
         }
         /// <summary>
         /// Upload local file (multipart/form-data)<br/>
-        /// Uploads a local file using multipart/form-data. The file field name must be `file_upload`.
+        /// Uploads a local file using multipart/form-data. The file field name must be `file_upload`.<br/>
+        /// **Required permissions:** `serverless:files:write`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="targetPath">
         /// Target path (including filename)<br/>

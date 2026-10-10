@@ -19,7 +19,8 @@ namespace Fal
         /// - Build cost estimation tools<br/>
         /// - Check current billing rates<br/>
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** none. Any authenticated caller can use this API.
         /// </summary>
         /// <param name="endpointId">
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>
@@ -47,7 +48,8 @@ namespace Fal
         /// - Build cost estimation tools<br/>
         /// - Check current billing rates<br/>
         /// See [fal.ai pricing](https://fal.ai/pricing) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** none. Any authenticated caller can use this API.
         /// </summary>
         /// <param name="endpointId">
         /// Filter by specific endpoint ID(s). Accepts 1-50 endpoint IDs. Supports comma-separated values: ?endpoint_id=model1,model2 or array syntax: ?endpoint_id=model1&amp;endpoint_id=model2<br/>

@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Add asset to collection<br/>
-        /// Add an asset to a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. Unresolved request and vector IDs are materialized before membership is added. For character collections, this creates an explicit smart-entity link.
+        /// Add an asset to a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. Unresolved request and vector IDs are materialized before membership is added. For character collections, this creates an explicit smart-entity link.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -29,7 +30,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add asset to collection<br/>
-        /// Add an asset to a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. Unresolved request and vector IDs are materialized before membership is added. For character collections, this creates an explicit smart-entity link.
+        /// Add an asset to a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. Unresolved request and vector IDs are materialized before membership is added. For character collections, this creates an explicit smart-entity link.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -52,7 +54,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Add asset to collection<br/>
-        /// Add an asset to a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. Unresolved request and vector IDs are materialized before membership is added. For character collections, this creates an explicit smart-entity link.
+        /// Add an asset to a manual or character collection. Provide exactly one asset ID, request ID, or vector ID. Unresolved request and vector IDs are materialized before membership is added. For character collections, this creates an explicit smart-entity link.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>

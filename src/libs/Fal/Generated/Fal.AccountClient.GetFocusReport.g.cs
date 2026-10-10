@@ -75,7 +75,8 @@ namespace Fal
         /// pooled billing the **invoice** source already spans all pooled teams even<br/>
         /// without `expand` (they share one billing customer); `expand=organization` adds the<br/>
         /// per-team `SubAccount` breakdown.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `billing:usage:read`, `auth:keys:read`, `account:users:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns those same estimates with the Tags column populated from the X-Fal-Tags tags set on your requests; it requires tagged reporting to be enabled for the account, and recent usage is delayed relative to 'estimate'.<br/>
@@ -165,7 +166,8 @@ namespace Fal
         /// pooled billing the **invoice** source already spans all pooled teams even<br/>
         /// without `expand` (they share one billing customer); `expand=organization` adds the<br/>
         /// per-team `SubAccount` breakdown.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `billing:usage:read`, `auth:keys:read`, `account:users:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="source">
         /// Report source. 'invoice' returns finalized invoice data for a billing month. 'estimate' returns real-time usage estimates for a date range. 'tagged-estimate' returns those same estimates with the Tags column populated from the X-Fal-Tags tags set on your requests; it requires tagged reporting to be enabled for the account, and recent usage is delayed relative to 'estimate'.<br/>

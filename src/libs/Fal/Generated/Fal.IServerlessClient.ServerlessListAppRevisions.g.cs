@@ -18,7 +18,8 @@ namespace Fal
         /// deployment events; older revisions return null for both. `message` and<br/>
         /// `annotations` are the deploy-time metadata set via `fal deploy<br/>
         /// --message`/`--annotation`; both are null when the deploy did not set them.<br/>
-        /// **Authentication:** Required via API key. Only the app owner can query it.
+        /// **Authentication:** Required via API key. Only the app owner can query it.<br/>
+        /// **Required permissions:** `serverless:apps:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>
@@ -61,7 +62,8 @@ namespace Fal
         /// deployment events; older revisions return null for both. `message` and<br/>
         /// `annotations` are the deploy-time metadata set via `fal deploy<br/>
         /// --message`/`--annotation`; both are null when the deploy did not set them.<br/>
-        /// **Authentication:** Required via API key. Only the app owner can query it.
+        /// **Authentication:** Required via API key. Only the app owner can query it.<br/>
+        /// **Required permissions:** `serverless:apps:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="owner">
         /// Username of the app owner<br/>

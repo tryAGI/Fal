@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Unfavorite asset collection<br/>
-        /// Unfavorite an asset collection for the authenticated user's fal Assets library.
+        /// Unfavorite an asset collection for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -26,7 +27,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Unfavorite asset collection<br/>
-        /// Unfavorite an asset collection for the authenticated user's fal Assets library.
+        /// Unfavorite an asset collection for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>

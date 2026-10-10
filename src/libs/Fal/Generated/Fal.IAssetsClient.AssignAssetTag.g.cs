@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Assign tag to asset<br/>
-        /// Assign a tag to an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.
+        /// Assign a tag to an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
@@ -29,7 +30,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Assign tag to asset<br/>
-        /// Assign a tag to an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.
+        /// Assign a tag to an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>
@@ -52,7 +54,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Assign tag to asset<br/>
-        /// Assign a tag to an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.
+        /// Assign a tag to an asset. Provide a request ID or vector ID; unresolved references are materialized before tag state is added.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="tagId">
         /// Tag ID<br/>

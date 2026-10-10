@@ -88,7 +88,8 @@ namespace Fal
         /// - Debug specific requests by ID<br/>
         /// - Monitor billing unit consumption per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `billing:usage:read`, `auth:keys:read`, `account:users:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -198,7 +199,8 @@ namespace Fal
         /// - Debug specific requests by ID<br/>
         /// - Monitor billing unit consumption per request<br/>
         /// See [fal.ai docs](https://fal.ai/docs/documentation/model-apis/faq) for more details.<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `billing:usage:read`, `auth:keys:read`, `account:users:read`. Key presets that include them: `BILLING`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

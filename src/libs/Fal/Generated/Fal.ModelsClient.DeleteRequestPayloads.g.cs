@@ -49,7 +49,6 @@ namespace Fal
         /// **Important:**<br/>
         /// - Only **output** CDN files are deleted (input files may be used by other requests)<br/>
         /// - This action is irreversible<br/>
-        /// - Requires authentication with an admin API key<br/>
         /// **What gets deleted:**<br/>
         /// - Request input/output payload data<br/>
         /// - CDN-hosted output files (images, videos, etc.)<br/>
@@ -61,7 +60,8 @@ namespace Fal
         /// **Idempotency:**<br/>
         /// - Optional Idempotency-Key header prevents duplicate deletions on retries<br/>
         /// - Responses cached for 10 minutes per unique key<br/>
-        /// See [fal.ai docs](https://fal.ai/docs/platform-apis/v1/models/requests/payloads) for more details about request payloads.
+        /// See [fal.ai docs](https://fal.ai/docs/platform-apis/v1/models/requests/payloads) for more details about request payloads.<br/>
+        /// **Required permissions:** `models:requests:write`, `assets:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestId">
         /// Unique identifier for the request (UUID format)<br/>
@@ -95,7 +95,6 @@ namespace Fal
         /// **Important:**<br/>
         /// - Only **output** CDN files are deleted (input files may be used by other requests)<br/>
         /// - This action is irreversible<br/>
-        /// - Requires authentication with an admin API key<br/>
         /// **What gets deleted:**<br/>
         /// - Request input/output payload data<br/>
         /// - CDN-hosted output files (images, videos, etc.)<br/>
@@ -107,7 +106,8 @@ namespace Fal
         /// **Idempotency:**<br/>
         /// - Optional Idempotency-Key header prevents duplicate deletions on retries<br/>
         /// - Responses cached for 10 minutes per unique key<br/>
-        /// See [fal.ai docs](https://fal.ai/docs/platform-apis/v1/models/requests/payloads) for more details about request payloads.
+        /// See [fal.ai docs](https://fal.ai/docs/platform-apis/v1/models/requests/payloads) for more details about request payloads.<br/>
+        /// **Required permissions:** `models:requests:write`, `assets:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestId">
         /// Unique identifier for the request (UUID format)<br/>

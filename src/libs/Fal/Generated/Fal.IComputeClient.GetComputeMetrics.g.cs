@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Compute Metrics<br/>
-        /// Returns Prometheus-compatible metrics for an active compute cluster owned by the authenticated caller. Requires compute access and compute:instances:read permission. Use the compute_cluster query parameter to select the cluster by label.
+        /// Returns Prometheus-compatible metrics for an active compute cluster owned by the authenticated caller. Requires compute access and compute:instances:read permission. Use the compute_cluster query parameter to select the cluster by label.<br/>
+        /// **Required permissions:** `compute:instances:read`. Key presets that include them: `COMPUTE`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="computeCluster">
         /// The label of the compute cluster owned by the caller<br/>
@@ -21,7 +22,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Compute Metrics<br/>
-        /// Returns Prometheus-compatible metrics for an active compute cluster owned by the authenticated caller. Requires compute access and compute:instances:read permission. Use the compute_cluster query parameter to select the cluster by label.
+        /// Returns Prometheus-compatible metrics for an active compute cluster owned by the authenticated caller. Requires compute access and compute:instances:read permission. Use the compute_cluster query parameter to select the cluster by label.<br/>
+        /// **Required permissions:** `compute:instances:read`. Key presets that include them: `COMPUTE`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="computeCluster">
         /// The label of the compute cluster owned by the caller<br/>

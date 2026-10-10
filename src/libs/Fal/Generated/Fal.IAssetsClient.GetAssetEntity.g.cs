@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Get asset entity<br/>
-        /// Get a saved entity's type, @mention handle, visual description, and defining reference images. Only entities belonging to the authenticated account are accessible.
+        /// Get a saved entity's type, @mention handle, visual description, and defining reference images. Only entities belonging to the authenticated account are accessible.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="entityId">
         /// Smart entity ID
@@ -20,7 +21,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get asset entity<br/>
-        /// Get a saved entity's type, @mention handle, visual description, and defining reference images. Only entities belonging to the authenticated account are accessible.
+        /// Get a saved entity's type, @mention handle, visual description, and defining reference images. Only entities belonging to the authenticated account are accessible.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="entityId">
         /// Smart entity ID

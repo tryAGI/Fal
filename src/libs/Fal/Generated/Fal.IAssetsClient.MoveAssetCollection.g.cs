@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Move asset collection<br/>
-        /// Move a manual asset collection under another collection, or to the top level. Only manual collections can be moved or act as folders; nesting is limited to 5 levels deep and cannot create a cycle.
+        /// Move a manual asset collection under another collection, or to the top level. Only manual collections can be moved or act as folders; nesting is limited to 5 levels deep and cannot create a cycle.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -29,7 +30,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Move asset collection<br/>
-        /// Move a manual asset collection under another collection, or to the top level. Only manual collections can be moved or act as folders; nesting is limited to 5 levels deep and cannot create a cycle.
+        /// Move a manual asset collection under another collection, or to the top level. Only manual collections can be moved or act as folders; nesting is limited to 5 levels deep and cannot create a cycle.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>
@@ -52,7 +54,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Move asset collection<br/>
-        /// Move a manual asset collection under another collection, or to the top level. Only manual collections can be moved or act as folders; nesting is limited to 5 levels deep and cannot create a cycle.
+        /// Move a manual asset collection under another collection, or to the top level. Only manual collections can be moved or act as folders; nesting is limited to 5 levels deep and cannot create a cycle.<br/>
+        /// **Required permissions:** `assets:write`. Key presets that include them: `API`, `SERVERLESS`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="collectionId">
         /// Collection ID<br/>

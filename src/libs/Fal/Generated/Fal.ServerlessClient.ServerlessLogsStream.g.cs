@@ -58,7 +58,8 @@ namespace Fal
 
         /// <summary>
         /// Logs stream (SSE)<br/>
-        /// Streams live logs that match the provided filters using Server-Sent Events.
+        /// Streams live logs that match the provided filters using Server-Sent Events.<br/>
+        /// **Required permissions:** `serverless:logs:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="start">
         /// Start date in ISO8601 format (e.g., '2025-01-01T00:00:00Z' or '2025-01-01'). Defaults to 24 hours ago.<br/>

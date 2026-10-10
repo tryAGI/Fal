@@ -80,7 +80,8 @@ namespace Fal
         /// - Semantic text search: `?query=sunset+landscape`<br/>
         /// - Image similarity: `?image_url=https://...&amp;min_similarity=0.5`<br/>
         /// - Filtered search: `?query=portrait&amp;endpoint_id=fal-ai/flux/dev`<br/>
-        /// - Browse across multiple endpoints: `?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell`
+        /// - Browse across multiple endpoints: `?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell`<br/>
+        /// **Required permissions:** `models:requests:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>
@@ -175,7 +176,8 @@ namespace Fal
         /// - Semantic text search: `?query=sunset+landscape`<br/>
         /// - Image similarity: `?image_url=https://...&amp;min_similarity=0.5`<br/>
         /// - Filtered search: `?query=portrait&amp;endpoint_id=fal-ai/flux/dev`<br/>
-        /// - Browse across multiple endpoints: `?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell`
+        /// - Browse across multiple endpoints: `?endpoint_id=fal-ai/flux/dev,fal-ai/flux/schnell`<br/>
+        /// **Required permissions:** `models:requests:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of items to return. Actual maximum depends on query type and expansion parameters.<br/>

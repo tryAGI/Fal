@@ -6,7 +6,8 @@ namespace Fal
     {
         /// <summary>
         /// Logs history (paginated)<br/>
-        /// Returns paginated historical logs that match the provided filters.
+        /// Returns paginated historical logs that match the provided filters.<br/>
+        /// **Required permissions:** `serverless:logs:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Number of results per page<br/>
@@ -80,7 +81,8 @@ namespace Fal
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Logs history (paginated)<br/>
-        /// Returns paginated historical logs that match the provided filters.
+        /// Returns paginated historical logs that match the provided filters.<br/>
+        /// **Required permissions:** `serverless:logs:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Number of results per page<br/>

@@ -45,7 +45,8 @@ namespace Fal
 
         /// <summary>
         /// List asset collections<br/>
-        /// List asset collections for the authenticated user's fal Assets library.
+        /// List asset collections for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of collections to return<br/>
@@ -77,7 +78,8 @@ namespace Fal
         }
         /// <summary>
         /// List asset collections<br/>
-        /// List asset collections for the authenticated user's fal Assets library.
+        /// List asset collections for the authenticated user's fal Assets library.<br/>
+        /// **Required permissions:** `assets:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="limit">
         /// Maximum number of collections to return<br/>

@@ -12,7 +12,8 @@ namespace Fal
         /// - Load a workflow for editing<br/>
         /// - View workflow configuration<br/>
         /// - Export workflow definition<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `workflows:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="username">
         /// The username of the workflow owner<br/>
@@ -38,7 +39,8 @@ namespace Fal
         /// - Load a workflow for editing<br/>
         /// - View workflow configuration<br/>
         /// - Export workflow definition<br/>
-        ///
+        ///     <br/>
+        /// **Required permissions:** `workflows:read`. Key presets that include them: `API`, `SERVERLESS`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="username">
         /// The username of the workflow owner<br/>

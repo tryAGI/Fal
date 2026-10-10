@@ -41,7 +41,8 @@ namespace Fal
 
         /// <summary>
         /// List files (root)<br/>
-        /// Lists files and folders in the root of your project storage.
+        /// Lists files and folders in the root of your project storage.<br/>
+        /// **Required permissions:** `serverless:files:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -59,7 +60,8 @@ namespace Fal
         }
         /// <summary>
         /// List files (root)<br/>
-        /// Lists files and folders in the root of your project storage.
+        /// Lists files and folders in the root of your project storage.<br/>
+        /// **Required permissions:** `serverless:files:read`. Key presets that include them: `SERVERLESS`, `DEPLOY`, `READONLY`, `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
