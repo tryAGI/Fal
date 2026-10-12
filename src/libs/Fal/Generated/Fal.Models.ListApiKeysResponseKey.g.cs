@@ -29,14 +29,14 @@ namespace Fal
         public required string Alias { get; set; }
 
         /// <summary>
-        /// Deprecated: always `API`. This API lists and manages only keys on the `API` preset or the legacy `API` scope; keys on other presets or custom policies are not listed.<br/>
+        /// Coarse scope of a legacy API key. Deprecated: superseded by mode, preset and permissions, and omitted for keys that carry granular permissions.<br/>
         /// Example: API
         /// </summary>
         /// <example>API</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.ListApiKeysResponseKeyScopeJsonConverter))]
         [global::System.Obsolete("This property marked as deprecated.")]
-        public global::Fal.ListApiKeysResponseKeyScope Scope { get; set; }
+        public global::Fal.ListApiKeysResponseKeyScope? Scope { get; set; }
 
         /// <summary>
         /// ISO8601 timestamp when the key was created<br/>
@@ -46,6 +46,49 @@ namespace Fal
         [global::System.Text.Json.Serialization.JsonPropertyName("created_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string CreatedAt { get; set; }
+
+        /// <summary>
+        /// User-provided description of what the key is for<br/>
+        /// Example: CI deploy key for the main environment
+        /// </summary>
+        /// <example>CI deploy key for the main environment</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("description")]
+        public string? Description { get; set; }
+
+        /// <summary>
+        /// How the key's permissions are expressed: a named preset, a custom permission list, or a legacy scope.<br/>
+        /// Example: preset
+        /// </summary>
+        /// <example>preset</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.ListApiKeysResponseKeyModeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Fal.ListApiKeysResponseKeyMode Mode { get; set; }
+
+        /// <summary>
+        /// Preset the key was created from, present when mode is preset<br/>
+        /// Example: API
+        /// </summary>
+        /// <example>API</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("preset")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.ListApiKeysResponseKeyPresetJsonConverter))]
+        public global::Fal.ListApiKeysResponseKeyPreset? Preset { get; set; }
+
+        /// <summary>
+        /// Resolved permissions, present for preset and custom keys<br/>
+        /// Example: [models:requests:read, models:requests:write]
+        /// </summary>
+        /// <example>[models:requests:read, models:requests:write]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("permissions")]
+        public global::System.Collections.Generic.IList<string>? Permissions { get; set; }
+
+        /// <summary>
+        /// ISO8601 timestamp when the key expires, or null if it doesn't<br/>
+        /// Example: 2025-07-15T12:00:00Z
+        /// </summary>
+        /// <example>2025-07-15T12:00:00Z</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expires_at")]
+        public string? ExpiresAt { get; set; }
 
         /// <summary>
         /// Nickname of the user who created this key (when expanded)<br/>
@@ -84,6 +127,26 @@ namespace Fal
         /// ISO8601 timestamp when the key was created<br/>
         /// Example: 2025-01-15T12:00:00Z
         /// </param>
+        /// <param name="mode">
+        /// How the key's permissions are expressed: a named preset, a custom permission list, or a legacy scope.<br/>
+        /// Example: preset
+        /// </param>
+        /// <param name="description">
+        /// User-provided description of what the key is for<br/>
+        /// Example: CI deploy key for the main environment
+        /// </param>
+        /// <param name="preset">
+        /// Preset the key was created from, present when mode is preset<br/>
+        /// Example: API
+        /// </param>
+        /// <param name="permissions">
+        /// Resolved permissions, present for preset and custom keys<br/>
+        /// Example: [models:requests:read, models:requests:write]
+        /// </param>
+        /// <param name="expiresAt">
+        /// ISO8601 timestamp when the key expires, or null if it doesn't<br/>
+        /// Example: 2025-07-15T12:00:00Z
+        /// </param>
         /// <param name="creatorNickname">
         /// Nickname of the user who created this key (when expanded)<br/>
         /// Example: developer
@@ -99,12 +162,22 @@ namespace Fal
             string keyId,
             string alias,
             string createdAt,
+            global::Fal.ListApiKeysResponseKeyMode mode,
+            string? description,
+            global::Fal.ListApiKeysResponseKeyPreset? preset,
+            global::System.Collections.Generic.IList<string>? permissions,
+            string? expiresAt,
             string? creatorNickname,
             string? creatorEmail)
         {
             this.KeyId = keyId ?? throw new global::System.ArgumentNullException(nameof(keyId));
             this.Alias = alias ?? throw new global::System.ArgumentNullException(nameof(alias));
             this.CreatedAt = createdAt ?? throw new global::System.ArgumentNullException(nameof(createdAt));
+            this.Description = description;
+            this.Mode = mode;
+            this.Preset = preset;
+            this.Permissions = permissions;
+            this.ExpiresAt = expiresAt;
             this.CreatorNickname = creatorNickname;
             this.CreatorEmail = creatorEmail;
         }

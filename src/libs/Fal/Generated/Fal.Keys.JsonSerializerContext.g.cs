@@ -19,12 +19,16 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>), TypeInfoPropertyName = "AnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyRequestPreset), TypeInfoPropertyName = "CreateApiKeyRequestPreset2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ListApiKeysResponseKey>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKey))]
     #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKeyScope), TypeInfoPropertyName = "ListApiKeysResponseKeyScope2")]
     #pragma warning restore CS0618
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKeyMode), TypeInfoPropertyName = "ListApiKeysResponseKeyMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKeyPreset), TypeInfoPropertyName = "ListApiKeysResponseKeyPreset2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType), TypeInfoPropertyName = "ListApiKeysResponseErrorType2_3")]
@@ -53,6 +57,18 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyResponse6))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyResponseError5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyResponseErrorType5), TypeInfoPropertyName = "CreateApiKeyResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseErrorType), TypeInfoPropertyName = "RevokeApiKeyResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseErrorType2), TypeInfoPropertyName = "RevokeApiKeyResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseErrorType3), TypeInfoPropertyName = "RevokeApiKeyResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseErrorType4), TypeInfoPropertyName = "RevokeApiKeyResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteApiKeyResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteApiKeyResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteApiKeyResponseErrorType), TypeInfoPropertyName = "DeleteApiKeyResponseErrorType2_3")]
@@ -68,9 +84,13 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>?), TypeInfoPropertyName = "NullableAnyOfStringIListString2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyRequestPreset?), TypeInfoPropertyName = "NullableCreateApiKeyRequestPreset2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     #pragma warning disable CS0618 // This registration names a deprecated API model.
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKeyScope?), TypeInfoPropertyName = "NullableListApiKeysResponseKeyScope2")]
     #pragma warning restore CS0618
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKeyMode?), TypeInfoPropertyName = "NullableListApiKeysResponseKeyMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseKeyPreset?), TypeInfoPropertyName = "NullableListApiKeysResponseKeyPreset2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType?), TypeInfoPropertyName = "NullableListApiKeysResponseErrorType2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType2?), TypeInfoPropertyName = "NullableListApiKeysResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListApiKeysResponseErrorType3?), TypeInfoPropertyName = "NullableListApiKeysResponseErrorType32")]
@@ -80,6 +100,10 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyResponseErrorType3?), TypeInfoPropertyName = "NullableCreateApiKeyResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyResponseErrorType4?), TypeInfoPropertyName = "NullableCreateApiKeyResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateApiKeyResponseErrorType5?), TypeInfoPropertyName = "NullableCreateApiKeyResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseErrorType?), TypeInfoPropertyName = "NullableRevokeApiKeyResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseErrorType2?), TypeInfoPropertyName = "NullableRevokeApiKeyResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseErrorType3?), TypeInfoPropertyName = "NullableRevokeApiKeyResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.RevokeApiKeyResponseErrorType4?), TypeInfoPropertyName = "NullableRevokeApiKeyResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteApiKeyResponseErrorType?), TypeInfoPropertyName = "NullableDeleteApiKeyResponseErrorType2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteApiKeyResponseErrorType2?), TypeInfoPropertyName = "NullableDeleteApiKeyResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteApiKeyResponseErrorType3?), TypeInfoPropertyName = "NullableDeleteApiKeyResponseErrorType32")]
@@ -229,9 +253,21 @@ namespace Fal
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyScope)
+                    typeToConvert == typeof(global::Fal.CreateApiKeyRequestPreset)
+
+                    || typeToConvert == typeof(global::Fal.CreateApiKeyRequestPreset?)
+
+                    || typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyScope)
 
                     || typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyScope?)
+
+                    || typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyMode)
+
+                    || typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyMode?)
+
+                    || typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyPreset)
+
+                    || typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyPreset?)
 
                     || typeToConvert == typeof(global::Fal.ListApiKeysResponseErrorType)
 
@@ -269,6 +305,22 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.CreateApiKeyResponseErrorType5?)
 
+                    || typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType)
+
+                    || typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType?)
+
+                    || typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType2)
+
+                    || typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType2?)
+
+                    || typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType3)
+
+                    || typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType3?)
+
+                    || typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType4)
+
+                    || typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType4?)
+
                     || typeToConvert == typeof(global::Fal.DeleteApiKeyResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.DeleteApiKeyResponseErrorType?)
@@ -290,6 +342,16 @@ namespace Fal
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
+                if (typeToConvert == typeof(global::Fal.CreateApiKeyRequestPreset))
+                {
+                    return new global::Fal.JsonConverters.CreateApiKeyRequestPresetJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.CreateApiKeyRequestPreset?))
+                {
+                    return new global::Fal.JsonConverters.CreateApiKeyRequestPresetNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyScope))
                 {
                     return new global::Fal.JsonConverters.ListApiKeysResponseKeyScopeJsonConverter();
@@ -298,6 +360,26 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyScope?))
                 {
                     return new global::Fal.JsonConverters.ListApiKeysResponseKeyScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyMode))
+                {
+                    return new global::Fal.JsonConverters.ListApiKeysResponseKeyModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyMode?))
+                {
+                    return new global::Fal.JsonConverters.ListApiKeysResponseKeyModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyPreset))
+                {
+                    return new global::Fal.JsonConverters.ListApiKeysResponseKeyPresetJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ListApiKeysResponseKeyPreset?))
+                {
+                    return new global::Fal.JsonConverters.ListApiKeysResponseKeyPresetNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.ListApiKeysResponseErrorType))
@@ -388,6 +470,46 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.CreateApiKeyResponseErrorType5?))
                 {
                     return new global::Fal.JsonConverters.CreateApiKeyResponseErrorType5NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType))
+                {
+                    return new global::Fal.JsonConverters.RevokeApiKeyResponseErrorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType?))
+                {
+                    return new global::Fal.JsonConverters.RevokeApiKeyResponseErrorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType2))
+                {
+                    return new global::Fal.JsonConverters.RevokeApiKeyResponseErrorType2JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType2?))
+                {
+                    return new global::Fal.JsonConverters.RevokeApiKeyResponseErrorType2NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType3))
+                {
+                    return new global::Fal.JsonConverters.RevokeApiKeyResponseErrorType3JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType3?))
+                {
+                    return new global::Fal.JsonConverters.RevokeApiKeyResponseErrorType3NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType4))
+                {
+                    return new global::Fal.JsonConverters.RevokeApiKeyResponseErrorType4JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.RevokeApiKeyResponseErrorType4?))
+                {
+                    return new global::Fal.JsonConverters.RevokeApiKeyResponseErrorType4NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.DeleteApiKeyResponseErrorType))

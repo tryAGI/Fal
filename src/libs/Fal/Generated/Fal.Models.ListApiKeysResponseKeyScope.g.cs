@@ -4,13 +4,17 @@
 namespace Fal
 {
     /// <summary>
-    /// Deprecated: always `API`. This API lists and manages only keys on the `API` preset or the legacy `API` scope; keys on other presets or custom policies are not listed.<br/>
+    /// Coarse scope of a legacy API key. Deprecated: superseded by mode, preset and permissions, and omitted for keys that carry granular permissions.<br/>
     /// Example: API
     /// </summary>
     public enum ListApiKeysResponseKeyScope
     {
         /// <summary>
-        /// always `API`. This API lists and manages only keys on the `API` preset or the legacy `API` scope; keys on other presets or custom policies are not listed.
+        ///
+        /// </summary>
+        Admin,
+        /// <summary>
+        /// superseded by mode, preset and permissions, and omitted for keys that carry granular permissions.
         /// </summary>
         Api,
     }
@@ -27,6 +31,7 @@ namespace Fal
         {
             return value switch
             {
+                ListApiKeysResponseKeyScope.Admin => "ADMIN",
                 ListApiKeysResponseKeyScope.Api => "API",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -38,6 +43,7 @@ namespace Fal
         {
             return value switch
             {
+                "ADMIN" => ListApiKeysResponseKeyScope.Admin,
                 "API" => ListApiKeysResponseKeyScope.Api,
                 _ => null,
             };

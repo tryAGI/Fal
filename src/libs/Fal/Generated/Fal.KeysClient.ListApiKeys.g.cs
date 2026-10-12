@@ -47,12 +47,16 @@ namespace Fal
 
         /// <summary>
         /// List API Keys<br/>
-        /// Returns the API keys in the authenticated user's workspace that are on the `API` preset<br/>
-        /// or the legacy `API` scope. Keys on other presets or custom policies are not listed.<br/>
+        /// Returns a list of all API keys belonging to the authenticated user's workspace.<br/>
         /// **Key Features:**<br/>
         /// - View all API keys with their aliases and creation dates<br/>
+        /// - See how each key is permissioned via `mode`, `preset` and `permissions`<br/>
         /// - Optionally expand to include creator information<br/>
         /// - Paginated results for workspaces with many keys<br/>
+        /// **Key Modes:**<br/>
+        /// - `preset`: created from a named permission preset, reported in `preset`<br/>
+        /// - `custom`: created with an explicit list of permissions<br/>
+        /// - `legacy`: predates granular permissions and carries a coarse scope<br/>
         /// **Expansion Options:**<br/>
         /// - `expand=creator_info`: Include creator_nickname and creator_email for each key<br/>
         /// **Common Use Cases:**<br/>
@@ -96,12 +100,16 @@ namespace Fal
         }
         /// <summary>
         /// List API Keys<br/>
-        /// Returns the API keys in the authenticated user's workspace that are on the `API` preset<br/>
-        /// or the legacy `API` scope. Keys on other presets or custom policies are not listed.<br/>
+        /// Returns a list of all API keys belonging to the authenticated user's workspace.<br/>
         /// **Key Features:**<br/>
         /// - View all API keys with their aliases and creation dates<br/>
+        /// - See how each key is permissioned via `mode`, `preset` and `permissions`<br/>
         /// - Optionally expand to include creator information<br/>
         /// - Paginated results for workspaces with many keys<br/>
+        /// **Key Modes:**<br/>
+        /// - `preset`: created from a named permission preset, reported in `preset`<br/>
+        /// - `custom`: created with an explicit list of permissions<br/>
+        /// - `legacy`: predates granular permissions and carries a coarse scope<br/>
         /// **Expansion Options:**<br/>
         /// - `expand=creator_info`: Include creator_nickname and creator_email for each key<br/>
         /// **Common Use Cases:**<br/>
