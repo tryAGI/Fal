@@ -7,7 +7,7 @@ namespace Fal
     {
 
 
-        private static readonly global::Fal.EndPointSecurityRequirement s_DeleteApiKeySecurityRequirement0 =
+        private static readonly global::Fal.EndPointSecurityRequirement s_RevokeApiKeySecurityRequirement0 =
             new global::Fal.EndPointSecurityRequirement
             {
                 Authorizations = new global::Fal.EndPointAuthorizationRequirement[]
@@ -21,45 +21,47 @@ namespace Fal
                     },
                 },
             };
-        private static readonly global::Fal.EndPointSecurityRequirement[] s_DeleteApiKeySecurityRequirements =
+        private static readonly global::Fal.EndPointSecurityRequirement[] s_RevokeApiKeySecurityRequirements =
             new global::Fal.EndPointSecurityRequirement[]
-            {                s_DeleteApiKeySecurityRequirement0,
+            {                s_RevokeApiKeySecurityRequirement0,
             };
-        partial void PrepareDeleteApiKeyArguments(
+        partial void PrepareRevokeApiKeyArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string keyId,
             ref string? idempotencyKey);
-        partial void PrepareDeleteApiKeyRequest(
+        partial void PrepareRevokeApiKeyRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string keyId,
             string? idempotencyKey);
-        partial void ProcessDeleteApiKeyResponse(
+        partial void ProcessRevokeApiKeyResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
         /// <summary>
-        /// Delete API Key<br/>
-        /// Deletes an API key by its ID. This action is irreversible.<br/>
+        /// Revoke API Key<br/>
+        /// Revokes an API key by its ID, so it can no longer be used. This action is irreversible.<br/>
+        /// The key stops working immediately and drops out of `GET /v1/keys`, but the<br/>
+        /// record is retained with when it was revoked and by whom.<br/>
         /// **Requirements:**<br/>
         /// - Key must belong to the authenticated user's workspace<br/>
         /// **Key Features:**<br/>
-        /// - Permanently revoke API key access<br/>
+        /// - Permanently revoke API key access while retaining the audit record<br/>
         /// - Idempotent operation (safe to retry)<br/>
         /// - Optional Idempotency-Key header for safe retries<br/>
         /// **Important:**<br/>
         /// - This action cannot be undone<br/>
         /// - Any applications using this key will immediately lose access<br/>
-        /// - Returns 204 even if the key doesn't exist (idempotent behavior)<br/>
+        /// - Returns 204 even if the key doesn't exist or is already revoked<br/>
         /// **Common Use Cases:**<br/>
         /// - Revoke compromised keys<br/>
         /// - Clean up unused keys<br/>
-        /// - Implement key rotation (delete old, create new)<br/>
+        /// - Implement key rotation (revoke old, create new)<br/>
         /// - Offboard team members<br/>
         /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="keyId">
-        /// Unique identifier of the API key to delete<br/>
+        /// Unique identifier of the API key to revoke<br/>
         /// Example: abc123def456
         /// </param>
         /// <param name="idempotencyKey">
@@ -69,13 +71,13 @@ namespace Fal
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task DeleteApiKeyAsync(
+        public async global::System.Threading.Tasks.Task RevokeApiKeyAsync(
             string keyId,
             string? idempotencyKey = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            await DeleteApiKeyAsResponseAsync(
+            await RevokeApiKeyAsResponseAsync(
                 keyId: keyId,
                 idempotencyKey: idempotencyKey,
                 requestOptions: requestOptions,
@@ -83,27 +85,29 @@ namespace Fal
             ).ConfigureAwait(false);
         }
         /// <summary>
-        /// Delete API Key<br/>
-        /// Deletes an API key by its ID. This action is irreversible.<br/>
+        /// Revoke API Key<br/>
+        /// Revokes an API key by its ID, so it can no longer be used. This action is irreversible.<br/>
+        /// The key stops working immediately and drops out of `GET /v1/keys`, but the<br/>
+        /// record is retained with when it was revoked and by whom.<br/>
         /// **Requirements:**<br/>
         /// - Key must belong to the authenticated user's workspace<br/>
         /// **Key Features:**<br/>
-        /// - Permanently revoke API key access<br/>
+        /// - Permanently revoke API key access while retaining the audit record<br/>
         /// - Idempotent operation (safe to retry)<br/>
         /// - Optional Idempotency-Key header for safe retries<br/>
         /// **Important:**<br/>
         /// - This action cannot be undone<br/>
         /// - Any applications using this key will immediately lose access<br/>
-        /// - Returns 204 even if the key doesn't exist (idempotent behavior)<br/>
+        /// - Returns 204 even if the key doesn't exist or is already revoked<br/>
         /// **Common Use Cases:**<br/>
         /// - Revoke compromised keys<br/>
         /// - Clean up unused keys<br/>
-        /// - Implement key rotation (delete old, create new)<br/>
+        /// - Implement key rotation (revoke old, create new)<br/>
         /// - Offboard team members<br/>
         /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="keyId">
-        /// Unique identifier of the API key to delete<br/>
+        /// Unique identifier of the API key to revoke<br/>
         /// Example: abc123def456
         /// </param>
         /// <param name="idempotencyKey">
@@ -113,7 +117,7 @@ namespace Fal
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Fal.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse> DeleteApiKeyAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Fal.AutoSDKHttpResponse> RevokeApiKeyAsResponseAsync(
             string keyId,
             string? idempotencyKey = default,
             global::Fal.AutoSDKRequestOptions? requestOptions = default,
@@ -121,7 +125,7 @@ namespace Fal
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareDeleteApiKeyArguments(
+            PrepareRevokeApiKeyArguments(
                 httpClient: HttpClient,
                 keyId: ref keyId,
                 idempotencyKey: ref idempotencyKey);
@@ -129,8 +133,8 @@ namespace Fal
 
             var __authorizations = global::Fal.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_DeleteApiKeySecurityRequirements,
-                operationName: "DeleteApiKeyAsync");
+                securityRequirements: s_RevokeApiKeySecurityRequirements,
+                operationName: "RevokeApiKeyAsync");
 
             using var __timeoutCancellationTokenSource = global::Fal.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -150,7 +154,7 @@ namespace Fal
             {
 
                             var __pathBuilder = new global::Fal.PathBuilder(
-                                path: $"/keys/{keyId}",
+                                path: $"/keys/{keyId}/revoke",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Fal.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -158,7 +162,7 @@ namespace Fal
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Delete,
+                    method: global::System.Net.Http.HttpMethod.Post,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -195,7 +199,7 @@ namespace Fal
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareDeleteApiKeyRequest(
+                PrepareRevokeApiKeyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     keyId: keyId,
@@ -216,10 +220,10 @@ namespace Fal
                     await global::Fal.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "DeleteApiKey",
-                                methodName: "DeleteApiKeyAsync",
-                                pathTemplate: "$\"/keys/{keyId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "RevokeApiKey",
+                                methodName: "RevokeApiKeyAsync",
+                                pathTemplate: "$\"/keys/{keyId}/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
@@ -250,10 +254,10 @@ namespace Fal
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "DeleteApiKey",
-                                methodName: "DeleteApiKeyAsync",
-                                pathTemplate: "$\"/keys/{keyId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "RevokeApiKey",
+                                methodName: "RevokeApiKeyAsync",
+                                pathTemplate: "$\"/keys/{keyId}/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
@@ -291,10 +295,10 @@ namespace Fal
                         await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "DeleteApiKey",
-                                methodName: "DeleteApiKeyAsync",
-                                pathTemplate: "$\"/keys/{keyId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "RevokeApiKey",
+                                methodName: "RevokeApiKeyAsync",
+                                pathTemplate: "$\"/keys/{keyId}/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -331,7 +335,7 @@ namespace Fal
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessDeleteApiKeyResponse(
+                ProcessRevokeApiKeyResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -339,10 +343,10 @@ namespace Fal
                     await global::Fal.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "DeleteApiKey",
-                                methodName: "DeleteApiKeyAsync",
-                                pathTemplate: "$\"/keys/{keyId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "RevokeApiKey",
+                                methodName: "RevokeApiKeyAsync",
+                                pathTemplate: "$\"/keys/{keyId}/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -361,10 +365,10 @@ namespace Fal
                     await global::Fal.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Fal.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "DeleteApiKey",
-                                methodName: "DeleteApiKeyAsync",
-                                pathTemplate: "$\"/keys/{keyId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "RevokeApiKey",
+                                methodName: "RevokeApiKeyAsync",
+                                pathTemplate: "$\"/keys/{keyId}/revoke\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -383,19 +387,19 @@ namespace Fal
                             {
                                 string? __content_401 = null;
                                 global::System.Exception? __exception_401 = null;
-                                global::Fal.DeleteApiKeyResponse? __value_401 = null;
+                                global::Fal.RevokeApiKeyResponse? __value_401 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = global::Fal.DeleteApiKeyResponse.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = global::Fal.RevokeApiKeyResponse.FromJson(__content_401, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = global::Fal.DeleteApiKeyResponse.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = global::Fal.RevokeApiKeyResponse.FromJson(__content_401, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -404,7 +408,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.DeleteApiKeyResponse>.Create(
+                                throw global::Fal.ApiException<global::Fal.RevokeApiKeyResponse>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
@@ -420,19 +424,19 @@ namespace Fal
                             {
                                 string? __content_403 = null;
                                 global::System.Exception? __exception_403 = null;
-                                global::Fal.DeleteApiKeyResponse2? __value_403 = null;
+                                global::Fal.RevokeApiKeyResponse2? __value_403 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_403 = global::Fal.DeleteApiKeyResponse2.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = global::Fal.RevokeApiKeyResponse2.FromJson(__content_403, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_403 = global::Fal.DeleteApiKeyResponse2.FromJson(__content_403, JsonSerializerContext);
+                                        __value_403 = global::Fal.RevokeApiKeyResponse2.FromJson(__content_403, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -441,7 +445,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.DeleteApiKeyResponse2>.Create(
+                                throw global::Fal.ApiException<global::Fal.RevokeApiKeyResponse2>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,
@@ -457,19 +461,19 @@ namespace Fal
                             {
                                 string? __content_429 = null;
                                 global::System.Exception? __exception_429 = null;
-                                global::Fal.DeleteApiKeyResponse3? __value_429 = null;
+                                global::Fal.RevokeApiKeyResponse3? __value_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_429 = global::Fal.DeleteApiKeyResponse3.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.RevokeApiKeyResponse3.FromJson(__content_429, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_429 = global::Fal.DeleteApiKeyResponse3.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = global::Fal.RevokeApiKeyResponse3.FromJson(__content_429, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -478,7 +482,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.DeleteApiKeyResponse3>.Create(
+                                throw global::Fal.ApiException<global::Fal.RevokeApiKeyResponse3>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
@@ -494,19 +498,19 @@ namespace Fal
                             {
                                 string? __content_500 = null;
                                 global::System.Exception? __exception_500 = null;
-                                global::Fal.DeleteApiKeyResponse4? __value_500 = null;
+                                global::Fal.RevokeApiKeyResponse4? __value_500 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_500 = global::Fal.DeleteApiKeyResponse4.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.RevokeApiKeyResponse4.FromJson(__content_500, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_500 = global::Fal.DeleteApiKeyResponse4.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = global::Fal.RevokeApiKeyResponse4.FromJson(__content_500, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -515,7 +519,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.DeleteApiKeyResponse4>.Create(
+                                throw global::Fal.ApiException<global::Fal.RevokeApiKeyResponse4>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
