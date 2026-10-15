@@ -86,7 +86,7 @@ namespace Fal
         public string? AuthMethod { get; set; }
 
         /// <summary>
-        /// Activated X-Fal-Tags key/values represented by this row. Only populated when source=tagged-estimate; a key the row's requests did not set is omitted, so a row that set none reports {}.
+        /// Activated X-Fal-Tags key/values represented by this row. Only populated when source=tagged-estimate; a key the row's requests did not set is omitted, so a row that set none reports {}. A key activated for all of its values keeps its 50 highest-cost values over the request window and reports the rest as '(other)'.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
         public global::System.Collections.Generic.Dictionary<string, string>? Tags { get; set; }
@@ -140,7 +140,7 @@ namespace Fal
         /// Authentication method label (e.g., 'Key 1', 'Key 2', 'User token'). Only populated when 'auth_method' is included in expand parameter.
         /// </param>
         /// <param name="tags">
-        /// Activated X-Fal-Tags key/values represented by this row. Only populated when source=tagged-estimate; a key the row's requests did not set is omitted, so a row that set none reports {}.
+        /// Activated X-Fal-Tags key/values represented by this row. Only populated when source=tagged-estimate; a key the row's requests did not set is omitted, so a row that set none reports {}. A key activated for all of its values keeps its 50 highest-cost values over the request window and reports the rest as '(other)'.
         /// </param>
         /// <param name="authMethodStructured">
         /// Structured authentication method identity. Only populated when 'auth_method_structured' is included in expand parameter.
