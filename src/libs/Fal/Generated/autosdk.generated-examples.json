@@ -849,6 +849,17 @@
     },
     {
       "Order": 78,
+      "Title": "Stop Runner",
+      "Slug": "serverlessstoprunner",
+      "Description": "Gracefully stops a serverless runner owned by the authenticated account.\nThe runner stops accepting new requests and finishes in-flight work before shutting down.\n\nSet \u0060replace_first=true\u0060 to start a replacement before stopping this runner.\nThis option applies to deployed application runners, not standalone \u0060fal run\u0060 runners.\n\nA successful response acknowledges the stop request; the runner may still be draining.\nStopping a runner does not change the application\u0027s scaling configuration, so autoscaling may start new runners.\n\n**Required permissions:** \u0060serverless:runners:terminate\u0060. Key presets that include them: \u0060COMPUTE\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
+      "Language": "http",
+      "Code": "### Stop Runner\n# @name serverlessStopRunner\nPOST {{host}}/serverless/runners/{{runner_id}}/stop?replace_first=false\nAuthorization: Bearer {{token}}\nAccept: application/json\n\n## Responses\n# 200\n# Description: Graceful stop requested successfully\n# Content-Type: application/json\n# 400\n# Description: Invalid request parameters\n# Content-Type: application/json\n# 401\n# Description: Authentication required\n# Content-Type: application/json\n# 403\n# Description: Access denied\n# Content-Type: application/json\n# 404\n# Description: Resource not found\n# Content-Type: application/json\n# 429\n# Description: Rate limit exceeded\n# Content-Type: application/json\n# 500\n# Description: Internal server error\n# Content-Type: application/json",
+      "Format": "http",
+      "OperationId": "serverlessStopRunner",
+      "Setup": null
+    },
+    {
+      "Order": 79,
       "Title": "Upload file from URL",
       "Slug": "serverlessuploadfromurl",
       "Description": "Creates a new file at the target path by downloading it from the provided URL.\n\n**Required permissions:** \u0060serverless:files:write\u0060. Key presets that include them: \u0060SERVERLESS\u0060, \u0060DEPLOY\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -859,7 +870,7 @@
       "Setup": null
     },
     {
-      "Order": 79,
+      "Order": 80,
       "Title": "Upload local file (multipart/form-data)",
       "Slug": "serverlessuploadlocalfile",
       "Description": "Uploads a local file using multipart/form-data. The file field name must be \u0060file_upload\u0060.\n\n**Required permissions:** \u0060serverless:files:write\u0060. Key presets that include them: \u0060SERVERLESS\u0060, \u0060DEPLOY\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -870,7 +881,7 @@
       "Setup": null
     },
     {
-      "Order": 80,
+      "Order": 81,
       "Title": "Get file ACL",
       "Slug": "getstoragefileacl",
       "Description": "Returns the Access Control List currently applied to a fal CDN file.\n\nThe ACL consists of a default decision (\u0060allow\u0060, \u0060forbid\u0060, or \u0060hide\u0060) plus\noptional per-user rules that override the default. Rule users are returned as\nnicknames where possible.\n\n**Authentication:** Required. The API key must have the \u0060assets:read\u0060 permission.\n    \n\n**Required permissions:** \u0060assets:read\u0060. Key presets that include them: \u0060API\u0060, \u0060SERVERLESS\u0060, \u0060READONLY\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -881,7 +892,7 @@
       "Setup": null
     },
     {
-      "Order": 81,
+      "Order": 82,
       "Title": "Get storage settings",
       "Slug": "getstoragesettings",
       "Description": "Returns the account-level storage lifecycle settings applied to newly uploaded\nfal CDN files:\n\n- \u0060expiration_duration_seconds\u0060: how long files live before being\n  automatically deleted (null disables auto-expiration).\n- \u0060initial_acl\u0060: the default ACL applied to new uploads (null means the\n  system default, which is public).\n\nBoth fields are null when the account has never saved settings.\n\n**Authentication:** Required. The API key must have the \u0060account:settings:read\u0060 permission.\n    \n\n**Required permissions:** \u0060account:settings:read\u0060. Key presets that include them: \u0060API\u0060, \u0060SERVERLESS\u0060, \u0060DEPLOY\u0060, \u0060COMPUTE\u0060, \u0060BILLING\u0060, \u0060READONLY\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -892,7 +903,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 82,
+      "Order": 83,
       "Title": "Set file ACL",
       "Slug": "setstoragefileacl",
       "Description": "Replaces the Access Control List of a fal CDN file.\n\nThe ACL consists of a default decision (\u0060allow\u0060, \u0060forbid\u0060, or \u0060hide\u0060) plus\noptional per-user rules that override the default. Rule users may be specified\nby nickname or user ID. Setting \u0060default\u0060 to \u0060allow\u0060 with no rules makes the\nfile public; \u0060forbid\u0060 or \u0060hide\u0060 restricts it to the rules you provide.\n\nRules referencing users that do not exist are dropped. The response reflects\nthe ACL actually applied, so verify it contains the rules you sent.\n\n**Authentication:** Required. The API key must have the \u0060assets:write\u0060 permission.\n    \n\n**Required permissions:** \u0060assets:write\u0060. Key presets that include them: \u0060API\u0060, \u0060SERVERLESS\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -903,7 +914,7 @@
       "Setup": null
     },
     {
-      "Order": 83,
+      "Order": 84,
       "Title": "Sign file URL",
       "Slug": "signstoragefileurl",
       "Description": "Creates a signed URL that grants temporary access to a fal CDN file,\nregardless of its ACL. Useful for sharing access-restricted files.\n\nThe signature is valid for \u0060expiration_seconds\u0060 (up to 7 days).\n\n**Authentication:** Required. The API key must have the \u0060assets:read\u0060 permission.\n    \n\n**Required permissions:** \u0060assets:read\u0060. Key presets that include them: \u0060API\u0060, \u0060SERVERLESS\u0060, \u0060READONLY\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -914,7 +925,7 @@
       "Setup": null
     },
     {
-      "Order": 84,
+      "Order": 85,
       "Title": "Update storage settings",
       "Slug": "updatestoragesettings",
       "Description": "Replaces the account-level storage lifecycle settings applied to newly\nuploaded fal CDN files. Omitted or null fields are cleared (reset to the\nsystem default), so always send the full desired configuration. Sending an\nempty JSON object \u0060{}\u0060 clears all settings. To change a single setting,\nfirst GET the current settings and PUT the full object back with only that\nfield changed.\n\nA request whose body is not valid JSON (including a zero-length body) or\nwhose Content-Type is not \u0060application/json\u0060 is rejected with a 400\n\u0060validation_error\u0060 and the stored settings are unchanged.\n\nACL rules referencing users that do not exist are dropped. The response\nreflects the settings actually saved, so verify it contains the rules you sent.\n\nThese are the same settings that the per-request\n\u0060X-Fal-Object-Lifecycle-Preference\u0060 header overrides on individual requests.\n\n**Authentication:** Required. The API key must have the \u0060account:settings:write\u0060 permission.\n    \n\n**Required permissions:** \u0060account:settings:write\u0060. Key presets that include them: \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -925,7 +936,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 85,
+      "Order": 86,
       "Title": "Create a workflow",
       "Slug": "createworkflow",
       "Description": "Create a new workflow owned by the authenticated user.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Save a newly built workflow\n- Programmatically provision workflows\n\n**Note:** Workflow names must be unique within your namespace. Creating a\nworkflow with a name you already use returns a 400 validation error.\n    \n\n**Required permissions:** \u0060workflows:write\u0060. Key presets that include them: \u0060SERVERLESS\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -936,7 +947,7 @@
       "Setup": "This example assumes \u0060using Fal;\u0060 is in scope and \u0060apiKey\u0060 contains the required credential."
     },
     {
-      "Order": 86,
+      "Order": 87,
       "Title": "Get workflow details",
       "Slug": "getworkflow",
       "Description": "Get detailed information about a specific workflow, including its full contents/definition.\n\n**Authentication:** Required.\n\n**Common Use Cases:**\n- Load a workflow for editing\n- View workflow configuration\n- Export workflow definition\n    \n\n**Required permissions:** \u0060workflows:read\u0060. Key presets that include them: \u0060API\u0060, \u0060SERVERLESS\u0060, \u0060READONLY\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
@@ -947,7 +958,7 @@
       "Setup": null
     },
     {
-      "Order": 87,
+      "Order": 88,
       "Title": "List user workflows",
       "Slug": "listworkflows",
       "Description": "List workflows for the authenticated user with optional search and filtering.\n\n**Features:**\n- Paginated results with cursor-based pagination\n- Search by workflow name or title\n- Filter by model endpoints used in the workflow\n\n**Authentication:** Required. Returns only workflows owned by the authenticated user.\n\n**Common Use Cases:**\n- Display user\u0027s workflow library\n- Search for specific workflows\n- Find workflows using particular models\n    \n\n**Required permissions:** \u0060workflows:read\u0060. Key presets that include them: \u0060API\u0060, \u0060SERVERLESS\u0060, \u0060READONLY\u0060, \u0060FULL\u0060. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).",
