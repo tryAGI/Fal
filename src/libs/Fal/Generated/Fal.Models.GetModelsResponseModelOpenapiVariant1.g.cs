@@ -4,12 +4,12 @@
 namespace Fal
 {
     /// <summary>
-    /// OpenAPI 3.0 specification for the model
+    /// OpenAPI 3.1 specification for the model
     /// </summary>
     public sealed partial class GetModelsResponseModelOpenapiVariant1
     {
         /// <summary>
-        /// OpenAPI version (e.g., '3.0.4')
+        /// OpenAPI version (e.g., '3.1.0')
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openapi")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -25,7 +25,7 @@ namespace Fal
         /// Initializes a new instance of the <see cref="GetModelsResponseModelOpenapiVariant1" /> class.
         /// </summary>
         /// <param name="openapi">
-        /// OpenAPI version (e.g., '3.0.4')
+        /// OpenAPI version (e.g., '3.1.0')
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

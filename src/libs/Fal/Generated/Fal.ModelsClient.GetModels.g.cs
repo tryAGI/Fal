@@ -71,7 +71,7 @@ namespace Fal
         /// - Keep sort, filters and limit unchanged when following `next_cursor`; cursors are page positions, not snapshots, and catalog/ranking updates can change later pages.<br/>
         /// **Expansion:**<br/>
         /// Use `expand` to include additional data in each model object:<br/>
-        /// - `openapi-3.0` — full OpenAPI 3.0 schema in the `openapi` field<br/>
+        /// - `openapi-3.0` — full OpenAPI 3.1 schema in the `openapi` field (the value keeps its original name)<br/>
         /// - `enterprise_status` — enterprise readiness status (`ready` or `pending`) in the `enterprise_status` field<br/>
         /// **Examples of `endpoint_id` values:**<br/>
         /// - `fal-ai/flux/dev`<br/>
@@ -118,7 +118,7 @@ namespace Fal
         /// Example: recent
         /// </param>
         /// <param name="expand">
-        /// Fields to expand in the response. Supported values: 'openapi-3.0' (includes full OpenAPI 3.0 schema in 'openapi' field), 'enterprise_status' (includes enterprise readiness status)<br/>
+        /// Fields to expand in the response. Supported values: 'openapi-3.0' (includes the model's full OpenAPI 3.1 schema in 'openapi' field; the value keeps its original name), 'enterprise_status' (includes enterprise readiness status)<br/>
         /// Example: [openapi-3.0, enterprise_status]
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -167,7 +167,7 @@ namespace Fal
         /// - Keep sort, filters and limit unchanged when following `next_cursor`; cursors are page positions, not snapshots, and catalog/ranking updates can change later pages.<br/>
         /// **Expansion:**<br/>
         /// Use `expand` to include additional data in each model object:<br/>
-        /// - `openapi-3.0` — full OpenAPI 3.0 schema in the `openapi` field<br/>
+        /// - `openapi-3.0` — full OpenAPI 3.1 schema in the `openapi` field (the value keeps its original name)<br/>
         /// - `enterprise_status` — enterprise readiness status (`ready` or `pending`) in the `enterprise_status` field<br/>
         /// **Examples of `endpoint_id` values:**<br/>
         /// - `fal-ai/flux/dev`<br/>
@@ -214,7 +214,7 @@ namespace Fal
         /// Example: recent
         /// </param>
         /// <param name="expand">
-        /// Fields to expand in the response. Supported values: 'openapi-3.0' (includes full OpenAPI 3.0 schema in 'openapi' field), 'enterprise_status' (includes enterprise readiness status)<br/>
+        /// Fields to expand in the response. Supported values: 'openapi-3.0' (includes the model's full OpenAPI 3.1 schema in 'openapi' field; the value keeps its original name), 'enterprise_status' (includes enterprise readiness status)<br/>
         /// Example: [openapi-3.0, enterprise_status]
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

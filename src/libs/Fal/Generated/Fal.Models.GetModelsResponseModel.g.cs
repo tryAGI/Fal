@@ -22,7 +22,7 @@ namespace Fal
         public global::Fal.GetModelsResponseModelMetadata? Metadata { get; set; }
 
         /// <summary>
-        /// OpenAPI 3.0 specification or error (present when expand=openapi-3.0 is requested)
+        /// OpenAPI 3.1 specification or error (present when expand=openapi-3.0 is requested)
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("openapi")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>))]
@@ -51,7 +51,7 @@ namespace Fal
         /// Model metadata (optional - may be absent for endpoints without registry entries)
         /// </param>
         /// <param name="openapi">
-        /// OpenAPI 3.0 specification or error (present when expand=openapi-3.0 is requested)
+        /// OpenAPI 3.1 specification or error (present when expand=openapi-3.0 is requested)
         /// </param>
         /// <param name="enterpriseStatus">
         /// Enterprise readiness status (present when expand=enterprise_status is requested)
