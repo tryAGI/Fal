@@ -44,6 +44,7 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamRunSource), TypeInfoPropertyName = "ServerlessLogsStreamRunSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointStatus), TypeInfoPropertyName = "ServerlessListRequestsByEndpointStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointSortBy), TypeInfoPropertyName = "ServerlessListRequestsByEndpointSortBy2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerReplaceFirst), TypeInfoPropertyName = "ServerlessStopRunnerReplaceFirst2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageTimeframe), TypeInfoPropertyName = "ServerlessGetUsageTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageBoundToTimeframe), TypeInfoPropertyName = "ServerlessGetUsageBoundToTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponse))]
@@ -308,6 +309,25 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponse7))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseError6))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType6), TypeInfoPropertyName = "ServerlessListRequestsByEndpointResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType), TypeInfoPropertyName = "ServerlessStopRunnerResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponse3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseError2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType2), TypeInfoPropertyName = "ServerlessStopRunnerResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponse4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseError3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType3), TypeInfoPropertyName = "ServerlessStopRunnerResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponse5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseError4))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType4), TypeInfoPropertyName = "ServerlessStopRunnerResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponse6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseError5))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType5), TypeInfoPropertyName = "ServerlessStopRunnerResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponse7))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseError6))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType6), TypeInfoPropertyName = "ServerlessStopRunnerResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ServerlessGetUsageResponseTimeSerie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseTimeSerie))]
@@ -353,6 +373,7 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessLogsStreamRunSource?), TypeInfoPropertyName = "NullableServerlessLogsStreamRunSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointStatus?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointSortBy?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointSortBy2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerReplaceFirst?), TypeInfoPropertyName = "NullableServerlessStopRunnerReplaceFirst2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageTimeframe?), TypeInfoPropertyName = "NullableServerlessGetUsageTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageBoundToTimeframe?), TypeInfoPropertyName = "NullableServerlessGetUsageBoundToTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetAnalyticsResponseErrorType?), TypeInfoPropertyName = "NullableServerlessGetAnalyticsResponseErrorType2_3")]
@@ -435,6 +456,12 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType5?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType6?), TypeInfoPropertyName = "NullableServerlessListRequestsByEndpointResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType?), TypeInfoPropertyName = "NullableServerlessStopRunnerResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessStopRunnerResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessStopRunnerResponseErrorType32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType4?), TypeInfoPropertyName = "NullableServerlessStopRunnerResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType5?), TypeInfoPropertyName = "NullableServerlessStopRunnerResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessStopRunnerResponseErrorType6?), TypeInfoPropertyName = "NullableServerlessStopRunnerResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType?), TypeInfoPropertyName = "NullableServerlessGetUsageResponseErrorType2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType2?), TypeInfoPropertyName = "NullableServerlessGetUsageResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType3?), TypeInfoPropertyName = "NullableServerlessGetUsageResponseErrorType32")]
@@ -651,6 +678,10 @@ namespace Fal
                     || typeToConvert == typeof(global::Fal.ServerlessListRequestsByEndpointSortBy)
 
                     || typeToConvert == typeof(global::Fal.ServerlessListRequestsByEndpointSortBy?)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerReplaceFirst)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerReplaceFirst?)
 
                     || typeToConvert == typeof(global::Fal.ServerlessGetUsageTimeframe)
 
@@ -980,6 +1011,30 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType6?)
 
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType?)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType2)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType2?)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType3)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType3?)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType4)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType4?)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType5)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType5?)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType6)
+
+                    || typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType6?)
+
                     || typeToConvert == typeof(global::Fal.ServerlessGetUsageResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.ServerlessGetUsageResponseErrorType?)
@@ -1127,6 +1182,16 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.ServerlessListRequestsByEndpointSortBy?))
                 {
                     return new global::Fal.JsonConverters.ServerlessListRequestsByEndpointSortByNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerReplaceFirst))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerReplaceFirstJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerReplaceFirst?))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerReplaceFirstNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.ServerlessGetUsageTimeframe))
@@ -1947,6 +2012,66 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.ServerlessListRequestsByEndpointResponseErrorType6?))
                 {
                     return new global::Fal.JsonConverters.ServerlessListRequestsByEndpointResponseErrorType6NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType?))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType2))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType2JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType2?))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType2NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType3))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType3JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType3?))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType3NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType4))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType4JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType4?))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType4NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType5))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType5JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType5?))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType5NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType6))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType6JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.ServerlessStopRunnerResponseErrorType6?))
+                {
+                    return new global::Fal.JsonConverters.ServerlessStopRunnerResponseErrorType6NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.ServerlessGetUsageResponseErrorType))
