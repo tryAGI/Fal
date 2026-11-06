@@ -47,7 +47,7 @@ namespace Fal
         public required global::System.Collections.Generic.IList<string> Tags { get; set; }
 
         /// <summary>
-        /// ISO8601 timestamp of when the model was last updated
+        /// ISO8601 timestamp of when the model's catalog entry or API schema last changed. Schema changes are picked up daily
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated_at")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -179,7 +179,7 @@ namespace Fal
         /// Freeform tags such as 'new', 'beta', 'pro', or 'turbo' (Explore badges)
         /// </param>
         /// <param name="updatedAt">
-        /// ISO8601 timestamp of when the model was last updated
+        /// ISO8601 timestamp of when the model's catalog entry or API schema last changed. Schema changes are picked up daily
         /// </param>
         /// <param name="thumbnailUrl">
         /// Main thumbnail image URL
