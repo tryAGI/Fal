@@ -106,6 +106,7 @@ namespace Fal
         /// - Billing duration tracking<br/>
         /// - Time-bucketed data for trend analysis<br/>
         /// - Flexible date range and timeframe options<br/>
+        /// - Date range capped at 90 days per request<br/>
         /// **Common Use Cases:**<br/>
         /// - Monitor your serverless app performance and reliability<br/>
         /// - Export analytics to your own observability tools<br/>
@@ -234,6 +235,7 @@ namespace Fal
         /// - Billing duration tracking<br/>
         /// - Time-bucketed data for trend analysis<br/>
         /// - Flexible date range and timeframe options<br/>
+        /// - Date range capped at 90 days per request<br/>
         /// **Common Use Cases:**<br/>
         /// - Monitor your serverless app performance and reliability<br/>
         /// - Export analytics to your own observability tools<br/>

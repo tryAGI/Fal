@@ -45,6 +45,7 @@ namespace Fal
         /// - Time-bucketed data for trend analysis<br/>
         /// - Single or multi-model analytics<br/>
         /// - Flexible date range and timeframe options<br/>
+        /// - Date range capped at 90 days per request<br/>
         /// **Common Use Cases:**<br/>
         /// - Monitor model performance and reliability<br/>
         /// - Generate performance dashboards<br/>
@@ -149,6 +150,7 @@ namespace Fal
         /// - Time-bucketed data for trend analysis<br/>
         /// - Single or multi-model analytics<br/>
         /// - Flexible date range and timeframe options<br/>
+        /// - Date range capped at 90 days per request<br/>
         /// **Common Use Cases:**<br/>
         /// - Monitor model performance and reliability<br/>
         /// - Generate performance dashboards<br/>
