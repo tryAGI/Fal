@@ -13,7 +13,7 @@ namespace Fal
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.FavoriteAssetCharacterResponseError6 Error { get; set; }
+        public required global::Fal.FavoriteAssetCharacterResponseError Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -31,7 +31,7 @@ namespace Fal
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public FavoriteAssetCharacterResponse7(
-            global::Fal.FavoriteAssetCharacterResponseError6 error)
+            global::Fal.FavoriteAssetCharacterResponseError error)
         {
             this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }

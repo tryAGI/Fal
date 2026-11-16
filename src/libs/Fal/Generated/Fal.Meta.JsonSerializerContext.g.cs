@@ -19,12 +19,9 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseErrorType), TypeInfoPropertyName = "GetMetaResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseErrorType), TypeInfoPropertyName = "GetMetaResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseErrorType2), TypeInfoPropertyName = "GetMetaResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseErrorType?), TypeInfoPropertyName = "NullableGetMetaResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseErrorType2?), TypeInfoPropertyName = "NullableGetMetaResponseErrorType22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseErrorType?), TypeInfoPropertyName = "NullableGetMetaResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     internal sealed partial class MetaSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -170,11 +167,7 @@ namespace Fal
                 return
                     typeToConvert == typeof(global::Fal.GetMetaResponseErrorType)
 
-                    || typeToConvert == typeof(global::Fal.GetMetaResponseErrorType?)
-
-                    || typeToConvert == typeof(global::Fal.GetMetaResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetMetaResponseErrorType2?);
+                    || typeToConvert == typeof(global::Fal.GetMetaResponseErrorType?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -189,16 +182,6 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.GetMetaResponseErrorType?))
                 {
                     return new global::Fal.JsonConverters.GetMetaResponseErrorTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetMetaResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetMetaResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetMetaResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetMetaResponseErrorType2NullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

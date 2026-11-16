@@ -28,46 +28,17 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseCredits))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType), TypeInfoPropertyName = "GetAccountBillingResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType), TypeInfoPropertyName = "GetAccountBillingResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType2), TypeInfoPropertyName = "GetAccountBillingResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType3), TypeInfoPropertyName = "GetAccountBillingResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType4), TypeInfoPropertyName = "GetAccountBillingResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType5), TypeInfoPropertyName = "GetAccountBillingResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType), TypeInfoPropertyName = "GetFocusReportResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType2), TypeInfoPropertyName = "GetFocusReportResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType3), TypeInfoPropertyName = "GetFocusReportResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType4), TypeInfoPropertyName = "GetFocusReportResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType5), TypeInfoPropertyName = "GetFocusReportResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType), TypeInfoPropertyName = "GetFocusReportResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType2), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType3), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType4), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType), TypeInfoPropertyName = "GetModelAccessControlsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, global::System.Collections.Generic.IList<string>>?), TypeInfoPropertyName = "NullableAnyOfStringIListString2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
@@ -76,20 +47,9 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportExpand?), TypeInfoPropertyName = "NullableGetFocusReportExpand2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportTimeframe?), TypeInfoPropertyName = "NullableGetFocusReportTimeframe2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportBoundToTimeframe?), TypeInfoPropertyName = "NullableGetFocusReportBoundToTimeframe2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType?), TypeInfoPropertyName = "NullableGetAccountBillingResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType2?), TypeInfoPropertyName = "NullableGetAccountBillingResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType3?), TypeInfoPropertyName = "NullableGetAccountBillingResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType4?), TypeInfoPropertyName = "NullableGetAccountBillingResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType5?), TypeInfoPropertyName = "NullableGetAccountBillingResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType?), TypeInfoPropertyName = "NullableGetFocusReportResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType2?), TypeInfoPropertyName = "NullableGetFocusReportResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType3?), TypeInfoPropertyName = "NullableGetFocusReportResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType4?), TypeInfoPropertyName = "NullableGetFocusReportResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType5?), TypeInfoPropertyName = "NullableGetFocusReportResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType?), TypeInfoPropertyName = "NullableGetModelAccessControlsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType2?), TypeInfoPropertyName = "NullableGetModelAccessControlsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType3?), TypeInfoPropertyName = "NullableGetModelAccessControlsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType4?), TypeInfoPropertyName = "NullableGetModelAccessControlsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAccountBillingResponseErrorType?), TypeInfoPropertyName = "NullableGetAccountBillingResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetFocusReportResponseErrorType?), TypeInfoPropertyName = "NullableGetFocusReportResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelAccessControlsResponseErrorType?), TypeInfoPropertyName = "NullableGetModelAccessControlsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, global::System.Collections.Generic.List<string>>))]
     internal sealed partial class AccountSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
@@ -254,57 +214,13 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType5?)
-
                     || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType5?)
-
                     || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType)
 
-                    || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType?)
-
-                    || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType4?);
+                    || typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -361,46 +277,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetAccountBillingResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetAccountBillingResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetAccountBillingResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetAccountBillingResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetAccountBillingResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetAccountBillingResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetAccountBillingResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.GetAccountBillingResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAccountBillingResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.GetAccountBillingResponseErrorType5NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType))
                 {
                     return new global::Fal.JsonConverters.GetFocusReportResponseErrorTypeJsonConverter();
@@ -411,46 +287,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetFocusReportResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetFocusReportResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetFocusReportResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetFocusReportResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetFocusReportResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetFocusReportResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetFocusReportResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.GetFocusReportResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetFocusReportResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.GetFocusReportResponseErrorType5NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType))
                 {
                     return new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorTypeJsonConverter();
@@ -459,36 +295,6 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType?))
                 {
                     return new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelAccessControlsResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetModelAccessControlsResponseErrorType4NullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

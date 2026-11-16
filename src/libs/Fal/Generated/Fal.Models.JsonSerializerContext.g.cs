@@ -63,45 +63,27 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseOrderingSort), TypeInfoPropertyName = "GetModelsResponseOrderingSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType), TypeInfoPropertyName = "GetModelsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType), TypeInfoPropertyName = "GetModelsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType2), TypeInfoPropertyName = "GetModelsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType3), TypeInfoPropertyName = "GetModelsResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType4), TypeInfoPropertyName = "GetModelsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetPricingResponsePrice>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponsePrice))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType), TypeInfoPropertyName = "GetPricingResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType), TypeInfoPropertyName = "GetPricingResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType2), TypeInfoPropertyName = "GetPricingResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType3), TypeInfoPropertyName = "GetPricingResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType4), TypeInfoPropertyName = "GetPricingResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseEstimateType), TypeInfoPropertyName = "EstimatePricingResponseEstimateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType), TypeInfoPropertyName = "EstimatePricingResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType), TypeInfoPropertyName = "EstimatePricingResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType2), TypeInfoPropertyName = "EstimatePricingResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType3), TypeInfoPropertyName = "EstimatePricingResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType4), TypeInfoPropertyName = "EstimatePricingResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetUsageResponseTimeSerie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseTimeSerie))]
@@ -113,16 +95,10 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseSummaryItemAuthMethodStructured))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType), TypeInfoPropertyName = "GetUsageResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType), TypeInfoPropertyName = "GetUsageResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType2), TypeInfoPropertyName = "GetUsageResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType3), TypeInfoPropertyName = "GetUsageResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType4), TypeInfoPropertyName = "GetUsageResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetAnalyticsResponseTimeSerie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseTimeSerie))]
@@ -132,101 +108,55 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseSummaryItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType), TypeInfoPropertyName = "GetAnalyticsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType), TypeInfoPropertyName = "GetAnalyticsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType2), TypeInfoPropertyName = "GetAnalyticsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType3), TypeInfoPropertyName = "GetAnalyticsResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType4), TypeInfoPropertyName = "GetAnalyticsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType5), TypeInfoPropertyName = "GetAnalyticsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponse7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType6), TypeInfoPropertyName = "GetAnalyticsResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.GetBillingEventsResponseBillingEvent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseBillingEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseBillingEventAuthMethodStructured))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType), TypeInfoPropertyName = "GetBillingEventsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType), TypeInfoPropertyName = "GetBillingEventsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType2), TypeInfoPropertyName = "GetBillingEventsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType3), TypeInfoPropertyName = "GetBillingEventsResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType4), TypeInfoPropertyName = "GetBillingEventsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType5), TypeInfoPropertyName = "GetBillingEventsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.DeleteRequestPayloadsResponseCdnDeleteResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseCdnDeleteResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType), TypeInfoPropertyName = "DeleteRequestPayloadsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType), TypeInfoPropertyName = "DeleteRequestPayloadsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType2), TypeInfoPropertyName = "DeleteRequestPayloadsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType3), TypeInfoPropertyName = "DeleteRequestPayloadsResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType4), TypeInfoPropertyName = "DeleteRequestPayloadsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType5), TypeInfoPropertyName = "DeleteRequestPayloadsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponse7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType6), TypeInfoPropertyName = "DeleteRequestPayloadsResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.ListRequestsByEndpointResponseItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType2), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType3), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType4), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType5), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponse7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType6), TypeInfoPropertyName = "ListRequestsByEndpointResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.SearchRequestsResponseResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseResult))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType), TypeInfoPropertyName = "SearchRequestsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType), TypeInfoPropertyName = "SearchRequestsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType2), TypeInfoPropertyName = "SearchRequestsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType3), TypeInfoPropertyName = "SearchRequestsResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType4), TypeInfoPropertyName = "SearchRequestsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType5), TypeInfoPropertyName = "SearchRequestsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2>?), TypeInfoPropertyName = "NullableOneOfEstimatePricingRequestVariant1EstimatePricingRequestVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant1EstimateType?), TypeInfoPropertyName = "NullableEstimatePricingRequestVariant1EstimateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
@@ -254,51 +184,16 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>?), TypeInfoPropertyName = "NullableAnyOfGetModelsResponseModelEnterpriseStatusEnumGetModelsResponseModelEnterpriseStatusEnum22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseModelEnterpriseStatusEnum?), TypeInfoPropertyName = "NullableGetModelsResponseModelEnterpriseStatusEnum2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseOrderingSort?), TypeInfoPropertyName = "NullableGetModelsResponseOrderingSort2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType2?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType3?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType4?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType?), TypeInfoPropertyName = "NullableGetPricingResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType2?), TypeInfoPropertyName = "NullableGetPricingResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType3?), TypeInfoPropertyName = "NullableGetPricingResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType4?), TypeInfoPropertyName = "NullableGetPricingResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType?), TypeInfoPropertyName = "NullableGetPricingResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseEstimateType?), TypeInfoPropertyName = "NullableEstimatePricingResponseEstimateType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType?), TypeInfoPropertyName = "NullableEstimatePricingResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType2?), TypeInfoPropertyName = "NullableEstimatePricingResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType3?), TypeInfoPropertyName = "NullableEstimatePricingResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType4?), TypeInfoPropertyName = "NullableEstimatePricingResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType?), TypeInfoPropertyName = "NullableGetUsageResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType2?), TypeInfoPropertyName = "NullableGetUsageResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType3?), TypeInfoPropertyName = "NullableGetUsageResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType4?), TypeInfoPropertyName = "NullableGetUsageResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType?), TypeInfoPropertyName = "NullableGetAnalyticsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType2?), TypeInfoPropertyName = "NullableGetAnalyticsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType3?), TypeInfoPropertyName = "NullableGetAnalyticsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType4?), TypeInfoPropertyName = "NullableGetAnalyticsResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType5?), TypeInfoPropertyName = "NullableGetAnalyticsResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType6?), TypeInfoPropertyName = "NullableGetAnalyticsResponseErrorType62")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType?), TypeInfoPropertyName = "NullableGetBillingEventsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType2?), TypeInfoPropertyName = "NullableGetBillingEventsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType3?), TypeInfoPropertyName = "NullableGetBillingEventsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType4?), TypeInfoPropertyName = "NullableGetBillingEventsResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType5?), TypeInfoPropertyName = "NullableGetBillingEventsResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType?), TypeInfoPropertyName = "NullableDeleteRequestPayloadsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType2?), TypeInfoPropertyName = "NullableDeleteRequestPayloadsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType3?), TypeInfoPropertyName = "NullableDeleteRequestPayloadsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType4?), TypeInfoPropertyName = "NullableDeleteRequestPayloadsResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType5?), TypeInfoPropertyName = "NullableDeleteRequestPayloadsResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType6?), TypeInfoPropertyName = "NullableDeleteRequestPayloadsResponseErrorType62")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType?), TypeInfoPropertyName = "NullableListRequestsByEndpointResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType2?), TypeInfoPropertyName = "NullableListRequestsByEndpointResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType3?), TypeInfoPropertyName = "NullableListRequestsByEndpointResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType4?), TypeInfoPropertyName = "NullableListRequestsByEndpointResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType5?), TypeInfoPropertyName = "NullableListRequestsByEndpointResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType6?), TypeInfoPropertyName = "NullableListRequestsByEndpointResponseErrorType62")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType?), TypeInfoPropertyName = "NullableSearchRequestsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType2?), TypeInfoPropertyName = "NullableSearchRequestsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType3?), TypeInfoPropertyName = "NullableSearchRequestsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType4?), TypeInfoPropertyName = "NullableSearchRequestsResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType5?), TypeInfoPropertyName = "NullableSearchRequestsResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType?), TypeInfoPropertyName = "NullableEstimatePricingResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType?), TypeInfoPropertyName = "NullableGetUsageResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType?), TypeInfoPropertyName = "NullableGetAnalyticsResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetBillingEventsResponseErrorType?), TypeInfoPropertyName = "NullableGetBillingEventsResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteRequestPayloadsResponseErrorType?), TypeInfoPropertyName = "NullableDeleteRequestPayloadsResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ListRequestsByEndpointResponseErrorType?), TypeInfoPropertyName = "NullableListRequestsByEndpointResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SearchRequestsResponseErrorType?), TypeInfoPropertyName = "NullableSearchRequestsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetModelsResponseModel>))]
@@ -530,33 +425,9 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.GetModelsResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.GetModelsResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetModelsResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetModelsResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetModelsResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetModelsResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetModelsResponseErrorType4?)
-
                     || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType?)
-
-                    || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType4?)
 
                     || typeToConvert == typeof(global::Fal.EstimatePricingResponseEstimateType)
 
@@ -566,145 +437,29 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType4?)
-
                     || typeToConvert == typeof(global::Fal.GetUsageResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.GetUsageResponseErrorType?)
-
-                    || typeToConvert == typeof(global::Fal.GetUsageResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetUsageResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetUsageResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetUsageResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetUsageResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetUsageResponseErrorType4?)
 
                     || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType5?)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType6)
-
-                    || typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType6?)
-
                     || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType?)
-
-                    || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType5?)
 
                     || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType5?)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType6)
-
-                    || typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType6?)
-
                     || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType5?)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType6)
-
-                    || typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType6?)
-
                     || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType)
 
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType?)
-
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType5?);
+                    || typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -891,36 +646,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetModelsResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.GetModelsResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetModelsResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelsResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetModelsResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelsResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetModelsResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelsResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetModelsResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelsResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetModelsResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetModelsResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetModelsResponseErrorType4NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.GetPricingResponseErrorType))
                 {
                     return new global::Fal.JsonConverters.GetPricingResponseErrorTypeJsonConverter();
@@ -929,36 +654,6 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.GetPricingResponseErrorType?))
                 {
                     return new global::Fal.JsonConverters.GetPricingResponseErrorTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetPricingResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetPricingResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetPricingResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetPricingResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetPricingResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetPricingResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetPricingResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetPricingResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetPricingResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetPricingResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetPricingResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetPricingResponseErrorType4NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.EstimatePricingResponseEstimateType))
@@ -981,36 +676,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.EstimatePricingResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.EstimatePricingResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.EstimatePricingResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.EstimatePricingResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.EstimatePricingResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.EstimatePricingResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.EstimatePricingResponseErrorType4NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.GetUsageResponseErrorType))
                 {
                     return new global::Fal.JsonConverters.GetUsageResponseErrorTypeJsonConverter();
@@ -1019,36 +684,6 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.GetUsageResponseErrorType?))
                 {
                     return new global::Fal.JsonConverters.GetUsageResponseErrorTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetUsageResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetUsageResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetUsageResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetUsageResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetUsageResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetUsageResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetUsageResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetUsageResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetUsageResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetUsageResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetUsageResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetUsageResponseErrorType4NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType))
@@ -1061,56 +696,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetAnalyticsResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType5NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType6))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType6JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetAnalyticsResponseErrorType6?))
-                {
-                    return new global::Fal.JsonConverters.GetAnalyticsResponseErrorType6NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType))
                 {
                     return new global::Fal.JsonConverters.GetBillingEventsResponseErrorTypeJsonConverter();
@@ -1119,46 +704,6 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType?))
                 {
                     return new global::Fal.JsonConverters.GetBillingEventsResponseErrorTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetBillingEventsResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetBillingEventsResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetBillingEventsResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetBillingEventsResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetBillingEventsResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetBillingEventsResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.GetBillingEventsResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetBillingEventsResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.GetBillingEventsResponseErrorType5NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType))
@@ -1171,56 +716,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType5NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType6))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType6JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.DeleteRequestPayloadsResponseErrorType6?))
-                {
-                    return new global::Fal.JsonConverters.DeleteRequestPayloadsResponseErrorType6NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType))
                 {
                     return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorTypeJsonConverter();
@@ -1231,56 +726,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType5NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType6))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.ListRequestsByEndpointResponseErrorType6?))
-                {
-                    return new global::Fal.JsonConverters.ListRequestsByEndpointResponseErrorType6NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType))
                 {
                     return new global::Fal.JsonConverters.SearchRequestsResponseErrorTypeJsonConverter();
@@ -1289,46 +734,6 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType?))
                 {
                     return new global::Fal.JsonConverters.SearchRequestsResponseErrorTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.SearchRequestsResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.SearchRequestsResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.SearchRequestsResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.SearchRequestsResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.SearchRequestsResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.SearchRequestsResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.SearchRequestsResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SearchRequestsResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.SearchRequestsResponseErrorType5NullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

@@ -13,7 +13,7 @@ namespace Fal
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.SetAssetTagsForAssetResponseError2 Error { get; set; }
+        public required global::Fal.SetAssetTagsForAssetResponseError Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -31,7 +31,7 @@ namespace Fal
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public SetAssetTagsForAssetResponse3(
-            global::Fal.SetAssetTagsForAssetResponseError2 error)
+            global::Fal.SetAssetTagsForAssetResponseError error)
         {
             this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }
