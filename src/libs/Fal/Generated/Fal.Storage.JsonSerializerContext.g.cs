@@ -35,22 +35,12 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseRuleDecision), TypeInfoPropertyName = "GetStorageFileAclResponseRuleDecision2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType), TypeInfoPropertyName = "GetStorageFileAclResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType), TypeInfoPropertyName = "GetStorageFileAclResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType2), TypeInfoPropertyName = "GetStorageFileAclResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType3), TypeInfoPropertyName = "GetStorageFileAclResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType4), TypeInfoPropertyName = "GetStorageFileAclResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType5), TypeInfoPropertyName = "GetStorageFileAclResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponse7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType6), TypeInfoPropertyName = "GetStorageFileAclResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseDefault), TypeInfoPropertyName = "SetStorageFileAclResponseDefault2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.SetStorageFileAclResponseRule>))]
@@ -58,41 +48,21 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseRuleDecision), TypeInfoPropertyName = "SetStorageFileAclResponseRuleDecision2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType), TypeInfoPropertyName = "SetStorageFileAclResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType), TypeInfoPropertyName = "SetStorageFileAclResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType2), TypeInfoPropertyName = "SetStorageFileAclResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType3), TypeInfoPropertyName = "SetStorageFileAclResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType4), TypeInfoPropertyName = "SetStorageFileAclResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType5), TypeInfoPropertyName = "SetStorageFileAclResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponse7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType6), TypeInfoPropertyName = "SetStorageFileAclResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType), TypeInfoPropertyName = "SignStorageFileUrlResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType), TypeInfoPropertyName = "SignStorageFileUrlResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType2), TypeInfoPropertyName = "SignStorageFileUrlResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType3), TypeInfoPropertyName = "SignStorageFileUrlResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType4), TypeInfoPropertyName = "SignStorageFileUrlResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType5), TypeInfoPropertyName = "SignStorageFileUrlResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponse7))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseError6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType6), TypeInfoPropertyName = "SignStorageFileUrlResponseErrorType62")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseInitialAcl))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseInitialAclDefault), TypeInfoPropertyName = "GetStorageSettingsResponseInitialAclDefault2")]
@@ -101,16 +71,10 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseInitialAclRuleDecision), TypeInfoPropertyName = "GetStorageSettingsResponseInitialAclRuleDecision2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType), TypeInfoPropertyName = "GetStorageSettingsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType), TypeInfoPropertyName = "GetStorageSettingsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType2), TypeInfoPropertyName = "GetStorageSettingsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType3), TypeInfoPropertyName = "GetStorageSettingsResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType4), TypeInfoPropertyName = "GetStorageSettingsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseInitialAcl))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseInitialAclDefault), TypeInfoPropertyName = "UpdateStorageSettingsResponseInitialAclDefault2")]
@@ -119,19 +83,11 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseInitialAclRuleDecision), TypeInfoPropertyName = "UpdateStorageSettingsResponseInitialAclRuleDecision2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType), TypeInfoPropertyName = "UpdateStorageSettingsResponseErrorType2_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType), TypeInfoPropertyName = "UpdateStorageSettingsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseError2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType2), TypeInfoPropertyName = "UpdateStorageSettingsResponseErrorType22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponse4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseError3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType3), TypeInfoPropertyName = "UpdateStorageSettingsResponseErrorType32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseError4))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType4), TypeInfoPropertyName = "UpdateStorageSettingsResponseErrorType42")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponse6))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseError5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType5), TypeInfoPropertyName = "UpdateStorageSettingsResponseErrorType52")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclRequestDefault?), TypeInfoPropertyName = "NullableSetStorageFileAclRequestDefault2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclRequestRuleDecision?), TypeInfoPropertyName = "NullableSetStorageFileAclRequestRuleDecision2")]
@@ -139,39 +95,17 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsRequestInitialAclRuleDecision?), TypeInfoPropertyName = "NullableUpdateStorageSettingsRequestInitialAclRuleDecision2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseDefault?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseDefault2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseRuleDecision?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseRuleDecision2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType2?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType3?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType4?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType5?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType6?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageFileAclResponseErrorType?), TypeInfoPropertyName = "NullableGetStorageFileAclResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseDefault?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseDefault2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseRuleDecision?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseRuleDecision2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType2?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType3?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType4?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType5?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType6?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseErrorType62")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType?), TypeInfoPropertyName = "NullableSignStorageFileUrlResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType2?), TypeInfoPropertyName = "NullableSignStorageFileUrlResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType3?), TypeInfoPropertyName = "NullableSignStorageFileUrlResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType4?), TypeInfoPropertyName = "NullableSignStorageFileUrlResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType5?), TypeInfoPropertyName = "NullableSignStorageFileUrlResponseErrorType52")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType6?), TypeInfoPropertyName = "NullableSignStorageFileUrlResponseErrorType62")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SetStorageFileAclResponseErrorType?), TypeInfoPropertyName = "NullableSetStorageFileAclResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.SignStorageFileUrlResponseErrorType?), TypeInfoPropertyName = "NullableSignStorageFileUrlResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseInitialAclDefault?), TypeInfoPropertyName = "NullableGetStorageSettingsResponseInitialAclDefault2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseInitialAclRuleDecision?), TypeInfoPropertyName = "NullableGetStorageSettingsResponseInitialAclRuleDecision2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType?), TypeInfoPropertyName = "NullableGetStorageSettingsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType2?), TypeInfoPropertyName = "NullableGetStorageSettingsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType3?), TypeInfoPropertyName = "NullableGetStorageSettingsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType4?), TypeInfoPropertyName = "NullableGetStorageSettingsResponseErrorType42")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetStorageSettingsResponseErrorType?), TypeInfoPropertyName = "NullableGetStorageSettingsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseInitialAclDefault?), TypeInfoPropertyName = "NullableUpdateStorageSettingsResponseInitialAclDefault2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseInitialAclRuleDecision?), TypeInfoPropertyName = "NullableUpdateStorageSettingsResponseInitialAclRuleDecision2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType?), TypeInfoPropertyName = "NullableUpdateStorageSettingsResponseErrorType2_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType2?), TypeInfoPropertyName = "NullableUpdateStorageSettingsResponseErrorType22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType3?), TypeInfoPropertyName = "NullableUpdateStorageSettingsResponseErrorType32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType4?), TypeInfoPropertyName = "NullableUpdateStorageSettingsResponseErrorType42")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType5?), TypeInfoPropertyName = "NullableUpdateStorageSettingsResponseErrorType52")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateStorageSettingsResponseErrorType?), TypeInfoPropertyName = "NullableUpdateStorageSettingsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.SetStorageFileAclRequestRule>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.UpdateStorageSettingsRequestInitialAclRule>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetStorageFileAclResponseRule>))]
@@ -348,26 +282,6 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType5?)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType6)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType6?)
-
                     || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseDefault)
 
                     || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseDefault?)
@@ -380,49 +294,9 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType5?)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType6)
-
-                    || typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType6?)
-
                     || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType)
 
                     || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType?)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType5?)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType6)
-
-                    || typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType6?)
 
                     || typeToConvert == typeof(global::Fal.GetStorageSettingsResponseInitialAclDefault)
 
@@ -436,18 +310,6 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType4?)
-
                     || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseInitialAclDefault)
 
                     || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseInitialAclDefault?)
@@ -458,23 +320,7 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType)
 
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType?)
-
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType2)
-
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType2?)
-
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType3)
-
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType3?)
-
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType4)
-
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType4?)
-
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType5)
-
-                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType5?);
+                    || typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -551,56 +397,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType5NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType6))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType6JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageFileAclResponseErrorType6?))
-                {
-                    return new global::Fal.JsonConverters.GetStorageFileAclResponseErrorType6NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseDefault))
                 {
                     return new global::Fal.JsonConverters.SetStorageFileAclResponseDefaultJsonConverter();
@@ -631,56 +427,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType5NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType6))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType6JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SetStorageFileAclResponseErrorType6?))
-                {
-                    return new global::Fal.JsonConverters.SetStorageFileAclResponseErrorType6NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType))
                 {
                     return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorTypeJsonConverter();
@@ -689,56 +435,6 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType?))
                 {
                     return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType5NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType6))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType6JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.SignStorageFileUrlResponseErrorType6?))
-                {
-                    return new global::Fal.JsonConverters.SignStorageFileUrlResponseErrorType6NullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.GetStorageSettingsResponseInitialAclDefault))
@@ -771,36 +467,6 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetStorageSettingsResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.GetStorageSettingsResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.GetStorageSettingsResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.GetStorageSettingsResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.GetStorageSettingsResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.GetStorageSettingsResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.GetStorageSettingsResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.GetStorageSettingsResponseErrorType4NullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseInitialAclDefault))
                 {
                     return new global::Fal.JsonConverters.UpdateStorageSettingsResponseInitialAclDefaultJsonConverter();
@@ -829,46 +495,6 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType?))
                 {
                     return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType2))
-                {
-                    return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorType2JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType2?))
-                {
-                    return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorType2NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType3))
-                {
-                    return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorType3JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType3?))
-                {
-                    return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorType3NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType4))
-                {
-                    return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorType4JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType4?))
-                {
-                    return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorType4NullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType5))
-                {
-                    return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorType5JsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.UpdateStorageSettingsResponseErrorType5?))
-                {
-                    return new global::Fal.JsonConverters.UpdateStorageSettingsResponseErrorType5NullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

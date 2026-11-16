@@ -13,7 +13,7 @@ namespace Fal
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.UpdateAssetCollectionResponseError8 Error { get; set; }
+        public required global::Fal.UpdateAssetCollectionResponseError Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -31,7 +31,7 @@ namespace Fal
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateAssetCollectionResponse9(
-            global::Fal.UpdateAssetCollectionResponseError8 error)
+            global::Fal.UpdateAssetCollectionResponseError error)
         {
             this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }

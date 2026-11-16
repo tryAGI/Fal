@@ -13,7 +13,7 @@ namespace Fal
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.ServerlessListRequestsByEndpointResponseError4 Error { get; set; }
+        public required global::Fal.ServerlessListRequestsByEndpointResponseError Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -31,7 +31,7 @@ namespace Fal
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ServerlessListRequestsByEndpointResponse5(
-            global::Fal.ServerlessListRequestsByEndpointResponseError4 error)
+            global::Fal.ServerlessListRequestsByEndpointResponseError error)
         {
             this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }

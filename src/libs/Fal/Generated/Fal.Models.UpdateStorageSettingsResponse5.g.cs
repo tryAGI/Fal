@@ -13,7 +13,7 @@ namespace Fal
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.UpdateStorageSettingsResponseError4 Error { get; set; }
+        public required global::Fal.UpdateStorageSettingsResponseError Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -31,7 +31,7 @@ namespace Fal
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UpdateStorageSettingsResponse5(
-            global::Fal.UpdateStorageSettingsResponseError4 error)
+            global::Fal.UpdateStorageSettingsResponseError error)
         {
             this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }

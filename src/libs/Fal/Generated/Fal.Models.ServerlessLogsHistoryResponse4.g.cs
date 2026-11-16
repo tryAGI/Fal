@@ -13,7 +13,7 @@ namespace Fal
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.ServerlessLogsHistoryResponseError3 Error { get; set; }
+        public required global::Fal.ServerlessLogsHistoryResponseError Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -31,7 +31,7 @@ namespace Fal
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ServerlessLogsHistoryResponse4(
-            global::Fal.ServerlessLogsHistoryResponseError3 error)
+            global::Fal.ServerlessLogsHistoryResponseError error)
         {
             this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }
