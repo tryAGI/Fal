@@ -416,24 +416,61 @@ namespace Fal
                                 retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
+                            // Invalid request parameters
+                            if ((int)__response.StatusCode == 400)
+                            {
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
+                                global::Fal.ServerlessLogsStreamResponse2? __value_400 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse2.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse2.FromJson(__content_400, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_400 = __ex;
+                                }
+
+
+                                throw global::Fal.ApiException<global::Fal.ServerlessLogsStreamResponse2>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_400 is { Length: > 0 } ? __content_400 : __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
+                                    responseBody: __content_400,
+                                    responseObject: __value_400,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
                             // Authentication required
                             if ((int)__response.StatusCode == 401)
                             {
                                 string? __content_401 = null;
                                 global::System.Exception? __exception_401 = null;
-                                global::Fal.ServerlessLogsStreamResponse2? __value_401 = null;
+                                global::Fal.ServerlessLogsStreamResponse3? __value_401 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = __content_401 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse2.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse3.FromJson(__content_401, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = __content_401 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse2.FromJson(__content_401, JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse3.FromJson(__content_401, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -442,7 +479,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessLogsStreamResponse2>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessLogsStreamResponse3>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_401 is { Length: > 0 } ? __content_401 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
@@ -458,19 +495,19 @@ namespace Fal
                             {
                                 string? __content_429 = null;
                                 global::System.Exception? __exception_429 = null;
-                                global::Fal.ServerlessLogsStreamResponse3? __value_429 = null;
+                                global::Fal.ServerlessLogsStreamResponse4? __value_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_429 = __content_429 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse3.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = __content_429 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse4.FromJson(__content_429, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_429 = __content_429 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse3.FromJson(__content_429, JsonSerializerContext);
+                                        __value_429 = __content_429 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse4.FromJson(__content_429, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -479,7 +516,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessLogsStreamResponse3>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessLogsStreamResponse4>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_429 is { Length: > 0 } ? __content_429 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_429,
@@ -495,19 +532,19 @@ namespace Fal
                             {
                                 string? __content_500 = null;
                                 global::System.Exception? __exception_500 = null;
-                                global::Fal.ServerlessLogsStreamResponse4? __value_500 = null;
+                                global::Fal.ServerlessLogsStreamResponse5? __value_500 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_500 = __content_500 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse4.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = __content_500 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse5.FromJson(__content_500, JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_500 = __content_500 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse4.FromJson(__content_500, JsonSerializerContext);
+                                        __value_500 = __content_500 is not { Length: > 0 } ? null : global::Fal.ServerlessLogsStreamResponse5.FromJson(__content_500, JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -516,7 +553,7 @@ namespace Fal
                                 }
 
 
-                                throw global::Fal.ApiException<global::Fal.ServerlessLogsStreamResponse4>.Create(
+                                throw global::Fal.ApiException<global::Fal.ServerlessLogsStreamResponse5>.Create(
                                     statusCode: __response.StatusCode,
                                     message: __content_500 is { Length: > 0 } ? __content_500 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_500,
