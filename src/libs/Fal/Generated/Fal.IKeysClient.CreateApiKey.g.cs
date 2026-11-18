@@ -12,17 +12,14 @@ namespace Fal
         /// **Important Security Notice:**<br/>
         /// The `key_secret` is only returned once at creation time. Store it securely immediately<br/>
         /// as it cannot be retrieved again. If lost, you must delete the key and create a new one.<br/>
+        /// **Key Creation Access:**<br/>
+        /// API keys cannot create keys, even on the `FULL` preset. This endpoint returns<br/>
+        /// `403` for an API key. Create keys in the [dashboard](https://fal.ai/dashboard/keys) instead.<br/>
         /// **Key Features:**<br/>
-        /// - Create API keys programmatically without UI access<br/>
         /// - Assign meaningful aliases for key identification<br/>
         /// - Scope a key with a named preset or an explicit list of permissions<br/>
         /// - Optionally set an expiry with `expires_at`<br/>
         /// - Keys are immediately active upon creation<br/>
-        /// **Common Use Cases:**<br/>
-        /// - Programmatic key provisioning for CI/CD pipelines<br/>
-        /// - Self-serve key generation for team members<br/>
-        /// - Automated key rotation workflows<br/>
-        /// - Integration with secret management systems<br/>
         /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="request"></param>
@@ -42,17 +39,14 @@ namespace Fal
         /// **Important Security Notice:**<br/>
         /// The `key_secret` is only returned once at creation time. Store it securely immediately<br/>
         /// as it cannot be retrieved again. If lost, you must delete the key and create a new one.<br/>
+        /// **Key Creation Access:**<br/>
+        /// API keys cannot create keys, even on the `FULL` preset. This endpoint returns<br/>
+        /// `403` for an API key. Create keys in the [dashboard](https://fal.ai/dashboard/keys) instead.<br/>
         /// **Key Features:**<br/>
-        /// - Create API keys programmatically without UI access<br/>
         /// - Assign meaningful aliases for key identification<br/>
         /// - Scope a key with a named preset or an explicit list of permissions<br/>
         /// - Optionally set an expiry with `expires_at`<br/>
         /// - Keys are immediately active upon creation<br/>
-        /// **Common Use Cases:**<br/>
-        /// - Programmatic key provisioning for CI/CD pipelines<br/>
-        /// - Self-serve key generation for team members<br/>
-        /// - Automated key rotation workflows<br/>
-        /// - Integration with secret management systems<br/>
         /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="request"></param>
@@ -72,17 +66,14 @@ namespace Fal
         /// **Important Security Notice:**<br/>
         /// The `key_secret` is only returned once at creation time. Store it securely immediately<br/>
         /// as it cannot be retrieved again. If lost, you must delete the key and create a new one.<br/>
+        /// **Key Creation Access:**<br/>
+        /// API keys cannot create keys, even on the `FULL` preset. This endpoint returns<br/>
+        /// `403` for an API key. Create keys in the [dashboard](https://fal.ai/dashboard/keys) instead.<br/>
         /// **Key Features:**<br/>
-        /// - Create API keys programmatically without UI access<br/>
         /// - Assign meaningful aliases for key identification<br/>
         /// - Scope a key with a named preset or an explicit list of permissions<br/>
         /// - Optionally set an expiry with `expires_at`<br/>
         /// - Keys are immediately active upon creation<br/>
-        /// **Common Use Cases:**<br/>
-        /// - Programmatic key provisioning for CI/CD pipelines<br/>
-        /// - Self-serve key generation for team members<br/>
-        /// - Automated key rotation workflows<br/>
-        /// - Integration with secret management systems<br/>
         /// **Required permissions:** `auth:keys:write`. Key presets that include them: `FULL`. See [key permissions](https://fal.ai/docs/documentation/model-apis/authentication/key-based#permissions).
         /// </summary>
         /// <param name="alias">
