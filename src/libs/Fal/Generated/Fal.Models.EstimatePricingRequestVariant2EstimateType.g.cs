@@ -4,14 +4,14 @@
 namespace Fal
 {
     /// <summary>
-    /// Estimate type: unit price calculation based on billing units
+    /// Estimate type: historical API pricing based on past usage patterns
     /// </summary>
     public enum EstimatePricingRequestVariant2EstimateType
     {
         /// <summary>
         ///
         /// </summary>
-        UnitPrice,
+        HistoricalApiPrice,
     }
 
     /// <summary>
@@ -26,7 +26,7 @@ namespace Fal
         {
             return value switch
             {
-                EstimatePricingRequestVariant2EstimateType.UnitPrice => "unit_price",
+                EstimatePricingRequestVariant2EstimateType.HistoricalApiPrice => "historical_api_price",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -37,7 +37,7 @@ namespace Fal
         {
             return value switch
             {
-                "unit_price" => EstimatePricingRequestVariant2EstimateType.UnitPrice,
+                "historical_api_price" => EstimatePricingRequestVariant2EstimateType.HistoricalApiPrice,
                 _ => null,
             };
         }

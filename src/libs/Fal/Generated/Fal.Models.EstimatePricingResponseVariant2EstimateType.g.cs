@@ -6,7 +6,7 @@ namespace Fal
     /// <summary>
     /// The type of estimate that was performed
     /// </summary>
-    public enum EstimatePricingResponseEstimateType
+    public enum EstimatePricingResponseVariant2EstimateType
     {
         /// <summary>
         ///
@@ -21,29 +21,29 @@ namespace Fal
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class EstimatePricingResponseEstimateTypeExtensions
+    public static class EstimatePricingResponseVariant2EstimateTypeExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this EstimatePricingResponseEstimateType value)
+        public static string ToValueString(this EstimatePricingResponseVariant2EstimateType value)
         {
             return value switch
             {
-                EstimatePricingResponseEstimateType.HistoricalApiPrice => "historical_api_price",
-                EstimatePricingResponseEstimateType.UnitPrice => "unit_price",
+                EstimatePricingResponseVariant2EstimateType.HistoricalApiPrice => "historical_api_price",
+                EstimatePricingResponseVariant2EstimateType.UnitPrice => "unit_price",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static EstimatePricingResponseEstimateType? ToEnum(string value)
+        public static EstimatePricingResponseVariant2EstimateType? ToEnum(string value)
         {
             return value switch
             {
-                "historical_api_price" => EstimatePricingResponseEstimateType.HistoricalApiPrice,
-                "unit_price" => EstimatePricingResponseEstimateType.UnitPrice,
+                "historical_api_price" => EstimatePricingResponseVariant2EstimateType.HistoricalApiPrice,
+                "unit_price" => EstimatePricingResponseVariant2EstimateType.UnitPrice,
                 _ => null,
             };
         }

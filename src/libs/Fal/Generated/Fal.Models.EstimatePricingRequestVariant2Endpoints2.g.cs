@@ -9,11 +9,11 @@ namespace Fal
     public sealed partial class EstimatePricingRequestVariant2Endpoints2
     {
         /// <summary>
-        /// Number of billing units expected (e.g., number of images, videos, etc.)
+        /// Number of API calls to estimate (regardless of units per call)
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("unit_quantity")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("call_quantity")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double UnitQuantity { get; set; }
+        public required int CallQuantity { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,16 +24,16 @@ namespace Fal
         /// <summary>
         /// Initializes a new instance of the <see cref="EstimatePricingRequestVariant2Endpoints2" /> class.
         /// </summary>
-        /// <param name="unitQuantity">
-        /// Number of billing units expected (e.g., number of images, videos, etc.)
+        /// <param name="callQuantity">
+        /// Number of API calls to estimate (regardless of units per call)
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EstimatePricingRequestVariant2Endpoints2(
-            double unitQuantity)
+            int callQuantity)
         {
-            this.UnitQuantity = unitQuantity;
+            this.CallQuantity = callQuantity;
         }
 
         /// <summary>

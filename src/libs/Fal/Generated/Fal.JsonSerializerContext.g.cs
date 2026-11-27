@@ -18,21 +18,24 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2>), TypeInfoPropertyName = "OneOfEstimatePricingRequestVariant1EstimatePricingRequestVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2, global::Fal.EstimatePricingRequestVariant3>), TypeInfoPropertyName = "AnyOfEstimatePricingRequestVariant1EstimatePricingRequestVariant2EstimatePricingRequestVariant32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant1EstimateType), TypeInfoPropertyName = "EstimatePricingRequestVariant1EstimateType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Fal.EstimatePricingRequestVariant1Endpoints2>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant1Endpoints2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.EstimatePricingRequestVariant1Item>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant1Item))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant2EstimateType), TypeInfoPropertyName = "EstimatePricingRequestVariant2EstimateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Fal.EstimatePricingRequestVariant2Endpoints2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant2Endpoints2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant3EstimateType), TypeInfoPropertyName = "EstimatePricingRequestVariant3EstimateType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Fal.EstimatePricingRequestVariant3Endpoints2>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant3Endpoints2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateWorkflowRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateWorkflowRequestContents))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateWorkflowRequestContentsSchema))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateAssetCollectionRequest))]
@@ -162,8 +165,37 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponse3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponse4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponse5))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseEstimateType), TypeInfoPropertyName = "EstimatePricingResponseEstimateType2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.EstimatePricingResponseVariant1, global::Fal.EstimatePricingResponseVariant2>), TypeInfoPropertyName = "AnyOfEstimatePricingResponseVariant1EstimatePricingResponseVariant22")]
+    #pragma warning restore CS0618
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1Status), TypeInfoPropertyName = "EstimatePricingResponseVariant1Status2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1Confidence), TypeInfoPropertyName = "EstimatePricingResponseVariant1Confidence2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.EstimatePricingResponseVariant1Item>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1Item))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemStatus), TypeInfoPropertyName = "EstimatePricingResponseVariant1ItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.EstimatePricingResponseVariant1ItemWarning>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemWarning))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemErrorType), TypeInfoPropertyName = "EstimatePricingResponseVariant1ItemErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.EstimatePricingResponseVariant1ItemErrorError>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemErrorError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.AnyOf<string, double?>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, double?>), TypeInfoPropertyName = "AnyOfStringDouble2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponent>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponent))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponentBillingUnit))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<string>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponentConfidence), TypeInfoPropertyName = "EstimatePricingResponseVariant1ItemPerRequestComponentConfidence2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence), TypeInfoPropertyName = "EstimatePricingResponseVariant1ItemPerRequestConfidence2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestKnownConfidence), TypeInfoPropertyName = "EstimatePricingResponseVariant1ItemPerRequestKnownConfidence2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant2))]
+    #pragma warning restore CS0618
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant2EstimateType), TypeInfoPropertyName = "EstimatePricingResponseVariant2EstimateType2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType), TypeInfoPropertyName = "EstimatePricingResponseErrorType2")]
@@ -483,6 +515,20 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateAssetCharacterResponse10))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetCharacterResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetCharacterResponseCharacter))]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_898695ff2bd5345d")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetCharacterResponseCharacterType), TypeInfoPropertyName = "UpdateAssetCharacterResponseCharacterType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetCharacterResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.UpdateAssetCharacterResponseError))]
@@ -509,20 +555,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAssetCharacterResponse8))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAssetCharacterResponse9))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAssetCharacterResponse10))]
-    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-    )]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_898695ff2bd5345d")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCharacterResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCharacterResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.DeleteAssetCharacterResponseErrorType), TypeInfoPropertyName = "DeleteAssetCharacterResponseErrorType2")]
@@ -993,6 +1025,20 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponseErrorType), TypeInfoPropertyName = "ServerlessGetUsageResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse3))]
+    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_898695ff2bd5345d")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse4))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse5))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.ServerlessGetUsageResponse6))]
@@ -1019,20 +1065,6 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeInstanceResponseSector), TypeInfoPropertyName = "GetComputeInstanceResponseSector2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeInstanceResponseStatus), TypeInfoPropertyName = "GetComputeInstanceResponseStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeInstanceResponse2))]
-    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-    )]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_8df3f0ff85c28fa0")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_4af0049b8319fe25")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>?), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_fc90b6f0c4769996")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.OneOf<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>>), TypeInfoPropertyName = "GetAssetLineageResponseLineageNodeVariant4_898695ff2bd5345d")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeInstanceResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeInstanceResponseErrorType), TypeInfoPropertyName = "GetComputeInstanceResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetComputeInstanceResponse3))]
@@ -1135,10 +1167,10 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseErrorType), TypeInfoPropertyName = "GetMetaResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponse3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.OneOf<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2>?), TypeInfoPropertyName = "NullableOneOfEstimatePricingRequestVariant1EstimatePricingRequestVariant22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant1EstimateType?), TypeInfoPropertyName = "NullableEstimatePricingRequestVariant1EstimateType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2, global::Fal.EstimatePricingRequestVariant3>?), TypeInfoPropertyName = "NullableAnyOfEstimatePricingRequestVariant1EstimatePricingRequestVariant2EstimatePricingRequestVariant32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant2EstimateType?), TypeInfoPropertyName = "NullableEstimatePricingRequestVariant2EstimateType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingRequestVariant3EstimateType?), TypeInfoPropertyName = "NullableEstimatePricingRequestVariant3EstimateType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.CreateAssetEntityRequestType?), TypeInfoPropertyName = "NullableCreateAssetEntityRequestType2")]
@@ -1205,7 +1237,20 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseOrderingSort?), TypeInfoPropertyName = "NullableGetModelsResponseOrderingSort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetModelsResponseErrorType?), TypeInfoPropertyName = "NullableGetModelsResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetPricingResponseErrorType?), TypeInfoPropertyName = "NullableGetPricingResponseErrorType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseEstimateType?), TypeInfoPropertyName = "NullableEstimatePricingResponseEstimateType2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<global::Fal.EstimatePricingResponseVariant1, global::Fal.EstimatePricingResponseVariant2>?), TypeInfoPropertyName = "NullableAnyOfEstimatePricingResponseVariant1EstimatePricingResponseVariant22")]
+    #pragma warning restore CS0618
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1Status?), TypeInfoPropertyName = "NullableEstimatePricingResponseVariant1Status2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1Confidence?), TypeInfoPropertyName = "NullableEstimatePricingResponseVariant1Confidence2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemStatus?), TypeInfoPropertyName = "NullableEstimatePricingResponseVariant1ItemStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemErrorType?), TypeInfoPropertyName = "NullableEstimatePricingResponseVariant1ItemErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.AnyOf<string, double?>?), TypeInfoPropertyName = "NullableAnyOfStringDouble2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponentConfidence?), TypeInfoPropertyName = "NullableEstimatePricingResponseVariant1ItemPerRequestComponentConfidence2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence?), TypeInfoPropertyName = "NullableEstimatePricingResponseVariant1ItemPerRequestConfidence2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestKnownConfidence?), TypeInfoPropertyName = "NullableEstimatePricingResponseVariant1ItemPerRequestKnownConfidence2")]
+    #pragma warning disable CS0618 // This registration names a deprecated API model.
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseVariant2EstimateType?), TypeInfoPropertyName = "NullableEstimatePricingResponseVariant2EstimateType2")]
+    #pragma warning restore CS0618
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.EstimatePricingResponseErrorType?), TypeInfoPropertyName = "NullableEstimatePricingResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetUsageResponseErrorType?), TypeInfoPropertyName = "NullableGetUsageResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetAnalyticsResponseErrorType?), TypeInfoPropertyName = "NullableGetAnalyticsResponseErrorType2")]
@@ -1357,6 +1402,7 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseSummaryItemProduct?), TypeInfoPropertyName = "NullableGetOrganizationUsageResponseSummaryItemProduct2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetOrganizationUsageResponseErrorType?), TypeInfoPropertyName = "NullableGetOrganizationUsageResponseErrorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Fal.GetMetaResponseErrorType?), TypeInfoPropertyName = "NullableGetMetaResponseErrorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.EstimatePricingRequestVariant1Item>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.SetStorageFileAclRequestRule>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.UpdateStorageSettingsRequestInitialAclRule>))]
@@ -1372,6 +1418,12 @@ namespace Fal
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.ServerlessListAppEventsCategoryItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetModelsResponseModel>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetPricingResponsePrice>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.EstimatePricingResponseVariant1Item>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.EstimatePricingResponseVariant1ItemWarning>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.EstimatePricingResponseVariant1ItemErrorError>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.AnyOf<string, double?>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponent>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetUsageResponseTimeSerie>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetUsageResponseTimeSerieResult>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Fal.GetUsageResponseSummaryItem>))]
@@ -1464,7 +1516,7 @@ namespace Fal
 
                 internal static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Fal.JsonConverters.OneOfJsonConverter<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2>());
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.EstimatePricingRequestVariant1, global::Fal.EstimatePricingRequestVariant2, global::Fal.EstimatePricingRequestVariant3>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
@@ -1541,6 +1593,10 @@ namespace Fal
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, global::System.Collections.Generic.IList<string>>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelOpenapiVariant1, global::Fal.GetModelsResponseModelOpenapiVariant2>());
             options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.GetModelsResponseModelEnterpriseStatusEnum?, global::Fal.GetModelsResponseModelEnterpriseStatusEnum2>());
+            #pragma warning disable CS0618 // Converter references a deprecated API model.
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<global::Fal.EstimatePricingResponseVariant1, global::Fal.EstimatePricingResponseVariant2>());
+            #pragma warning restore CS0618
+            options.Converters.Add(new global::Fal.JsonConverters.AnyOfJsonConverter<string, double?>());
             options.Converters.Add(new global::Fal.JsonConverters.OneOfJsonConverter<global::Fal.GetAssetLineageResponseLineageNodeVariant1, global::Fal.GetAssetLineageResponseLineageNodeVariant2, global::Fal.GetAssetLineageResponseLineageNodeVariant3, global::Fal.GetAssetLineageResponseLineageNodeVariant4>());
             options.Converters.Add(new global::Fal.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
@@ -1564,13 +1620,13 @@ namespace Fal
             public override bool CanConvert(global::System.Type typeToConvert)
             {
                 return
-                    typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant1EstimateType)
-
-                    || typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant1EstimateType?)
-
-                    || typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant2EstimateType)
+                    typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant2EstimateType)
 
                     || typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant2EstimateType?)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant3EstimateType)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant3EstimateType?)
 
                     || typeToConvert == typeof(global::Fal.CreateAssetEntityRequestType)
 
@@ -1800,9 +1856,37 @@ namespace Fal
 
                     || typeToConvert == typeof(global::Fal.GetPricingResponseErrorType?)
 
-                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseEstimateType)
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1Status)
 
-                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseEstimateType?)
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1Status?)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1Confidence)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1Confidence?)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemStatus)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemStatus?)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemErrorType)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemErrorType?)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponentConfidence)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponentConfidence?)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence?)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestKnownConfidence)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestKnownConfidence?)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant2EstimateType)
+
+                    || typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant2EstimateType?)
 
                     || typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType)
 
@@ -2405,16 +2489,6 @@ namespace Fal
                 global::System.Type typeToConvert,
                 global::System.Text.Json.JsonSerializerOptions options)
             {
-                if (typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant1EstimateType))
-                {
-                    return new global::Fal.JsonConverters.EstimatePricingRequestVariant1EstimateTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant1EstimateType?))
-                {
-                    return new global::Fal.JsonConverters.EstimatePricingRequestVariant1EstimateTypeNullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant2EstimateType))
                 {
                     return new global::Fal.JsonConverters.EstimatePricingRequestVariant2EstimateTypeJsonConverter();
@@ -2423,6 +2497,16 @@ namespace Fal
                 if (typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant2EstimateType?))
                 {
                     return new global::Fal.JsonConverters.EstimatePricingRequestVariant2EstimateTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant3EstimateType))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingRequestVariant3EstimateTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingRequestVariant3EstimateType?))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingRequestVariant3EstimateTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.CreateAssetEntityRequestType))
@@ -2995,14 +3079,84 @@ namespace Fal
                     return new global::Fal.JsonConverters.GetPricingResponseErrorTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseEstimateType))
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1Status))
                 {
-                    return new global::Fal.JsonConverters.EstimatePricingResponseEstimateTypeJsonConverter();
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1StatusJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseEstimateType?))
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1Status?))
                 {
-                    return new global::Fal.JsonConverters.EstimatePricingResponseEstimateTypeNullableJsonConverter();
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1StatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1Confidence))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ConfidenceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1Confidence?))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ConfidenceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemStatus))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemStatus?))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemErrorType))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemErrorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemErrorType?))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemErrorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponentConfidence))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemPerRequestComponentConfidenceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestComponentConfidence?))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemPerRequestComponentConfidenceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemPerRequestConfidenceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence?))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemPerRequestConfidenceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestKnownConfidence))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemPerRequestKnownConfidenceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant1ItemPerRequestKnownConfidence?))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant1ItemPerRequestKnownConfidenceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant2EstimateType))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant2EstimateTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Fal.EstimatePricingResponseVariant2EstimateType?))
+                {
+                    return new global::Fal.JsonConverters.EstimatePricingResponseVariant2EstimateTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Fal.EstimatePricingResponseErrorType))
