@@ -4,24 +4,26 @@
 namespace Fal
 {
     /// <summary>
-    /// Cost estimation response with total cost<br/>
-    /// Example: {"estimate_type":"historical_api_price","total_cost":3.75,"currency":"USD"}
+    /// Cost estimation response with total cost
     /// </summary>
-    public sealed partial class EstimatePricingResponse
+    [global::System.Obsolete("This model marked as deprecated.")]
+    public sealed partial class EstimatePricingResponseVariant2
     {
         /// <summary>
         /// The type of estimate that was performed
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("estimate_type")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.EstimatePricingResponseEstimateTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.EstimatePricingResponseVariant2EstimateTypeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Fal.EstimatePricingResponseEstimateType EstimateType { get; set; }
+        [global::System.Obsolete("This property marked as deprecated.")]
+        public required global::Fal.EstimatePricingResponseVariant2EstimateType EstimateType { get; set; }
 
         /// <summary>
         /// Total estimated cost across all endpoints
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("total_cost")]
         [global::System.Text.Json.Serialization.JsonRequired]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public required double TotalCost { get; set; }
 
         /// <summary>
@@ -29,6 +31,7 @@ namespace Fal
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("currency")]
         [global::System.Text.Json.Serialization.JsonRequired]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public required string Currency { get; set; }
 
         /// <summary>
@@ -38,7 +41,7 @@ namespace Fal
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="EstimatePricingResponse" /> class.
+        /// Initializes a new instance of the <see cref="EstimatePricingResponseVariant2" /> class.
         /// </summary>
         /// <param name="estimateType">
         /// The type of estimate that was performed
@@ -52,8 +55,8 @@ namespace Fal
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public EstimatePricingResponse(
-            global::Fal.EstimatePricingResponseEstimateType estimateType,
+        public EstimatePricingResponseVariant2(
+            global::Fal.EstimatePricingResponseVariant2EstimateType estimateType,
             double totalCost,
             string currency)
         {
@@ -63,9 +66,9 @@ namespace Fal
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="EstimatePricingResponse" /> class.
+        /// Initializes a new instance of the <see cref="EstimatePricingResponseVariant2" /> class.
         /// </summary>
-        public EstimatePricingResponse()
+        public EstimatePricingResponseVariant2()
         {
         }
 

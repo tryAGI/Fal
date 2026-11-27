@@ -3,10 +3,10 @@
 namespace Fal.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class EstimatePricingResponseEstimateTypeNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.EstimatePricingResponseEstimateType?>
+    public sealed class EstimatePricingResponseVariant2EstimateTypeJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.EstimatePricingResponseVariant2EstimateType>
     {
         /// <inheritdoc />
-        public override global::Fal.EstimatePricingResponseEstimateType? Read(
+        public override global::Fal.EstimatePricingResponseVariant2EstimateType Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Fal.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Fal.EstimatePricingResponseEstimateTypeExtensions.ToEnum(stringValue);
+                        return global::Fal.EstimatePricingResponseVariant2EstimateTypeExtensions.ToEnum(stringValue) ?? default;
                     }
 
                     break;
@@ -26,11 +26,11 @@ namespace Fal.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Fal.EstimatePricingResponseEstimateType)numValue;
+                    return (global::Fal.EstimatePricingResponseVariant2EstimateType)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Fal.EstimatePricingResponseEstimateType?);
+                    return default(global::Fal.EstimatePricingResponseVariant2EstimateType);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,19 +42,12 @@ namespace Fal.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Fal.EstimatePricingResponseEstimateType? value,
+            global::Fal.EstimatePricingResponseVariant2EstimateType value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            if (value == null)
-            {
-                writer.WriteNullValue();
-            }
-            else
-            {
-                writer.WriteStringValue(global::Fal.EstimatePricingResponseEstimateTypeExtensions.ToValueString(value.Value));
-            }
+            writer.WriteStringValue(global::Fal.EstimatePricingResponseVariant2EstimateTypeExtensions.ToValueString(value));
         }
     }
 }

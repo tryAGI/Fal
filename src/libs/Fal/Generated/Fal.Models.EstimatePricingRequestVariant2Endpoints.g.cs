@@ -4,7 +4,7 @@
 namespace Fal
 {
     /// <summary>
-    /// Map of endpoint IDs to unit quantities
+    /// Map of endpoint IDs to call quantities
     /// </summary>
     public sealed partial class EstimatePricingRequestVariant2Endpoints
     {

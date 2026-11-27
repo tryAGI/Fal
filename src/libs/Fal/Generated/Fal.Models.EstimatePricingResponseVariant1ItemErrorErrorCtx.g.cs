@@ -4,9 +4,9 @@
 namespace Fal
 {
     /// <summary>
-    /// Map of endpoint IDs to call quantities
+    /// Details of the constraint.
     /// </summary>
-    public sealed partial class EstimatePricingRequestVariant1Endpoints
+    public sealed partial class EstimatePricingResponseVariant1ItemErrorErrorCtx
     {
 
         /// <summary>

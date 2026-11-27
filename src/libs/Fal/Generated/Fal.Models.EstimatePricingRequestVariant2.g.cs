@@ -4,19 +4,19 @@
 namespace Fal
 {
     /// <summary>
-    /// Unit price estimate: Calculates cost based on unit price × billing units. Useful for estimating costs when you know the expected output quantity.
+    /// Historical API price estimate: Calculates cost based on historical pricing per API call. Useful for estimating costs based on actual usage patterns.
     /// </summary>
     public sealed partial class EstimatePricingRequestVariant2
     {
         /// <summary>
-        /// Estimate type: unit price calculation based on billing units
+        /// Estimate type: historical API pricing based on past usage patterns
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("estimate_type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Fal.JsonConverters.EstimatePricingRequestVariant2EstimateTypeJsonConverter))]
         public global::Fal.EstimatePricingRequestVariant2EstimateType EstimateType { get; set; }
 
         /// <summary>
-        /// Map of endpoint IDs to unit quantities
+        /// Map of endpoint IDs to call quantities
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endpoints")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -32,10 +32,10 @@ namespace Fal
         /// Initializes a new instance of the <see cref="EstimatePricingRequestVariant2" /> class.
         /// </summary>
         /// <param name="endpoints">
-        /// Map of endpoint IDs to unit quantities
+        /// Map of endpoint IDs to call quantities
         /// </param>
         /// <param name="estimateType">
-        /// Estimate type: unit price calculation based on billing units
+        /// Estimate type: historical API pricing based on past usage patterns
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

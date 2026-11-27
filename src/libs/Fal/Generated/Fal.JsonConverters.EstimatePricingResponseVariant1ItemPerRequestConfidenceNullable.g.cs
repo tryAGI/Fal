@@ -3,10 +3,10 @@
 namespace Fal.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class EstimatePricingRequestVariant1EstimateTypeNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.EstimatePricingRequestVariant1EstimateType?>
+    public sealed class EstimatePricingResponseVariant1ItemPerRequestConfidenceNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence?>
     {
         /// <inheritdoc />
-        public override global::Fal.EstimatePricingRequestVariant1EstimateType? Read(
+        public override global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence? Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Fal.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Fal.EstimatePricingRequestVariant1EstimateTypeExtensions.ToEnum(stringValue);
+                        return global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidenceExtensions.ToEnum(stringValue);
                     }
 
                     break;
@@ -26,11 +26,11 @@ namespace Fal.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Fal.EstimatePricingRequestVariant1EstimateType)numValue;
+                    return (global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Fal.EstimatePricingRequestVariant1EstimateType?);
+                    return default(global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence?);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,7 +42,7 @@ namespace Fal.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Fal.EstimatePricingRequestVariant1EstimateType? value,
+            global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidence? value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
@@ -53,7 +53,7 @@ namespace Fal.JsonConverters
             }
             else
             {
-                writer.WriteStringValue(global::Fal.EstimatePricingRequestVariant1EstimateTypeExtensions.ToValueString(value.Value));
+                writer.WriteStringValue(global::Fal.EstimatePricingResponseVariant1ItemPerRequestConfidenceExtensions.ToValueString(value.Value));
             }
         }
     }
